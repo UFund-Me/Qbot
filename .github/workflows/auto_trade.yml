@@ -1,0 +1,56 @@
+name: Auto_Trade_By_CI
+
+## --------------------------------------------------------- ##
+## ┌───────────── minute (0 - 59)
+## │ ┌───────────── hour (0 - 23)
+## │ │ ┌───────────── day of the month (1 - 31)
+## │ │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+## │ │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+## │ │ │ │ │
+## │ │ │ │ │
+## │ │ │ │ │
+## * * * * *
+## '50 15 * * *'
+## --------------------------------------------------------- ##
+
+on:
+  schedule:
+    - cron: '01 * * * *'
+    - cron: '25 9,13 * * 1,5'
+    - cron: '00 13,15 * * 1,5'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.10"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: Not on weekend
+        if: github.event.schedule != '30 5 * * 0,6'
+        run: echo "This step will be skipped on weekend"
+      - name: Not on national holiday
+        if: github.event.schedule != '30 5 * * 0,6'
+        run: echo "This step will be skipped on weekend"
+      
+      - name: Every trade day
+        run: |
+          ../scripts/run_all.sh
+  
+  updates:
+    name: 'update annual national holiday'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.10"]
+    steps:
+      - name: ""
+        run: |
+          pip install pandas
+          ../scripts/update_national_holiday.sh

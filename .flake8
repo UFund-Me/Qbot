@@ -1,0 +1,67 @@
+# https://github.com/pytorch/pytorch/blob/master/.flake8
+# https://flake8.pycqa.org/en/latest/user/error-codes.html
+[flake8]
+select = B,C,E,F,P,T4,W,B9
+# line length is intentionally set to 80 here because black uses Bugbear
+# See https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length for more details
+max-line-length = 80
+# NOTE (yuting zhao): may change in the future, current setting to see https://github.com/psf/black/blob/main/.flake8
+max-complexity = 18
+# C408 ignored because we like the dict keyword argument syntax
+# E501 is not flexible enough, we're using B950 instead
+ignore =
+    E203,
+    # Ref: https://github.com/PyCQA/pycodestyle/issues/301
+    E251,
+    E305,
+    E402,
+    E501,
+    E721,
+    E741,
+    F405,
+    F821,
+    F841,
+    F999,
+    W503,
+    W504,
+    C408,
+    E302,
+    W291,
+    E303,
+    # shebang has extra meaning in fbcode lints, so I think it's not worth trying
+    # to line this up with executable bit
+    EXE001,
+    # these ignores are from flake8-bugbear; please fix!
+    B007,
+    B008,
+    # these ignores are from flake8-comprehensions; please fix!
+    C400,
+    C401,
+    C402,
+    C403,
+    C404,
+    C405,
+    C407,
+    C411,
+    C413,
+    C414,
+    C415
+per-file-ignores =
+    __init__.py: F401
+optional-ascii-coding = True
+exclude =
+    ./bazel-*,
+    ./.cache,
+    ./data,
+    ./dev-env,
+    ./.doxygen,
+    ./.git,
+    *_pb2.py
+    ./*.yml,
+    ./*.xml,
+    ./*.json,
+    ./prod-env,
+    ./production,
+    ./third_party,
+    *.pyi,
+    __pycache__,

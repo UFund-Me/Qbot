@@ -1,0 +1,35 @@
+[alias]
+    amd = commit --amend --no-edit
+    am = commit --amend
+    br = branch --sort=-committerdate
+    ci = commit
+    co = checkout
+    cp = cherry-pick
+    df = diff
+    drop = stash drop
+    # find cp from release branch
+    fcp = "!scripts/fcp.sh"
+    # push code to ci, it will rebase lastest master and then push
+    pci = !git fetch origin master && git rebase origin/master && git push
+    la = log --oneline --decorate --graph --all
+    last = log -1 HEAD --stat
+    ls = log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %C(yellow)%D%Creset' --abbrev-commit
+    lg = log --stat
+    pl = pull --rebase origin master
+    pop = stash pop
+    pr = pull --rebase --recurse-submodules
+    rc = rebase --continue
+    ri = rebase -i HEAD~10
+    root = rev-parse --show-toplevel
+    save = stash save
+    sl = stash list
+    st = status
+    sup = submodule update --init --recursive
+    unstage = reset HEAD --
+[color]
+    ui = auto
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
