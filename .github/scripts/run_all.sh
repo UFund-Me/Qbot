@@ -23,7 +23,7 @@ function parse_cmdline_args() {
         NEED_UPDATE="true"
         ;;
       -t | --test)
-        python3 ${TOP_DIR}/core/bt_boll.py
+        python ${TOP_DIR}/core/bt_boll.py
         ;;
       -h | --help)
         usage
@@ -36,6 +36,7 @@ function parse_cmdline_args() {
 function main() {
   parse_cmdline_args "$@"
 
+  echo "All done! ✨ 🍰 ✨"
 }
 
 main "$@"

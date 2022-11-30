@@ -1,8 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 
-#  Copyright (c) Charmve.
+# ****************************************************************************
+#  Copyright 2022 Charmve. All Rights Reserved.
 #  Licensed under the MIT License.
+# ****************************************************************************
 
 
 import sys
