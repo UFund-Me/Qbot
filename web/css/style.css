@@ -1,0 +1,15 @@
+body {
+    position: relative;
+    margin: 3em auto 2em auto;
+    width: 1080px;
+    font-family: Times New Roman, Lato, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    background: #fdfdfd;
+  }
+  .content {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .content p {
+    font-size: 17px;
+  }
