@@ -31,6 +31,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        TOP_DIR=${pwd}/../../
-        cd ${TOP_DIR}
         source ./.github/scripts/format_check.sh
+      shell: bash

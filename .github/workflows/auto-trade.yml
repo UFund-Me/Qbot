@@ -41,10 +41,9 @@ jobs:
       
       - name: Every trade day
         run: |
-          TOP_DIR=${pwd}/../../
-          cd ${TOP_DIR}
           pip install -r requirements.txt
           ./.github/scripts/run_all.sh --test
+        shell: bash
   
   # updates:
   #   name: 'Update annual national holiday'
