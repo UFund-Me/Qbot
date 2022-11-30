@@ -1,4 +1,10 @@
 pandas
 akshare
 backtrader
+easyquotation
+easytrader
+arrow
+tushare
+numpy
+requests
 matplotlib==3.2.2

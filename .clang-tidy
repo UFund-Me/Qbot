@@ -50,7 +50,7 @@ CheckOptions:
   - { key: bugprone-argument-comment.CommentBoolLiterals,          value: true      }
   - { key: bugprone-argument-comment.CommentNullPtrs,              value: true      }
 
-HeaderFilterRegex: "*/com_qcraft/[onboard|offboard|third_party|experimental|cyber|cyber_modules]/*"
+HeaderFilterRegex: "*/quant.ai/[core|engine|third_party|tests|]/*"
 WarningsAsErrors: "*"
 
 # References

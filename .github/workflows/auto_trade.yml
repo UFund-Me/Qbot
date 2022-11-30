@@ -19,14 +19,15 @@ on:
     - cron: '25 9,13 * * 1,5'
     - cron: '00 13,15 * * 1,5'
 
-jobs:
-  build:
+- stage:
+  jobs:
+  - job: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.10"]
+        python-version: ["3.9", "3.10"]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3
         with:
@@ -41,15 +42,17 @@ jobs:
       
       - name: Every trade day
         run: |
-          pip install akshare
-          ../scripts/run_all.sh --test
+          TOP_DIR=${pwd}/../../
+          cd ${TOP_DIR}
+          pip install  -r  requirements.txt
+          ./.github/scripts/run_all.sh --test
   
   # updates:
   #   name: 'Update annual national holiday'
   #   runs-on: ubuntu-latest
   #   strategy:
   #     matrix:
-  #       python-version: ["3.8", "3.10"]
+  #       python-version: ["3.9", "3.10"]
   #   steps:
   #     - name: ""
   #       run: |
