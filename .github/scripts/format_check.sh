@@ -3,8 +3,6 @@ set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)"
 
-CI_MERGE_REQUEST_LABELS="${CI_MERGE_REQUEST_LABELS:-}"
-
 function check_code_formatted() {
   readarray -t my_diffs < <(git diff \
     --ignore-submodules --diff-filter=d --name-only -- \
@@ -49,7 +47,6 @@ function check_merge_commit() {
 }
 
 function main() {
-  info "CI_MERGE_REQUEST_LABELS: ${CI_MERGE_REQUEST_LABELS}"
   check_merge_commit
   {
     IS_CI=true "${TOP_DIR}/scripts/format.sh" --git
