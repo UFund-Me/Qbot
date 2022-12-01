@@ -1,0 +1,40 @@
+# Basic dependabot.yml file with
+# minimum configuration for two package managers
+
+# reference: https://github.com/dependabot/dependabot-script/blob/main/.github/workflows/run.yml
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "conan"
+    # Look for `package.json` and `lock` files in the `root` directory
+    directory: "/"
+    # Check the npm registry for updates every day (weekdays)
+    schedule:
+      interval: "daily"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+  
+  # Set update schedule for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
+    ignore:
+      # Ignore updates to packages that start with 'aws'
+      # Wildcards match zero or more arbitrary characters
+      - dependency-name: "aws*"
+      # Ignore some updates to the 'express' package
+      - dependency-name: "express"
+        # Ignore only new versions for 4.x and 5.x
+        versions: ["4.x", "5.x"]
+      # For all packages, ignore all patch updates
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
