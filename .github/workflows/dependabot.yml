@@ -3,6 +3,11 @@
 
 # reference: https://github.com/dependabot/dependabot-script/blob/main/.github/workflows/run.yml
 
+name: Dependabot
+
+on:
+  - pull_request_target
+
 version: 2
 updates:
   # Enable version updates for npm
