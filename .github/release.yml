@@ -1,0 +1,21 @@
+changelog:
+  categories:
+    - title: Added 🎉
+      labels:
+        - enhancement
+
+    - title: Fixed 🐛
+      labels:
+        - "bug"
+
+    - title: Documentation 📘
+      labels:
+        - documentation
+
+    - title: Package Dependencies 🛠
+      labels:
+        - dependencies
+
+    - title: Other Changes
+      labels:
+        - "*"
