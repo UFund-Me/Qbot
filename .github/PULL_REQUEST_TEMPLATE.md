@@ -9,7 +9,7 @@
 
 ## How Has This Been Tested?
 <!---  Put an `x` in all the boxes that apply: --->
-- [ ] Pass the test by running: `pytest ar-dao/tests/test_all_pipeline.py` under upper directory of `/`.
+- [ ] Pass the test by running: `pytest quant.ai/tests/test_all_pipeline.py` under upper directory of `/`.
 - [ ] If you are adding a new feature, test on your own test scripts.
 
 <!--- **ATTENTION**: If you are adding a new feature, please make sure your codes are **correctly tested**. If our test scripts do not cover your cases, please provide your own test scripts under the `tests` folder and test them. More information about test scripts can be found [here](https://docs.python.org/3/library/unittest.html#basic-example), or you could refer to those we provide under the `tests` folder. -->

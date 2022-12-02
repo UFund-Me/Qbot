@@ -1,6 +1,6 @@
 ---
 name: "\U0001F31FFeature Request"
-about: Request for a new AR-DAO feature
+about: Request for a new quant.ai feature
 labels: enhancement
 ---
 ## 🌟 Feature Description

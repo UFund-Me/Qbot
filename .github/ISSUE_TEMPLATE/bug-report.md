@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Submit a bug report to help us improve AR-DAO
+about: Submit a bug report to help us improve quant.ai
 labels: bug
 ---
 ## 🐛 Bug Description
@@ -24,7 +24,7 @@ Steps to reproduce the behavior:
 **Note**: User could run `cd scripts && python collect_info.py all` under project directory to get system information
 and paste them here directly.
 
-- AR-DAO version:
+- quant.ai version:
 - Python version:
 - OS (`Windows`, `Linux`, `MacOS`):
 - Commit number (optional, please provide it if you are using the dev version):

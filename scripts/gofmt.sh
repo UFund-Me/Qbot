@@ -27,11 +27,11 @@ function check_gofmt_cmd() {
       fi
     else
       # NOTE: This depends on two facts:
-      # 1) Our workspace is named com_ar-dao and its workspace dir /ar-dao is writable
-      # 2) The symlink created (pointing to the execution_root dir) is ar-dao
+      # 1) Our workspace is named com_quant.ai and its workspace dir /quant.ai is writable
+      # 2) The symlink created (pointing to the execution_root dir) is quant.ai
       #    bazel info execution_root
       # Ref to https://docs.bazel.build/versions/main/user-manual.html on execution_root
-      GOFMT_PATH="${TOP_DIR}/ar-dao/external/go_sdk/bin/gofmt"
+      GOFMT_PATH="${TOP_DIR}/quant.ai/external/go_sdk/bin/gofmt"
       [[ -f "${GOFMT_PATH}" ]] || bazel build -c opt @go_sdk//:bin/gofmt
     fi
   fi # Done Inside Docker
