@@ -32,6 +32,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         sudo apt install shellcheck
-        sudo apt install protobuf
+        snap install protobuf
         ./.github/scripts/format_check.sh
       shell: bash
