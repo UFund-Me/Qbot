@@ -1,0 +1,7 @@
+# Include the license file
+include LICENSE.txt
+include requirements.txt
+include quantstats/report.html
+
+# Include the data files
+recursive-include data *
