@@ -1,32 +1,32 @@
 import abc
-import json
-import multiprocessing.pool
-import os
-import warnings
 import datetime
+import json
+import os
+
 import jqdatasdk
-import pandas as pd
-
 import pandas
+import pandas as pd
 import tushare as ts
-
-import requests
-from jqdatasdk import finance, query
-
 from easyquant.easydealutils.time import get_all_trade_days
 from easyquant.models import SecurityInfo
-from easytrader.utils.misc import file2dict
-from pandas import DataFrame
-
 from easyquotation.bar import get_price
+from easytrader.utils.misc import file2dict
+from jqdatasdk import finance, query
+from pandas import DataFrame
 
 
 class Quotation(metaclass=abc.ABCMeta):
     """行情获取基类"""
 
-    def get_bars(self, security, count, unit='1d',
-                 fields=['date', 'open', 'high', 'low', 'close', 'volume'],
-                 include_now=False, end_dt=None) -> DataFrame:
+    def get_bars(
+        self,
+        security,
+        count,
+        unit="1d",
+        fields=["date", "open", "high", "low", "close", "volume"],
+        include_now=False,
+        end_dt=None,
+    ) -> DataFrame:
         """
         获取历史数据(包含快照数据), 可查询单个标的多个数据字段
 
@@ -55,7 +55,7 @@ class Quotation(metaclass=abc.ABCMeta):
         return get_all_trade_days()
 
     def get_price(self, security: str, date) -> float:
-        df = self.get_bars(security, 1, unit='1d', end_dt=date)
+        df = self.get_bars(security, 1, unit="1d", end_dt=date)
         return df.close[-1]
 
     def get_north_money(self, date):
@@ -77,8 +77,7 @@ def is_shanghai(stock_code):
     :param stock_code:股票ID, 若以 'sz', 'sh' 开头直接返回对应类型，否则使用内置规则判断
     :return 'sh' or 'sz'"""
     assert type(stock_code) is str, "stock code need str type"
-    sh_head = ("50", "51", "60", "90", "110", "113",
-               "132", "204", "5", "6", "9", "7")
+    sh_head = ("50", "51", "60", "90", "110", "113", "132", "204", "5", "6", "9", "7")
     return stock_code.startswith(sh_head)
 
 
@@ -92,11 +91,11 @@ def to_date_str(dt):
 class TushareQuotation(Quotation):
     """
     tushare 行情
-    """""
+    """ ""
 
     def __init__(self):
-        tushare_config = file2dict('tushare.json')
-        ts.set_token(tushare_config['token'])
+        tushare_config = file2dict("tushare.json")
+        ts.set_token(tushare_config["token"])
 
     def get_stock_type(self, stock_code: str):
         return "SH" if is_shanghai(stock_code) else "SZ"
@@ -105,11 +104,21 @@ class TushareQuotation(Quotation):
         return "%s.%s" % (code, self.get_stock_type(code))
 
     def _get_cache_key(self, security, end_dt, unit):
-        return "data/tushare_%s_%s_%s.csv" % (self._format_code(security), to_date_str(end_dt), unit)
+        return "data/tushare_%s_%s_%s.csv" % (
+            self._format_code(security),
+            to_date_str(end_dt),
+            unit,
+        )
 
-    def get_bars(self, security, count, unit='1d',
-                 fields=['trade_date', 'open', 'high', 'low', 'close'],
-                 include_now=False, end_dt=None) -> DataFrame:
+    def get_bars(
+        self,
+        security,
+        count,
+        unit="1d",
+        fields=["trade_date", "open", "high", "low", "close"],
+        include_now=False,
+        end_dt=None,
+    ) -> DataFrame:
 
         if unit == "1d":
             unit = "D"
@@ -121,11 +130,13 @@ class TushareQuotation(Quotation):
             df.index = pandas.to_datetime(df["trade_date"])
             return df
 
-        df = ts.pro_bar(ts_code=self._format_code(security),
-                        end_date=to_date_str(end_dt),
-                        freq=unit,  # 只免费
-                        asset='E',
-                        limit=count)
+        df = ts.pro_bar(
+            ts_code=self._format_code(security),
+            end_date=to_date_str(end_dt),
+            freq=unit,  # 只免费
+            asset="E",
+            limit=count,
+        )
         df.index = pandas.to_datetime(df["trade_date"])
         df.sort_index(inplace=True)
 
@@ -137,18 +148,19 @@ class TushareQuotation(Quotation):
 class JQDataQuotation(Quotation):
     """
     JQData行情
-    """""
+    """ ""
+
     cache = {}
 
     def __init__(self):
-        jqdata = {'user': os.getenv('USER_ID'), 'password': os.getenv('PASSWORD')}
-        with open("jqdata.json", 'w', encoding='utf-8') as fw:
-            json.dump(jqdata, fw, indent=4, ensure_ascii=False) 
-        
-        config = file2dict('jqdata.json')
+        jqdata = {"user": os.getenv("USER_ID"), "password": os.getenv("PASSWORD")}
+        with open("jqdata.json", "w", encoding="utf-8") as fw:
+            json.dump(jqdata, fw, indent=4, ensure_ascii=False)
+
+        config = file2dict("jqdata.json")
         print("user:  ", config["user"])
         print("password:  ", config["password"])
-        
+
         jqdatasdk.auth(config["user"], config["password"])
 
     def _get_cache_key(self, security, end_dt, unit):
@@ -161,23 +173,39 @@ class JQDataQuotation(Quotation):
         return "%s%s" % (code, self.get_stock_type(code))
 
     def get_north_money(self, date):
-        n_sh = finance.run_query(query(finance.STK_ML_QUOTA).filter(finance.STK_ML_QUOTA.day <= date,
-                                                                    finance.STK_ML_QUOTA.link_id == 310001).order_by(
-            finance.STK_ML_QUOTA.day.desc()).limit(10))
-        n_sz = finance.run_query(query(finance.STK_ML_QUOTA).filter(finance.STK_ML_QUOTA.day <= date,
-                                                                    finance.STK_ML_QUOTA.link_id == 310002).order_by(
-            finance.STK_ML_QUOTA.day.desc()).limit(10))
+        n_sh = finance.run_query(
+            query(finance.STK_ML_QUOTA)
+            .filter(
+                finance.STK_ML_QUOTA.day <= date, finance.STK_ML_QUOTA.link_id == 310001
+            )
+            .order_by(finance.STK_ML_QUOTA.day.desc())
+            .limit(10)
+        )
+        n_sz = finance.run_query(
+            query(finance.STK_ML_QUOTA)
+            .filter(
+                finance.STK_ML_QUOTA.day <= date, finance.STK_ML_QUOTA.link_id == 310002
+            )
+            .order_by(finance.STK_ML_QUOTA.day.desc())
+            .limit(10)
+        )
         total_net_in = 0
         for i in range(0, 3):
-            sh_in = n_sh['buy_amount'][i] - n_sh['sell_amount'][i]
-            sz_in = n_sz['buy_amount'][i] - n_sz['sell_amount'][i]
+            sh_in = n_sh["buy_amount"][i] - n_sh["sell_amount"][i]
+            sz_in = n_sz["buy_amount"][i] - n_sz["sell_amount"][i]
             amount = sh_in + sz_in
             total_net_in += amount
         return total_net_in
 
-    def get_bars(self, security, count, unit='1d',
-                 fields=['date', 'open', 'high', 'low', 'close', 'volume'],
-                 include_now=True, end_dt=None) -> DataFrame:
+    def get_bars(
+        self,
+        security,
+        count,
+        unit="1d",
+        fields=["date", "open", "high", "low", "close", "volume"],
+        include_now=True,
+        end_dt=None,
+    ) -> DataFrame:
 
         query_dt = end_dt
         if not isinstance(query_dt, datetime.datetime):
@@ -185,8 +213,8 @@ class JQDataQuotation(Quotation):
 
         query_dt += datetime.timedelta(days=1)
 
-        if 'date' not in fields:
-            fields.append('date')
+        if "date" not in fields:
+            fields.append("date")
 
         cache_key = self._get_cache_key(security, query_dt, unit)
 
@@ -202,12 +230,16 @@ class JQDataQuotation(Quotation):
             self.cache[cache_key] = df
             return df[df.index <= end_dt] if "m" in unit else df
 
-        df = jqdatasdk.get_bars(self._format_code(security), 10000,
-                                unit=unit,
-                                fields=fields,
-                                include_now=include_now,
-                                # 取整天的数据
-                                end_dt=to_date_str(query_dt), fq_ref_date=datetime.datetime.now())
+        df = jqdatasdk.get_bars(
+            self._format_code(security),
+            10000,
+            unit=unit,
+            fields=fields,
+            include_now=include_now,
+            # 取整天的数据
+            end_dt=to_date_str(query_dt),
+            fq_ref_date=datetime.datetime.now(),
+        )
         df.index = df.date
         df.sort_index(inplace=True)
         # 放入缓存
@@ -225,7 +257,7 @@ class JQDataQuotation(Quotation):
 class FreeOnlineQuotation(Quotation):
     """
     实时行情
-    """""
+    """ ""
 
     def get_stock_type(self, stock_code: str):
         return "sh" if is_shanghai(stock_code) else "sz"
@@ -233,10 +265,18 @@ class FreeOnlineQuotation(Quotation):
     def _format_code(self, code: str) -> str:
         return "%s%s" % (self.get_stock_type(code), code)
 
-    def get_bars(self, security, count, unit='1d',
-                 fields=['date', 'open', 'high', 'low', 'close', 'volume'],
-                 include_now=False, end_dt=None) -> DataFrame:
-        df = get_price(self._format_code(security), end_date=end_dt, count=security, frequency=unit)
+    def get_bars(
+        self,
+        security,
+        count,
+        unit="1d",
+        fields=["date", "open", "high", "low", "close", "volume"],
+        include_now=False,
+        end_dt=None,
+    ) -> DataFrame:
+        df = get_price(
+            self._format_code(security), end_date=end_dt, count=security, frequency=unit
+        )
         return df
 
 
@@ -253,8 +293,8 @@ def use_quotation(source: str) -> Quotation:
     return FreeOnlineQuotation()
 
 
-if __name__ == '__main__':
-    qutation = use_quotation('jqdata')
+if __name__ == "__main__":
+    qutation = use_quotation("jqdata")
     # df1 = qutation.get_bars("002230", 200, unit="5m", end_dt=datetime.datetime.now())
     # df2 = qutation.get_bars("002230", 200, unit="5m", end_dt=datetime.datetime.now())
     # print(df1)

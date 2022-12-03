@@ -2,12 +2,9 @@
 import datetime
 from typing import List
 
+import talib
 from easyquant.quotation import Quotation
 from easytrader.webtrader import WebTrader
-from easytrader.model import *
-
-from talib._ta_lib import *
-import talib
 
 
 class Context:
@@ -15,7 +12,13 @@ class Context:
     上下文
     """
 
-    def __init__(self, user: WebTrader, quotation: Quotation, current_dt=datetime.datetime.now(), trade_mode=True):
+    def __init__(
+        self,
+        user: WebTrader,
+        quotation: Quotation,
+        current_dt=datetime.datetime.now(),
+        trade_mode=True,
+    ):
         self.change_dt(current_dt)
         self.user = user
         self.quotation = quotation
@@ -25,13 +28,18 @@ class Context:
     def is_trade_date(self, date: str):
         return date in self.trade_days
 
-    def change_dt(self, current_dt:datetime.datetime):
+    def change_dt(self, current_dt: datetime.datetime):
         self.current_dt = current_dt
         self.previous_date = self.current_dt - datetime.timedelta(days=1)
 
-    def fetch_bars(self,  stock_code: str, max_num=120, unit='1d',
-                   fields=['date', 'open', 'high', 'low', 'close'],
-                   end_dt=None):
+    def fetch_bars(
+        self,
+        stock_code: str,
+        max_num=120,
+        unit="1d",
+        fields=["date", "open", "high", "low", "close"],
+        end_dt=None,
+    ):
         """
         获取K线
         :param stock_code:
@@ -41,9 +49,13 @@ class Context:
         :param end_dt:
         :return:
         """
-        return self.quotation.get_bars(stock_code, max_num,
-                                       unit=unit,fields=fields,
-                                       end_dt=end_dt if end_dt else self.current_dt)
+        return self.quotation.get_bars(
+            stock_code,
+            max_num,
+            unit=unit,
+            fields=fields,
+            end_dt=end_dt if end_dt else self.current_dt,
+        )
 
     def fetch_minute_bars(self, stock_code: str, minute=5, max_num=80):
         """
@@ -53,11 +65,13 @@ class Context:
         :param max_num:
         :return:
         """
-        return self.quotation.get_bars(stock_code, max_num,
-                                       unit=str(minute) + "m",
-                                       end_dt=self.current_dt)
+        return self.quotation.get_bars(
+            stock_code, max_num, unit=str(minute) + "m", end_dt=self.current_dt
+        )
 
-    def calculate_minute_cci(self, stock_code: str, minute=5, max_num=80, time_period=14):
+    def calculate_minute_cci(
+        self, stock_code: str, minute=5, max_num=80, time_period=14
+    ):
         """
         分钟级cci
         :param stock_code:
@@ -90,7 +104,9 @@ class Context:
     #     df['volume'] = df['volume'].astype('float')
     #     return df
 
-    def calculate_minute_rsi(self, stock_code: str, minute=5, max_num=80, time_period=6):
+    def calculate_minute_rsi(
+        self, stock_code: str, minute=5, max_num=80, time_period=6
+    ):
         """
         计算RSI
         :param stock_code:
@@ -131,7 +147,13 @@ class Context:
         :param volume: 买入总金额 由 volume / price 取整， 若指定 price 则此参数无效
         :param entrust_prop:
         """
-        return self.user.buy(security, price=price, amount=amount, volume=volume, entrust_prop=entrust_prop)
+        return self.user.buy(
+            security,
+            price=price,
+            amount=amount,
+            volume=volume,
+            entrust_prop=entrust_prop,
+        )
 
     def sell(self, security, price=0, amount=0, volume=0, entrust_prop=0):
         """卖出股票
@@ -141,7 +163,13 @@ class Context:
         :param volume: 卖出总金额 由 volume / price 取整， 若指定 price 则此参数无效
         :param entrust_prop:
         """
-        return self.user.sell(security, price=price, amount=amount, volume=volume, entrust_prop=entrust_prop)
+        return self.user.sell(
+            security,
+            price=price,
+            amount=amount,
+            volume=volume,
+            entrust_prop=entrust_prop,
+        )
 
     def __getattr__(self, func_name):
         def talib_func(*args, **kwargs):

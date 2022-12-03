@@ -5,7 +5,9 @@ from easyquant.quotation import use_quotation
 
 
 def get_t_price(code: str):
-    df = quotation.get_bars(code, count=1, end_dt=datetime.datetime.now() - datetime.timedelta(days=1))
+    df = quotation.get_bars(
+        code, count=1, end_dt=datetime.datetime.now() - datetime.timedelta(days=1)
+    )
 
     last = df[-1:]
 
@@ -26,7 +28,7 @@ def get_t_prices(codes: List[str]):
     return [get_t_price(code) for code in codes]
 
 
-quotation = use_quotation('jqdata')
+quotation = use_quotation("jqdata")
 codes = {
     # "512580": "碳中和",
     # "002233": "塔牌",
@@ -38,11 +40,13 @@ codes = {
     # "300750": "宁德时代",
     # "159949": "创业板50",
     # "600900": "长电",
-    "600048": "保利"}
+    "600048": "保利",
+}
 
 for stock in codes.keys():
     r1, r2, s1, s2 = get_t_price(stock)
 
-    print("%s %s : 阻力价格1 = %s, 阻力价格2 = %s, 支撑1 =%s , 支撑2 =%s" % (codes[stock], stock, r1, r2, s1, s2))
-
-
+    print(
+        "%s %s : 阻力价格1 = %s, 阻力价格2 = %s, 支撑1 =%s , 支撑2 =%s"
+        % (codes[stock], stock, r1, r2, s1, s2)
+    )

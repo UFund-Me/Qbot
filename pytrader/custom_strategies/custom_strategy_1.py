@@ -1,19 +1,12 @@
-import time
-import datetime
-from typing import List, Dict
+from typing import Dict
 
-from dateutil import tz
-from pandas import DataFrame
-
-from easyquant import DefaultLogHandler
 from easyquant import StrategyTemplate
 from easyquant.context import Context
-from easyquant.event_engine import Event
-from easytrader.model import Position
+from pandas import DataFrame
 
 
 class Strategy(StrategyTemplate):
-    name = 'example strategy'
+    name = "example strategy"
 
     watch_stocks = ["002230"]
 

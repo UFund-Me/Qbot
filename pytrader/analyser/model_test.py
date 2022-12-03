@@ -1,12 +1,10 @@
 import qlib
 from qlib.config import REG_CN
-from qlib.contrib.model.gbdt import LGBModel
-from qlib.contrib.data.handler import Alpha158
-from qlib.utils import init_instance_by_config, flatten_dict
+from qlib.utils import flatten_dict, init_instance_by_config
 from qlib.workflow import R
-from qlib.workflow.record_temp import SignalRecord, PortAnaRecord
+from qlib.workflow.record_temp import SignalRecord
 
-qlib.init(provider_uri='data/cn_data', region=REG_CN)
+qlib.init(provider_uri="data/cn_data", region=REG_CN)
 
 market = "csi300"
 benchmark = "SH000300"

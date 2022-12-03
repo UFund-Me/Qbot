@@ -44,7 +44,7 @@ class DayKline(basequotation.BaseQuotation):
                 else:
                     stock_detail = value.get("day")
                 if stock_detail is None:
-                    print("stock code data not find %s"%stock_code)
+                    print("stock code data not find %s" % stock_code)
                     continue
                 stock_dict[stock_code] = stock_detail
                 break

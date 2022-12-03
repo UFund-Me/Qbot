@@ -1,23 +1,14 @@
 # -*- coding: utf-8 -*-
-import json
-import numbers
 import os
-import pickle
-import re
 import time
-import random
 import uuid
-from datetime import datetime
 from typing import List
 
-import requests
-
 from easytrader import exceptions, webtrader
-from easytrader.log import logger
-from easytrader.model import Balance, Position, Entrust, Deal
-from easytrader.utils.misc import parse_cookies_str
+from easytrader.model import Balance, Deal, Entrust, Position
 
 # import ddddocr
+
 
 class MockTrader(webtrader.WebTrader):
     config_path = os.path.dirname(__file__) + "/config/mock.json"
@@ -36,7 +27,8 @@ class MockTrader(webtrader.WebTrader):
                 frozen_balance=0,
                 market_value=0,
                 pre_interest=0.25,
-                money_type=u"人民币")
+                money_type=u"人民币",
+            )
         ]
 
         self.positions: List[Position] = []
@@ -131,7 +123,7 @@ class MockTrader(webtrader.WebTrader):
         balance = self.get_balance()[0]
         cost = self.calculate_cost(amount, price, entrust_bs)
         if not volume:
-            volume = float(price) * amount # 可能要取整数
+            volume = float(price) * amount  # 可能要取整数
 
         total_cost = volume + cost
         if balance.current_balance < total_cost and entrust_bs == "B":
@@ -140,30 +132,34 @@ class MockTrader(webtrader.WebTrader):
             raise exceptions.TradeError(u"数量不能为0")
 
         entrust_no = str(uuid.uuid1())
-        self.entrust.append(Entrust(
-            entrust_no=entrust_no,
-            bs_type=entrust_bs,
-            entrust_status='已成交',
-            report_time=self.time.strftime("%Y-%m-%d %H:%M:%S"),
-            stock_code=security,
-            stock_name=security,
-            entrust_amount=amount,
-            entrust_price=price,
-            cost=cost
-        ))
+        self.entrust.append(
+            Entrust(
+                entrust_no=entrust_no,
+                bs_type=entrust_bs,
+                entrust_status="已成交",
+                report_time=self.time.strftime("%Y-%m-%d %H:%M:%S"),
+                stock_code=security,
+                stock_name=security,
+                entrust_amount=amount,
+                entrust_price=price,
+                cost=cost,
+            )
+        )
 
-        self.deals.append(Deal(
-            deal_no=str(uuid.uuid1()),
-            entrust_no=entrust_no,
-            bs_type=entrust_bs,
-            stock_code=security,
-            stock_name=security,
-            deal_amount=amount,
-            deal_price=price,
-            entrust_amount=amount,
-            entrust_price=price,
-            deal_time=self.time.strftime("%Y-%m-%d %H:%M:%S"),
-        ))
+        self.deals.append(
+            Deal(
+                deal_no=str(uuid.uuid1()),
+                entrust_no=entrust_no,
+                bs_type=entrust_bs,
+                stock_code=security,
+                stock_name=security,
+                deal_amount=amount,
+                deal_price=price,
+                entrust_amount=amount,
+                entrust_price=price,
+                deal_time=self.time.strftime("%Y-%m-%d %H:%M:%S"),
+            )
+        )
         balance = self.assets[0]
 
         position = self.find_hold_position(security)
@@ -171,30 +167,33 @@ class MockTrader(webtrader.WebTrader):
         if entrust_bs == "B":
             # 更新持仓
             balance.enable_balance = balance.enable_balance - total_cost
-            balance.current_balance = max (0, balance.current_balance - total_cost)
+            balance.current_balance = max(0, balance.current_balance - total_cost)
             balance.asset_balance -= total_cost
             if position:
-                position.cost_price = (position.current_amount * position.cost_price + volume) / (
-                        position.current_amount + amount)
+                position.cost_price = (
+                    position.current_amount * position.cost_price + volume
+                ) / (position.current_amount + amount)
                 position.current_amount += amount
             else:
-                self.positions.append(Position(
-                    current_amount=amount,
-                    enable_amount=amount,
-                    income_balance=0,
-                    cost_price= total_cost / amount,
-                    last_price=price,
-                    market_value=volume,
-                    position_str="random",
-                    stock_code=security,
-                    stock_name=security))
+                self.positions.append(
+                    Position(
+                        current_amount=amount,
+                        enable_amount=amount,
+                        income_balance=0,
+                        cost_price=total_cost / amount,
+                        last_price=price,
+                        market_value=volume,
+                        position_str="random",
+                        stock_code=security,
+                        stock_name=security,
+                    )
+                )
         else:
             # 卖出
             if position:
                 position.current_amount -= amount
                 # 更新持仓
                 balance.enable_balance = balance.enable_balance + volume - cost
-
 
     def find_hold_position(self, code: str) -> Position:
         for position in self.positions:
@@ -223,8 +222,8 @@ class MockTrader(webtrader.WebTrader):
         return self._trade(security, price, amount, volume, "S")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     trader = MockTrader()
-    trader.prepare('../eastmoney.json')
+    trader.prepare("../eastmoney.json")
     print(trader.get_position())
-    trader.buy('002230', price=55, amount=100)
+    trader.buy("002230", price=55, amount=100)

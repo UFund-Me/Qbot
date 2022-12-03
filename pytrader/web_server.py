@@ -1,44 +1,52 @@
 import datetime
 import json
-from datetime import datetime, timedelta
-
-import uvicorn
-from easytrader.webtrader import WebTrader
-from fastapi import Depends, FastAPI, HTTPException, status, Path
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from jose import jwt, JWTError
-from starlette.responses import RedirectResponse
-
-import easyquant
-import easyquotation.api
-from easyquant.log_handler.default_handler import DefaultLogHandler
-from easyquant.quotation import use_quotation
-from t import get_t_price
-from web.database import Database
-from web.db_service import DbService
-from web.dto import LoginRequest, BuyRequest, StrategyModel
-from web.models import User
-from web.settings import APISettings
-from web.user_service import Token, route_data, UserService, oauth2_scheme, TokenData, UserModel
 
 # fix mimetypes error, default .js is text/plain
 import mimetypes
+from datetime import timedelta
+
+import easyquant
+import easyquotation.api
+import uvicorn
+from easyquant.log_handler.default_handler import DefaultLogHandler
+from easyquant.quotation import use_quotation
+from easytrader.webtrader import WebTrader
+from fastapi import Depends, FastAPI, HTTPException, Path, status
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from jose import JWTError, jwt
+from starlette.responses import RedirectResponse
+from t import get_t_price
+from web.database import Database
+from web.db_service import DbService
+from web.dto import BuyRequest, LoginRequest, StrategyModel
+from web.models import User
+from web.settings import APISettings
+from web.user_service import (
+    Token,
+    TokenData,
+    UserModel,
+    UserService,
+    oauth2_scheme,
+    route_data,
+)
 
 mimetypes.add_type("application/javascript; charset=utf-8", ".js")
 
 # 东财
-broker = 'eastmoney'
-need_data = 'account.json'
-log_type = 'file'
+broker = "eastmoney"
+need_data = "account.json"
+log_type = "file"
 
-log_handler = DefaultLogHandler(name='测试', log_type=log_type, filepath='logs.log')
-engine = easyquant.MainEngine(broker,
-                              need_data,
-                              quotation='online',
-                              # 1分钟K线
-                              bar_type="1m",
-                              log_handler=log_handler)
+log_handler = DefaultLogHandler(name="测试", log_type=log_type, filepath="logs.log")
+engine = easyquant.MainEngine(
+    broker,
+    need_data,
+    quotation="online",
+    # 1分钟K线
+    bar_type="1m",
+    log_handler=log_handler,
+)
 trader: WebTrader = engine.user
 
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
@@ -50,8 +58,8 @@ settings = APISettings()
 database = Database()
 db_service = DbService(settings, database)
 user_service = UserService(db_service)
-quotation = use_quotation('jqdata')
-online_quotation = easyquotation.api.use('qq')
+quotation = use_quotation("jqdata")
+online_quotation = easyquotation.api.use("qq")
 
 origins = ["*"]
 app.add_middleware(
@@ -96,48 +104,48 @@ async def root():
 
 @app.get("/api/balance")
 def get_balance(current_user: User = Depends(get_current_active_user)):
-    return {
-        'error': 0,
-        'data': trader.get_balance()[0]
-    }
+    return {"error": 0, "data": trader.get_balance()[0]}
 
 
 @app.get("/api/position")
 def get_position(current_user: User = Depends(get_current_active_user)):
-    return {
-        'error': 0,
-        'data': trader.get_position()
-    }
+    return {"error": 0, "data": trader.get_position()}
 
 
 @app.get("/api/entrust")
 def get_entrust(current_user: User = Depends(get_current_active_user)):
-    return {
-        'error': 0,
-        'data': trader.get_entrust()
-    }
+    return {"error": 0, "data": trader.get_entrust()}
 
 
 @app.get("/api/deal")
 def get_current_deal(current_user: User = Depends(get_current_active_user)):
-    return {
-        'error': 0,
-        'data': trader.get_current_deal()
-    }
+    return {"error": 0, "data": trader.get_current_deal()}
 
 
 @app.post("/api/buy")
-async def buy(request: BuyRequest, current_user: User = Depends(get_current_active_user)):
-    trader.buy(request.security, price=request.price, amount=request.amount, volume=request.volume,
-               entrust_prop=request.entrust_prop)
-    return {'error': 0}
+async def buy(
+    request: BuyRequest, current_user: User = Depends(get_current_active_user)
+):
+    trader.buy(
+        request.security,
+        price=request.price,
+        amount=request.amount,
+        volume=request.volume,
+        entrust_prop=request.entrust_prop,
+    )
+    return {"error": 0}
 
 
 @app.post("/api/sell")
-async def buy(request: BuyRequest, ):
-    trader.sell(request.security, price=request.price, amount=request.amount, volume=request.volume,
-                entrust_prop=request.entrust_prop)
-    return {'error': 0}
+async def sell(request: BuyRequest):
+    trader.sell(
+        request.security,
+        price=request.price,
+        amount=request.amount,
+        volume=request.volume,
+        entrust_prop=request.entrust_prop,
+    )
+    return {"error": 0}
 
 
 @app.post("/api/watch_stocks/{code}")
@@ -145,19 +153,13 @@ def watch_stock(code: str = Path(..., title="The stock code to watch")):
     security = quotation.get_stock_info(code)
     price = quotation.get_price(code, date=datetime.now())
     dbitem = db_service.watch_stock(code, security.name, price)
-    return {
-        'error': 0,
-        'data': dbitem
-    }
+    return {"error": 0, "data": dbitem}
 
 
 @app.delete("/api/watch_stocks/{code}")
 def delete_watch_stock(code: str = Path(..., title="The stock code to remove")):
     db_item = db_service.remove_stock(code)
-    return {
-        'error': 0,
-        'data': db_item
-    }
+    return {"error": 0, "data": db_item}
 
 
 @app.get("/api/stocks")
@@ -167,32 +169,23 @@ async def get_stocks(current_user: User = Depends(get_current_active_user)):
     data = online_quotation.real(codes)
     data = list(data.values())
     for stock in data:
-        stock['t_price'] = get_t_price(stock['code'])
+        stock["t_price"] = get_t_price(stock["code"])
     return data
 
 
 @app.get("/api/strategies")
 async def list_strategies():
-    return {
-        'error': 0,
-        'data': db_service.list_strategies()
-    }
+    return {"error": 0, "data": db_service.list_strategies()}
 
 
 @app.post("/api/strategies")
 def add_strategy(model: StrategyModel):
-    return {
-        'error': 0,
-        'data': db_service.add_strategy(model.name, model.code)
-    }
+    return {"error": 0, "data": db_service.add_strategy(model.name, model.code)}
 
 
 @app.put("/api/strategies/{id}")
 def update_strategy(model: StrategyModel, id: int = Path(..., title="strategy id")):
-    return {
-        'error': 0,
-        'data': db_service.update_strategy(id, model.name, model.code)
-    }
+    return {"error": 0, "data": db_service.update_strategy(id, model.name, model.code)}
 
 
 @app.post("/api/login", response_model=Token)
@@ -218,7 +211,8 @@ async def read_users_me(current_user: User = Depends(get_current_active_user)):
         full_name=current_user.full_name,
         roles=json.loads(current_user.roles),
         username=current_user.username,
-        disabled=False)
+        disabled=False,
+    )
     return user
 
 

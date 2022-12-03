@@ -97,16 +97,16 @@ pos  0.000000
 
 
 from copy import deepcopy
-import qlib
+
 import fire
 import pandas as pd
-from qlib.config import REG_CN, HIGH_FREQ_CONFIG
-from qlib.data import D
-from qlib.utils import exists_qlib_data, init_instance_by_config, flatten_dict
-from qlib.workflow import R
-from qlib.workflow.record_temp import SignalRecord, PortAnaRecord
-from qlib.tests.data import GetData
+import qlib
 from qlib.backtest import collect_data
+from qlib.config import HIGH_FREQ_CONFIG, REG_CN
+from qlib.tests.data import GetData
+from qlib.utils import flatten_dict, init_instance_by_config
+from qlib.workflow import R
+from qlib.workflow.record_temp import PortAnaRecord, SignalRecord
 
 
 class NestedDecisionExecutionWorkflow:
@@ -172,9 +172,7 @@ class NestedDecisionExecutionWorkflow:
                                 "time_per_step": "5min",
                                 "generate_portfolio_metrics": True,
                                 "verbose": True,
-                                "indicator_config": {
-                                    "show_indicator": True,
-                                },
+                                "indicator_config": {"show_indicator": True},
                             },
                         },
                         "inner_strategy": {
@@ -182,24 +180,17 @@ class NestedDecisionExecutionWorkflow:
                             "module_path": "qlib.contrib.strategy.rule_strategy",
                         },
                         "generate_portfolio_metrics": True,
-                        "indicator_config": {
-                            "show_indicator": True,
-                        },
+                        "indicator_config": {"show_indicator": True},
                     },
                 },
                 "inner_strategy": {
                     "class": "SBBStrategyEMA",
                     "module_path": "qlib.contrib.strategy.rule_strategy",
-                    "kwargs": {
-                        "instruments": market,
-                        "freq": "1min",
-                    },
+                    "kwargs": {"instruments": market, "freq": "1min"},
                 },
                 "track_data": True,
                 "generate_portfolio_metrics": True,
-                "indicator_config": {
-                    "show_indicator": True,
-                },
+                "indicator_config": {"show_indicator": True},
             },
         },
         "backtest": {
@@ -220,13 +211,21 @@ class NestedDecisionExecutionWorkflow:
     def _init_qlib(self):
         """initialize qlib"""
         provider_uri_day = "~/.qlib/qlib_data/cn_data"  # target_dir
-        GetData().qlib_data(target_dir=provider_uri_day, region=REG_CN, version="v2", exists_skip=True)
+        GetData().qlib_data(
+            target_dir=provider_uri_day, region=REG_CN, version="v2", exists_skip=True
+        )
         provider_uri_1min = HIGH_FREQ_CONFIG.get("provider_uri")
         GetData().qlib_data(
-            target_dir=provider_uri_1min, interval="1min", region=REG_CN, version="v2", exists_skip=True
+            target_dir=provider_uri_1min,
+            interval="1min",
+            region=REG_CN,
+            version="v2",
+            exists_skip=True,
         )
         provider_uri_map = {"1min": provider_uri_1min, "day": provider_uri_day}
-        qlib.init(provider_uri=provider_uri_map, dataset_cache=None, expression_cache=None)
+        qlib.init(
+            provider_uri=provider_uri_map, dataset_cache=None, expression_cache=None
+        )
 
     def _train_model(self, model, dataset):
         with R.start(experiment_name="train"):
@@ -247,11 +246,7 @@ class NestedDecisionExecutionWorkflow:
         strategy_config = {
             "class": "TopkDropoutStrategy",
             "module_path": "qlib.contrib.strategy.signal_strategy",
-            "kwargs": {
-                "signal": (model, dataset),
-                "topk": 50,
-                "n_drop": 5,
-            },
+            "kwargs": {"signal": (model, dataset), "topk": 50, "n_drop": 5},
         }
         self.port_analysis_config["strategy"] = strategy_config
         self.port_analysis_config["backtest"]["benchmark"] = self.benchmark
@@ -281,13 +276,11 @@ class NestedDecisionExecutionWorkflow:
         strategy_config = {
             "class": "TopkDropoutStrategy",
             "module_path": "qlib.contrib.strategy.signal_strategy",
-            "kwargs": {
-                "signal": (model, dataset),
-                "topk": 50,
-                "n_drop": 5,
-            },
+            "kwargs": {"signal": (model, dataset), "topk": 50, "n_drop": 5},
         }
-        data_generator = collect_data(executor=executor_config, strategy=strategy_config, **backtest_config)
+        data_generator = collect_data(
+            executor=executor_config, strategy=strategy_config, **backtest_config
+        )
         for trade_decision in data_generator:
             print(trade_decision)
 
@@ -303,13 +296,17 @@ class NestedDecisionExecutionWorkflow:
     def check_diff_freq(self):
         self._init_qlib()
         exp = R.get_exp(experiment_name="backtest")
-        rec = next(iter(exp.list_recorders().values()))  # assuming this will get the latest recorder
+        rec = next(
+            iter(exp.list_recorders().values())
+        )  # assuming this will get the latest recorder
         for check_key in "account", "total_turnover", "total_cost":
             check_key = "total_cost"
 
             acc_dict = {}
             for freq in ["30minute", "5minute", "1day"]:
-                acc_dict[freq] = rec.load_object(f"portfolio_analysis/report_normal_{freq}.pkl")[check_key]
+                acc_dict[freq] = rec.load_object(
+                    f"portfolio_analysis/report_normal_{freq}.pkl"
+                )[check_key]
             acc_df = pd.DataFrame(acc_dict)
             acc_resam = acc_df.resample("1d").last().dropna()
             assert (acc_resam["30minute"] == acc_resam["1day"]).all()
@@ -362,11 +359,7 @@ class NestedDecisionExecutionWorkflow:
         strategy_config = {
             "class": "TopkDropoutStrategy",
             "module_path": "qlib.contrib.strategy.signal_strategy",
-            "kwargs": {
-                "signal": (model, dataset),
-                "topk": 50,
-                "n_drop": 5,
-            },
+            "kwargs": {"signal": (model, dataset), "topk": 50, "n_drop": 5},
         }
         pa_conf = deepcopy(self.port_analysis_config)
         pa_conf["strategy"] = strategy_config

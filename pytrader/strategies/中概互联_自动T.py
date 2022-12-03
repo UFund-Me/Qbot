@@ -1,15 +1,10 @@
 import time
-import datetime
-from typing import List, Dict
-
-from dateutil import tz
+from typing import Dict
 from pandas import DataFrame
 
 from easyquant import DefaultLogHandler
 from easyquant import StrategyTemplate
 from easyquant.context import Context
-from easyquant.event_engine import Event
-
 
 class Strategy(StrategyTemplate):
     name = '测试策略1'

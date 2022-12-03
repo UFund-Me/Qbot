@@ -2,12 +2,13 @@
 import logging
 import sys
 
+from easytrader.eastmoney_trader import EastMoneyTrader
 from easytrader.log import logger
 from easytrader.mock_trader import MockTrader
-from easytrader.eastmoney_trader import EastMoneyTrader
 
 if sys.version_info <= (3, 5):
     raise TypeError("不支持 Python3.5 及以下版本，请升级")
+
 
 def use(broker, debug=False, **kwargs):
     """用于生成特定的券商对象
@@ -32,4 +33,3 @@ def use(broker, debug=False, **kwargs):
         return EastMoneyTrader(**kwargs)
 
     raise NotImplementedError
-

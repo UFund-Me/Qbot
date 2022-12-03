@@ -1,17 +1,18 @@
-import qlib
-import pandas as pd
-from qlib.config import REG_CN
-
-from qlib.contrib.evaluate import risk_analysis
-from qlib.contrib.strategy import TopkDropoutStrategy
-from qlib.contrib.evaluate import backtest_daily
 import pickle
 
-if __name__ == '__main__':
-    # init qlib
-    qlib.init(provider_uri='data/cn_data', region=REG_CN)
+import pandas as pd
+import qlib
+from qlib.config import REG_CN
+from qlib.contrib.evaluate import backtest_daily, risk_analysis
+from qlib.contrib.strategy import TopkDropoutStrategy
 
-    with open('mlruns/3/ee9de2cb147348c58cfe2dd0bf06f5f6/artifacts/pred.pkl','rb') as f:
+if __name__ == "__main__":
+    # init qlib
+    qlib.init(provider_uri="data/cn_data", region=REG_CN)
+
+    with open(
+        "mlruns/3/ee9de2cb147348c58cfe2dd0bf06f5f6/artifacts/pred.pkl", "rb"
+    ) as f:
         pred_score = pickle.load(f)
 
     CSI300_BENCH = "SH000300"
@@ -28,10 +29,11 @@ if __name__ == '__main__':
     )
     analysis = dict()
     analysis["excess_return_without_cost"] = risk_analysis(
-        report_normal["return"] - report_normal["bench"], freq='day'
+        report_normal["return"] - report_normal["bench"], freq="day"
     )
     analysis["excess_return_with_cost"] = risk_analysis(
-        report_normal["return"] - report_normal["bench"] - report_normal["cost"], freq='day'
+        report_normal["return"] - report_normal["bench"] - report_normal["cost"],
+        freq="day",
     )
 
     analysis_df = pd.concat(analysis)  # type: pd.DataFrame

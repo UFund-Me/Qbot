@@ -9,15 +9,6 @@ export WHITE='\033[34m'
 export YELLOW='\033[33m'
 export NO_COLOR='\033[0m'
 
-# Note(jiaming): Readonly.
-# Not using the `readonly` keyword here as this file may be sourced multiple times
-AVAILABLE_OFFICES=(
-  bayarea
-  beijing
-  shenzhen
-  suzhou
-)
-
 function info() {
   (echo >&2 -e "[${WHITE}${BOLD}INFO${NO_COLOR}] $*")
 }
@@ -67,24 +58,32 @@ function file_ext() {
 # a.pb.txt => pb.txt
 # a.b.pb.txt => pb.txt
 # Ref: https://stackoverflow.com/questions/10586153/how-to-split-a-string-into-an-array-in-bash
-function file_comp_ext() {
-  local filename
-  filename="$(basename "$1")"
-  readarray -d . -t fds <<< "${filename}."
-  unset "fds[-1]"
-  local n="${#fds[@]}"
-  case "${n}" in
-    1)
-      echo ""
-      ;;
-    2)
-      echo "${fds[1]}"
-      ;;
-    *)
-      echo "${fds[-2]}.${fds[-1]}"
-      ;;
-  esac
-}
+# function file_comp_ext() {
+#   local filename
+#   declare -a fds=()
+#   filename="$(basename "$1")"
+#   # readarray -d . -t fds <<< "${filename}."
+#   if [[ -x "${filename}" ]]; then
+#     while IFS=\= read fd; do
+#       fds+=($fd)
+#     done < <("${filename}.")
+#   fi
+
+#   # dismiss "[-1]: bad array subscript"
+#   unset "fds[-1]"
+#   local n="${#fds[@]}"
+#   case "${n}" in
+#     1)
+#       echo ""
+#       ;;
+#     2)
+#       echo "${fds[1]}"
+#       ;;
+#     *)
+#       echo "${fds[-2]}.${fds[-1]}"
+#       ;;
+#   esac
+# }
 
 function array_contains() {
   local match="$1"
@@ -120,10 +119,10 @@ function c_family_header() {
 
 }
 
-# Checks if the specified argument is a proto file.
-function proto_ext() {
-  [[ "$(file_ext "$1")" == "proto" || "$(file_comp_ext "$1")" == "pb.txt" ]]
-}
+# # Checks if the specified argument is a proto file.
+# function proto_ext() {
+#   [[ "$(file_ext "$1")" == "proto" || "$(file_comp_ext "$1")" == "pb.txt" ]]
+# }
 
 function go_ext() {
   [[ "$(file_ext "$1")" == "go" ]]
@@ -245,23 +244,4 @@ function country_of_office() {
       ;;
   esac
   echo "${country}"
-}
-
-#############################################
-# Check if the "canonical" office is valid
-# Globals:
-#   AVAILABLE_OFFICES
-# Arguments:
-#   A canonical office name
-# Returns:
-#   0 if office name is valid, non-zero otherwise
-#############################################
-function validate_office() {
-  local office="$1"
-  for cand in "${AVAILABLE_OFFICES[@]}"; do
-    if [[ "${cand}" == "${office}" ]]; then
-      return 0
-    fi
-  done
-  return 1
 }

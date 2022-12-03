@@ -1,13 +1,10 @@
 # coding: utf-8
 import datetime
+import time
 from collections import deque
 from threading import Thread
 
-import pandas as pd
-import arrow
 from dateutil import tz
-
-import time
 
 from ..context import Context
 from ..easydealutils import time as etime
@@ -51,7 +48,6 @@ class ClockIntervalHandler:
 
 
 class DailyHandler:
-
     def __init__(self, func, time: str):
         """
         :param clock_type:
@@ -72,7 +68,15 @@ class DailyHandler:
 
 
 class ClockMomentHandler:
-    def __init__(self, clock_engine, clock_type, moment=None, is_trading_date=True, makeup=False, call=None):
+    def __init__(
+        self,
+        clock_engine,
+        clock_type,
+        moment=None,
+        is_trading_date=True,
+        makeup=False,
+        call=None,
+    ):
         """
         :param clock_type:
         :param moment: datetime.time
@@ -87,8 +91,7 @@ class ClockMomentHandler:
         self.makeup = makeup
         self.call = call or (lambda: None)
         self.next_time = datetime.datetime.combine(
-            self.clock_engine.now_dt.date(),
-            self.moment,
+            self.clock_engine.now_dt.date(), self.moment,
         )
 
         if not self.makeup and self.is_active():
@@ -105,10 +108,7 @@ class ClockMomentHandler:
             else:
                 next_date = self.next_time.date() + datetime.timedelta(days=1)
 
-            self.next_time = datetime.datetime.combine(
-                next_date,
-                self.moment
-            )
+            self.next_time = datetime.datetime.combine(next_date, self.moment)
 
     def is_active(self):
         if self.is_trading_date and not etime.is_trade_date(self.clock_engine.now_dt):
@@ -122,9 +122,12 @@ class ClockEngine:
     时间推送引擎
     1. 提供统一的 now 时间戳.
     """
-    EventType = 'clock_tick'
 
-    def __init__(self, event_engine: EventEngine, context: Context, tzinfo=None, mock=False):
+    EventType = "clock_tick"
+
+    def __init__(
+        self, event_engine: EventEngine, context: Context, tzinfo=None, mock=False
+    ):
         """
         :param event_engine:
         :param event_engine: tzinfo
@@ -135,10 +138,18 @@ class ClockEngine:
 
         self.event_engine = event_engine
         self.is_active = True
-        self.clock_engine_thread = Thread(target=self.clock_tick, name="ClockEngine.clocktick")
+        self.clock_engine_thread = Thread(
+            target=self.clock_tick, name="ClockEngine.clocktick"
+        )
         self.sleep_time = 1
-        self.trading_state = True if (etime.is_tradetime(datetime.datetime.now()) and etime.is_trade_date(
-            datetime.datetime.now())) else False
+        self.trading_state = (
+            True
+            if (
+                etime.is_tradetime(datetime.datetime.now())
+                and etime.is_trade_date(datetime.datetime.now())
+            )
+            else False
+        )
         self.clock_moment_handlers = deque()
         self.clock_interval_handlers = set()
         self.context = context
@@ -156,19 +167,27 @@ class ClockEngine:
         def _open():
             self.trading_state = True
 
-        self._register_moment('open', datetime.time(9, tzinfo=self.tzinfo), makeup=True, call=_open)
+        self._register_moment(
+            "open", datetime.time(9, tzinfo=self.tzinfo), makeup=True, call=_open
+        )
 
         # 中午休市
-        self._register_moment('pause', datetime.time(11, 30, tzinfo=self.tzinfo), makeup=True)
+        self._register_moment(
+            "pause", datetime.time(11, 30, tzinfo=self.tzinfo), makeup=True
+        )
 
         # 下午开盘
-        self._register_moment('continue', datetime.time(13, tzinfo=self.tzinfo), makeup=True)
+        self._register_moment(
+            "continue", datetime.time(13, tzinfo=self.tzinfo), makeup=True
+        )
 
         # 收盘事件
         def close():
             self.trading_state = False
 
-        self._register_moment('close', datetime.time(15, tzinfo=self.tzinfo), makeup=True, call=close)
+        self._register_moment(
+            "close", datetime.time(15, tzinfo=self.tzinfo), makeup=True, call=close
+        )
 
         # 间隔事件
         # for interval in (0.5, 1, 5, 15, 30, 60):
@@ -223,7 +242,10 @@ class ClockEngine:
                 break
 
     def push_event_type(self, clock_handler):
-        event = Event(event_type=self.EventType, data=Clock(self.trading_state, clock_handler.clock_type))
+        event = Event(
+            event_type=self.EventType,
+            data=Clock(self.trading_state, clock_handler.clock_type),
+        )
         self.event_engine.put(event)
 
     def stop(self):
@@ -241,9 +263,13 @@ class ClockEngine:
     def register_moment(self, clock_type, moment, makeup=False):
         return self._register_moment(clock_type, moment, makeup=makeup)
 
-    def _register_moment(self, clock_type, moment, is_trading_date=True, makeup=False, call=None):
+    def _register_moment(
+        self, clock_type, moment, is_trading_date=True, makeup=False, call=None
+    ):
         handlers = list(self.clock_moment_handlers)
-        handler = ClockMomentHandler(self, clock_type, moment, is_trading_date, makeup, call)
+        handler = ClockMomentHandler(
+            self, clock_type, moment, is_trading_date, makeup, call
+        )
         handlers.append(handler)
 
         # 触发事件重新排序

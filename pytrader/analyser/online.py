@@ -5,16 +5,18 @@
 This example is about how can simulate the OnlineManager based on rolling tasks.
 """
 
-from pprint import pprint
 import fire
 import qlib
-from qlib.model.trainer import DelayTrainerR, DelayTrainerRM, TrainerR, TrainerRM
+from qlib.model.trainer import TrainerRM
+from qlib.tests.config import (
+    CSI100_RECORD_LGB_TASK_CONFIG_ONLINE,
+    CSI100_RECORD_XGBOOST_TASK_CONFIG_ONLINE,
+)
 from qlib.workflow import R
 from qlib.workflow.online.manager import OnlineManager
 from qlib.workflow.online.strategy import RollingStrategy
 from qlib.workflow.task.gen import RollingGen
 from qlib.workflow.task.manage import TaskManager
-from qlib.tests.config import CSI100_RECORD_LGB_TASK_CONFIG_ONLINE, CSI100_RECORD_XGBOOST_TASK_CONFIG_ONLINE
 
 
 class OnlineSimulationExample:
@@ -47,7 +49,10 @@ class OnlineSimulationExample:
             tasks (dict or list[dict]): a set of the task config waiting for rolling and training
         """
         if tasks is None:
-            tasks = [CSI100_RECORD_XGBOOST_TASK_CONFIG_ONLINE, CSI100_RECORD_LGB_TASK_CONFIG_ONLINE]
+            tasks = [
+                CSI100_RECORD_XGBOOST_TASK_CONFIG_ONLINE,
+                CSI100_RECORD_LGB_TASK_CONFIG_ONLINE,
+            ]
         self.exp_name = exp_name
         self.task_pool = task_pool
         self.start_time = start_time
@@ -60,9 +65,13 @@ class OnlineSimulationExample:
         self.rolling_gen = RollingGen(
             step=rolling_step, rtype=RollingGen.ROLL_SD, ds_extra_mod_func=None
         )  # The rolling tasks generator, ds_extra_mod_func is None because we just need to simulate to 2018-10-31 and needn't change the handler end time.
-        self.trainer = TrainerRM(self.exp_name, self.task_pool)  # Also can be TrainerR, TrainerRM, DelayTrainerR
+        self.trainer = TrainerRM(
+            self.exp_name, self.task_pool
+        )  # Also can be TrainerR, TrainerRM, DelayTrainerR
         self.rolling_online_manager = OnlineManager(
-            RollingStrategy(exp_name, task_template=tasks, rolling_gen=self.rolling_gen),
+            RollingStrategy(
+                exp_name, task_template=tasks, rolling_gen=self.rolling_gen
+            ),
             trainer=self.trainer,
             begin_time=self.start_time,
         )
@@ -97,6 +106,6 @@ class OnlineSimulationExample:
 
 
 if __name__ == "__main__":
-    ## to run all workflow automatically with your own parameters, use the command below
+    # To run all workflow automatically with your own parameters, use the command below
     # python online_management_simulate.py main --experiment_name="your_exp_name" --rolling_step=60
     fire.Fire(OnlineSimulationExample)

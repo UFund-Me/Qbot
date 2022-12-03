@@ -5,12 +5,12 @@ from sqlalchemy.orm import sessionmaker
 
 class Database:
     def __init__(self):
-        SQLALCHEMY_DATABASE_URL = f'sqlite:///pytrader.db'
-        self.engine = create_engine(
-            SQLALCHEMY_DATABASE_URL, pool_pre_ping=True
-        )
+        SQLALCHEMY_DATABASE_URL = f"{'sqlite:///pytrader.db'}"
+        self.engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True)
 
-        self.SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
+        self.SessionLocal = sessionmaker(
+            autocommit=False, autoflush=False, bind=self.engine
+        )
 
     def get_db(self):
         db = self.SessionLocal()

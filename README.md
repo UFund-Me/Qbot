@@ -1,4 +1,4 @@
-<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> Qbot </h1>
+<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h1>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="224"/>
@@ -28,19 +28,36 @@
   </p>
 </div>
 
-
-Qbot = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
-
+```
+🤖 Qbot = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
+          |           |          |            |
+          |           |          |             \_ quantstats (dashboard\online operate)
+          |           |           \______________ Qbot - vnpy, pytrader, pyfunds
+          |           \__________________________ BackTest - backtrader, easyquant
+          \______________________________________ quant.ai - qlib, deep learning strategies         
+```
 
 ## Installation
 
+[Install Guide](./docs/Install_guide.md)
+
+```
+ ____________________________________
+< Run ``./env_setup.sh`` to say hello >
+ ------------------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+```
 
 ## Get Started
 
 
-## Benchmark and model zoo
+## Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/en/model_zoo.md).
+Results and models are available in the [model zoo](docs/model_zoo.md).
 
 <div align="center">
   <b>Components</b>
@@ -176,9 +193,9 @@ Results and models are available in the [model zoo](docs/en/model_zoo.md).
 |    FCOS3D     |   ✓    |     ✗      |   ✗    |   ✗   |    ✗    |  ✗  |     ✗      |
 
 
-<sup>**Note:** All the about **300+ models, methods of 40+ papers** in 2D detection supported by [MMDetection](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/model_zoo.md) can be trained or used in this codebase.</sup>
+<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/model_zoo.md) can be trained or used in this codebase.</sup>
 
-
+## Quantstats Report
 ## Contributing
 
 We appreciate all contributions to improve MMDetection3D. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.

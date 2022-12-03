@@ -31,5 +31,7 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        source ./.github/scripts/format_check.sh
+        sudo apt install shellcheck
+        sudo apt install protobuf
+        ./.github/scripts/format_check.sh
       shell: bash

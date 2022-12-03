@@ -1,7 +1,6 @@
-from pandas import DataFrame
-from talib._ta_lib import BBANDS, MA_Type
-
 from backtest_strategies.backtest_strategy_template import BacktestStrategyTemplate
+from pandas import DataFrame
+from talib._ta_lib import BBANDS
 
 
 class BOLLStrategy(BacktestStrategyTemplate):
@@ -9,7 +8,7 @@ class BOLLStrategy(BacktestStrategyTemplate):
 
     def get_singal(self, df: DataFrame):
         upper, middle, lower = self.get_boll(df)
-         # 获取最新价格
+        # 获取最新价格
         current_price = df.close[-1]
 
         # 穿越上轨，买入信号
@@ -18,7 +17,7 @@ class BOLLStrategy(BacktestStrategyTemplate):
 
         # 穿越下轨，卖出信号
         if current_price < lower[-1]:
-            return  0
+            return 0
 
         return -1
 
@@ -27,7 +26,9 @@ class BOLLStrategy(BacktestStrategyTemplate):
 
     def show_score(self, df, ax):
         upper, middle, lower = self.get_boll(df)
-        df['upper'] = upper
-        df['middle'] = middle
-        df['lower'] = lower
-        df[['close','middle', 'upper','lower']].plot(ax=ax, grid=True, title='BOOL', figsize=(20, 10))
+        df["upper"] = upper
+        df["middle"] = middle
+        df["lower"] = lower
+        df[["close", "middle", "upper", "lower"]].plot(
+            ax=ax, grid=True, title="BOOL", figsize=(20, 10)
+        )

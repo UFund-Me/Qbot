@@ -4,8 +4,8 @@
 url = "https://quotes.sina.cn/cn/api/jsonp_v2.php/var%20_sh688017_5_1632742847429=/CN_MarketDataService.getKLineData?symbol=sh688017&scale=5&ma=no&datalen=1023"
 """
 
-import re
 import json
+
 from . import basequotation, helpers
 
 
@@ -37,7 +37,7 @@ class SinaTimeKline(basequotation.BaseQuotation):
     def format_response_data(self, rep_data, **kwargs):
         stock_dict = dict()
         for stock_code, stock_detail in rep_data:
-            start = stock_detail.index('jsopnp(') + len('jsopnp(')
+            start = stock_detail.index("jsopnp(") + len("jsopnp(")
             # pylint: disable=line-too-long
             stock_detail = stock_detail[start:-1]
             stock_dict[stock_code] = json.loads(stock_detail)

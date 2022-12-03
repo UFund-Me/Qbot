@@ -4,7 +4,8 @@
 set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
-source "${TOP_DIR}/scripts/quant_base.sh"
+# shellcheck disable=SC1090,SC1091
+source "${TOP_DIR}/scripts/qbot_base.sh"
 
 GOFMT_PATH=
 function check_gofmt_cmd() {

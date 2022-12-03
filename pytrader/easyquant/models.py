@@ -1,4 +1,3 @@
-
 class SecurityInfo(object):
     code = None
     display_name = None

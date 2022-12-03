@@ -5,8 +5,8 @@ select = B,C,E,F,P,T4,W,B9
 # line length is intentionally set to 80 here because black uses Bugbear
 # See https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length for more details
 max-line-length = 80
-# NOTE (yuting zhao): may change in the future, current setting to see https://github.com/psf/black/blob/main/.flake8
-max-complexity = 18
+# NOTE: may change in the future, current setting to see https://github.com/psf/black/blob/main/.flake8
+max-complexity = 36
 # C408 ignored because we like the dict keyword argument syntax
 # E501 is not flexible enough, we're using B950 instead
 ignore =

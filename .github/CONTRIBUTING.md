@@ -1,5 +1,7 @@
 # Style
 
+> <b>Before you pull request, please run ``./scripts/format.sh --git``.</b>
+
 This project is formatted with [clang-format][fmt] using the style file at the root of the repository. Please run clang-format before sending a pull request.
 
 In general, try to follow the style of surrounding code. We mostly follow the [Google C++ style guide][cpp-style].

@@ -7,4 +7,5 @@ arrow
 tushare
 numpy
 requests
+qlib
 matplotlib==3.2.2

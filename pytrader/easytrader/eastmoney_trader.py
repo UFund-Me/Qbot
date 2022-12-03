@@ -3,19 +3,15 @@ import json
 import numbers
 import os
 import pickle
-import re
-import time
 import random
+import time
 from typing import List
 
+import ddddocr
 import requests
-
 from easytrader import exceptions, webtrader
 from easytrader.log import logger
-from easytrader.model import Balance, Position, Entrust, Deal
-from easytrader.utils.misc import parse_cookies_str
-
-import ddddocr
+from easytrader.model import Balance, Deal, Entrust, Position
 
 
 class EastMoneyTrader(webtrader.WebTrader):
@@ -35,8 +31,8 @@ class EastMoneyTrader(webtrader.WebTrader):
         # "X-Requested-With": "XMLHttpRequest",
     }
 
-    random_number = '0.9033461201665647898'
-    session_file = 'eastmoney_trader.session'
+    random_number = "0.9033461201665647898"
+    session_file = "eastmoney_trader.session"
 
     def __init__(self, **kwargs):
         super(EastMoneyTrader, self).__init__()
@@ -59,8 +55,8 @@ class EastMoneyTrader(webtrader.WebTrader):
 
     def _recognize_verification_code(self):
         ocr = ddddocr.DdddOcr()
-        self.random_number = '0.903%d' % random.randint(100000, 900000)
-        req = self.s.get("%s%s" % (self.config['yzm'], self.random_number))
+        self.random_number = "0.903%d" % random.randint(100000, 900000)
+        req = self.s.get("%s%s" % (self.config["yzm"], self.random_number))
         code = ocr.classification(req.content)
         if len(code) == 4:
             return code
@@ -75,7 +71,7 @@ class EastMoneyTrader(webtrader.WebTrader):
         # always save (to update timeout)
         with open(self.session_file, "wb") as f:
             pickle.dump((self.validate_key, self.s), f)
-            print('updated session cache-file %s' % self.session_file)
+            print("updated session cache-file %s" % self.session_file)
 
     def _reload_session(self):
         if os.path.exists(self.session_file):
@@ -83,40 +79,43 @@ class EastMoneyTrader(webtrader.WebTrader):
                 with open(self.session_file, "rb") as f:
                     self.validate_key, self.s = pickle.load(f)
                     return True
-            except:
-                print('load session failed')
+            except not open(self.session_file, "rb"):
+                print("load session failed")
         return False
 
     def auto_login(self, **kwargs):
         if self.validate_key:
             try:
                 self.heartbeat()
-                print('already logined in')
+                print("already logined in")
                 return
-            except:
-                print('heartbeat failed, login again')
+            except not self.heartbeat():
+                print("heartbeat failed, login again")
 
         """
         自动登录
         :return:
         """
-        password = self.account_config['password']
+        password = self.account_config["password"]
         basedir = os.path.split(os.path.realpath(__file__))[0]
         stdout = os.popen(os.path.join(basedir, "./utils/base.exe %s" % password))
         password = stdout.read().strip()
         while True:
             identifyCode = self._recognize_verification_code()
-            login_res = self.s.post(self.config['authentication'], data={
-                'duration': 1800,
-                'password': password,
-                'identifyCode': identifyCode,
-                'type': 'Z',
-                'userId': self.account_config['user'],
-                'randNumber': self.random_number,
-            }).json()
+            login_res = self.s.post(
+                self.config["authentication"],
+                data={
+                    "duration": 1800,
+                    "password": password,
+                    "identifyCode": identifyCode,
+                    "type": "Z",
+                    "userId": self.account_config["user"],
+                    "randNumber": self.random_number,
+                },
+            ).json()
 
-            if login_res['Status'] != 0:
-                logger.info('auto login error, try again later')
+            if login_res["Status"] != 0:
+                logger.info("auto login error, try again later")
                 print(login_res)
                 time.sleep(3)
             else:
@@ -128,11 +127,11 @@ class EastMoneyTrader(webtrader.WebTrader):
         self._save_session()
 
     def _get_valid_key(self):
-        content = self.s.get(self.config['authentication_check']).text
-        key = "input id=\"em_validatekey\" type=\"hidden\" value=\""
+        content = self.s.get(self.config["authentication_check"]).text
+        key = 'input id="em_validatekey" type="hidden" value="'
         begin = content.index(key) + len(key)
-        end = content.index("\" />", begin)
-        self.validate_key = content[begin: end]
+        end = content.index('" />', begin)
+        self.validate_key = content[begin:end]
 
     def _prepare_account(self, user="", password="", **kwargs):
         """
@@ -190,8 +189,8 @@ class EastMoneyTrader(webtrader.WebTrader):
     def _request_data(self, api_name: str, params=None):
         api = self._get_api_url(api_name)
         result = self.s.get(api, params=params).json()
-        if result['Status'] == 0:
-            return result['Data']
+        if result["Status"] == 0:
+            return result["Data"]
         # TODO 错误处理
         return None
 
@@ -221,12 +220,13 @@ class EastMoneyTrader(webtrader.WebTrader):
         # 'Djzj': '0.00', 'Zjye': '1.00', 'Money_type': 'RMB', 'Drckyk': None, 'Ljyk': None, 'F303S': None}]}
         return [
             Balance(
-                asset_balance=float(assets['Zzc']),
-                current_balance=float(assets['Kqzj']),
-                enable_balance=float(assets['Kyzj']),
-                frozen_balance=float(assets['Djzj']),
-                market_value=float(assets['Zzc']) - float(assets['Kyzj']),
-                money_type=u"人民币")
+                asset_balance=float(assets["Zzc"]),
+                current_balance=float(assets["Kqzj"]),
+                enable_balance=float(assets["Kyzj"]),
+                frozen_balance=float(assets["Djzj"]),
+                market_value=float(assets["Zzc"]) - float(assets["Kyzj"]),
+                money_type=u"人民币",
+            )
         ]
 
     @staticmethod
@@ -264,7 +264,8 @@ class EastMoneyTrader(webtrader.WebTrader):
                     position_str="random",
                     stock_code=pos["Zqdm"],
                     stock_name=pos["Zqmc"],
-                ))
+                )
+            )
         return position_list
 
     def get_entrust(self) -> List[Entrust]:
@@ -343,18 +344,21 @@ class EastMoneyTrader(webtrader.WebTrader):
         if amount == 0:
             raise exceptions.TradeError(u"数量不能为0")
 
-        response = self.s.post(self._get_api_url('submit'), data={
-            "stockCode": security,
-            "price": price,
-            "amount": amount,
-            "zqmc": "unknown",
-            "tradeType": entrust_bs
-        }).json()
+        response = self.s.post(
+            self._get_api_url("submit"),
+            data={
+                "stockCode": security,
+                "price": price,
+                "amount": amount,
+                "zqmc": "unknown",
+                "tradeType": entrust_bs,
+            },
+        ).json()
 
-        if response['Status'] != 0:
-            raise exceptions.TradeError('下单失败, %s' % json.dumps(response))
+        if response["Status"] != 0:
+            raise exceptions.TradeError("下单失败, %s" % json.dumps(response))
 
-        logger.info('下单成功')
+        logger.info("下单成功")
 
     def buy(self, security, price=0, amount=0, volume=0, entrust_prop=0):
         """买入卖出股票
@@ -377,8 +381,8 @@ class EastMoneyTrader(webtrader.WebTrader):
         return self._trade(security, price, amount, volume, "S")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     trader = EastMoneyTrader()
-    trader.prepare('../eastmoney.json')
+    trader.prepare("../eastmoney.json")
     print(trader.get_position())
-    trader.buy('002230', price=55, amount=100)
+    trader.buy("002230", price=55, amount=100)

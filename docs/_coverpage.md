@@ -1,12 +1,11 @@
-<div align="center">
+<!-- <div align="center">
 	<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" width="100px" alt="L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
-</div>
+</div> -->
 
-# Qbot 人工智能自动化量化交易 🌱
-<!---## AI + 金融 <small>V1.2 </small>-->
+<h1> 🤖 Qbot  </h1>
+<h2> 人工智能自动化量化交易机器人  </h2>
 
-> 人工智能、量化交易
-
+>  <small>🌱 V1.2</small>
 <br>
 
 <span id="busuanzi_container_site_pv" style='display:none'>

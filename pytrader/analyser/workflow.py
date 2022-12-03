@@ -1,12 +1,11 @@
 import qlib
 from qlib.config import REG_CN
-from qlib.utils import exists_qlib_data, init_instance_by_config
+from qlib.utils import flatten_dict, init_instance_by_config
 from qlib.workflow import R
-from qlib.workflow.record_temp import SignalRecord, PortAnaRecord
-from qlib.utils import flatten_dict
+from qlib.workflow.record_temp import PortAnaRecord, SignalRecord
 
 if __name__ == "__main__":
-    qlib.init(provider_uri='data/cn_data', region=REG_CN)
+    qlib.init(provider_uri="data/cn_data", region=REG_CN)
 
     ###################################
     # train model
@@ -73,20 +72,12 @@ if __name__ == "__main__":
         "executor": {
             "class": "SimulatorExecutor",
             "module_path": "qlib.backtest.executor",
-            "kwargs": {
-                "time_per_step": "day",
-                "generate_portfolio_metrics": True,
-            },
+            "kwargs": {"time_per_step": "day", "generate_portfolio_metrics": True},
         },
         "strategy": {
             "class": "TopkDropoutStrategy",
             "module_path": "qlib.contrib.strategy.signal_strategy",
-            "kwargs": {
-                "model": model,
-                "dataset": dataset,
-                "topk": 50,
-                "n_drop": 5,
-            },
+            "kwargs": {"model": model, "dataset": dataset, "topk": 50, "n_drop": 5},
         },
         "backtest": {
             "start_time": "2017-01-01",
@@ -119,32 +110,38 @@ if __name__ == "__main__":
         par = PortAnaRecord(recorder, port_analysis_config, "day")
         par.generate()
 
-    from qlib.contrib.report import analysis_model, analysis_position
     import pandas as pd
+    from qlib.contrib.report import analysis_model, analysis_position
+
     recorder = R.get_recorder(recorder_id=ba_rid, experiment_name="backtest_analysis")
     print(recorder)
     pred_df = recorder.load_object("pred.pkl")
-    pred_df_dates = pred_df.index.get_level_values(level='datetime')
+    pred_df_dates = pred_df.index.get_level_values(level="datetime")
     report_normal_df = recorder.load_object("portfolio_analysis/report_normal_1day.pkl")
     positions = recorder.load_object("portfolio_analysis/positions_normal_1day.pkl")
     analysis_df = recorder.load_object("portfolio_analysis/port_analysis_1day.pkl")
 
-    report_graph = analysis_position.report_graph(report_normal_df,show_notebook=False)
+    report_graph = analysis_position.report_graph(report_normal_df, show_notebook=False)
     for fig in report_graph:
         fig.show()
 
-    risk_analysis_graph = analysis_position.risk_analysis_graph(analysis_df, report_normal_df, show_notebook=False)
+    risk_analysis_graph = analysis_position.risk_analysis_graph(
+        analysis_df, report_normal_df, show_notebook=False
+    )
     for fig in risk_analysis_graph:
         fig.show()
 
-
     label_df = dataset.prepare("test", col_set="label")
-    label_df.columns = ['label']
-    pred_label = pd.concat([label_df, pred_df], axis=1, sort=True).reindex(label_df.index)
+    label_df.columns = ["label"]
+    pred_label = pd.concat([label_df, pred_df], axis=1, sort=True).reindex(
+        label_df.index
+    )
     score_ic_graph = analysis_position.score_ic_graph(pred_label, show_notebook=False)
     for fig in score_ic_graph:
         fig.show()
 
-    model_performance_graph = analysis_model.model_performance_graph(pred_label, show_notebook=False)
+    model_performance_graph = analysis_model.model_performance_graph(
+        pred_label, show_notebook=False
+    )
     for fig in model_performance_graph:
         fig.show()

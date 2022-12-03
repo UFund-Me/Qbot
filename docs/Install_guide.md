@@ -20,6 +20,8 @@ bash Anaconda3-5.3.1-Linux-x86_64.sh
 ```bash
 conda create -n Qbot python=3.9
 conda activate Qbot
+
+pip install -r requirements.txt
 ```
 
 ## Prepare

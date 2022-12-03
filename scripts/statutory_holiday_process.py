@@ -15,7 +15,7 @@ import sys
 import pandas as pd
 import requests
 
-URL_PATTERN = f'{"<a href="(.*?)".*?国务院办公厅关于%s年部分"}'
+URL_PATTERN = '<a href="(.*?)".*?国务院办公厅关于%s年部分'
 STATUTORY_HOLIDAY_TEXT_PATTERN = '<p align=.*?bold;">.*?、(.*?)：</span>(.*?)</p>'
 Y_M_D_BETWEEN_PATTERN = r"(\d{4})年(\d{1,2})月(\d{1,2})日至(\d{4})年(\d{1,2})月(\d{1,2})日"
 Y_M_D_PATTERN = r"(\d{4})年(\d{1,2})月(\d{1,2})日"

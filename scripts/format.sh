@@ -24,7 +24,7 @@ set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 # shellcheck disable=SC1091
-source "${TOP_DIR}/scripts/quant_base.sh"
+source "${TOP_DIR}/scripts/qbot_base.sh"
 
 GIT_MODE=0
 IS_CI="${IS_CI:-false}"
@@ -73,9 +73,9 @@ function run_gofmt() {
 function run_format() {
   for arg in "$@"; do
     if [[ -f "${arg}" ]]; then
-      if c_family_ext "${arg}" || proto_ext "${arg}"; then
-        run_clang_format "${arg}"
-      elif plain_py_ext "${arg}"; then
+      # if c_family_ext "${arg}" || proto_ext "${arg}"; then
+      #   run_clang_format "${arg}"
+      if plain_py_ext "${arg}"; then
         if [[ "${IS_CI}" == true || "${SKIP_STR_NORM_PY}" -eq 1 ]]; then
           run_pyfmt -S "${arg}"
         else
@@ -175,6 +175,7 @@ function main() {
   done
 
   if [ "${FORMAT_ALL}" -eq 1 ]; then
+    # shellcheck disable=SC2034
     FORMAT_BAZEL=1
     FORMAT_CPP=1
     FORMAT_BASH=1
@@ -192,7 +193,12 @@ function main() {
     local what_to_diff
     what_to_diff="${CI_MERGE_REQUEST_DIFF_BASE_SHA:-HEAD~1}"
 
-    readarray -t diff_files < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
+    # readarray -t diff_files < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
+    ## instead of readarray
+    # shellcheck disable=SC1001,SC2162
+    while IFS=\= read diff_file; do
+      diff_files+=("$diff_file")
+    done < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
 
     for one_change in "${diff_files[@]}"; do
       run_format "${TOP_DIR}/${one_change}"

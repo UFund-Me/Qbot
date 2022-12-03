@@ -1,19 +1,13 @@
-import time
-import datetime
-from typing import List, Dict
+from typing import Dict
 
-from dateutil import tz
-from pandas import DataFrame
-
-from easyquant import DefaultLogHandler
 from easyquant import StrategyTemplate
 from easyquant.context import Context
-from easyquant.event_engine import Event
 from easytrader.model import Position
+from pandas import DataFrame
 
 
 class Strategy(StrategyTemplate):
-    name = '测试策略1'
+    name = "测试策略1"
     # 每次T的数量
     t_amount = 5000
     # 股票
@@ -68,14 +62,18 @@ class Strategy(StrategyTemplate):
                     # self.log.info("上升中，继续持仓")
                 else:
                     # self.log.info('%s CCI:%s' % (stock_code, cci_last_10[0:3]))
-                    self.log.info('%s RSI6:%s' % (stock_code, rsi6[0:3]))
+                    self.log.info("%s RSI6:%s" % (stock_code, rsi6[0:3]))
                     # 如果卖过1次，需要等买了后再卖
                     amount = stock_pos.current_amount
                     self.log.info("RSI拐点，卖出 %s元 %s股" % (latest.close[0], amount))
-                    self.user.sell(stock_code, price=latest.close[0],
-                                   amount=amount)
-                    self.log.info('%s 盈亏: %s ' % (stock_code,
-                                                  amount * (latest.close[0] - stock_pos.cost_price)))
+                    self.user.sell(stock_code, price=latest.close[0], amount=amount)
+                    self.log.info(
+                        "%s 盈亏: %s "
+                        % (
+                            stock_code,
+                            amount * (latest.close[0] - stock_pos.cost_price),
+                        )
+                    )
                     return
             elif last_rsi < 35 or rsi6[1] < 35:
                 # self.log.info("enter low space")
@@ -87,7 +85,7 @@ class Strategy(StrategyTemplate):
                     if buy_amount == 0:
                         self.log.info("没钱买入")
                         continue
-                    self.log.info('%s RSI6:%s' % (stock_code, rsi6[0:3]))
+                    self.log.info("%s RSI6:%s" % (stock_code, rsi6[0:3]))
                     # self.log.info('%s CCI:%s' % (stock_code, cci_last_10[0:3]))
                     self.log.info("RSI上穿，抄底买入 %s元 %s股" % (latest.close[0], buy_amount))
 
@@ -95,27 +93,35 @@ class Strategy(StrategyTemplate):
                     return
 
             # TODO 跌破10日线止损
-            if latest.close[0] < ma_20 and stock_pos.current_amount > 0 and stock_pos.cost_price > latest.close[0]:
+            if (
+                latest.close[0] < ma_20
+                and stock_pos.current_amount > 0
+                and stock_pos.cost_price > latest.close[0]
+            ):
                 self.log.info("跌破20日线，止损 %s元 " % latest.close[0])
                 amount = stock_pos.current_amount
-                self.user.sell(stock_code, price=latest.close[0],
-                               amount=stock_pos.current_amount)
-                self.log.info('%s 盈亏: %s ' % (stock_code,
-                                              amount * (latest.close[0] - stock_pos.cost_price)))
-
+                self.user.sell(
+                    stock_code, price=latest.close[0], amount=stock_pos.current_amount
+                )
+                self.log.info(
+                    "%s 盈亏: %s "
+                    % (stock_code, amount * (latest.close[0] - stock_pos.cost_price))
+                )
 
     def get_stock_pos(self, positions, stock_code):
         stock_pos = list(filter(lambda pos: pos.stock_code == stock_code, positions))
         if len(stock_pos) == 0:
-            stock_pos = Position(current_amount=0,
-                                 enable_amount=0,
-                                 income_balance=0,
-                                 cost_price=0,
-                                 last_price=0,
-                                 market_value=0,
-                                 position_str="random",
-                                 stock_code=stock_code,
-                                 stock_name=stock_code)
+            stock_pos = Position(
+                current_amount=0,
+                enable_amount=0,
+                income_balance=0,
+                cost_price=0,
+                last_price=0,
+                market_value=0,
+                position_str="random",
+                stock_code=stock_code,
+                stock_name=stock_code,
+            )
         else:
             stock_pos = stock_pos[0]
         return stock_pos

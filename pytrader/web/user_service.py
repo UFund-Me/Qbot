@@ -1,12 +1,10 @@
 from datetime import datetime, timedelta
-from typing import Optional, List
+from typing import List, Optional
 
-from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from jose import JWTError, jwt
+from jose import jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
-
 from web.db_service import DbService
 
 # to get a string like this run:
@@ -19,29 +17,29 @@ route_data = [
     {
         "id": 22,
         "parentId": 2,
-        "name": 'ProjectImport',
-        "path": '/Project/ProjectImport',
-        "component": 'ProjectImport',
-        "meta": {"title": '项目导入', "icon": 'el-icon-help'}
+        "name": "ProjectImport",
+        "path": "/Project/ProjectImport",
+        "component": "ProjectImport",
+        "meta": {"title": "项目导入", "icon": "el-icon-help"},
     },
     {
         "id": 3,
         "parentId": 0,
-        "name": 'Nav',
-        "path": '/Nav',
-        "component": 'Layout',
-        "redirect": '/Nav/SecondNav/ThirdNav',
-        "meta": {"title": '多级导航', "icon": 'el-icon-picture'}
+        "name": "Nav",
+        "path": "/Nav",
+        "component": "Layout",
+        "redirect": "/Nav/SecondNav/ThirdNav",
+        "meta": {"title": "多级导航", "icon": "el-icon-picture"},
     },
     {
         "id": 30,
         "parentId": 3,
-        "name": 'SecondNav',
-        "path": '/Nav/SecondNav',
-        "redirect": '/Nav/SecondNav/ThirdNav',
-        "component": 'SecondNav',
-        "meta": {"title": '二级导航', "icon": 'el-icon-camera', "alwaysShow": True}
-    }
+        "name": "SecondNav",
+        "path": "/Nav/SecondNav",
+        "redirect": "/Nav/SecondNav/ThirdNav",
+        "component": "SecondNav",
+        "meta": {"title": "二级导航", "icon": "el-icon-camera", "alwaysShow": True},
+    },
 ]
 
 
@@ -94,7 +92,9 @@ class UserService:
             return False
         return user
 
-    def create_access_token(self, data: dict, expires_delta: Optional[timedelta] = None):
+    def create_access_token(
+        self, data: dict, expires_delta: Optional[timedelta] = None
+    ):
         to_encode = data.copy()
         if expires_delta:
             expire = datetime.utcnow() + expires_delta

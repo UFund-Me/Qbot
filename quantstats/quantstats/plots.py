@@ -20,8 +20,10 @@
 
 try:
     from pandas.plotting import register_matplotlib_converters as _rmc
+
     _rmc()
 except ImportError:
     pass
 
-from quantstats._plotting.wrappers import *
+# F401 'quantstats._plotting.wrappers.*' imported but unused
+# from quantstats._plotting.wrappers import *

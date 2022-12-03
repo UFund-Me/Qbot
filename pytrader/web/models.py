@@ -1,13 +1,12 @@
 from datetime import datetime
 
-from sqlalchemy import Column, String, Integer, DateTime, Float, create_engine
-
+from sqlalchemy import Column, DateTime, Float, Integer, String, create_engine
 from web.database import Base
 from web.settings import APISettings
 
 
 class WatchStocks(Base):
-    __tablename__ = 'watch_stocks'
+    __tablename__ = "watch_stocks"
 
     code = Column(String(10), primary_key=True, index=True)
     name = Column(String(255), nullable=False)
@@ -17,7 +16,7 @@ class WatchStocks(Base):
 
 
 class Strategies(Base):
-    __tablename__ = 'strategies'
+    __tablename__ = "strategies"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     name = Column(String(255), index=True)
     code = Column(String(1024), nullable=False)
@@ -26,7 +25,7 @@ class Strategies(Base):
 
 
 class User(Base):
-    __tablename__ = 'user'
+    __tablename__ = "user"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     username = Column(String(255), index=True)
     full_name = Column(String(255), nullable=False)
@@ -36,10 +35,9 @@ class User(Base):
     create_time = Column(DateTime, nullable=False, default=datetime.now)
     update_time = Column(DateTime, nullable=False, default=datetime.now)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     settings = APISettings()
-    SQLALCHEMY_DATABASE_URL = f'sqlite:///../pytrader.db'
-    engine = create_engine(
-        SQLALCHEMY_DATABASE_URL, pool_pre_ping=True
-    )
+    SQLALCHEMY_DATABASE_URL = f"{'sqlite:///../pytrader.db'}"
+    engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True)
     Base.metadata.create_all(engine)

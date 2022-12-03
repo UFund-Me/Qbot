@@ -1,20 +1,18 @@
 import datetime
 import doctest
 import json
-from functools import lru_cache
 
-import requests
-
-
-f = open("/Users/charmve/Qbot/utils/easyquant/easydealutils/trade_days.json", mode='r', encoding='utf-8')
+f = open("trade_days.json", mode="r", encoding="utf-8")
 days = list(json.loads(f.read()).values())
 f.close()
+
 
 def get_all_trade_days():
     return days
 
+
 def _is_trade_day(now_time):
-    today = now_time.strftime('%Y%m%d')
+    today = now_time.strftime("%Y%m%d")
     return today in days
 
 
@@ -24,6 +22,7 @@ def is_weekend(now_time):
 
 def is_trade_date(now_time):
     return _is_trade_day(now_time)
+
 
 def get_next_trade_date(now_time):
     """
@@ -45,7 +44,7 @@ def get_next_trade_date(now_time):
             else:
                 return now.date()
         if days > max_days:
-            raise ValueError('无法确定 %s 下一个交易日' % now_time)
+            raise ValueError("无法确定 %s 下一个交易日" % now_time)
 
 
 OPEN_TIME = (
@@ -67,9 +66,7 @@ def is_tradetime(now_time):
         return False
 
 
-PAUSE_TIME = (
-    (datetime.time(11, 30, 0), datetime.time(12, 59, 30)),
-)
+PAUSE_TIME = ((datetime.time(11, 30, 0), datetime.time(12, 59, 30)),)
 
 
 def is_pause(now_time):
@@ -83,9 +80,7 @@ def is_pause(now_time):
             return True
 
 
-CONTINUE_TIME = (
-    (datetime.time(12, 59, 30), datetime.time(13, 0, 0)),
-)
+CONTINUE_TIME = ((datetime.time(12, 59, 30), datetime.time(13, 0, 0)),)
 
 
 def is_continue(now_time):
@@ -96,9 +91,7 @@ def is_continue(now_time):
     return False
 
 
-CLOSE_TIME = (
-    datetime.time(15, 0, 0),
-)
+CLOSE_TIME = (datetime.time(15, 0, 0),)
 
 
 def is_closing(now_time, start=datetime.time(14, 54, 30)):
@@ -107,6 +100,7 @@ def is_closing(now_time, start=datetime.time(14, 54, 30)):
         if start <= now < close:
             return True
     return False
+
 
 if __name__ == "__main__":
     doctest.testmod()

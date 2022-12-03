@@ -1,13 +1,11 @@
-import os
-import os
 import signal
 import sys
 from datetime import datetime, timedelta
 from threading import Lock
 
-from logbook import Logger, StreamHandler
-
 from easytrader.mock_trader import MockTrader
+from logbook import StreamHandler
+
 from .context import Context
 from .event_engine import EventEngine
 from .log_handler.default_handler import MockLogHandler
@@ -19,7 +17,10 @@ StreamHandler(sys.stdout).push_application()
 
 PY_MAJOR_VERSION, PY_MINOR_VERSION = sys.version_info[:2]
 if (PY_MAJOR_VERSION, PY_MINOR_VERSION) < (3, 5):
-    raise Exception('Python 版本需要 3.5 或以上, 当前版本为 %s.%s 请升级 Python' % (PY_MAJOR_VERSION, PY_MINOR_VERSION))
+    raise Exception(
+        "Python 版本需要 3.5 或以上, 当前版本为 %s.%s 请升级 Python"
+        % (PY_MAJOR_VERSION, PY_MINOR_VERSION)
+    )
 
 
 class PositionLog(object):
@@ -41,15 +42,17 @@ class PositionLog(object):
 class BackTestEngine:
     """回测引擎"""
 
-    def __init__(self,
-                 strategy_class,
-                 start_date: str,
-                 end_date: str,
-                 bar_type="5m",
-                 quotation='jqdata'):
+    def __init__(
+        self,
+        strategy_class,
+        start_date: str,
+        end_date: str,
+        bar_type="5m",
+        quotation="jqdata",
+    ):
         """初始化事件 / 行情 引擎并启动事件引擎
         """
-        self.broker = 'mock'
+        self.broker = "mock"
         self.bar_type = bar_type
         self.quotation = use_quotation(quotation)
         self.user = MockTrader()
@@ -60,7 +63,9 @@ class BackTestEngine:
         self.start_date = start_date
         self.end_date = end_date
 
-        self.quotation_engine = QuotationEngine(self.quotation, self.event_engine, bar_type=bar_type)
+        self.quotation_engine = QuotationEngine(
+            self.quotation, self.event_engine, bar_type=bar_type
+        )
         self.strategy: StrategyTemplate = strategy_class(self.user, self.log, self)
 
         # 加载锁
@@ -71,7 +76,7 @@ class BackTestEngine:
             signal.SIGINT,  # 键盘信号
             signal.SIGTERM,  # kill 命令
         ]
-        if sys.platform != 'win32':
+        if sys.platform != "win32":
             self.shutdown_signals.extend([signal.SIGHUP, signal.SIGQUIT])
 
         for s in self.shutdown_signals:
@@ -79,13 +84,13 @@ class BackTestEngine:
             signal.signal(s, self.shutdown)
 
         self.records = []
-        self.log.info('启动回测引擎')
+        self.log.info("启动回测引擎")
 
     def start(self):
         """ 启动回测 """
         self.user.set_quotation(self.quotation)
-        start_date_time = datetime.strptime(self.start_date, '%Y-%m-%d')
-        end_date_time = datetime.strptime(self.end_date, '%Y-%m-%d')
+        start_date_time = datetime.strptime(self.start_date, "%Y-%m-%d")
+        end_date_time = datetime.strptime(self.end_date, "%Y-%m-%d")
 
         current_dt = start_date_time
 
@@ -122,7 +127,10 @@ class BackTestEngine:
             while current_time <= end_date:
                 self.context.change_dt(current_time)
                 # 更新
-                strategy.on_bar(self.context, self.quotation_engine.fetch_quotation(end_date=current_time))
+                strategy.on_bar(
+                    self.context,
+                    self.quotation_engine.fetch_quotation(end_date=current_time),
+                )
                 current_time += timedelta(minutes=minute)
         else:
             # day = int

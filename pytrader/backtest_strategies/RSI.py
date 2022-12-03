@@ -1,7 +1,5 @@
-from pandas import DataFrame
-from talib._ta_lib import *
-
 from backtest_strategies.backtest_strategy_template import BacktestStrategyTemplate
+from pandas import DataFrame
 
 
 class RSIStrategy(BacktestStrategyTemplate):

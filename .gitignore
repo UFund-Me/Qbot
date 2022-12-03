@@ -131,5 +131,6 @@ dmypy.json
 .vscode
 .vim
 .nvimrc
+jqdata.json
 
 *.DS_Store

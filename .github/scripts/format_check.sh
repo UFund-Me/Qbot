@@ -2,9 +2,14 @@
 set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)"
+# shellcheck disable=SC1090,SC1091
+source "${TOP_DIR}/scripts/check_gtest_deps.sh"
 
 function check_code_formatted() {
-  readarray -t my_diffs < <(git diff \
+  # shellcheck disable=SC1001,SC2162
+  while IFS=\= read my_diff; do
+    my_diffs+=("$my_diff")
+  done < <(git diff \
     --ignore-submodules --diff-filter=d --name-only -- \
     "*.h" "*.cc" "*.cpp" "*.cu" \
     "*.proto" \

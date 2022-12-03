@@ -3,9 +3,9 @@ set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 # shellcheck disable=SC1090,SC1091
-source "${TOP_DIR}/scripts/quant_base.sh"
+source "${TOP_DIR}/scripts/qbot_base.sh"
 # shellcheck disable=SC1090,SC1091
-source "${TOP_DIR}/tools/eg/check_gtest_deps.sh"
+source "${TOP_DIR}/scripts/check_gtest_deps.sh"
 
 SHELL_CHECK_GIST="https://gist.github.com/nicerobot/53cee11ee0abbdc997661e65b348f375#file-_shellcheck-md"
 
@@ -35,7 +35,7 @@ function run_gtest_dependency_check() {
 }
 
 function proto_specific_dirs_check() {
-  declare -A proto_dirs
+  declare -a proto_dirs=()
   for fn in "$@"; do
     if [[ "${fn}" == *".proto" ]]; then
       local dir
@@ -51,7 +51,7 @@ function proto_specific_dirs_check() {
 
 function run_proto_lint() {
   local msg
-  # NOTE(Jiaming):
+  # NOTE:
   # 1. run "buf lint" from top_dir
   # 2. buf lint would probably fail, here we check unused imports only
   pushd "${TOP_DIR}" > /dev/null
@@ -77,7 +77,12 @@ function main() {
   local what_to_diff
   what_to_diff="${CI_MERGE_REQUEST_DIFF_BASE_SHA:-HEAD~1}"
 
-  readarray -t changes < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
+  # readarray -t changes < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
+  # shellcheck disable=SC1001,SC2162
+  while IFS=\= read change; do
+    changes+=("$change")
+  done < <(git diff --ignore-submodules --diff-filter=d --name-only "${what_to_diff}")
+
   for one_change in "${changes[@]}"; do
     if [[ "${one_change}" == *".proto" ]]; then
       run_proto_lint "${one_change}"

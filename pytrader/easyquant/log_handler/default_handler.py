@@ -2,17 +2,22 @@ import os
 import sys
 
 import logbook
-from logbook import Logger, StreamHandler, FileHandler
-
 from easyquant.context import Context
+from logbook import FileHandler, Logger, StreamHandler
 
-logbook.set_datetime_format('local')
+logbook.set_datetime_format("local")
 
 
 class DefaultLogHandler(object):
     """默认的 Log 类"""
 
-    def __init__(self, name='default', log_type='stdout', filepath='default.log', loglevel='DEBUG'):
+    def __init__(
+        self,
+        name="default",
+        log_type="stdout",
+        filepath="default.log",
+        loglevel="DEBUG",
+    ):
         """Log对象
         :param name: log 名字
         :param :logtype: 'stdout' 输出到屏幕, 'file' 输出到指定文件
@@ -21,9 +26,9 @@ class DefaultLogHandler(object):
         :return log handler object
         """
         self.log = Logger(name)
-        if log_type == 'stdout':
+        if log_type == "stdout":
             StreamHandler(sys.stdout, level=loglevel).push_application()
-        if log_type == 'file':
+        if log_type == "file":
             if os.path.isdir(filepath) and not os.path.exists(filepath):
                 os.makedirs(os.path.dirname(filepath))
             file_handler = FileHandler(filepath, level=loglevel)
@@ -38,4 +43,7 @@ class MockLogHandler(object):
         self.context = context
 
     def info(self, msg):
-        print("[%s] INFO: %s" % (self.context.current_dt.strftime("%Y-%m-%d %H:%M:%S"), msg))
+        print(
+            "[%s] INFO: %s"
+            % (self.context.current_dt.strftime("%Y-%m-%d %H:%M:%S"), msg)
+        )

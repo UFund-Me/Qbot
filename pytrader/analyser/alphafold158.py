@@ -2,9 +2,8 @@ import qlib
 from qlib.config import REG_CN
 from qlib.contrib.data.handler import Alpha158
 
-
-if __name__ == '__main__':
-    qlib.init(provider_uri='data/cn_data', region=REG_CN)
+if __name__ == "__main__":
+    qlib.init(provider_uri="data/cn_data", region=REG_CN)
 
     data_handler_config = {
         "start_time": "2018-01-01",
@@ -17,11 +16,10 @@ if __name__ == '__main__':
     h = Alpha158(**data_handler_config)
 
     # get all the columns of the data
-    print('columns: \n', h.get_cols())
+    print("columns: \n", h.get_cols())
 
     # fetch all the labels
-    print('labels: \n', h.fetch(col_set="label"))
+    print("labels: \n", h.fetch(col_set="label"))
 
     # fetch all the features
-    print('features: \n', h.fetch(col_set="feature"))
-
+    print("features: \n", h.fetch(col_set="feature"))
