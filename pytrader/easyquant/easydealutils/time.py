@@ -2,7 +2,7 @@ import datetime
 import doctest
 import json
 
-f = open("trade_days.json", mode="r", encoding="utf-8")
+f = open("/Users/charmve/Qbot/pytrader/easyquant/easydealutils/trade_days.json", mode="r", encoding="utf-8")
 days = list(json.loads(f.read()).values())
 f.close()
 

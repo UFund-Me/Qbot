@@ -5,7 +5,7 @@ from typing import List
 import talib
 from easyquant.quotation import Quotation
 from easytrader.webtrader import WebTrader
-
+from easytrader.model import Balance, Deal, Entrust, Position
 
 class Context:
     """

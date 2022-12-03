@@ -132,5 +132,8 @@ dmypy.json
 .vim
 .nvimrc
 jqdata.json
+pytrader.db
+account.json
+*.log
 
 *.DS_Store
