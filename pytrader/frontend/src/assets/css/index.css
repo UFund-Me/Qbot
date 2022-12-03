@@ -1,0 +1,40 @@
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+/* 提高优先级，避免修改主题色的时候样式被修改 */
+body {
+    /*! @import */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    button:focus {
+        outline: none;
+    }
+
+    @responsive {
+        .transition-width {
+            transition-property: width;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .min-height-10 {
+            min-height: 2.5rem;
+        }
+
+        .min-width-32 {
+            min-width: 8rem;
+        }
+
+        .leading-12 {
+            line-height: 3rem;
+        }
+    }
+}

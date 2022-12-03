@@ -1,0 +1,156 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="基金,自选基金,自选基金助手,基金助手,自选,fund,chrome扩展,extension,chrome,funds,实时">
+    <meta name="description"
+        content="自选基金助手是一款Chrome扩展，实时查看您关注的基金，助您快速获取实时数据，可以用来查看您的自选基金的实时估值情况，可以自由的增减自选基金。您的自选基金数据会跟随账号同步。">
+    <title>自选基金助手</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            padding: 15px;
+        }
+
+        .content {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 850px) {
+
+            .content {
+                width: 100%;
+            }
+
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        .img-row {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .img-row img {
+            max-width: 100%;
+        }
+
+        #content>p {
+            margin: 6px 0;
+        }
+
+        #qrcode {
+            width: 200px;
+            height: 200px;
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>自选基金助手</h1>
+        <p>自选基金助手，实时查看您关注的基金，助您快速获取实时数据</p>
+        <p>可以用来查看您的自选基金的实时估值情况，可以自由的增减自选基金。您的自选基金数据会跟随账号同步。</p>
+        <h2>介绍</h2>
+        <p>买了基金后，一直想找一款pc端的浏览器扩展插件，毕竟股票的交易时间都是在工作日进行的，可惜找不到，便打算自己写一个，已上架扩展商店。扩展的形式很适合上班族，不用打开网站，仅以小窗口的形式展示，不会引起BOSS的注意，方便上班摸鱼。
+        </p>
+        <p>首先输入基金代码添加基金，将基金添加特别关注后，可以以角标的形式展示在浏览器中，更加简便直观。可以在设置中单独开启显示份额与收益选项，在编辑中输入持有的份额，可以计算出每个基金的实时估值与收益，以及总收益。</p>
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20201016093442.png"
+                alt="主要功能">
+        </div>
+        <h2>如何使用</h2>
+        <p><strong>插件已上架Microsoft Edge扩展商店：</strong><a
+                href="https://microsoftedge.microsoft.com/addons/detail/kophadiajpobbfoobhclbobddkoindoi">点击跳转至Microsoft
+                Edge扩展商店</a></p>
+
+        <p>若因网络问题，可以下载CRX文件手动安装（非常不建议）：<a href="https://github.com/x2rr/funds/releases">下载地址1</a>　　<a
+                href="https://gitee.com/rabt/funds/releases">下载地址2</a></p>
+
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20200717165330.png"
+                alt="主界面1">
+        </div>
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20200916120011.png"
+                alt="主界面2">
+        </div>
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20200916120012.png"
+                alt="主界面3">
+        </div>
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20200907111218.png"
+                alt="主界面4">
+        </div>
+        <div class="img-row">
+            <img style="margin: 10px;" src="https://gitee.com/rabt/Picture/raw/master/img/20200907111226.png"
+                alt="主界面5">
+        </div>
+        <div id="content">
+            <h2>交流反馈</h2>
+            <p>qq群：{{ changelog.qqGroup }}</p>
+            <p>电报群：{{ changelog.tgGroup }}</p>
+            <p>微信群二维码</p>
+            <div id="qrcode"></div>
+            <h2>更新说明</h2>
+            <div>
+                <div v-for="el in changelog.list" :key="el.version">
+                    <h3>{{el.version}}</h3>
+                    <ul>
+                        <li v-for="(i, ind) in el.content" :key="ind">
+                            {{i.content}}
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <h3>v1.8.0</h3>
+        <ul>
+            <li>新增查看基金详情功能，点击基金名称即可查看估值图、走势图等相关信息。</li>
+            <li>新增基金配置信息的导入导出功能。</li>
+            <li>修复页面布局中的bug。</li>
+        </ul> -->
+
+
+        <h2>隐私协议</h2>
+
+        <p><a href="https://x2rr.github.io/funds/privacy.html">点击跳转</a></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./lib/qrcode.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: "#content",
+            data: {
+                changelog: {}
+            },
+            mounted() {
+                $.ajax({
+                    type: "get",
+                    url: "./src/common/changeLog.json",
+                    dataType: "json",
+                    success: (data) => {
+                        this.changelog = data;
+                        var qrcode = new QRCode('qrcode', {
+                            text: data.qrcode,
+                            width: 200,
+                            height: 200,
+                        });
+                    },
+                    error: function () {}
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

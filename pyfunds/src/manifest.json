@@ -1,0 +1,37 @@
+{
+  "author": "LiuRabt",
+  "name": "自选基金助手 - 实时查看基金涨跌幅",
+  "description": "自选基金助手，实时查看您关注的基金，助您快速获取实时数据",
+  "version": null,
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "homepage_url": "http://rabt.gitee.io/funds/docs/dist/index.html",
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon19.png",
+      "38": "icons/icon38.png"
+    },
+    "default_title": "自选基金助手",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": false
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://jic.talkingdata.com; object-src 'self'",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "https://*.eastmoney.com/*"
+  ]
+}

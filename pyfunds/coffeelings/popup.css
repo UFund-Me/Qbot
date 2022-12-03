@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39&display=swap');
+
+:root {
+  --caramel: rgba(210, 149, 115, 1);
+  --cinnamon: rgba(190, 114, 097, 1);
+  --light: rgba(159, 087, 084, 1);
+  --city: rgba(125, 068, 072, 1);
+  --dark: rgba(104, 066, 066, 1);
+  --italian: rgba(073, 034, 051, 1);
+  --alphaitalian: rgba(073, 047, 072, 0.3);
+  --lightvanilla: rgba(233, 190, 155, 0.35);
+  --lightervanilla: rgba(233, 190, 155, 0.15);
+  --darkvanilla: rgba(233, 190, 155, 0.6);
+  --vanilla: rgba(233, 190, 155, 1);
+}
+
+html {
+  width: 340px;
+  height: 580px;
+}
+
+body {
+  background-color: var(--caramel);
+  font-family: "Montserrat", sans-serif;
+  color: var(--italian);
+  font-size: 12px;
+  position: absolute;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  display: inline-block;
+}
+
+/* * * */
+/*MAIN*/
+/* * * */
+div#pick {
+  display: none;
+}
+
+/* STATIC */
+div#prompt {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-left: -60px;
+  margin-top: 340px;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+div#coffee_options {
+  position: relative;
+  height: 281px;
+  width: 450px;
+  margin: 0 auto;
+}
+
+div#coffee_options img.coffee {
+  display: none;
+  position: absolute;
+  width: 190px;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+div#coffee_options img.coffee#default {
+  display: block;
+}
+
+/* MOOD OPT */
+div#mood_options {
+  position: absolute;
+  margin-left: 210px;
+  margin-top: -170px;
+  transform: scale(0.8);
+}
+
+div#mood_options img {
+  transform: scale(1);
+  -webkit-transition: transform 0.8s;
+}
+
+div#mood_options img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  -webkit-transition: transform 0.2s;
+}
+
+#tail {
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* TAIL */
+div#tail {
+  display: none;
+}
+
+div#tail img {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -20px;
+  transform: scale(0.7);
+}
+
+div#tail p {
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 6px;
+  font-size: 10px;
+  z-index: 100;
+}
+
+/*BARCODE*/
+div#barcode {
+  position: absolute;
+  font-family: 'Libre Barcode 39';
+  color: var(--dark);
+  font-size: 19px;
+  margin-left: 141px;
+  margin-top: 30px;
+  pointer-events: none;
+}
+
+/*BG*/
+div#bg img#bg_1 {
+  position: absolute;
+  margin-top: -410px;
+  margin-left: -64px;
+  transform: scale(.8);
+  z-index: -2;
+  pointer-events: none;
+}
+
+div#bg img#bg_2 {
+  position: absolute;
+  margin-top: -450px;
+  margin-left: -55px;
+  transform: scale(0.8);
+  z-index: -3;
+  pointer-events: none;
+}
+
+/*DATE*/
+div#date {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 220px;
+}
+
+.years {
+  background-color: var(--caramel);
+  font-family: inherit;
+  color: inherit;
+  transition: 0.2s;
+  border: none;
+}
+
+.years:hover {
+  box-shadow: 0 0 10px 100px var(--lightvanilla) inset;
+  background-color: var(--darkvanilla);
+}
+
+.years:focus {
+  outline: none;
+}
+
+/* * * */
+/*CALENDAR*/
+/* * * */
+div#calendar {
+  display: none;
+  transform: scale(0.59);
+  margin-top: -200px;
+  margin-left: 36px;
+  width: 350px;
+  height: 960px;
+}
+
+/*MONTHS*/
+.months {
+  margin: auto;
+  margin-left: -36px;
+}
+
+.months li {
+  width: 17.4px;
+  padding: 4px;
+  display: inline-block;
+  font-size: 17px;
+  color: var(--italian);
+  font-style: 'Montserrat';
+  text-align: center;
+}
+
+/*DAYS*/
+.day {
+  width: 18.5px;
+  padding: 3px;
+  height: 20px;
+  color: #777;
+  cursor: pointer;
+  background-color: var(--lightvanilla);
+  border: solid var(--caramel) 2px;
+  -webkit-transition: background-color 0.3s;
+}
+
+.day:hover {
+  background-color: var(--darkvanilla);
+  -webkit-transition: background-color 0.1s;
+}
+
+div#tail {
+  z-index: 2;
+}
+
+div#notADay {
+  background-color: var(--caramel);
+  pointer-events: none;
+}
+
+span#dayNum {
+  color: var(--caramel);
+  margin: 1px 2px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/*GRID*/
+.day-grid {
+  float: left;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  display: inline-block;
+}
+
+/*NEW BUTTONS*/
+div#header {
+  position: absolute;
+  margin-left: -80px;
+  margin-top: 900px;
+  text-align: right;
+}
+
+div#header button {
+  font-size: 20px;
+  color: var(--light);
+  background: transparent;
+  border: 2px solid var(--light);
+  border-radius: 6px;
+  padding: 2px 8px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 2px 0;
+  opacity: 0.8;
+}
+
+div#header button:hover {
+  background-color: var(--light);
+  color: var(--vanilla);
+  opacity: 1;
+}
+
+div#header #cal_year {
+  margin-top: 00px;
+  color: var(--light);
+}
+
+/*SETTING*/
+#info {
+  display: none;
+}
+
+div#info button#convertText {
+  position: absolute;
+  z-index: 4;
+  font-size: 10px;
+  color: var(--light);
+  background: transparent;
+  border: 1px solid var(--light);
+  border-radius: 6px;
+  padding: 2px 8px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 358px 100px;
+  opacity: 0.8;
+}
+
+div#info button#convertText:hover {
+  background-color: var(--light);
+  color: var(--vanilla);
+  opacity: 1;
+}
+
+#infooverlay {
+  position: fixed;
+  top: 0;
+  background: var(--dark);
+  opacity: 60%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+#infooverlay:hover {
+  opacity: 50%;
+}
+
+#info img {
+  position: absolute;
+  width: 70%;
+  z-index: 3;
+  margin: 155px 25px;
+}
+
+/*NOTES*/
+div#note {
+  display: none;
+  position: absolute;
+  margin-left: -180px;
+  margin-top: 640px;
+}
+
+div#note p {
+  font-size: 17px;
+  margin-left: 3px;
+}
+
+div#note hr {
+  margin-top: -15px;
+  border: 0;
+  height: 1px;
+  background: var(--italian);
+}
+
+div#noteButtons button {
+  border: none;
+  margin-left: 140px;
+  margin-top: -30px;
+  font-size: 20px;
+  color: var(--light);
+  background: transparent;
+  padding: 2px 8px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+div#noteButtons button#goSaveNote {
+  display: none;
+  margin-top: -10px;
+}
+
+div#noteButtons button#goTrashNote {
+  margin-left: -65px;
+}
+
+div#lock {
+  position: absolute;
+  display: none;
+  margin-left: 150px;
+  margin-top: 40px;
+}
+
+div#lock i {
+  font-size: 17px;
+  color: var(--dark);
+}
+
+div#note button:hover {
+  color: var(--italian);
+}
+
+div#note p#noteContent {
+  display: block;
+  width: 161px;
+  height: 118px;
+  font-size: 14px;
+  overflow: scroll;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+div#note textarea#noteEditor {
+  outline: none;
+  display: none;
+  resize: none;
+  width: 170px;
+  height: 120px;
+  margin-top: 5px;
+  background-color: var(--lightvanilla);
+  color: var(--italian);
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+div#bg2 {
+  position: absolute;
+  transform: scale(1.3);
+  margin-left: -123px;
+  margin-top: 60px;
+  z-index: -3;
+  pointer-events: none;
+}
+
+div#infoNote textarea {
+  opacity: 0.8;
+  outline: none;
+  border: none;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 80px;
+  width: 170px;
+  height: 40px;
+  resize: none;
+  background-color: var(--lightvanilla);
+  color: var(--city);
+  font-size: 8px;
+  font-family: 'Montserrat';
+  -webkit-transition: background-color 0.5s;
+}
+
+div#infoNote textarea:focus {
+  background-color: var(--darkvanilla);
+  opacity: 0.7;
+}
+
+::placeholder {
+  color: var(--city);
+  font-style: italic;
+}
+
+div#radio {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 170px;
+  font-size: 10px;
+  color: var(--city);
+}
+
+div#radio i {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+div#radio i:hover {
+  opacity: 0.8;
+}
+
+div#radio p {
+  margin-right: 5px;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + i {
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+[type=radio]:checked + i {
+  color: var(--caramel);
+  background-color: var(--city);
+}
+
+div#donate {
+  position: absolute;
+  display: block;
+  bottom: -275;
+  right: 130;
+}
+
+a#kofiButton img {
+  border: 0px;
+  opacity: 0.5;
+  height: 25px;
+  transition: 0.2s;
+}
+
+a#kofiButton img:hover {
+  opacity: 1;
+}

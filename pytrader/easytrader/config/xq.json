@@ -1,0 +1,9 @@
+{
+  "login_api": "https://xueqiu.com/user/login",
+  "prefix": "https://xueqiu.com/user/login",
+  "portfolio_url": "https://xueqiu.com/p/",
+  "search_stock_url": "https://xueqiu.com/stock/p/search.json",
+  "rebalance_url": "https://xueqiu.com/cubes/rebalancing/create.json",
+  "history_url": "https://xueqiu.com/cubes/rebalancing/history.json",
+  "referer": "https://xueqiu.com/p/update?action=holdings&symbol=%s"
+}

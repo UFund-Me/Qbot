@@ -50,7 +50,7 @@ CheckOptions:
   - { key: bugprone-argument-comment.CommentBoolLiterals,          value: true      }
   - { key: bugprone-argument-comment.CommentNullPtrs,              value: true      }
 
-HeaderFilterRegex: "*/quant.ai/[core|engine|third_party|tests|]/*"
+HeaderFilterRegex: "*/Qbot/[core|engine|third_party|tests|]/*"
 WarningsAsErrors: "*"
 
 # References

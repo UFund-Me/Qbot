@@ -18,12 +18,25 @@ bash Anaconda3-5.3.1-Linux-x86_64.sh
 4. 创建conda环境：
 
 ```bash
-conda create -n quant.ai python=3.9
-conda activate quant.ai
+conda create -n Qbot python=3.9
+conda activate Qbot
+```
+
+## Prepare
+
+设置环境变量聚款账号:
+
+```bash
+export USER_ID="admin"
+export PASSWORD="admin1234."
 ```
 
 ## RUN
 
+Auto run with ci, eg:
+
 ```
-auto run with ci
+python3 pytrader/backtest.py
+python3 pytrader/tradertest.py
+
 ```

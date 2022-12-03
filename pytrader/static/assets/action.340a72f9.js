@@ -1,0 +1,1 @@
+import{c as r}from"./permission.838efab6.js";import"./index.893f68d1.js";import"./element-plus.5733ce57.js";const s=(o,e)=>{const a=typeof e.value=="string"?[e.value]:e.value,t=e.arg==="and"?"and":"or";r(a,t)||o.parentNode&&o.parentNode.removeChild(o)};var m=o=>{o.directive("action",{mounted:(e,a)=>s(e,a)})};export{m as default};

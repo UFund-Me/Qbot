@@ -18,5 +18,5 @@
 
 <br>
 
-[GitHub](https://github.com/UFund-Me/quant.ai)
+[GitHub](https://github.com/UFund-Me/Qbot)
 [Get Started](/README.md)

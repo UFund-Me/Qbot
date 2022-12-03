@@ -1,0 +1,523 @@
+<html>
+
+<head>
+  <link href="popup.css" rel="stylesheet" type="text/css">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div id="info">
+    <button id="convertText">save journal as .txt</button>
+    <img src="art/info.png"></img>
+    <div id="infooverlay"></div>
+  </div>
+
+  <div id="pick">
+    <div id="prompt">
+      <p>choose today's</p><br>
+      <p style="font-family: 'Yesteryear'; font-size: 36px; margin-top: -27px;">roast</p>
+    </div>
+
+    <div id="coffee_options">
+      <img class="coffee" id="default" src="art/coffee.png" alt="coffee"></img>
+      <img class="coffee" id="amazing" src="art/coffee_amazing.png" alt="coffee"></img>
+      <img class="coffee" id="ok" src="art/coffee_ok.png" alt="coffee"></img>
+      <img class="coffee" id="tired" src="art/coffee_tired.png" alt="coffee"></img>
+      <img class="coffee" id="sad" src="art/coffee_sad.png" alt="coffee"></img>
+      <img class="coffee" id="stressed" src="art/coffee_stressed.png" alt="coffee"></img>
+    </div>
+    <div id="mood_options">
+      <img class="opt" id="amazing" src="art/mood_1.png"></img><br>
+      <img class="opt" id="ok" src="art/mood_2.png"></img><br>
+      <img class="opt" id="tired" src="art/mood_3.png"></img><br>
+      <img class="opt" id="sad" src="art/mood_4.png"></img><br>
+      <img class="opt" id="stressed" src="art/mood_5.png"></img>
+    </div>
+
+    <div id="barcode">
+      <p>gamer</p>
+    </div>
+    <div id="infoNote">
+      <textarea id="input" placeholder="how are you?"></textarea>
+      <div id="radio">
+        <p>themes:</p>
+        <label>
+          <input type="radio" name="reason" value="work" checked>
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+        </label>
+        <label>
+          <input type="radio" name="reason" value="talk">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+        </label>
+        <label>
+          <input type="radio" name="reason" value="chill">
+          <i class="fa fa-headphones" aria-hidden="true"></i>
+        </label>
+        <br>
+      </div>
+    </div>
+
+    <div id="date">
+      <p id="month" style="font-family: 'Yesteryear'; font-size: 25px;">uwu</p>
+      <p id="day">420</p>
+      <select class="years" id="years">
+      </select>
+    </div>
+
+    <div id="donate">
+      <a href='https://ko-fi.com/Z8Z81ZLEW' target='_blank' id="kofiButton"><img src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee' /></a>
+    </div>
+
+    <div id="bg">
+      <img id="bg_1" src="art/bg_1.png"></img>
+      <img id="bg_2" src="art/bg_2.png"></img>
+    </div>
+  </div>
+
+  <div id="tail">
+    <img id="tail_img" src="art/highlight.png"></img>
+    <p id="tail_name"></p>
+    <p id="tail_date"></p>
+  </div>
+
+  <div id="calendar">
+    <div id="header">
+      <button id="goToPick"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+      <button id="goToInfo"><i class="fa fa-question" aria-hidden="true"></i></button>
+      <h1 id="cal_year">2000</h1>
+    </div>
+    <ul class="months">
+      <li id="JanName">J</li>
+      <li id="FebName">F</li>
+      <li id="MarName">M</li>
+      <li id="AprName">A</li>
+      <li id="MayName">M</li>
+      <li id="JunName">J</li>
+      <li id="JulName">J</li>
+      <li id="AugName">A</li>
+      <li id="SepName">S</li>
+      <li id="OctName">O</li>
+      <li id="NovName">N</li>
+      <li id="DecName">D</li>
+    </ul>
+    <div id="days">
+      <div id="Jan" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Feb" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day" id="leapDay"></div>
+        <div class="day" id="notADay"></div>
+        <div class="day" id="notADay"></div>
+      </div>
+      <div id="Mar" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Apr" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day" id="notADay"></div>
+      </div>
+      <div id="May" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Jun" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day" id="notADay"></div>
+      </div>
+      <div id="Jul" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Aug" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Sep" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day" id="notADay"></div>
+      </div>
+      <div id="Oct" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+      <div id="Nov" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day" id="notADay"></div>
+      </div>
+      <div id="Dec" class="day-grid">
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+      </div>
+    </div>
+    <div id="note">
+      <div id="lock"><i class="fa fa-lock" aria-hidden="true"></i></div>
+      <p id="noteDate"><small><b>March 6</b></small> / &#9734;&#9734;&#9734;&#9734;&#9734;</p>
+      <hr>
+      <p id="noteContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae varius ex. Vivamus posuere vitae nibh quis pulvinar. Suspendisse condimentum nunc non tempor viverra. Maecenas cursus hendrerit nunc et viverra.</p>
+      <textarea id="noteEditor" placeholder="what's up?"></textarea>
+      <hr id="line">
+      <div id="noteButtons">
+        <br><br><button id="goEditNote"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        <button id="goSaveNote"><i class="fa fa-check" aria-hidden="true"></i></button>
+        <button id="goTrashNote"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </diV>
+    </div>
+    <div id="bg2">
+      <img id="bg_3" src="art/bg_3.png"></img>
+    </div>
+  </div>
+
+</body>
+
+</html>

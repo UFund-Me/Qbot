@@ -1,0 +1,1 @@
+import{_ as o}from"./index.893f68d1.js";import{k as n,y as t,z as r,A as s}from"./element-plus.5733ce57.js";const c=n({name:"SecondText"});function a(p,_,m,d,f,i){const e=t("router-view");return r(),s(e)}var x=o(c,[["render",a]]);export{x as default};

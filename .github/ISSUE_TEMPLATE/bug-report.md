@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Submit a bug report to help us improve quant.ai
+about: Submit a bug report to help us improve Qbot
 labels: bug
 ---
 ## 🐛 Bug Description
@@ -24,7 +24,7 @@ Steps to reproduce the behavior:
 **Note**: User could run `cd scripts && python collect_info.py all` under project directory to get system information
 and paste them here directly.
 
-- quant.ai version:
+- Qbot version:
 - Python version:
 - OS (`Windows`, `Linux`, `MacOS`):
 - Commit number (optional, please provide it if you are using the dev version):

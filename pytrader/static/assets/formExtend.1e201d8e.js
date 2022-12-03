@@ -1,0 +1,1 @@
+import{u as r}from"./element-plus.5733ce57.js";async function o(e,s=!1){const a=r(e).validate;return new Promise(t=>a((n,i)=>t(s?{valid:n,object:i}:n)))}function F(e){r(e).resetFields()}export{F as r,o as v};

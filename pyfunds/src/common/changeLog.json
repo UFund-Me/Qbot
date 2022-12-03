@@ -1,0 +1,491 @@
+{
+    "qrcode": "https://weixin.qq.com/g/AQYAAJ6MTRw1pI-31LPYqSQWV83WDBv6qoauh5ALGiV2Vmx6KQsFffBuIMERFqH7",
+    "tgGroup": "https://t.me/choose_funds_chat",
+    "qqGroup": "951222618",
+    "tip": null,
+    "htmlTip": "<div>插件小程序版“韭菜计算助手”已上线，欢迎使用！</div><div>本插件是一个开源项目，您的支持是我开发的动力，期待5星好评！</div>去商店评价→ <a target='_Blank' href='https://chrome.google.com/webstore/detail/dhdelcemeednchdmijiocipbjlknndff'>chrome商店</a>&nbsp;&nbsp;&nbsp;&nbsp;<a target='_Blank' href='https://microsoftedge.microsoft.com/addons/detail/kophadiajpobbfoobhclbobddkoindoi'>Microsoft Edge商店</a>",
+    "list": [{
+            "version": "3.0.4",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复部分设备基金数据空白的问题。"
+            }]
+        }, {
+            "version": "3.0.3",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "优化加仓功能的计算方式。"
+            }]
+        }, {
+            "version": "3.0.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复角标与弹窗内容不一致的问题。"
+            }, {
+                "type": 1,
+                "content": "修复加仓后成本小数点异常的问题。"
+            }]
+        }, {
+            "version": "3.0.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "支持账号登录功能，方便跨平台同步（对应的增加了阿里云bspapp.com访问权限）。"
+            }, {
+                "type": 2,
+                "content": "支持手动加仓减仓功能。"
+            }, {
+                "type": 2,
+                "content": "编辑基金信息时支持份额金额二选一输入。"
+            }, {
+                "type": 1,
+                "content": "修复基金累计收益曲线异常问题、基金持有收益率计算问题。"
+            }, {
+                "type": 1,
+                "content": "其他问题修复与优化。"
+            }]
+        }, {
+            "version": "2.5.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "新增配套微信小程序‘韭菜计算助手’,欢迎使用。"
+            }, {
+                "type": 1,
+                "content": "调整更新净值显示布局。"
+            }]
+        }, {
+            "version": "2.5.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复基金信息的Excel导入导出功能。"
+            }]
+        }, {
+            "version": "2.5.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "支持基金信息的Excel导入导出功能。"
+            }, {
+                "type": 1,
+                "content": "支持锁定并保持基金的排序方式。"
+            }, {
+                "type": 1,
+                "content": "行情中心支持查看当日交易额与涨跌数量信息。"
+            }, {
+                "type": 1,
+                "content": "问题修复与优化。"
+            }]
+        }, {
+            "version": "2.4.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "支持以文本的方式导入导出配置信息。"
+            }, {
+                "type": 1,
+                "content": "行情中心支持查看北向资金、南向资金信息。"
+            }, {
+                "type": 1,
+                "content": "问题修复与优化。"
+            }]
+        }, {
+            "version": "2.4.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复新版本出现的问题。"
+            }]
+        }, {
+            "version": "2.4.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "增加行情中心，支持查看大盘资金流向、行业版块资金流向。"
+            }, {
+                "type": 2,
+                "content": "基金详情页添加基金概况信息，支持查看基金经理详情。"
+            }, {
+                "type": 2,
+                "content": "编辑页面支持调节页面灰度与透明度。"
+            }, {
+                "type": 1,
+                "content": "页面布局调整，修复历史遗留问题。"
+            }]
+        }, {
+            "version": "2.3.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复一个影响性能的定时任务问题。"
+            }]
+        }, {
+            "version": "2.3.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "新增独立窗口模式，右击插件图标，选择进入即可。"
+            }, {
+                "type": 1,
+                "content": "添加手动刷新按钮。"
+            }, {
+                "type": 1,
+                "content": "修复大盘与股票走势图中，鼠标移出时卡死的问题。"
+            }]
+        }, {
+            "version": "2.2.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "解决火狐浏览器手机版更新日志无法点击的问题。"
+            }]
+        }, {
+            "version": "2.2.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "大盘指数支持查看走势图。"
+            }, {
+                "type": 2,
+                "content": "持仓明细中可点击对应股票直接查看走势图。"
+            }, {
+                "type": 1,
+                "content": "页面布局调整，金额小数点位数调整。"
+            }]
+        }, {
+            "version": "2.1.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "持仓明细中可点击对应股票跳转至网站详情。"
+            }, {
+                "type": 1,
+                "content": "合并单位净值与累计净值，详情中增加日增长率。"
+            }, {
+                "type": 1,
+                "content": "页面布局调整。"
+            }]
+        }, {
+            "version": "2.1.0",
+            "type": 2,
+            "content": [{
+                "type": 2,
+                "content": "支持查看基金的持仓明细。"
+            }, {
+                "type": 2,
+                "content": "角标内容支持选择指数。"
+            }, {
+                "type": 1,
+                "content": "走势图支持更多区间选择。"
+            }, {
+                "type": 1,
+                "content": "页面字号新增两档可调节，其他页面布局调整。"
+            }]
+        }, {
+            "version": "2.0.9",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复角标金额上k时颜色异常问题。"
+            }, {
+                "type": 1,
+                "content": "修复导入配置后角标未更新的问题。"
+            }]
+        }, {
+            "version": "2.0.8",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "调整节假日链接。"
+            }]
+        }, {
+            "version": "2.0.7",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "优化代码，修改插件主页。"
+            }]
+        }, {
+            "version": "2.0.6",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复单个基金角标颜色异常的问题。"
+            }]
+        },
+        {
+            "version": "2.0.5",
+            "type": 1,
+            "content": [{
+                    "type": 1,
+                    "content": "修复个别基金估值收益异常问题。"
+                },
+                {
+                    "type": 1,
+                    "content": "界面布局对齐方式调整。"
+                }
+            ]
+        },
+        {
+            "version": "2.0.4",
+            "type": 1,
+            "content": [{
+                    "type": 1,
+                    "content": "修复角标NAN问题。"
+                },
+                {
+                    "type": 1,
+                    "content": "修复更新日志无法关闭问题。"
+                }
+            ]
+        },
+        {
+            "version": "2.0.3",
+            "type": 1,
+            "content": [{
+                    "type": 1,
+                    "content": "修复一系列bug,优化代码。"
+                },
+                {
+                    "type": 1,
+                    "content": "添加交流群，欢迎交流与反馈。"
+                }
+            ]
+        },
+        {
+            "version": "2.0.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复个别基金数据异常的bug。"
+            }]
+        },
+        {
+            "version": "2.0.0",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "调整基金接口，支持当日实际净值，已更新的基金会有√提示。"
+                },
+                {
+                    "type": 2,
+                    "content": "角标支持自定义功能，单个、全部、收益率、收益额，随心所欲。"
+                },
+                {
+                    "type": 1,
+                    "content": "支持查看历史更新日志功能。"
+                }
+            ]
+        },
+        {
+            "version": "1.8.0",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "新增查看基金详情功能，点击基金名称即可查看估值图、走势图等相关信息。"
+                },
+                {
+                    "type": 2,
+                    "content": "新增基金配置信息的导入导出功能。"
+                },
+                {
+                    "type": 1,
+                    "content": "修复页面布局中的bug。"
+                }
+            ]
+        }, {
+
+            "version": "1.7.1",
+            "type": 1,
+            "content": [{
+                    "type": 2,
+                    "content": "新增查看持有收益功能， 添加持仓成本后， 可以统计持仓总收益。"
+                },
+                {
+                    "type": 1,
+                    "content": "修复设置页面中的bug。"
+                }
+            ]
+        }, {
+            "version": "1.7.0",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "新增暗色模式主题。"
+                },
+                {
+                    "type": 2,
+                    "content": "顶部指数信息支持动态修改。"
+                },
+                {
+                    "type": 1,
+                    "content": "暂停实时更新功能改为全局生效。"
+                },
+                {
+                    "type": 1,
+                    "content": "修复删除特别关注的基金后，脚本还实时更新的异常。"
+                }
+            ]
+        }, {
+            "version": "1.6.0",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "解决基金添加后无法显示、基金丢失等异常问题。"
+                },
+                {
+                    "type": 2,
+                    "content": "添加基金时增加搜索与多选功能。"
+                },
+                {
+                    "type": 2,
+                    "content": "增加按类别排序功能。"
+                },
+                {
+                    "type": 1,
+                    "content": "增加拖拽排序功能。"
+                }
+
+            ]
+        }, {
+            "version": "1.5.6",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复不同时区的时间异常问题。"
+            }]
+        }, {
+            "version": "1.5.5",
+            "type": 1,
+            "content": [{
+                    "type": 1,
+                    "content": "改个名字，φ(>ω<*) 听说名字越长越厉害。"
+                },
+                {
+                    "type": 1,
+                    "content": "优化滚动条效果，调整页面布局。"
+                },
+                {
+                    "type": 1,
+                    "content": "优化基金名称过长时的显示效果。"
+                }
+            ]
+        }, {
+            "version": "1.5.4",
+            "type": 1,
+            "content": [{
+                    "type": 2,
+                    "content": "有小伙伴反馈找不到设置入口，现在主页面增加设置入口，主页面布局调整。"
+                },
+                {
+                    "type": 1,
+                    "content": "设置页增加源码入口，感兴趣的小伙伴可以帮忙点个star。"
+                }
+            ]
+        }, {
+            "version": "1.5.3",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "优化持有金额与估值收益的计算方式，持有金额为上一个结算日的金额，估值收益为当前估算的收益额。"
+                },
+                {
+                    "type": 2,
+                    "content": "添加基金总收益项。"
+                }
+            ]
+        }, {
+            "version": "1.5.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "优化页面布局，拆分份额与收益信息选项。"
+            }]
+        }, {
+            "version": "1.5.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "功能优化。"
+            }]
+        }, {
+            "version": "1.5.0",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "增加基金排序功能。"
+                },
+                {
+                    "type": 2,
+                    "content": "增加收益估算功能，填写持有份额后即可自动计算每日收益，需在设置中开启。"
+                },
+                {
+                    "type": 2,
+                    "content": "新增设置选项，右键应用选择‘选项’即可进入设置。"
+                },
+                {
+                    "type": 1,
+                    "content": "完善节假日信息，可在设置中更新最新节假日信息。"
+                }
+            ]
+        }, {
+            "version": "1.4.3",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "解决因个别新发行基金数据错误而产生的数据异常问题。"
+            }]
+        }, {
+            "version": "1.4.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复休市中角标颜色异常的bug。"
+            }]
+        }, {
+            "version": "1.4.1",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "涨跌颜色调整。"
+            }]
+        }, {
+            "version": "1.4.0",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "优化代码，完善功能。"
+            }]
+        }, {
+            "version": "1.3.2",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "优化特别关注功能。"
+            }]
+        }, {
+            "version": "1.3.1",
+            "type": 2,
+            "content": [{
+                    "type": 2,
+                    "content": "增加特别关注功能，实时角标提醒；"
+                },
+                {
+                    "type": 1,
+                    "content": "增加简单的休市逻辑，休市状态不再实时更新数据。"
+                }
+            ]
+        }, {
+            "version": "1.2.0",
+            "type": 1,
+            "content": [{
+                "type": 1,
+                "content": "修复个别基金数据无法正常获取的问题；"
+            }]
+        }
+    ]
+}

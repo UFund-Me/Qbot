@@ -1,0 +1,17 @@
+{
+  "assets": "https://jywg.18.cn/Com/queryAssetAndPositionV1?validatekey=%s",
+  "submit": "https://jywg.18.cn/Trade/SubmitTradeV2?validatekey=%s",
+  "revoke": "https://jywg.18.cn/Trade/RevokeOrders?validatekey=%s",
+  "get_stock_list": "https://jywg.18.cn/Search/GetStockList?validatekey=%s",
+  "get_orders_data": "https://jywg.18.cn/Search/GetOrdersData?validatekey=%s",
+  "get_deal_data": "https://jywg.18.cn/Search/GetDealData?validatekey=%s",
+  "authentication": "https://jywg.18.cn/Login/Authentication",
+  "yzm": "https://jywg.18.cn/Login/YZM?randNum=",
+  "prefix" : "",
+  "authentication_check": "https://jywg.18.cn/Trade/Buy",
+  "get_his_deal_data": "https://jywg.18.cn/Search/GetHisDealData?validatekey=%s",
+  "get_his_orders_data": "https://jywg.18.cn/Search/GetHisOrdersData?validatekey=%s",
+  "get_can_buy_new_stock_list_v3": "https://jywg.18.cn/Trade/GetCanBuyNewStockListV3?validatekey=%s",
+  "get_convertible_bond_list_v2": "https://jywg.18.cn/Trade/GetConvertibleBondListV2?validatekey=%s",
+  "submit_bat_trade_v2": "https://jywg.18.cn/Trade/SubmitBatTradeV2?validatekey=%s"
+}

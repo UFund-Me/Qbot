@@ -1,0 +1,1 @@
+import{_ as o}from"./index.893f68d1.js";import{k as n,y as r,z as t,A as s}from"./element-plus.5733ce57.js";const a=n({name:"SecondNav"});function c(p,_,m,d,f,i){const e=r("router-view");return t(),s(e)}var v=o(a,[["render",c]]);export{v as default};

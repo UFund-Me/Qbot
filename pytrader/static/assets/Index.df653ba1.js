@@ -1,0 +1,1 @@
+import{_ as e}from"./index.893f68d1.js";import{k as n,z as t,F as r}from"./element-plus.5733ce57.js";const o=n({name:"ThirdText"});function s(a,c,d,p,i,f){return t(),r("div",null," ThirdText ")}var l=e(o,[["render",s]]);export{l as default};

@@ -1,17 +1,17 @@
-<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> quant.ai </h1>
+<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> Qbot </h1>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="224"/>
   <div>&nbsp;</div>
   <div align="center">
-    <b><font size="5">quant.ai website</font></b>
+    <b><font size="5">Qbot website</font></b>
     <sup>
       <a href="">
         <i><font size="4">HOT</font></i>
       </a>
     </sup>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <b><font size="5">quant.ai platform</font></b>
+    <b><font size="5">Qbot platform</font></b>
     <sup>
       <a href="">
         <i><font size="4">TRY IT OUT</font></i>
@@ -23,13 +23,13 @@
 
 <div align="center">
   <p>
-  <b>quant.ai</b> is an AI-oriented quantitative investment platform, which aims to realize the potential, <br>
+  <b>Qbot</b> is an AI-oriented quantitative investment platform, which aims to realize the potential, <br>
   empower AI technologies in quantitative investment.
   </p>
 </div>
 
 
-quant.ai = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
+Qbot = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
 
 
 ## Installation
