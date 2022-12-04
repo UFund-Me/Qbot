@@ -3,12 +3,12 @@
 set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../" && pwd -P)"
-NEED_UPDATE="false"
 
 function usage() {
   cat << EOF
 Usage: $0 [options] ...
 OPTIONS:
+    -t, --test              Test strategies
     -u, --update            Update the sysroot by manaul
     -h, --help              Show this message and exit
 EOF
@@ -19,11 +19,10 @@ function parse_cmdline_args() {
     local opt="$1"
     shift
     case "${opt}" in
-      -u | --update)
-        NEED_UPDATE="true"
-        ;;
+      -u | --update) ;;
+
       -t | --test)
-        python ${TOP_DIR}/core/bt_boll.py
+        python "${TOP_DIR}"/core/bt_boll.py
         ;;
       -h | --help)
         usage

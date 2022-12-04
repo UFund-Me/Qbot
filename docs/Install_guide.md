@@ -38,7 +38,8 @@ export PASSWORD="admin1234."
 Auto run with ci, eg:
 
 ```
-python3 pytrader/backtest.py
-python3 pytrader/tradertest.py
+cd  pytrader
+python3 test_backtrade.py
+python3 test_trader.py
 
 ```

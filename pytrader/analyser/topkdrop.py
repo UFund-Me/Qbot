@@ -8,7 +8,7 @@ from qlib.contrib.strategy import TopkDropoutStrategy
 
 if __name__ == "__main__":
     # init qlib
-    qlib.init(provider_uri="data/cn_data", region=REG_CN)
+    qlib.init(provider_uri="../data/cn_data", region=REG_CN)
 
     with open(
         "mlruns/3/ee9de2cb147348c58cfe2dd0bf06f5f6/artifacts/pred.pkl", "rb"

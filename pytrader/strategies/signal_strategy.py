@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append(r"/Users/charmve/workspace/quant.ai/Qtrading/data")
+sys.path.append(r"/Users/charmve/Qbot/pytrader/data")
 
 # print(sys.path)
 

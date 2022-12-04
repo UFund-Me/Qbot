@@ -6,14 +6,14 @@
   <div align="center">
     <b><font size="5">Qbot website</font></b>
     <sup>
-      <a href="">
+      <a href="https://ufund-me.github.io/Qbot/">
         <i><font size="4">HOT</font></i>
       </a>
     </sup>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <b><font size="5">Qbot platform</font></b>
     <sup>
-      <a href="">
+      <a href="https://ufund-me.github.io/Qbot/quantstats/docs/tearsheet.html">
         <i><font size="4">TRY IT OUT</font></i>
       </a>
     </sup>
@@ -30,11 +30,11 @@
 
 ```
 🤖 Qbot = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
-          |           |          |            |
-          |           |          |             \_ quantstats (dashboard\online operate)
-          |           |           \______________ Qbot - vnpy, pytrader, pyfunds
-          |           \__________________________ BackTest - backtrader, easyquant
-          \______________________________________ quant.ai - qlib, deep learning strategies         
+            |           |          |            |
+            |           |          |             \_ quantstats (dashboard\online operate)
+            |           |           \______________ Qbot - vnpy, pytrader, pyfunds
+            |           \__________________________ BackTest - backtrader, easyquant
+            \______________________________________ quant.ai - qlib, deep learning strategies
 ```
 
 ## Installation
@@ -123,19 +123,11 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
       <td>
         <li><b>Outdoor</b></li>
         <ul>
-            <li><a href="configs/second">SECOND (Sensor'2018)</a></li>
-            <li><a href="configs/pointpillars">PointPillars (CVPR'2019)</a></li>
-            <li><a href="configs/ssn">SSN (ECCV'2020)</a></li>
-            <li><a href="configs/3dssd">3DSSD (CVPR'2020)</a></li>
-            <li><a href="configs/sassd">SA-SSD (CVPR'2020)</a></li>
-            <li><a href="configs/point_rcnn">PointRCNN (CVPR'2019)</a></li>
             <li><a href="configs/parta2">Part-A2 (TPAMI'2020)</a></li>
             <li><a href="configs/centerpoint">CenterPoint (CVPR'2021)</a></li>
         </ul>
         <li><b>Indoor</b></li>
         <ul>
-            <li><a href="configs/votenet">VoteNet (ICCV'2019)</a></li>
-            <li><a href="configs/h3dnet">H3DNet (ECCV'2020)</a></li>
             <li><a href="configs/groupfree3d">Group-Free-3D (ICCV'2021)</a></li>
             <li><a href="configs/fcaf3d">FCAF3D (ECCV'2022)</a></li>
       </ul>
@@ -143,11 +135,9 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
       <td>
         <li><b>Outdoor</b></li>
         <ul>
-          <li><a href="configs/imvoxelnet">ImVoxelNet (WACV'2022)</a></li>
           <li><a href="configs/smoke">SMOKE (CVPRW'2020)</a></li>
           <li><a href="configs/fcos3d">FCOS3D (ICCVW'2021)</a></li>
           <li><a href="configs/pgd">PGD (CoRL'2021)</a></li>
-          <li><a href="configs/monoflex">MonoFlex (CVPR'2021)</a></li>
         </ul>
         <li><b>Indoor</b></li>
         <ul>
@@ -198,7 +188,7 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 ## Quantstats Report
 ## Contributing
 
-We appreciate all contributions to improve MMDetection3D. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
+We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
 
 ## Acknowledgement

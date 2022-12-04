@@ -4,7 +4,7 @@ from qlib.config import REG_CN
 from qlib.contrib.report import analysis_model, analysis_position
 from qlib.workflow import R
 
-qlib.init(provider_uri="data/cn_data", region=REG_CN)
+qlib.init(provider_uri="../data/cn_data", region=REG_CN)
 
 recorder = R.get_recorder(
     recorder_id="cfb1dc0830294571a67fc6a862e1cc1e", experiment_name="backtest_analysis"

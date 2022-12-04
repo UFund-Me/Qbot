@@ -192,13 +192,13 @@ class MainEngine:
     def load_strategy(self, names=None):
         """动态加载策略
         :param names: 策略名列表，元素为策略的 name 属性"""
-        s_folder = "../strategies"
+        s_folder = "strategies"
         self._names = names
         strategies = os.listdir(s_folder)
         strategies = filter(
             lambda file: file.endswith(".py") and file != "__init__.py", strategies
         )
-        importlib.import_module(s_folder)
+        # importlib.import_module(s_folder)
         for strategy_file in strategies:
             self.load(self._names, strategy_file)
         # 如果线程没有启动，就启动策略监视线程

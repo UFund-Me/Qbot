@@ -3,7 +3,7 @@ from qlib.config import REG_CN
 from qlib.contrib.data.handler import Alpha158
 
 if __name__ == "__main__":
-    qlib.init(provider_uri="data/cn_data", region=REG_CN)
+    qlib.init(provider_uri="../data/cn_data", region=REG_CN)
 
     data_handler_config = {
         "start_time": "2018-01-01",

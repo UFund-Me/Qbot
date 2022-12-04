@@ -5,7 +5,7 @@ from qlib.workflow import R
 from qlib.workflow.record_temp import PortAnaRecord, SignalRecord
 
 if __name__ == "__main__":
-    qlib.init(provider_uri="data/cn_data", region=REG_CN)
+    qlib.init(provider_uri="../data/cn_data", region=REG_CN)
 
     ###################################
     # train model

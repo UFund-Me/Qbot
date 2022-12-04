@@ -15,8 +15,8 @@ conda info --env
 
 pip install -r requirements.txt
 
-export USER_ID="admin"
-export PASSWORD="admin1234."
+export USER_ID="admin"       # replace your info
+export PASSWORD="admin1234." # replace your info
 
 echo "Successful - Environment is set up!"
 
@@ -42,3 +42,8 @@ cat << EOF
                 |           \__________________________ BackTest - backtrader, easyquant
                 \______________________________________ quant.ai - qlib, deep learning strategies                                   
 EOF
+
+echo "Run example backtest"
+cd pytrader
+python test_backtrade.py
+# python test_trader.py

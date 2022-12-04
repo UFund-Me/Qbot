@@ -1,6 +1,7 @@
 pandas
 akshare
 backtrader
+logbook
 easyquotation
 easytrader
 arrow
@@ -8,4 +9,14 @@ tushare
 numpy
 requests
 qlib
-matplotlib==3.2.2
+pyqlib
+matplotlib
+
+ddddocr==1.4.7
+fastapi==0.88.0
+fire==0.4.0
+Flask==1.1.2
+jqdatasdk==1.8.11
+Logbook==1.5.3
+redis==4.3.5
+scipy==1.7.3

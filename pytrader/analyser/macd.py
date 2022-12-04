@@ -12,7 +12,7 @@ if __name__ == "__main__":
     ]  # label
     label_names = ["LABEL", "MOMENTUM5"]
 
-    qlib.init(provider_uri="data/cn_data", region=REG_CN)
+    qlib.init(provider_uri="../data/cn_data", region=REG_CN)
 
     data_loader_config = {"feature": (fields, names), "label": (labels, label_names)}
 
