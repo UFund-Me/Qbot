@@ -135,5 +135,6 @@ jqdata.json
 pytrader.db
 account.json
 *.log
+gui/__pycache__/
 
 *.DS_Store

@@ -25,11 +25,17 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-    - name: Analysing the code with pylint
+
+    - name: Format check
       run: |
         ./.github/scripts/format_check.sh
       shell: bash
+
+    # - name: Analysing the code with pylint
+    #   run: |
+    #     pylint $(git ls-files '*.py')

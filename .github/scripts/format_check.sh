@@ -6,6 +6,7 @@ TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)"
 source "${TOP_DIR}/scripts/check_gtest_deps.sh"
 
 function check_code_formatted() {
+  local my_diffs=()
   # shellcheck disable=SC1001,SC2162
   while IFS=\= read my_diff; do
     my_diffs+=("$my_diff")
