@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ## Prepare
 
-设置环境变量聚款账号:
+申请聚宽账号，设置环境变量:
 
 ```bash
 export USER_ID="admin"
@@ -38,8 +38,10 @@ export PASSWORD="admin1234."
 Auto run with ci, eg:
 
 ```
+python main.py
+
 cd  pytrader
-python3 test_backtrade.py
-python3 test_trader.py
+python test_backtrade.py
+python test_trader.py
 
 ```

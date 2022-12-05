@@ -9,8 +9,8 @@ tushare
 numpy
 requests
 qlib
-pyqlib
 matplotlib
+attrdict
 wxPython
 
 ddddocr==1.4.7
@@ -18,7 +18,6 @@ fastapi==0.88.0
 fire==0.4.0
 Flask==1.1.2
 jqdatasdk
-Logbook==1.5.3
 redis
 scipy==1.7.3
 opencv-python>=4.6.0
