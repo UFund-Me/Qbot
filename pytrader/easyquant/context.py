@@ -2,7 +2,7 @@
 import datetime
 from typing import List
 
-import talib
+# import talib
 from easyquant.quotation import Quotation
 from easytrader.model import Balance, Deal, Entrust, Position
 from easytrader.webtrader import WebTrader
@@ -172,9 +172,9 @@ class Context:
             entrust_prop=entrust_prop,
         )
 
-    def __getattr__(self, func_name):
-        def talib_func(*args, **kwargs):
-            func = getattr(talib, func_name)
-            return func(*args, **kwargs)
+    # def __getattr__(self, func_name):
+    #     def talib_func(*args, **kwargs):
+    #         func = getattr(talib, func_name)
+    #         return func(*args, **kwargs)
 
-        return talib_func
+    #     return talib_func

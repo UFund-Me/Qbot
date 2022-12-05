@@ -15,12 +15,16 @@ conda info --env
 
 pip install -r requirements.txt
 
-export USER_ID="admin"       # replace your info
-export PASSWORD="admin1234." # replace your info
+export USER_ID="admin"                   # replace your info
+export PASSWORD="admin1234."             # replace your info
+export MAIL_LICENSE="wafasqtakgywoobach" # replace your own 163.com / qq.com license
 
 echo "Successful - Environment is set up!"
 
 echo "Enjoy, Quanter!"
+
+echo -e "\e]8;;http://github.com/Charmve\aThis is Charmve's blog\e]8;;\a"
+echo -e "\e[40;38;5;82m Alpha \e[30;48;5;82m Qbot \e[0m"
 
 cat << EOF
 

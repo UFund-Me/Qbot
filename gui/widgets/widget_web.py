@@ -15,7 +15,7 @@ class WebPanel(wx.Panel):
         self.browser.LoadURL(url)
 
     def show_file(self, filename):
-        with open(filename, 'r') as f:
+        with open(filename, "r") as f:
             html_cont = f.read()
             self.browser.SetPage(html_cont, "")
             self.browser.Show()

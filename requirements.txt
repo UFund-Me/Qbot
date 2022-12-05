@@ -11,12 +11,16 @@ requests
 qlib
 pyqlib
 matplotlib
+wxPython
 
 ddddocr==1.4.7
 fastapi==0.88.0
 fire==0.4.0
 Flask==1.1.2
-jqdatasdk==1.8.11
+jqdatasdk
 Logbook==1.5.3
-redis==4.3.5
+redis
 scipy==1.7.3
+opencv-python>=4.6.0
+pydantic
+python-dotenv

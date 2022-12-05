@@ -136,5 +136,8 @@ pytrader.db
 account.json
 *.log
 gui/__pycache__/
+gui/csv/
+
+pytrader/user_config.sh
 
 *.DS_Store

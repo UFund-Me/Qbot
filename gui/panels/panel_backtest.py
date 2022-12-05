@@ -1,22 +1,21 @@
 import wx
-from gui.widgets.widget_matplotlib import MatplotlibPanel
-from gui.widgets.widget_web import WebPanel
+
 from gui.config import DATA_DIR_BKT_RESULT
-from bokeh.plotting import figure, output_file, show, save
+from gui.widgets.widget_web import WebPanel
 
 
 # https://zhuanlan.zhihu.com/p/376248349
 def OnBkt(event):
-    wx.MessageBox('ok')
+    wx.MessageBox("ok")
 
 
 class PanelBacktest(wx.Panel):
     def __init__(self, parent):
         super(PanelBacktest, self).__init__(parent)
 
-        # 回测按钮
-        self.btn_bkt = wx.Button(self, label="回测")
-        self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
+        # # 回测按钮
+        # self.btn_bkt = wx.Button(self, label="回测")
+        # self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
 
         # 进度条
 
@@ -29,9 +28,9 @@ class PanelBacktest(wx.Panel):
         hbox = wx.BoxSizer(wx.HORIZONTAL)
         vbox.Add(hbox)
 
-        hbox.Add(wx.StaticText(self,label='请选择基准:'))
+        hbox.Add(wx.StaticText(self, label="请选择基准:"))
         combo_benchmarks = wx.ComboBox(self, size=(190, 25), pos=(10, 120))
-        combo_benchmarks.SetItems(['沪深300指数(000300.SH)','标普500指数(SPY)'])
+        combo_benchmarks.SetItems(["沪深300指数(000300.SH)", "标普500指数(SPY)"])
         hbox.Add(combo_benchmarks)
 
         # 上面是一个panel
@@ -48,11 +47,11 @@ class PanelBacktest(wx.Panel):
         # 底部是一个浏览器
         web = WebPanel(self)
         vbox.Add(web, 1, wx.EXPAND)
-        web.show_file(DATA_DIR_BKT_RESULT.joinpath('bkt_result.html'))
+        web.show_file(DATA_DIR_BKT_RESULT.joinpath("bkt_result.html"))
 
-        web.show_url('http://www.jisilu.cn')
+        # web.show_url('http://www.jisilu.cn')
 
         self.web = web
 
     def OnClick(self, event):
-       pass
+        pass

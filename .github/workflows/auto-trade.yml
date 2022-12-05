@@ -31,11 +31,11 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      
+          pip install -r requirements.txt
+
       - name: Not on weekend
         if: github.event.schedule != '30 5 * * 0,6'
         run: echo "This step will be skipped on weekend"

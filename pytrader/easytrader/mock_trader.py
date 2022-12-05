@@ -7,8 +7,6 @@ from typing import List
 from easytrader import exceptions, webtrader
 from easytrader.model import Balance, Deal, Entrust, Position
 
-# import ddddocr
-
 
 class MockTrader(webtrader.WebTrader):
     config_path = os.path.dirname(__file__) + "/config/mock.json"

@@ -107,7 +107,7 @@ start_cash = 1000000  # 初始自己为1000000
 stake = 100  # 单次交易数量为1手
 commfee = 0.0005  # 佣金为万5
 sdate = "20210101"  # 回测时间段
-edate = "20221128"
+edate = "20221206"
 cerebro = bt.Cerebro()  # 创建回测系统实例
 # 利用AKShare获取股票的前复权数据的前6列
 df_qfq = ak.stock_zh_a_hist(
