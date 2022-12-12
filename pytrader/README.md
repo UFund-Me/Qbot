@@ -4,6 +4,10 @@
 
 支持东方财富自动交易
 
+在线交易和回测系统使用方法：
+
+<a href="https://asciinema.org/a/6i5fadK74xHInnyAAFuIJ4rBH" target="_blank"><img src="https://asciinema.org/a/6i5fadK74xHInnyAAFuIJ4rBH.svg" /></a>
+
 ## web 系统
 
 新增web，可以设置关注的股票，显示T操作价格

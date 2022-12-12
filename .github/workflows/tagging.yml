@@ -1,0 +1,37 @@
+name: Tag new version
+on:
+  pull_request:
+    branches:
+      - dev
+    types: [closed]
+
+jobs:
+  tag:
+    name: Application Tagging
+    runs-on: ubuntu-latest
+    if: "!(github.event_name == 'pull_request' && !github.event.pull_request.merged)"
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Cofiguring Git
+        run: |-
+          git config user.name $GITHUB_ACTOR
+          git config user.email gh-actions-${GITHUB_ACTOR}@github.com
+      # Bump version on merging Pull Requests with specific labels. (bump:major,bump:minor,bump:patch)
+      - name: Version Calculation
+        if: github.event.pull_request.merged
+        id: version-calc
+        uses: haya14busa/action-bumpr@v1
+
+      - name: Change version
+        uses: reedyuk/npm-version@1.1.1
+        with:
+          version: ${{ steps.version-calc.outputs.next_version }}
+          git-tag-version: 'false'
+
+      - name: Push version
+        run: |-
+          git commit -a -m "ci(version): level up version"
+          git tag -f ${{ steps.version-calc.outputs.next_version }}
+          git push origin ${{ steps.version-calc.outputs.next_version }}

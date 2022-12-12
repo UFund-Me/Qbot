@@ -71,6 +71,9 @@
 `npm run watch:dev`
 生成 dist 文件夹，浏览器选择“加载已解压的扩展程序”
 
+> 如果报错 `Node Sass Does Not Yet Support Your Current Environment Os X 64 Bit` 执行下 
+> `npm rebuild node-sass`
+
 打包与发布先执行
 `npm run build`
 生成 dist 文件夹，再执行
@@ -79,9 +82,12 @@
 
 ## 更新说明
 
+最新版本：
 ### v3.0.3
 
 - 优化加仓功能的计算方式。
+
+<details><summary>历史版本（点击展开）：</summary>
 
 ### v3.0.2
 
@@ -287,6 +293,8 @@
 ### v1.2.0
 
 - 修复个别基金数据无法正常获取的问题；
+
+</details>
 
 ## 隐私协议
 

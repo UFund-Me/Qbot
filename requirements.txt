@@ -1,17 +1,19 @@
 pandas
 akshare
 backtrader
+backtrader_plotting
 logbook
 easyquotation
 easytrader
+quantstats
 arrow
 tushare
 numpy
 requests
 qlib
 matplotlib
-attrdict
-wxPython
+# attrdict
+# wxPython
 
 ddddocr==1.4.7
 fastapi==0.88.0

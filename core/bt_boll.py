@@ -13,6 +13,8 @@ import akshare as ak
 import backtrader as bt
 import pandas as pd
 
+import quantstats
+
 
 class BollStrategy(bt.Strategy):  # BOLL策略程序
     params = (
@@ -133,11 +135,23 @@ data = bt.feeds.PandasData(
 )  # 规范化数据格式
 cerebro.adddata(data)  # 加载数据
 cerebro.addstrategy(BollStrategy, nk=13, printlog=True)  # 加载交易策略
+cerebro.addanalyzer(bt.analyzers.PyFolio, _name="PyFolio")
 cerebro.broker.setcash(start_cash)  # broker设置资金
 cerebro.broker.setcommission(commission=commfee)  # broker手续费
 cerebro.addsizer(bt.sizers.FixedSize, stake=stake)  # 设置买入数量
 print("期初总资金: %.2f" % start_cash)
-cerebro.run()  # 运行回测
+back = cerebro.run()  # 运行回测
 end_value = cerebro.broker.getvalue()  # 获取回测结束后的总资金
 print("期末总资金: %.2f" % end_value)
-cerebro.plot()
+# cerebro.plot()
+
+# result_img = cerebro.plot(style='line', plotdist=0.1, grid=True)
+result_img = cerebro.plot()
+result_img[0][0].savefig(f'{"result_img.png"}')
+
+strat = back[0]
+portfolio_stats = strat.analyzers.getbyname("PyFolio")
+returns, positions, transactions, gross_lev = portfolio_stats.get_pf_items()
+print(returns)
+returns.index = returns.index.tz_convert(None)
+quantstats.reports.html(returns, output="stats.html", title="BTC Sentiment")
