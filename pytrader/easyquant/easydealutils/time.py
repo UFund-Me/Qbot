@@ -2,8 +2,11 @@ import datetime
 import doctest
 import json
 
+from pathlib import Path
+TOP_DIR = Path(__file__).parent.parent.parent.parent.joinpath("pytrader")
+
 f = open(
-    "/Users/charmve/Qbot/pytrader/easyquant/easydealutils/trade_days.json",
+    TOP_DIR.joinpath("easyquant/easydealutils/trade_days.json"),
     mode="r",
     encoding="utf-8",
 )

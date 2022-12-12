@@ -17,6 +17,9 @@ from .log_handler.default_handler import DefaultLogHandler
 from .push_engine.clock_engine import ClockEngine
 from .push_engine.quotation_engine import QuotationEngine
 from .quotation import use_quotation
+from pathlib import Path
+
+TOP_DIR = Path(__file__).parent.parent.parent.parent.joinpath("pytrader")
 
 log = Logger(os.path.basename(__file__))
 StreamHandler(sys.stdout).push_application()
@@ -192,7 +195,7 @@ class MainEngine:
     def load_strategy(self, names=None):
         """动态加载策略
         :param names: 策略名列表，元素为策略的 name 属性"""
-        s_folder = "strategies"
+        s_folder = TOP_DIR.joinpath("strategies"),
         self._names = names
         strategies = os.listdir(s_folder)
         strategies = filter(

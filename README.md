@@ -23,7 +23,7 @@
 
 <div align="center">
   <p>
-  <b>Qbot</b> is an AI-oriented quantitative investment platform, which aims to realize the potential, <br>
+    <b>Qbot</b> is an AI-oriented quantitative investment platform, which aims to realize the potential, <br>
   empower AI technologies in quantitative investment.
   </p>
 </div>
@@ -54,6 +54,16 @@
 
 ## Get Started
 
+```shell
+export USER_ID="admin"                   # replace your info
+export PASSWORD="admin1234."             # replace your info
+
+pip install -r requirements.txt
+
+cd  pytrader
+python test_backtrade.py
+python test_trader.py
+```
 
 ## Benchmark and Model zoo
 
@@ -186,6 +196,10 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 <sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/model_zoo.md) can be trained or used in this codebase.</sup>
 
 ## Quantstats Report
+
+![Quantstats Report](https://user-images.githubusercontent.com/29084184/207054856-44d1815b-f92f-40a7-b82e-e4a6b3960f2f.png)
+
+Click [HERE](quantstats#visualize-stock-performance) to more detail.
 ## Contributing
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
@@ -193,4 +207,8 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 ## Acknowledgement
 
+<br><br>
 
+感谢大家的支持与喜欢！
+
+Code with ❤️ & ☕️ @Charmve 2022-2023
