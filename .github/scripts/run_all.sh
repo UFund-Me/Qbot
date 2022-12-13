@@ -23,6 +23,7 @@ function parse_cmdline_args() {
 
       -t | --test)
         python "${TOP_DIR}"/core/bt_boll.py
+        python "${TOP_DIR}"/core/bt_bigger_than_EMA.py
         ;;
       -h | --help)
         usage
