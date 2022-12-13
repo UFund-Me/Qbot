@@ -1,5 +1,12 @@
 <h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h1>
 
+[![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml)
+[![AutoTrade](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml)
+[![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml)
+[![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml)
+<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python%203.9|%203.10-00ff00.svg?logo=Python&color=blue" alt="Python version"></a>
+<a href="https://ufund-me.github.io/qbot"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
+
 <div align="center">
   <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="224"/>
   <div>&nbsp;</div>
@@ -68,7 +75,7 @@ python test_trader.py
 ## Benchmark and Model zoo
 
 Results and models are available in the [model zoo](docs/model_zoo.md).
-
+<!------
 <div align="center">
   <b>Components</b>
 </div>
@@ -179,18 +186,31 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
   </tbody>
 </table>
 
-|               | ResNet | PointNet++ | SECOND | DGCNN | RegNetX | DLA | MinkResNet |
-| :-----------: | :----: | :--------: | :----: | :---: | :-----: | :-: | :--------: |
-|    SECOND     |   ✗    |     ✗      |   ✓    |   ✗   |    ✗    |  ✗  |     ✗      |
-| PointPillars  |   ✗    |     ✗      |   ✓    |   ✗   |    ✓    |  ✗  |     ✗      |
-|  FreeAnchor   |   ✗    |     ✗      |   ✗    |   ✗   |    ✓    |  ✗  |     ✗      |
-|     3DSSD     |   ✗    |     ✓      |   ✗    |   ✗   |    ✗    |  ✗  |     ✗      |
-|    Part-A2    |   ✗    |     ✗      |   ✓    |   ✗   |    ✗    |  ✗  |     ✗      |
-|    MVXNet     |   ✓    |     ✗      |   ✓    |   ✗   |    ✗    |  ✗  |     ✗      |
-|  CenterPoint  |   ✗    |     ✗      |   ✓    |   ✗   |    ✗    |  ✗  |     ✗      |
-|      SSN      |   ✗    |     ✗      |   ✗    |   ✗   |    ✓    |  ✗  |     ✗      |
-|   ImVoteNet   |   ✓    |     ✓      |   ✗    |   ✗   |    ✗    |  ✗  |     ✗      |
-|    FCOS3D     |   ✓    |     ✗      |   ✗    |   ✗   |    ✗    |  ✗  |     ✗      |
+--------->
+
+|                | status | benchmark |   framework  | DGCNN | RegNetX |                        addition                                |   arXiv    |
+|  :-----------: | :----: | :--------:| :----:       | :---: | :-----: | :------------------------------------------------------------: | :--------: |
+|     GBDT       |   ✗    |     ✗     |   XGBoost    |   ✗   |    ✗    |  Tianqi Chen, et al. KDD 2016                                  |     ✗      |
+|     GBDT       |   ✗    |     ✗     |   LightGBM   |   ✗   |    ✓    |  Guolin Ke, et al. NIPS 2017                                   |     ✗      |
+|     GBDT       |   ✗    |     ✗     |   Catboost   |   ✗   |    ✓    |  Liudmila Prokhorenkova, et al. NIPS 2018✗                     |     ✗      |
+|     MLP        |   ✗    |     ✓     |   pytorch    |   ✗   |    ✗    |                             --                                 |     ✗      |
+|     LSTM       |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sepp Hochreiter, et al. Neural computation 1997               |     ✗      |
+|     GRU        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Kyunghyun Cho, et al. 2014                                    |     ✗      |
+|     ALSTM      |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Yao Qin, et al. IJCAI 2017                                    |     ✗      |
+|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |   ✗     |  Petar Velickovic, et al. 2017                                 |     ✗      |
+|     SFM        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Liheng Zhang, et al. KDD 2017                                 |     ✗      |
+|     TFT        |   ✓    |     ✗     |   tensorflow |   ✗   |    ✗    |  Bryan Lim, et al. International Journal of Forecasting 2019   |     ✗      |
+|     TabNet     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sercan O. Arik, et al. AAAI 2019                              |     ✗      |
+| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |   ✗     |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
+|     TCTS       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Xueqing Wu, et al. ICML 2021                                  |     ✗      |
+|  Transformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Ashish Vaswani, et al. NeurIPS 2017                           |     ✗      |
+|  Localformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Juyong Jiang, et al.                                          |     ✗      |
+|     TRA        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hengxu, Dong, et al. KDD 2021                                 |     ✗      |
+|     TCN        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Shaojie Bai, et al. 2018                                      |     ✗      |
+|     ADARNN     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  YunTao Du, et al. 2021                                        |     ✗      |
+|     ADD        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hongshun Tang, et al.2020                                     |     ✗      |
+|     IGMTF      |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021                                         |     ✗      |
+|     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021                                         |     ✗      |
 
 
 <sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/model_zoo.md) can be trained or used in this codebase.</sup>
