@@ -10,18 +10,18 @@ arrow
 tushare
 numpy
 requests
-qlib
-matplotlib
+pyqlib
+jqdatasdk
+redis
+pydantic
+python-dotenv
 # attrdict
 # wxPython
 
 ddddocr==1.4.7
+matplotlib==3.2.2
 fastapi==0.88.0
 fire==0.4.0
 Flask==1.1.2
-jqdatasdk
-redis
 scipy==1.7.3
 opencv-python>=4.6.0
-pydantic
-python-dotenv
