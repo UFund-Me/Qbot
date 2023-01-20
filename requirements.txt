@@ -11,6 +11,7 @@ tushare
 numpy
 requests
 pyqlib
+cython
 jqdatasdk
 redis
 pydantic
@@ -25,3 +26,7 @@ fire==0.4.0
 Flask==1.1.2
 scipy==1.7.3
 opencv-python>=4.6.0
+pydantic
+python-dotenv
+matplotlib==3.1.3
+plotly==4.12.0

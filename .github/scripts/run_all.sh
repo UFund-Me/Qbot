@@ -22,8 +22,8 @@ function parse_cmdline_args() {
       -u | --update) ;;
 
       -t | --test)
-        python "${TOP_DIR}"/core/bt_boll.py
-        python "${TOP_DIR}"/core/bt_bigger_than_EMA.py
+        python "${TOP_DIR}"/qbot/bt_boll.py
+        python "${TOP_DIR}"/qbot/bt_bigger_than_EMA.py
         ;;
       -h | --help)
         usage

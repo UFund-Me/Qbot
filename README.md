@@ -30,18 +30,18 @@
 
 <div align="center">
   <p>
-    <b>Qbot</b> is an AI-oriented quantitative investment platform, which aims to realize the potential, <br>
+    <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, <br>
   empower AI technologies in quantitative investment.
   </p>
 </div>
 
 ```
-🤖 Qbot = 智能交易策略 + 回测系统 + 自动化交易 (+ 可视化分析工具)
-            |           |          |            |
-            |           |          |             \_ quantstats (dashboard\online operate)
-            |           |           \______________ Qbot - vnpy, pytrader, pyfunds
-            |           \__________________________ BackTest - backtrader, easyquant
-            \______________________________________ quant.ai - qlib, deep learning strategies
+🤖 Qbot = 智能交易策略 + 回测系统 + 自动化量化交易 (+ 可视化分析工具)
+            |           |            |            |
+            |           |            |             \_ quantstats (dashboard\online operate)
+            |           |             \______________ Qbot - vnpy, pytrader, pyfunds
+            |           \____________________________ BackTest - backtrader, easyquant
+            \________________________________________ quant.ai - qlib, deep learning strategies
 ```
 
 ## Installation
@@ -70,6 +70,9 @@ pip install -r requirements.txt
 cd  pytrader
 python test_backtrade.py
 python test_trader.py
+
+# visualization
+python ./qbot/main.py
 ```
 
 ## Benchmark and Model zoo

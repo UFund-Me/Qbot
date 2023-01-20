@@ -8,7 +8,7 @@
 set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../" && pwd -P)"
-_file="${TOP_DIR}/config/national_holidays.csv"
+_file="${TOP_DIR}/qbot/config/national_holidays.csv"
 
 function parse_holiday() {
     local cron_items=()
