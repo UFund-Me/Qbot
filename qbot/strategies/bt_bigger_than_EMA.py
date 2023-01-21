@@ -141,6 +141,6 @@ if __name__ == "__main__":
     cerebro.run()
     # 获取回测结束后的总资金
     print("期末资金: %.2f" % cerebro.broker.getvalue())
-    cerebro.plotinfo.plotname = '收盘价大于简单移动平均价'
+    cerebro.plotinfo.plotname = "收盘价大于简单移动平均价"
     # Plot the result
     cerebro.plot()

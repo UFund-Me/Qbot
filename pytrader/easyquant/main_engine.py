@@ -17,7 +17,6 @@ from .log_handler.default_handler import DefaultLogHandler
 from .push_engine.clock_engine import ClockEngine
 from .push_engine.quotation_engine import QuotationEngine
 from .quotation import use_quotation
-from pathlib import Path
 
 # TOP_DIR = Path(__file__).parent.parent.parent.joinpath("pytrader")
 

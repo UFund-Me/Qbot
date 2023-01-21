@@ -6,22 +6,19 @@ TODO:
     - seperated insert, delete, update, query operations are required.
 """
 
-import abc
 import shutil
 import struct
-import traceback
-from pathlib import Path
-from typing import Iterable, List, Union
+from concurrent.futures import ProcessPoolExecutor
 from functools import partial
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from pathlib import Path
+from typing import Iterable
 
 import fire
-import numpy as np
 import pandas as pd
-from tqdm import tqdm
 from loguru import logger
-from qlib.utils import fname_to_code, code_to_fname, get_period_offset
 from qlib.config import C
+from qlib.utils import fname_to_code, get_period_offset
+from tqdm import tqdm
 
 
 class DumpPitData:
@@ -99,14 +96,22 @@ class DumpPitData:
             exclude_fields = exclude_fields.split(",")
         if isinstance(include_fields, str):
             include_fields = include_fields.split(",")
-        self._exclude_fields = tuple(filter(lambda x: len(x) > 0, map(str.strip, exclude_fields)))
-        self._include_fields = tuple(filter(lambda x: len(x) > 0, map(str.strip, include_fields)))
+        self._exclude_fields = tuple(
+            filter(lambda x: len(x) > 0, map(str.strip, exclude_fields))
+        )
+        self._include_fields = tuple(
+            filter(lambda x: len(x) > 0, map(str.strip, include_fields))
+        )
         self.file_suffix = file_suffix
-        self.csv_files = sorted(csv_path.glob(f"*{self.file_suffix}") if csv_path.is_dir() else [csv_path])
+        self.csv_files = sorted(
+            csv_path.glob(f"*{self.file_suffix}") if csv_path.is_dir() else [csv_path]
+        )
         if limit_nums is not None:
             self.csv_files = self.csv_files[: int(limit_nums)]
         self.qlib_dir = Path(qlib_dir).expanduser()
-        self.backup_dir = backup_dir if backup_dir is None else Path(backup_dir).expanduser()
+        self.backup_dir = (
+            backup_dir if backup_dir is None else Path(backup_dir).expanduser()
+        )
         if backup_dir is not None:
             self._backup_qlib_dir(Path(backup_dir).expanduser())
 
@@ -124,7 +129,9 @@ class DumpPitData:
     def get_source_data(self, file_path: Path) -> pd.DataFrame:
         df = pd.read_csv(str(file_path.resolve()), low_memory=False)
         df[self.value_column_name] = df[self.value_column_name].astype("float32")
-        df[self.date_column_name] = df[self.date_column_name].str.replace("-", "").astype("int32")
+        df[self.date_column_name] = (
+            df[self.date_column_name].str.replace("-", "").astype("int32")
+        )
         # df.drop_duplicates([self.date_field_name], inplace=True)
         return df
 
@@ -149,10 +156,7 @@ class DumpPitData:
         )
 
     def _dump_pit(
-        self,
-        file_path: str,
-        interval: str = "quarterly",
-        overwrite: bool = False,
+        self, file_path: str, interval: str = "quarterly", overwrite: bool = False,
     ):
         """
         dump data as the following format:
@@ -184,23 +188,27 @@ class DumpPitData:
             logger.warning(f"{symbol} file is empty")
             return
         for field in self.get_dump_fields(df):
-            df_sub = df.query(f'{self.field_column_name}=="{field}"').sort_values(self.date_column_name)
+            df_sub = df.query(f'{self.field_column_name}=="{field}"').sort_values(
+                self.date_column_name
+            )
             if df_sub.empty:
                 logger.warning(f"field {field} of {symbol} is empty")
                 continue
             data_file, index_file = self.get_filenames(symbol, field, interval)
 
-            ## calculate first & last period
+            # calculate first & last period
             start_year = df_sub[self.period_column_name].min()
             end_year = df_sub[self.period_column_name].max()
             if interval == self.INTERVAL_quarterly:
-                start_year //= 100
-                end_year //= 100
+                start_year  # = 100
+                end_year  # = 100
 
             # adjust `first_year` if existing data found
             if not overwrite and index_file.exists():
                 with open(index_file, "rb") as fi:
-                    (first_year,) = struct.unpack(self.PERIOD_DTYPE, fi.read(self.PERIOD_DTYPE_SIZE))
+                    (first_year,) = struct.unpack(
+                        self.PERIOD_DTYPE, fi.read(self.PERIOD_DTYPE_SIZE)
+                    )
                     n_years = len(fi.read()) // self.INDEX_DTYPE_SIZE
                     if interval == self.INTERVAL_quarterly:
                         n_years //= 4
@@ -212,14 +220,18 @@ class DumpPitData:
 
             # if data already exists, continue to the next field
             if start_year > end_year:
-                logger.warning(f"{symbol}-{field} data already exists, continue to the next field")
+                logger.warning(
+                    f"{symbol}-{field} data already exists, continue to the next field"
+                )
                 continue
 
             # dump index filled with NA
             with open(index_file, "ab") as fi:
                 for year in range(start_year, end_year + 1):
                     if interval == self.INTERVAL_quarterly:
-                        fi.write(struct.pack(self.INDEX_DTYPE * 4, *[self.NA_INDEX] * 4))
+                        fi.write(
+                            struct.pack(self.INDEX_DTYPE * 4, *[self.NA_INDEX] * 4)
+                        )
                     else:
                         fi.write(struct.pack(self.INDEX_DTYPE, self.NA_INDEX))
 
@@ -241,10 +253,14 @@ class DumpPitData:
                 # update index if needed
                 for i, row in df_sub.iterrows():
                     # get index
-                    offset = get_period_offset(first_year, row.period, interval == self.INTERVAL_quarterly)
+                    offset = get_period_offset(
+                        first_year, row.period, interval == self.INTERVAL_quarterly
+                    )
 
                     fi.seek(self.PERIOD_DTYPE_SIZE + self.INDEX_DTYPE_SIZE * offset)
-                    (cur_index,) = struct.unpack(self.INDEX_DTYPE, fi.read(self.INDEX_DTYPE_SIZE))
+                    (cur_index,) = struct.unpack(
+                        self.INDEX_DTYPE, fi.read(self.INDEX_DTYPE_SIZE)
+                    )
 
                     # Case I: new data => update `_next` with current index
                     if cur_index == self.NA_INDEX:
@@ -254,16 +270,34 @@ class DumpPitData:
                     else:
                         _cur_fd = fd.tell()
                         prev_index = self.NA_INDEX
-                        while cur_index != self.NA_INDEX:  # NOTE: first iter always != NA_INDEX
-                            fd.seek(cur_index + self.DATA_DTYPE_SIZE - self.INDEX_DTYPE_SIZE)
+                        while (
+                            cur_index != self.NA_INDEX
+                        ):  # NOTE: first iter always != NA_INDEX
+                            fd.seek(
+                                cur_index + self.DATA_DTYPE_SIZE - self.INDEX_DTYPE_SIZE
+                            )
                             prev_index = cur_index
-                            (cur_index,) = struct.unpack(self.INDEX_DTYPE, fd.read(self.INDEX_DTYPE_SIZE))
-                        fd.seek(prev_index + self.DATA_DTYPE_SIZE - self.INDEX_DTYPE_SIZE)
-                        fd.write(struct.pack(self.INDEX_DTYPE, _cur_fd))  # NOTE: add _next pointer
+                            (cur_index,) = struct.unpack(
+                                self.INDEX_DTYPE, fd.read(self.INDEX_DTYPE_SIZE)
+                            )
+                        fd.seek(
+                            prev_index + self.DATA_DTYPE_SIZE - self.INDEX_DTYPE_SIZE
+                        )
+                        fd.write(
+                            struct.pack(self.INDEX_DTYPE, _cur_fd)
+                        )  # NOTE: add _next pointer
                         fd.seek(_cur_fd)
 
                     # dump data
-                    fd.write(struct.pack(self.DATA_DTYPE, row.date, row.period, row.value, self.NA_INDEX))
+                    fd.write(
+                        struct.pack(
+                            self.DATA_DTYPE,
+                            row.date,
+                            row.period,
+                            row.value,
+                            self.NA_INDEX,
+                        )
+                    )
 
     def dump(self, interval="quarterly", overwrite=False):
         logger.info("start dump pit data......")
