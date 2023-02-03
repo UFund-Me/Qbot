@@ -200,11 +200,11 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 |     LSTM       |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sepp Hochreiter, et al. Neural computation 1997               |     ✗      |
 |     GRU        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Kyunghyun Cho, et al. 2014                                    |     ✗      |
 |     ALSTM      |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Yao Qin, et al. IJCAI 2017                                    |     ✗      |
-|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |   ✗     |  Petar Velickovic, et al. 2017                                 |     ✗      |
+|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |    ✗    |  Petar Velickovic, et al. 2017                                 |     ✗      |
 |     SFM        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Liheng Zhang, et al. KDD 2017                                 |     ✗      |
 |     TFT        |   ✓    |     ✗     |   tensorflow |   ✗   |    ✗    |  Bryan Lim, et al. International Journal of Forecasting 2019   |     ✗      |
 |     TabNet     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sercan O. Arik, et al. AAAI 2019                              |     ✗      |
-| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |   ✗     |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
+| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |    ✗    |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
 |     TCTS       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Xueqing Wu, et al. ICML 2021                                  |     ✗      |
 |  Transformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Ashish Vaswani, et al. NeurIPS 2017                           |     ✗      |
 |  Localformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Juyong Jiang, et al.                                          |     ✗      |
@@ -223,11 +223,12 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 ![Quantstats Report](https://user-images.githubusercontent.com/29084184/207054856-44d1815b-f92f-40a7-b82e-e4a6b3960f2f.png)
 
 Click [HERE](quantstats#visualize-stock-performance) to more detail.
+
 ## Contributing
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
-<a href="https://github.com/Charmve/AR-DAO/graphs/contributors"><img src="https://contrib.rocks/image?repo=Charmve/AR-DAO" /></a>
+<a href="https://github.com/Charmve/AR-DAO/graphs/contributors"><img src="https://contrib.rocks/image?repo=UFund-Me/Qbot" /></a>
 
 ## Acknowledgement
 
