@@ -227,10 +227,13 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
+<a href="https://github.com/Charmve/AR-DAO/graphs/contributors"><img src="https://contrib.rocks/image?repo=Charmve/AR-DAO" /></a>
 
 ## Acknowledgement
 
-<br><br>
+<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
+
+<br>
 
 感谢大家的支持与喜欢！
 
