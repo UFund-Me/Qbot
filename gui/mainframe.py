@@ -1,7 +1,10 @@
 import os
 from pathlib import Path
+import numpy as np
 
 import wx
+
+import matplotlib.pyplot as plt
 
 from gui.panels.panel_backtest import PanelBacktest
 from gui.widgets.widget_matplotlib import MatplotlibPanel
@@ -49,7 +52,7 @@ class MainFrame(wx.Frame):
     def __init__(self, *args, **kw):
         super(MainFrame, self).__init__(*args, **kw)
         # 设置默认大小
-        self.SetSize(wx.Size(900, 600))
+        self.SetSize(wx.Size(600, 400))
         self.SetName(APP_NAME)
 
         # 设置程序图标
@@ -72,10 +75,25 @@ class MainFrame(wx.Frame):
             self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0
         )
 
-        web = WebPanel(self.m_notebook)
-        self.m_notebook.AddPage(web, "Qbot 官方网站", True)
-        web.show_url("http://ufund-me.github.io")
-        # web.show_url('http://localhost:8888/notebooks/examples/workflow_by_code.ipynb?token=d6526946101b02f1755058d5f76a18a5f4117d5c6857249b')
+        homepage = WebPanel(self.m_notebook)
+        self.m_notebook.AddPage(homepage, "Qbot 官方网站", True)
+        homepage.show_url("http://ufund-me.github.io")
 
-        self.m_notebook.AddPage(MatplotlibPanel(self.m_notebook), "可视化回测555", True)
-        self.m_notebook.AddPage(PanelBacktest(self.m_notebook), "可视化回测系统", True)
+        plt.rc("grid", color="#316931", linewidth=1, linestyle="-")
+        plt.rc("xtick", labelsize=15)
+        plt.rc("ytick", labelsize=15)
+
+        # plot = MatplotlibPanel(self.m_notebook)
+        # self.m_notebook.AddPage(plot, "基金投资策略分析", True)
+        # plot.show()
+
+        web = WebPanel(self.m_notebook)
+        self.m_notebook.AddPage(web, "交易策略在线回测", True)
+        # bash: cd ~/Qbot/pytrader/strategies/ && jupyter-notebook
+        web.show_url('http://localhost:8888/notebooks/workflow_by_code.ipynb')
+
+        web = WebPanel(self.m_notebook)
+        self.m_notebook.AddPage(web, "基金投资策略分析", True)
+        web.show_url("http://sunshowerc.github.io/fund/#/")
+
+        self.m_notebook.AddPage(PanelBacktest(self.m_notebook), "可视化股票回测系统", True)

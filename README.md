@@ -73,11 +73,13 @@ python test_trader.py
 
 # visualization
 python ./qbot/main.py
+
+# if run on Mac, please use 'pythonw ./qbot/main.py'
 ```
 
 ## Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/model_zoo.md).
+Results and models are available in the [model zoo](docs/model_zoo.md). [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 <!------
 <div align="center">
   <b>Components</b>
@@ -200,11 +202,11 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 |     LSTM       |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sepp Hochreiter, et al. Neural computation 1997               |     ✗      |
 |     GRU        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Kyunghyun Cho, et al. 2014                                    |     ✗      |
 |     ALSTM      |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Yao Qin, et al. IJCAI 2017                                    |     ✗      |
-|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |    ✗    |  Petar Velickovic, et al. 2017                                 |     ✗      |
+|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |   ✗     |  Petar Velickovic, et al. 2017                                 |     ✗      |
 |     SFM        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Liheng Zhang, et al. KDD 2017                                 |     ✗      |
 |     TFT        |   ✓    |     ✗     |   tensorflow |   ✗   |    ✗    |  Bryan Lim, et al. International Journal of Forecasting 2019   |     ✗      |
 |     TabNet     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sercan O. Arik, et al. AAAI 2019                              |     ✗      |
-| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |    ✗    |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
+| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |   ✗     |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
 |     TCTS       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Xueqing Wu, et al. ICML 2021                                  |     ✗      |
 |  Transformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Ashish Vaswani, et al. NeurIPS 2017                           |     ✗      |
 |  Localformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Juyong Jiang, et al.                                          |     ✗      |
@@ -224,17 +226,27 @@ Results and models are available in the [model zoo](docs/model_zoo.md).
 
 Click [HERE](quantstats#visualize-stock-performance) to more detail.
 
+#### Some strategy backtest results:
+
+A股回测MACD策略:
+![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
+
+ A股回测KDJ策略:
+![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
 ## Contributing
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
-<a href="https://github.com/Charmve/AR-DAO/graphs/contributors"><img src="https://contrib.rocks/image?repo=UFund-Me/Qbot" /></a>
-
 ## Acknowledgement
 
-<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
+基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。
 
-<br>
+## 💖 Sponsors and Backers
+
+<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
+<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/backers.svg?avatarHeight=36" alt="Backer" width="900"></a>
+
+<br><br>
 
 感谢大家的支持与喜欢！
 
