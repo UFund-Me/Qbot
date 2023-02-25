@@ -44,6 +44,16 @@
             \________________________________________ quant.ai - qlib, deep learning strategies
 ```
 
+<br>
+
+<div align="center">
+
+  ***不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~***
+
+  <i>喜欢这个项目吗？请考虑 ❤️赞助本项目 以帮助改进！</i>
+
+</div>
+
 ## Installation
 
 [Install Guide](./docs/Install_guide.md)
