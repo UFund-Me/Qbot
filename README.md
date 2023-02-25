@@ -82,9 +82,10 @@ python test_backtrade.py
 python test_trader.py
 
 # visualization
-python ./qbot/main.py
+python main.py
 
-# if run on Mac, please use 'pythonw ./qbot/main.py'
+# if run on Mac, please use 'pythonw main.py'
+
 ```
 
 ## Benchmark and Model zoo

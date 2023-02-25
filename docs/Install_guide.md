@@ -38,8 +38,8 @@ export PASSWORD="admin1234."
 Auto run with ci, eg:
 
 ```
-python ./qbot/main.py
-# if run on Mac, please use 'pythonw ./qbot/main.py'
+python main.py
+# if run on Mac, please use 'pythonw main.py'
 
 cd  pytrader
 python test_backtrade.py

@@ -62,11 +62,11 @@ python test_backtrade.py # run backtest
 # make sure if local device
 if [[ "$(uname)" == "Darwin" ]]; then
   info "run on MacOS"
-  pythonw ./qbot/main.py
+  pythonw main.py
   # server_ip=$(ifconfig en0|grep "inet "|awk '{print $2}'|awk -F: '{print $1}')
 # shellcheck disable=SC2308
 elif [[ "$(expr substr "$(uname -s)" 1 5)" == "Linux" ]]; then
-  python ./qbot/main.py
+  python main.py
   # server_ip=$(ifconfig eth0|grep "inet addr"|awk '{print $2}'|awk -F: '{print $2}')
 # shellcheck disable=SC2308
 elif [[ "$(expr substr "$(uname -s)" 1 10)" == "MINGW32_NT" ]]; then
