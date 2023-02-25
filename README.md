@@ -203,29 +203,30 @@ Results and models are available in the [model zoo](docs/model_zoo.md). [![Binde
 
 --------->
 
-|                | status | benchmark |   framework  | DGCNN | RegNetX |                        addition                                |   arXiv    |
-|  :-----------: | :----: | :--------:| :----:       | :---: | :-----: | :------------------------------------------------------------: | :--------: |
-|     GBDT       |   ✗    |     ✗     |   XGBoost    |   ✗   |    ✗    |  Tianqi Chen, et al. KDD 2016                                  |     ✗      |
-|     GBDT       |   ✗    |     ✗     |   LightGBM   |   ✗   |    ✓    |  Guolin Ke, et al. NIPS 2017                                   |     ✗      |
-|     GBDT       |   ✗    |     ✗     |   Catboost   |   ✗   |    ✓    |  Liudmila Prokhorenkova, et al. NIPS 2018✗                     |     ✗      |
-|     MLP        |   ✗    |     ✓     |   pytorch    |   ✗   |    ✗    |                             --                                 |     ✗      |
-|     LSTM       |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sepp Hochreiter, et al. Neural computation 1997               |     ✗      |
-|     GRU        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Kyunghyun Cho, et al. 2014                                    |     ✗      |
-|     ALSTM      |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Yao Qin, et al. IJCAI 2017                                    |     ✗      |
-|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |   ✗     |  Petar Velickovic, et al. 2017                                 |     ✗      |
-|     SFM        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Liheng Zhang, et al. KDD 2017                                 |     ✗      |
-|     TFT        |   ✓    |     ✗     |   tensorflow |   ✗   |    ✗    |  Bryan Lim, et al. International Journal of Forecasting 2019   |     ✗      |
-|     TabNet     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sercan O. Arik, et al. AAAI 2019                              |     ✗      |
-| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |   ✗     |  Chuheng Zhang, et al. ICDM 2020                               |     ✗      |
-|     TCTS       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Xueqing Wu, et al. ICML 2021                                  |     ✗      |
-|  Transformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Ashish Vaswani, et al. NeurIPS 2017                           |     ✗      |
-|  Localformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Juyong Jiang, et al.                                          |     ✗      |
-|     TRA        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hengxu, Dong, et al. KDD 2021                                 |     ✗      |
-|     TCN        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Shaojie Bai, et al. 2018                                      |     ✗      |
-|     ADARNN     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  YunTao Du, et al. 2021                                        |     ✗      |
-|     ADD        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hongshun Tang, et al.2020                                     |     ✗      |
-|     IGMTF      |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021                                         |     ✗      |
-|     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021                                         |     ✗      |
+|                | status | benchmark |   framework  | DGCNN | RegNetX | addition |   arXiv    |
+|  :-----------: | :----: | :--------:|   :----:     | :---: | :-----: | :------: | :--------: |
+|     GBDT       |   ✗    |     ✗     |   XGBoost    |   ✗   |    ✗    |  Tianqi Chen, et al. KDD 2016 |     ✗      |
+|     GBDT       |   ✗    |     ✗     |   LightGBM   |   ✗   |    ✓    |  Guolin Ke, et al. NIPS 2017 |     ✗      |
+|     GBDT       |   ✗    |     ✗     |   Catboost   |   ✗   |    ✓    |  Liudmila Prokhorenkova, et al. NIPS 2018 |     ✗      |
+|     MLP        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  --      |     ✗      |
+|     LSTM       |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Sepp Hochreiter, et al. Neural computation 1997 |  ✗  |
+|    LightGBM    |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  --      |     ✗      |
+|     GRU        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Kyunghyun Cho, et al. 2014 |     ✗      |
+|     ALSTM      |   ✗    |     ✗     |   pytorch    |   ✗   |    ✗    |  Yao Qin, et al. IJCAI 2017 |     ✗      |
+|     GATs       |   ✗    |     ✓     |   pytorch    |   ✗   |    ✗    |  Petar Velickovic, et al. 2017 |     ✗      |
+|     SFM        |   ✓    |     ✓     |   pytorch    |   ✗   |    ✗    |  Liheng Zhang, et al. KDD 2017 |     ✗      |
+|     TFT        |   ✓    |     ✓     |   tensorflow |   ✗   |    ✗    |  Bryan Lim, et al. International Journal of Forecasting 2019 | ✗ |
+|     TabNet     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Sercan O. Arik, et al. AAAI 2019 |     ✗      |
+| DoubleEnsemble |   ✓    |     ✓     |   LightGBM   |   ✗   |    ✗    |  Chuheng Zhang, et al. ICDM 2020 |     ✗      |
+|     TCTS       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Xueqing Wu, et al. ICML 2021 |     ✗      |
+|  Transformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Ashish Vaswani, et al. NeurIPS 2017 |     ✗      |
+|  Localformer   |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Juyong Jiang, et al. |     ✗      |
+|     TRA        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hengxu, Dong, et al. KDD 2021 |     ✗      |
+|     TCN        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Shaojie Bai, et al. 2018 |     ✗      |
+|     ADARNN     |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  YunTao Du, et al. 2021 |     ✗      |
+|     ADD        |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Hongshun Tang, et al.2020 |     ✗      |
+|     IGMTF      |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021 |     ✗      |
+|     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021 |     ✗      |
 
 
 <sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/model_zoo.md) can be trained or used in this codebase.</sup>
@@ -241,7 +242,7 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 A股回测MACD策略:
 ![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
 
- A股回测KDJ策略:
+A股回测KDJ策略:
 ![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
 ## Contributing
 
@@ -251,10 +252,12 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。
 
+<br>
+
 ## 💖 Sponsors and Backers
 
-<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
-<a href="https://ufund-me.github.io/img/WeChat-sponsor.png" target="_blank"><img src="https://opencollective.com/ant-design/tiers/backers.svg?avatarHeight=36" alt="Backer" width="900"></a>
+<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
+<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/backers.svg?avatarHeight=36" alt="Backer" width="900"></a>
 
 <br><br>
 

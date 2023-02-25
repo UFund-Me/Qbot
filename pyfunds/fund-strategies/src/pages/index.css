@@ -1,0 +1,43 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 4em;
+  text-align: center;
+
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  max-width: 90vw;
+}
+
+.welcome {
+  height: 512px;
+  background: url(../assets/yay.jpg) no-repeat center 0;
+  background-size: 512px 512px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin: 1.8em 0 0;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}
+
+
+.inline {
+  display: inline-block;
+}
+
+.inline-select {
+  display: inline-block;
+  width: 100px !important;
+  margin: 0 10px;
+}
+
+.hint {
+  color: #888888;
+  font-size: 12px;
+}

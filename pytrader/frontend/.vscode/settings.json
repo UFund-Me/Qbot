@@ -1,0 +1,19 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "editor.tabSize": 4,
+    "vetur.validation.template": false,
+    "vetur.experimental.templateInterpolationService": true,
+    "vetur.validation.interpolation": false,
+    "scss.lint.unknownAtRules": "ignore",
+    "css.validate": true,
+    "scss.validate": true,
+    "files.associations": {
+        "*.css": "scss"
+    },
+    "volar.tsPlugin": true,
+    "volar.tsPluginStatus": false
+}
