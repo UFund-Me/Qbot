@@ -1,0 +1,46 @@
+{
+	"console.log": {
+		"scope": "javascript,typescript,vue",
+		"prefix": "con",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "Log output to console"
+	},
+	"style postcss scoped": {
+		"scope": "vue",
+		"prefix": "style",
+		"body": [
+            "<style lang='postcss' scoped>",
+            "    $1",
+            "</style>"
+		],
+		"description": ""
+	},
+	"vue新建页面": {
+		"scope": "vue",
+		"prefix": "page",
+		"body": [
+            "<template>",
+            "    <div>",
+            "       $2",
+            "    </div>",
+            "</template>",
+
+            "<script lang='ts'>",
+            "import { defineComponent } from 'vue'",
+            "",
+            "export default defineComponent({",
+            "    name: '$1',",
+            "    setup() {",
+            "        $3",
+            "        return {",
+            "            $4",
+            "        }",
+            "    },",
+            "})",
+            "</script>"
+		],
+		"description": ""
+	}
+}

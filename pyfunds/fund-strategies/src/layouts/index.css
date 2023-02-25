@@ -1,0 +1,23 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+  background: darkslateblue;
+  padding: .6em 0;
+  color: white;
+  margin: 0;
+}
+
+.compare-btn {
+  position: absolute;
+  transform: translate(0, -50%);
+  right: 15px;
+  top: 50%;
+}

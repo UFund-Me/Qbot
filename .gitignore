@@ -129,7 +129,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-.vscode
 .vim
 .nvimrc
 jqdata.json

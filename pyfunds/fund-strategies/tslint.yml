@@ -1,0 +1,15 @@
+defaultSeverity: error
+extends:
+  - tslint-react
+  - tslint-eslint-rules
+rules:
+  no-console: false
+  no-construct: true
+  no-debugger: false
+  no-reference: true
+  jsx-boolean-value: false
+  jsx-no-multiline-js: false # 允许 多行 js
+  jsx-no-lambda: false
+  jsx-wrap-multiline: false
+  jsx-alignment: false
+  eofline: false

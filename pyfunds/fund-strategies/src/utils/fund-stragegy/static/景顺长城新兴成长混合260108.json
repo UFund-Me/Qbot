@@ -1,0 +1,7020 @@
+{
+  "bonus": {
+    "2018-01-19": {
+      "date": "2018-01-19",
+      "val": "1.3490",
+      "accumulatedVal": "2.8860",
+      "growthRate": "-1.75",
+      "bonus": "0.17"
+    },
+    "2016-01-21": {
+      "date": "2016-01-21",
+      "val": "0.8070",
+      "accumulatedVal": "2.1740",
+      "growthRate": "-3.90",
+      "bonus": "0.007"
+    }
+  },
+  "all": {
+    "2019-12-27": {
+      "date": "2019-12-27",
+      "val": "1.8080",
+      "accumulatedVal": "3.3450",
+      "growthRate": "1.12",
+      "bonus": ""
+    },
+    "2019-12-26": {
+      "date": "2019-12-26",
+      "val": "1.7880",
+      "accumulatedVal": "3.3250",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2019-12-25": {
+      "date": "2019-12-25",
+      "val": "1.7830",
+      "accumulatedVal": "3.3200",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2019-12-24": {
+      "date": "2019-12-24",
+      "val": "1.7870",
+      "accumulatedVal": "3.3240",
+      "growthRate": "0.34",
+      "bonus": ""
+    },
+    "2019-12-23": {
+      "date": "2019-12-23",
+      "val": "1.7810",
+      "accumulatedVal": "3.3180",
+      "growthRate": "-0.84",
+      "bonus": ""
+    },
+    "2019-12-20": {
+      "date": "2019-12-20",
+      "val": "1.7960",
+      "accumulatedVal": "3.3330",
+      "growthRate": "0.06",
+      "bonus": ""
+    },
+    "2019-12-19": {
+      "date": "2019-12-19",
+      "val": "1.7950",
+      "accumulatedVal": "3.3320",
+      "growthRate": "-0.50",
+      "bonus": ""
+    },
+    "2019-12-18": {
+      "date": "2019-12-18",
+      "val": "1.8040",
+      "accumulatedVal": "3.3410",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2019-12-17": {
+      "date": "2019-12-17",
+      "val": "1.8090",
+      "accumulatedVal": "3.3460",
+      "growthRate": "1.29",
+      "bonus": ""
+    },
+    "2019-12-16": {
+      "date": "2019-12-16",
+      "val": "1.7860",
+      "accumulatedVal": "3.3230",
+      "growthRate": "-0.83",
+      "bonus": ""
+    },
+    "2019-12-13": {
+      "date": "2019-12-13",
+      "val": "1.8010",
+      "accumulatedVal": "3.3380",
+      "growthRate": "1.46",
+      "bonus": ""
+    },
+    "2019-12-12": {
+      "date": "2019-12-12",
+      "val": "1.7750",
+      "accumulatedVal": "3.3120",
+      "growthRate": "-0.67",
+      "bonus": ""
+    },
+    "2019-12-11": {
+      "date": "2019-12-11",
+      "val": "1.7870",
+      "accumulatedVal": "3.3240",
+      "growthRate": "-0.56",
+      "bonus": ""
+    },
+    "2019-12-10": {
+      "date": "2019-12-10",
+      "val": "1.7970",
+      "accumulatedVal": "3.3340",
+      "growthRate": "-0.33",
+      "bonus": ""
+    },
+    "2019-12-09": {
+      "date": "2019-12-09",
+      "val": "1.8030",
+      "accumulatedVal": "3.3400",
+      "growthRate": "-0.61",
+      "bonus": ""
+    },
+    "2019-12-06": {
+      "date": "2019-12-06",
+      "val": "1.8140",
+      "accumulatedVal": "3.3510",
+      "growthRate": "1.40",
+      "bonus": ""
+    },
+    "2019-12-05": {
+      "date": "2019-12-05",
+      "val": "1.7890",
+      "accumulatedVal": "3.3260",
+      "growthRate": "0.45",
+      "bonus": ""
+    },
+    "2019-12-04": {
+      "date": "2019-12-04",
+      "val": "1.7810",
+      "accumulatedVal": "3.3180",
+      "growthRate": "0.34",
+      "bonus": ""
+    },
+    "2019-12-03": {
+      "date": "2019-12-03",
+      "val": "1.7750",
+      "accumulatedVal": "3.3120",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2019-12-02": {
+      "date": "2019-12-02",
+      "val": "1.7700",
+      "accumulatedVal": "3.3070",
+      "growthRate": "0.80",
+      "bonus": ""
+    },
+    "2019-11-29": {
+      "date": "2019-11-29",
+      "val": "1.7560",
+      "accumulatedVal": "3.2930",
+      "growthRate": "-1.90",
+      "bonus": ""
+    },
+    "2019-11-28": {
+      "date": "2019-11-28",
+      "val": "1.7900",
+      "accumulatedVal": "3.3270",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2019-11-27": {
+      "date": "2019-11-27",
+      "val": "1.7950",
+      "accumulatedVal": "3.3320",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2019-11-26": {
+      "date": "2019-11-26",
+      "val": "1.8030",
+      "accumulatedVal": "3.3400",
+      "growthRate": "0.95",
+      "bonus": ""
+    },
+    "2019-11-25": {
+      "date": "2019-11-25",
+      "val": "1.7860",
+      "accumulatedVal": "3.3230",
+      "growthRate": "-0.45",
+      "bonus": ""
+    },
+    "2019-11-22": {
+      "date": "2019-11-22",
+      "val": "1.7940",
+      "accumulatedVal": "3.3310",
+      "growthRate": "-2.02",
+      "bonus": ""
+    },
+    "2019-11-21": {
+      "date": "2019-11-21",
+      "val": "1.8310",
+      "accumulatedVal": "3.3680",
+      "growthRate": "-0.27",
+      "bonus": ""
+    },
+    "2019-11-20": {
+      "date": "2019-11-20",
+      "val": "1.8360",
+      "accumulatedVal": "3.3730",
+      "growthRate": "-0.65",
+      "bonus": ""
+    },
+    "2019-11-19": {
+      "date": "2019-11-19",
+      "val": "1.8480",
+      "accumulatedVal": "3.3850",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2019-11-18": {
+      "date": "2019-11-18",
+      "val": "1.8250",
+      "accumulatedVal": "3.3620",
+      "growthRate": "0.66",
+      "bonus": ""
+    },
+    "2019-11-15": {
+      "date": "2019-11-15",
+      "val": "1.8130",
+      "accumulatedVal": "3.3500",
+      "growthRate": "-1.36",
+      "bonus": ""
+    },
+    "2019-11-14": {
+      "date": "2019-11-14",
+      "val": "1.8380",
+      "accumulatedVal": "3.3750",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2019-11-13": {
+      "date": "2019-11-13",
+      "val": "1.8360",
+      "accumulatedVal": "3.3730",
+      "growthRate": "0.22",
+      "bonus": ""
+    },
+    "2019-11-12": {
+      "date": "2019-11-12",
+      "val": "1.8320",
+      "accumulatedVal": "3.3690",
+      "growthRate": "0.16",
+      "bonus": ""
+    },
+    "2019-11-11": {
+      "date": "2019-11-11",
+      "val": "1.8290",
+      "accumulatedVal": "3.3660",
+      "growthRate": "-1.30",
+      "bonus": ""
+    },
+    "2019-11-08": {
+      "date": "2019-11-08",
+      "val": "1.8530",
+      "accumulatedVal": "3.3900",
+      "growthRate": "-0.54",
+      "bonus": ""
+    },
+    "2019-11-07": {
+      "date": "2019-11-07",
+      "val": "1.8630",
+      "accumulatedVal": "3.4000",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2019-11-06": {
+      "date": "2019-11-06",
+      "val": "1.8550",
+      "accumulatedVal": "3.3920",
+      "growthRate": "-1.28",
+      "bonus": ""
+    },
+    "2019-11-05": {
+      "date": "2019-11-05",
+      "val": "1.8790",
+      "accumulatedVal": "3.4160",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2019-11-04": {
+      "date": "2019-11-04",
+      "val": "1.8710",
+      "accumulatedVal": "3.4080",
+      "growthRate": "0.70",
+      "bonus": ""
+    },
+    "2019-11-01": {
+      "date": "2019-11-01",
+      "val": "1.8580",
+      "accumulatedVal": "3.3950",
+      "growthRate": "0.81",
+      "bonus": ""
+    },
+    "2019-10-31": {
+      "date": "2019-10-31",
+      "val": "1.8430",
+      "accumulatedVal": "3.3800",
+      "growthRate": "-0.05",
+      "bonus": ""
+    },
+    "2019-10-30": {
+      "date": "2019-10-30",
+      "val": "1.8440",
+      "accumulatedVal": "3.3810",
+      "growthRate": "-0.59",
+      "bonus": ""
+    },
+    "2019-10-29": {
+      "date": "2019-10-29",
+      "val": "1.8550",
+      "accumulatedVal": "3.3920",
+      "growthRate": "1.09",
+      "bonus": ""
+    },
+    "2019-10-28": {
+      "date": "2019-10-28",
+      "val": "1.8350",
+      "accumulatedVal": "3.3720",
+      "growthRate": "0.94",
+      "bonus": ""
+    },
+    "2019-10-25": {
+      "date": "2019-10-25",
+      "val": "1.8180",
+      "accumulatedVal": "3.3550",
+      "growthRate": "2.60",
+      "bonus": ""
+    },
+    "2019-10-24": {
+      "date": "2019-10-24",
+      "val": "1.7720",
+      "accumulatedVal": "3.3090",
+      "growthRate": "-0.62",
+      "bonus": ""
+    },
+    "2019-10-23": {
+      "date": "2019-10-23",
+      "val": "1.7830",
+      "accumulatedVal": "3.3200",
+      "growthRate": "-0.78",
+      "bonus": ""
+    },
+    "2019-10-22": {
+      "date": "2019-10-22",
+      "val": "1.7970",
+      "accumulatedVal": "3.3340",
+      "growthRate": "0.50",
+      "bonus": ""
+    },
+    "2019-10-21": {
+      "date": "2019-10-21",
+      "val": "1.7880",
+      "accumulatedVal": "3.3250",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2019-10-18": {
+      "date": "2019-10-18",
+      "val": "1.7730",
+      "accumulatedVal": "3.3100",
+      "growthRate": "-0.56",
+      "bonus": ""
+    },
+    "2019-10-17": {
+      "date": "2019-10-17",
+      "val": "1.7830",
+      "accumulatedVal": "3.3200",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2019-10-16": {
+      "date": "2019-10-16",
+      "val": "1.7780",
+      "accumulatedVal": "3.3150",
+      "growthRate": "-1.28",
+      "bonus": ""
+    },
+    "2019-10-15": {
+      "date": "2019-10-15",
+      "val": "1.8010",
+      "accumulatedVal": "3.3380",
+      "growthRate": "0.45",
+      "bonus": ""
+    },
+    "2019-10-14": {
+      "date": "2019-10-14",
+      "val": "1.7930",
+      "accumulatedVal": "3.3300",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2019-10-11": {
+      "date": "2019-10-11",
+      "val": "1.7910",
+      "accumulatedVal": "3.3280",
+      "growthRate": "0.45",
+      "bonus": ""
+    },
+    "2019-10-10": {
+      "date": "2019-10-10",
+      "val": "1.7830",
+      "accumulatedVal": "3.3200",
+      "growthRate": "1.42",
+      "bonus": ""
+    },
+    "2019-10-09": {
+      "date": "2019-10-09",
+      "val": "1.7580",
+      "accumulatedVal": "3.2950",
+      "growthRate": "-0.79",
+      "bonus": ""
+    },
+    "2019-10-08": {
+      "date": "2019-10-08",
+      "val": "1.7720",
+      "accumulatedVal": "3.3090",
+      "growthRate": "1.96",
+      "bonus": ""
+    },
+    "2019-09-30": {
+      "date": "2019-09-30",
+      "val": "1.7380",
+      "accumulatedVal": "3.2750",
+      "growthRate": "-0.40",
+      "bonus": ""
+    },
+    "2019-09-27": {
+      "date": "2019-09-27",
+      "val": "1.7450",
+      "accumulatedVal": "3.2820",
+      "growthRate": "1.16",
+      "bonus": ""
+    },
+    "2019-09-26": {
+      "date": "2019-09-26",
+      "val": "1.7250",
+      "accumulatedVal": "3.2620",
+      "growthRate": "-2.04",
+      "bonus": ""
+    },
+    "2019-09-25": {
+      "date": "2019-09-25",
+      "val": "1.7610",
+      "accumulatedVal": "3.2980",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2019-09-24": {
+      "date": "2019-09-24",
+      "val": "1.7660",
+      "accumulatedVal": "3.3030",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2019-09-23": {
+      "date": "2019-09-23",
+      "val": "1.7630",
+      "accumulatedVal": "3.3000",
+      "growthRate": "-1.40",
+      "bonus": ""
+    },
+    "2019-09-20": {
+      "date": "2019-09-20",
+      "val": "1.7880",
+      "accumulatedVal": "3.3250",
+      "growthRate": "0.34",
+      "bonus": ""
+    },
+    "2019-09-19": {
+      "date": "2019-09-19",
+      "val": "1.7820",
+      "accumulatedVal": "3.3190",
+      "growthRate": "0.39",
+      "bonus": ""
+    },
+    "2019-09-18": {
+      "date": "2019-09-18",
+      "val": "1.7750",
+      "accumulatedVal": "3.3120",
+      "growthRate": "1.43",
+      "bonus": ""
+    },
+    "2019-09-17": {
+      "date": "2019-09-17",
+      "val": "1.7500",
+      "accumulatedVal": "3.2870",
+      "growthRate": "-0.40",
+      "bonus": ""
+    },
+    "2019-09-16": {
+      "date": "2019-09-16",
+      "val": "1.7570",
+      "accumulatedVal": "3.2940",
+      "growthRate": "-0.23",
+      "bonus": ""
+    },
+    "2019-09-12": {
+      "date": "2019-09-12",
+      "val": "1.7610",
+      "accumulatedVal": "3.2980",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2019-09-11": {
+      "date": "2019-09-11",
+      "val": "1.7430",
+      "accumulatedVal": "3.2800",
+      "growthRate": "-2.95",
+      "bonus": ""
+    },
+    "2019-09-10": {
+      "date": "2019-09-10",
+      "val": "1.7960",
+      "accumulatedVal": "3.3330",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2019-09-09": {
+      "date": "2019-09-09",
+      "val": "1.8000",
+      "accumulatedVal": "3.3370",
+      "growthRate": "-0.55",
+      "bonus": ""
+    },
+    "2019-09-06": {
+      "date": "2019-09-06",
+      "val": "1.8100",
+      "accumulatedVal": "3.3470",
+      "growthRate": "-0.98",
+      "bonus": ""
+    },
+    "2019-09-05": {
+      "date": "2019-09-05",
+      "val": "1.8280",
+      "accumulatedVal": "3.3650",
+      "growthRate": "0.77",
+      "bonus": ""
+    },
+    "2019-09-04": {
+      "date": "2019-09-04",
+      "val": "1.8140",
+      "accumulatedVal": "3.3510",
+      "growthRate": "-0.77",
+      "bonus": ""
+    },
+    "2019-09-03": {
+      "date": "2019-09-03",
+      "val": "1.8280",
+      "accumulatedVal": "3.3650",
+      "growthRate": "0.05",
+      "bonus": ""
+    },
+    "2019-09-02": {
+      "date": "2019-09-02",
+      "val": "1.8270",
+      "accumulatedVal": "3.3640",
+      "growthRate": "0.27",
+      "bonus": ""
+    },
+    "2019-08-30": {
+      "date": "2019-08-30",
+      "val": "1.8220",
+      "accumulatedVal": "3.3590",
+      "growthRate": "1.50",
+      "bonus": ""
+    },
+    "2019-08-29": {
+      "date": "2019-08-29",
+      "val": "1.7950",
+      "accumulatedVal": "3.3320",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2019-08-28": {
+      "date": "2019-08-28",
+      "val": "1.7900",
+      "accumulatedVal": "3.3270",
+      "growthRate": "0.73",
+      "bonus": ""
+    },
+    "2019-08-27": {
+      "date": "2019-08-27",
+      "val": "1.7770",
+      "accumulatedVal": "3.3140",
+      "growthRate": "2.48",
+      "bonus": ""
+    },
+    "2019-08-26": {
+      "date": "2019-08-26",
+      "val": "1.7340",
+      "accumulatedVal": "3.2710",
+      "growthRate": "-0.97",
+      "bonus": ""
+    },
+    "2019-08-23": {
+      "date": "2019-08-23",
+      "val": "1.7510",
+      "accumulatedVal": "3.2880",
+      "growthRate": "0.57",
+      "bonus": ""
+    },
+    "2019-08-22": {
+      "date": "2019-08-22",
+      "val": "1.7410",
+      "accumulatedVal": "3.2780",
+      "growthRate": "1.46",
+      "bonus": ""
+    },
+    "2019-08-21": {
+      "date": "2019-08-21",
+      "val": "1.7160",
+      "accumulatedVal": "3.2530",
+      "growthRate": "-0.46",
+      "bonus": ""
+    },
+    "2019-08-20": {
+      "date": "2019-08-20",
+      "val": "1.7240",
+      "accumulatedVal": "3.2610",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2019-08-19": {
+      "date": "2019-08-19",
+      "val": "1.7210",
+      "accumulatedVal": "3.2580",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2019-08-16": {
+      "date": "2019-08-16",
+      "val": "1.7150",
+      "accumulatedVal": "3.2520",
+      "growthRate": "1.30",
+      "bonus": ""
+    },
+    "2019-08-15": {
+      "date": "2019-08-15",
+      "val": "1.6930",
+      "accumulatedVal": "3.2300",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2019-08-14": {
+      "date": "2019-08-14",
+      "val": "1.6960",
+      "accumulatedVal": "3.2330",
+      "growthRate": "0.95",
+      "bonus": ""
+    },
+    "2019-08-13": {
+      "date": "2019-08-13",
+      "val": "1.6800",
+      "accumulatedVal": "3.2170",
+      "growthRate": "-0.77",
+      "bonus": ""
+    },
+    "2019-08-12": {
+      "date": "2019-08-12",
+      "val": "1.6930",
+      "accumulatedVal": "3.2300",
+      "growthRate": "1.80",
+      "bonus": ""
+    },
+    "2019-08-09": {
+      "date": "2019-08-09",
+      "val": "1.6630",
+      "accumulatedVal": "3.2000",
+      "growthRate": "-1.83",
+      "bonus": ""
+    },
+    "2019-08-08": {
+      "date": "2019-08-08",
+      "val": "1.6940",
+      "accumulatedVal": "3.2310",
+      "growthRate": "1.32",
+      "bonus": ""
+    },
+    "2019-08-07": {
+      "date": "2019-08-07",
+      "val": "1.6720",
+      "accumulatedVal": "3.2090",
+      "growthRate": "-0.65",
+      "bonus": ""
+    },
+    "2019-08-06": {
+      "date": "2019-08-06",
+      "val": "1.6830",
+      "accumulatedVal": "3.2200",
+      "growthRate": "-0.36",
+      "bonus": ""
+    },
+    "2019-08-05": {
+      "date": "2019-08-05",
+      "val": "1.6890",
+      "accumulatedVal": "3.2260",
+      "growthRate": "-1.63",
+      "bonus": ""
+    },
+    "2019-08-02": {
+      "date": "2019-08-02",
+      "val": "1.7170",
+      "accumulatedVal": "3.2540",
+      "growthRate": "-0.35",
+      "bonus": ""
+    },
+    "2019-08-01": {
+      "date": "2019-08-01",
+      "val": "1.7230",
+      "accumulatedVal": "3.2600",
+      "growthRate": "-0.52",
+      "bonus": ""
+    },
+    "2019-07-31": {
+      "date": "2019-07-31",
+      "val": "1.7320",
+      "accumulatedVal": "3.2690",
+      "growthRate": "-0.92",
+      "bonus": ""
+    },
+    "2019-07-30": {
+      "date": "2019-07-30",
+      "val": "1.7480",
+      "accumulatedVal": "3.2850",
+      "growthRate": "0.06",
+      "bonus": ""
+    },
+    "2019-07-29": {
+      "date": "2019-07-29",
+      "val": "1.7470",
+      "accumulatedVal": "3.2840",
+      "growthRate": "1.04",
+      "bonus": ""
+    },
+    "2019-07-26": {
+      "date": "2019-07-26",
+      "val": "1.7290",
+      "accumulatedVal": "3.2660",
+      "growthRate": "0.12",
+      "bonus": ""
+    },
+    "2019-07-25": {
+      "date": "2019-07-25",
+      "val": "1.7270",
+      "accumulatedVal": "3.2640",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2019-07-24": {
+      "date": "2019-07-24",
+      "val": "1.7100",
+      "accumulatedVal": "3.2470",
+      "growthRate": "0.18",
+      "bonus": ""
+    },
+    "2019-07-23": {
+      "date": "2019-07-23",
+      "val": "1.7070",
+      "accumulatedVal": "3.2440",
+      "growthRate": "-0.99",
+      "bonus": ""
+    },
+    "2019-07-22": {
+      "date": "2019-07-22",
+      "val": "1.7240",
+      "accumulatedVal": "3.2610",
+      "growthRate": "-0.29",
+      "bonus": ""
+    },
+    "2019-07-19": {
+      "date": "2019-07-19",
+      "val": "1.7290",
+      "accumulatedVal": "3.2660",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2019-07-18": {
+      "date": "2019-07-18",
+      "val": "1.7120",
+      "accumulatedVal": "3.2490",
+      "growthRate": "-0.81",
+      "bonus": ""
+    },
+    "2019-07-17": {
+      "date": "2019-07-17",
+      "val": "1.7260",
+      "accumulatedVal": "3.2630",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2019-07-16": {
+      "date": "2019-07-16",
+      "val": "1.7260",
+      "accumulatedVal": "3.2630",
+      "growthRate": "-1.15",
+      "bonus": ""
+    },
+    "2019-07-15": {
+      "date": "2019-07-15",
+      "val": "1.7460",
+      "accumulatedVal": "3.2830",
+      "growthRate": "0.40",
+      "bonus": ""
+    },
+    "2019-07-12": {
+      "date": "2019-07-12",
+      "val": "1.7390",
+      "accumulatedVal": "3.2760",
+      "growthRate": "1.05",
+      "bonus": ""
+    },
+    "2019-07-11": {
+      "date": "2019-07-11",
+      "val": "1.7210",
+      "accumulatedVal": "3.2580",
+      "growthRate": "-0.23",
+      "bonus": ""
+    },
+    "2019-07-10": {
+      "date": "2019-07-10",
+      "val": "1.7250",
+      "accumulatedVal": "3.2620",
+      "growthRate": "0.41",
+      "bonus": ""
+    },
+    "2019-07-09": {
+      "date": "2019-07-09",
+      "val": "1.7180",
+      "accumulatedVal": "3.2550",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2019-07-08": {
+      "date": "2019-07-08",
+      "val": "1.7150",
+      "accumulatedVal": "3.2520",
+      "growthRate": "-0.98",
+      "bonus": ""
+    },
+    "2019-07-05": {
+      "date": "2019-07-05",
+      "val": "1.7320",
+      "accumulatedVal": "3.2690",
+      "growthRate": "2.73",
+      "bonus": ""
+    },
+    "2019-07-04": {
+      "date": "2019-07-04",
+      "val": "1.6860",
+      "accumulatedVal": "3.2230",
+      "growthRate": "-1.81",
+      "bonus": ""
+    },
+    "2019-07-03": {
+      "date": "2019-07-03",
+      "val": "1.7170",
+      "accumulatedVal": "3.2540",
+      "growthRate": "-2.28",
+      "bonus": ""
+    },
+    "2019-07-02": {
+      "date": "2019-07-02",
+      "val": "1.7570",
+      "accumulatedVal": "3.2940",
+      "growthRate": "0.75",
+      "bonus": ""
+    },
+    "2019-07-01": {
+      "date": "2019-07-01",
+      "val": "1.7440",
+      "accumulatedVal": "3.2810",
+      "growthRate": "3.62",
+      "bonus": ""
+    },
+    "2019-06-30": {
+      "date": "2019-06-30",
+      "val": "1.6830",
+      "accumulatedVal": "3.2200",
+      "growthRate": "",
+      "bonus": ""
+    },
+    "2019-06-28": {
+      "date": "2019-06-28",
+      "val": "1.6830",
+      "accumulatedVal": "3.2200",
+      "growthRate": "0.24",
+      "bonus": ""
+    },
+    "2019-06-27": {
+      "date": "2019-06-27",
+      "val": "1.6790",
+      "accumulatedVal": "3.2160",
+      "growthRate": "2.19",
+      "bonus": ""
+    },
+    "2019-06-26": {
+      "date": "2019-06-26",
+      "val": "1.6430",
+      "accumulatedVal": "3.1800",
+      "growthRate": "-0.30",
+      "bonus": ""
+    },
+    "2019-06-25": {
+      "date": "2019-06-25",
+      "val": "1.6480",
+      "accumulatedVal": "3.1850",
+      "growthRate": "-0.84",
+      "bonus": ""
+    },
+    "2019-06-24": {
+      "date": "2019-06-24",
+      "val": "1.6620",
+      "accumulatedVal": "3.1990",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2019-06-21": {
+      "date": "2019-06-21",
+      "val": "1.6450",
+      "accumulatedVal": "3.1820",
+      "growthRate": "-0.66",
+      "bonus": ""
+    },
+    "2019-06-20": {
+      "date": "2019-06-20",
+      "val": "1.6560",
+      "accumulatedVal": "3.1930",
+      "growthRate": "3.11",
+      "bonus": ""
+    },
+    "2019-06-19": {
+      "date": "2019-06-19",
+      "val": "1.6060",
+      "accumulatedVal": "3.1430",
+      "growthRate": "1.01",
+      "bonus": ""
+    },
+    "2019-06-18": {
+      "date": "2019-06-18",
+      "val": "1.5900",
+      "accumulatedVal": "3.1270",
+      "growthRate": "0.63",
+      "bonus": ""
+    },
+    "2019-06-17": {
+      "date": "2019-06-17",
+      "val": "1.5800",
+      "accumulatedVal": "3.1170",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2019-06-14": {
+      "date": "2019-06-14",
+      "val": "1.5910",
+      "accumulatedVal": "3.1280",
+      "growthRate": "-0.38",
+      "bonus": ""
+    },
+    "2019-06-13": {
+      "date": "2019-06-13",
+      "val": "1.5970",
+      "accumulatedVal": "3.1340",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2019-06-12": {
+      "date": "2019-06-12",
+      "val": "1.6020",
+      "accumulatedVal": "3.1390",
+      "growthRate": "-0.93",
+      "bonus": ""
+    },
+    "2019-06-11": {
+      "date": "2019-06-11",
+      "val": "1.6170",
+      "accumulatedVal": "3.1540",
+      "growthRate": "3.92",
+      "bonus": ""
+    },
+    "2019-06-10": {
+      "date": "2019-06-10",
+      "val": "1.5560",
+      "accumulatedVal": "3.0930",
+      "growthRate": "1.50",
+      "bonus": ""
+    },
+    "2019-06-06": {
+      "date": "2019-06-06",
+      "val": "1.5330",
+      "accumulatedVal": "3.0700",
+      "growthRate": "-1.60",
+      "bonus": ""
+    },
+    "2019-06-05": {
+      "date": "2019-06-05",
+      "val": "1.5580",
+      "accumulatedVal": "3.0950",
+      "growthRate": "-0.45",
+      "bonus": ""
+    },
+    "2019-06-04": {
+      "date": "2019-06-04",
+      "val": "1.5650",
+      "accumulatedVal": "3.1020",
+      "growthRate": "-1.63",
+      "bonus": ""
+    },
+    "2019-06-03": {
+      "date": "2019-06-03",
+      "val": "1.5910",
+      "accumulatedVal": "3.1280",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2019-05-31": {
+      "date": "2019-05-31",
+      "val": "1.5960",
+      "accumulatedVal": "3.1330",
+      "growthRate": "0.06",
+      "bonus": ""
+    },
+    "2019-05-30": {
+      "date": "2019-05-30",
+      "val": "1.5950",
+      "accumulatedVal": "3.1320",
+      "growthRate": "-0.06",
+      "bonus": ""
+    },
+    "2019-05-29": {
+      "date": "2019-05-29",
+      "val": "1.5960",
+      "accumulatedVal": "3.1330",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2019-05-28": {
+      "date": "2019-05-28",
+      "val": "1.6010",
+      "accumulatedVal": "3.1380",
+      "growthRate": "2.24",
+      "bonus": ""
+    },
+    "2019-05-27": {
+      "date": "2019-05-27",
+      "val": "1.5660",
+      "accumulatedVal": "3.1030",
+      "growthRate": "1.49",
+      "bonus": ""
+    },
+    "2019-05-24": {
+      "date": "2019-05-24",
+      "val": "1.5430",
+      "accumulatedVal": "3.0800",
+      "growthRate": "0.26",
+      "bonus": ""
+    },
+    "2019-05-23": {
+      "date": "2019-05-23",
+      "val": "1.5390",
+      "accumulatedVal": "3.0760",
+      "growthRate": "-2.66",
+      "bonus": ""
+    },
+    "2019-05-22": {
+      "date": "2019-05-22",
+      "val": "1.5810",
+      "accumulatedVal": "3.1180",
+      "growthRate": "-0.38",
+      "bonus": ""
+    },
+    "2019-05-21": {
+      "date": "2019-05-21",
+      "val": "1.5870",
+      "accumulatedVal": "3.1240",
+      "growthRate": "1.47",
+      "bonus": ""
+    },
+    "2019-05-20": {
+      "date": "2019-05-20",
+      "val": "1.5640",
+      "accumulatedVal": "3.1010",
+      "growthRate": "-2.19",
+      "bonus": ""
+    },
+    "2019-05-17": {
+      "date": "2019-05-17",
+      "val": "1.5990",
+      "accumulatedVal": "3.1360",
+      "growthRate": "-2.32",
+      "bonus": ""
+    },
+    "2019-05-16": {
+      "date": "2019-05-16",
+      "val": "1.6370",
+      "accumulatedVal": "3.1740",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2019-05-15": {
+      "date": "2019-05-15",
+      "val": "1.6210",
+      "accumulatedVal": "3.1580",
+      "growthRate": "4.58",
+      "bonus": ""
+    },
+    "2019-05-14": {
+      "date": "2019-05-14",
+      "val": "1.5500",
+      "accumulatedVal": "3.0870",
+      "growthRate": "-0.83",
+      "bonus": ""
+    },
+    "2019-05-13": {
+      "date": "2019-05-13",
+      "val": "1.5630",
+      "accumulatedVal": "3.1000",
+      "growthRate": "-0.57",
+      "bonus": ""
+    },
+    "2019-05-10": {
+      "date": "2019-05-10",
+      "val": "1.5720",
+      "accumulatedVal": "3.1090",
+      "growthRate": "4.24",
+      "bonus": ""
+    },
+    "2019-05-09": {
+      "date": "2019-05-09",
+      "val": "1.5080",
+      "accumulatedVal": "3.0450",
+      "growthRate": "-1.89",
+      "bonus": ""
+    },
+    "2019-05-08": {
+      "date": "2019-05-08",
+      "val": "1.5370",
+      "accumulatedVal": "3.0740",
+      "growthRate": "-1.66",
+      "bonus": ""
+    },
+    "2019-05-07": {
+      "date": "2019-05-07",
+      "val": "1.5630",
+      "accumulatedVal": "3.1000",
+      "growthRate": "1.69",
+      "bonus": ""
+    },
+    "2019-05-06": {
+      "date": "2019-05-06",
+      "val": "1.5370",
+      "accumulatedVal": "3.0740",
+      "growthRate": "-6.28",
+      "bonus": ""
+    },
+    "2019-04-30": {
+      "date": "2019-04-30",
+      "val": "1.6400",
+      "accumulatedVal": "3.1770",
+      "growthRate": "0.24",
+      "bonus": ""
+    },
+    "2019-04-29": {
+      "date": "2019-04-29",
+      "val": "1.6360",
+      "accumulatedVal": "3.1730",
+      "growthRate": "0.80",
+      "bonus": ""
+    },
+    "2019-04-26": {
+      "date": "2019-04-26",
+      "val": "1.6230",
+      "accumulatedVal": "3.1600",
+      "growthRate": "-1.04",
+      "bonus": ""
+    },
+    "2019-04-25": {
+      "date": "2019-04-25",
+      "val": "1.6400",
+      "accumulatedVal": "3.1770",
+      "growthRate": "-0.91",
+      "bonus": ""
+    },
+    "2019-04-24": {
+      "date": "2019-04-24",
+      "val": "1.6550",
+      "accumulatedVal": "3.1920",
+      "growthRate": "0.36",
+      "bonus": ""
+    },
+    "2019-04-23": {
+      "date": "2019-04-23",
+      "val": "1.6490",
+      "accumulatedVal": "3.1860",
+      "growthRate": "0.73",
+      "bonus": ""
+    },
+    "2019-04-22": {
+      "date": "2019-04-22",
+      "val": "1.6370",
+      "accumulatedVal": "3.1740",
+      "growthRate": "-0.91",
+      "bonus": ""
+    },
+    "2019-04-19": {
+      "date": "2019-04-19",
+      "val": "1.6520",
+      "accumulatedVal": "3.1890",
+      "growthRate": "1.23",
+      "bonus": ""
+    },
+    "2019-04-18": {
+      "date": "2019-04-18",
+      "val": "1.6320",
+      "accumulatedVal": "3.1690",
+      "growthRate": "0.62",
+      "bonus": ""
+    },
+    "2019-04-17": {
+      "date": "2019-04-17",
+      "val": "1.6220",
+      "accumulatedVal": "3.1590",
+      "growthRate": "1.00",
+      "bonus": ""
+    },
+    "2019-04-16": {
+      "date": "2019-04-16",
+      "val": "1.6060",
+      "accumulatedVal": "3.1430",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2019-04-15": {
+      "date": "2019-04-15",
+      "val": "1.5860",
+      "accumulatedVal": "3.1230",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2019-04-12": {
+      "date": "2019-04-12",
+      "val": "1.5910",
+      "accumulatedVal": "3.1280",
+      "growthRate": "-0.25",
+      "bonus": ""
+    },
+    "2019-04-11": {
+      "date": "2019-04-11",
+      "val": "1.5950",
+      "accumulatedVal": "3.1320",
+      "growthRate": "-2.33",
+      "bonus": ""
+    },
+    "2019-04-10": {
+      "date": "2019-04-10",
+      "val": "1.6330",
+      "accumulatedVal": "3.1700",
+      "growthRate": "1.55",
+      "bonus": ""
+    },
+    "2019-04-09": {
+      "date": "2019-04-09",
+      "val": "1.6080",
+      "accumulatedVal": "3.1450",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2019-04-08": {
+      "date": "2019-04-08",
+      "val": "1.5990",
+      "accumulatedVal": "3.1360",
+      "growthRate": "-0.25",
+      "bonus": ""
+    },
+    "2019-04-04": {
+      "date": "2019-04-04",
+      "val": "1.6030",
+      "accumulatedVal": "3.1400",
+      "growthRate": "2.23",
+      "bonus": ""
+    },
+    "2019-04-03": {
+      "date": "2019-04-03",
+      "val": "1.5680",
+      "accumulatedVal": "3.1050",
+      "growthRate": "0.06",
+      "bonus": ""
+    },
+    "2019-04-02": {
+      "date": "2019-04-02",
+      "val": "1.5670",
+      "accumulatedVal": "3.1040",
+      "growthRate": "-1.20",
+      "bonus": ""
+    },
+    "2019-04-01": {
+      "date": "2019-04-01",
+      "val": "1.5860",
+      "accumulatedVal": "3.1230",
+      "growthRate": "2.92",
+      "bonus": ""
+    },
+    "2019-03-29": {
+      "date": "2019-03-29",
+      "val": "1.5410",
+      "accumulatedVal": "3.0780",
+      "growthRate": "4.33",
+      "bonus": ""
+    },
+    "2019-03-28": {
+      "date": "2019-03-28",
+      "val": "1.4770",
+      "accumulatedVal": "3.0140",
+      "growthRate": "1.44",
+      "bonus": ""
+    },
+    "2019-03-27": {
+      "date": "2019-03-27",
+      "val": "1.4560",
+      "accumulatedVal": "2.9930",
+      "growthRate": "2.25",
+      "bonus": ""
+    },
+    "2019-03-26": {
+      "date": "2019-03-26",
+      "val": "1.4240",
+      "accumulatedVal": "2.9610",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2019-03-25": {
+      "date": "2019-03-25",
+      "val": "1.4200",
+      "accumulatedVal": "2.9570",
+      "growthRate": "-1.93",
+      "bonus": ""
+    },
+    "2019-03-22": {
+      "date": "2019-03-22",
+      "val": "1.4480",
+      "accumulatedVal": "2.9850",
+      "growthRate": "-0.14",
+      "bonus": ""
+    },
+    "2019-03-21": {
+      "date": "2019-03-21",
+      "val": "1.4500",
+      "accumulatedVal": "2.9870",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2019-03-20": {
+      "date": "2019-03-20",
+      "val": "1.4540",
+      "accumulatedVal": "2.9910",
+      "growthRate": "-0.82",
+      "bonus": ""
+    },
+    "2019-03-19": {
+      "date": "2019-03-19",
+      "val": "1.4660",
+      "accumulatedVal": "3.0030",
+      "growthRate": "-0.27",
+      "bonus": ""
+    },
+    "2019-03-18": {
+      "date": "2019-03-18",
+      "val": "1.4700",
+      "accumulatedVal": "3.0070",
+      "growthRate": "4.85",
+      "bonus": ""
+    },
+    "2019-03-15": {
+      "date": "2019-03-15",
+      "val": "1.4020",
+      "accumulatedVal": "2.9390",
+      "growthRate": "2.94",
+      "bonus": ""
+    },
+    "2019-03-14": {
+      "date": "2019-03-14",
+      "val": "1.3620",
+      "accumulatedVal": "2.8990",
+      "growthRate": "-0.66",
+      "bonus": ""
+    },
+    "2019-03-13": {
+      "date": "2019-03-13",
+      "val": "1.3710",
+      "accumulatedVal": "2.9080",
+      "growthRate": "-2.07",
+      "bonus": ""
+    },
+    "2019-03-12": {
+      "date": "2019-03-12",
+      "val": "1.4000",
+      "accumulatedVal": "2.9370",
+      "growthRate": "1.23",
+      "bonus": ""
+    },
+    "2019-03-11": {
+      "date": "2019-03-11",
+      "val": "1.3830",
+      "accumulatedVal": "2.9200",
+      "growthRate": "2.37",
+      "bonus": ""
+    },
+    "2019-03-08": {
+      "date": "2019-03-08",
+      "val": "1.3510",
+      "accumulatedVal": "2.8880",
+      "growthRate": "-0.81",
+      "bonus": ""
+    },
+    "2019-03-07": {
+      "date": "2019-03-07",
+      "val": "1.3620",
+      "accumulatedVal": "2.8990",
+      "growthRate": "-2.08",
+      "bonus": ""
+    },
+    "2019-03-06": {
+      "date": "2019-03-06",
+      "val": "1.3910",
+      "accumulatedVal": "2.9280",
+      "growthRate": "-0.43",
+      "bonus": ""
+    },
+    "2019-03-05": {
+      "date": "2019-03-05",
+      "val": "1.3970",
+      "accumulatedVal": "2.9340",
+      "growthRate": "0.79",
+      "bonus": ""
+    },
+    "2019-03-04": {
+      "date": "2019-03-04",
+      "val": "1.3860",
+      "accumulatedVal": "2.9230",
+      "growthRate": "2.29",
+      "bonus": ""
+    },
+    "2019-03-01": {
+      "date": "2019-03-01",
+      "val": "1.3550",
+      "accumulatedVal": "2.8920",
+      "growthRate": "2.81",
+      "bonus": ""
+    },
+    "2019-02-28": {
+      "date": "2019-02-28",
+      "val": "1.3180",
+      "accumulatedVal": "2.8550",
+      "growthRate": "-0.08",
+      "bonus": ""
+    },
+    "2019-02-27": {
+      "date": "2019-02-27",
+      "val": "1.3190",
+      "accumulatedVal": "2.8560",
+      "growthRate": "-0.23",
+      "bonus": ""
+    },
+    "2019-02-26": {
+      "date": "2019-02-26",
+      "val": "1.3220",
+      "accumulatedVal": "2.8590",
+      "growthRate": "-1.05",
+      "bonus": ""
+    },
+    "2019-02-25": {
+      "date": "2019-02-25",
+      "val": "1.3360",
+      "accumulatedVal": "2.8730",
+      "growthRate": "2.30",
+      "bonus": ""
+    },
+    "2019-02-22": {
+      "date": "2019-02-22",
+      "val": "1.3060",
+      "accumulatedVal": "2.8430",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2019-02-21": {
+      "date": "2019-02-21",
+      "val": "1.3010",
+      "accumulatedVal": "2.8380",
+      "growthRate": "0.31",
+      "bonus": ""
+    },
+    "2019-02-20": {
+      "date": "2019-02-20",
+      "val": "1.2970",
+      "accumulatedVal": "2.8340",
+      "growthRate": "0.15",
+      "bonus": ""
+    },
+    "2019-02-19": {
+      "date": "2019-02-19",
+      "val": "1.2950",
+      "accumulatedVal": "2.8320",
+      "growthRate": "-0.38",
+      "bonus": ""
+    },
+    "2019-02-18": {
+      "date": "2019-02-18",
+      "val": "1.3000",
+      "accumulatedVal": "2.8370",
+      "growthRate": "3.42",
+      "bonus": ""
+    },
+    "2019-02-15": {
+      "date": "2019-02-15",
+      "val": "1.2570",
+      "accumulatedVal": "2.7940",
+      "growthRate": "-0.79",
+      "bonus": ""
+    },
+    "2019-02-14": {
+      "date": "2019-02-14",
+      "val": "1.2670",
+      "accumulatedVal": "2.8040",
+      "growthRate": "0.88",
+      "bonus": ""
+    },
+    "2019-02-13": {
+      "date": "2019-02-13",
+      "val": "1.2560",
+      "accumulatedVal": "2.7930",
+      "growthRate": "0.48",
+      "bonus": ""
+    },
+    "2019-02-12": {
+      "date": "2019-02-12",
+      "val": "1.2500",
+      "accumulatedVal": "2.7870",
+      "growthRate": "0.64",
+      "bonus": ""
+    },
+    "2019-02-11": {
+      "date": "2019-02-11",
+      "val": "1.2420",
+      "accumulatedVal": "2.7790",
+      "growthRate": "4.28",
+      "bonus": ""
+    },
+    "2019-02-01": {
+      "date": "2019-02-01",
+      "val": "1.1910",
+      "accumulatedVal": "2.7280",
+      "growthRate": "1.28",
+      "bonus": ""
+    },
+    "2019-01-31": {
+      "date": "2019-01-31",
+      "val": "1.1760",
+      "accumulatedVal": "2.7130",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2019-01-30": {
+      "date": "2019-01-30",
+      "val": "1.1640",
+      "accumulatedVal": "2.7010",
+      "growthRate": "-1.27",
+      "bonus": ""
+    },
+    "2019-01-29": {
+      "date": "2019-01-29",
+      "val": "1.1790",
+      "accumulatedVal": "2.7160",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2019-01-28": {
+      "date": "2019-01-28",
+      "val": "1.1670",
+      "accumulatedVal": "2.7040",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2019-01-25": {
+      "date": "2019-01-25",
+      "val": "1.1650",
+      "accumulatedVal": "2.7020",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2019-01-24": {
+      "date": "2019-01-24",
+      "val": "1.1600",
+      "accumulatedVal": "2.6970",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2019-01-23": {
+      "date": "2019-01-23",
+      "val": "1.1550",
+      "accumulatedVal": "2.6920",
+      "growthRate": "0.87",
+      "bonus": ""
+    },
+    "2019-01-22": {
+      "date": "2019-01-22",
+      "val": "1.1450",
+      "accumulatedVal": "2.6820",
+      "growthRate": "-1.38",
+      "bonus": ""
+    },
+    "2019-01-21": {
+      "date": "2019-01-21",
+      "val": "1.1610",
+      "accumulatedVal": "2.6980",
+      "growthRate": "0.69",
+      "bonus": ""
+    },
+    "2019-01-18": {
+      "date": "2019-01-18",
+      "val": "1.1530",
+      "accumulatedVal": "2.6900",
+      "growthRate": "2.85",
+      "bonus": ""
+    },
+    "2019-01-17": {
+      "date": "2019-01-17",
+      "val": "1.1210",
+      "accumulatedVal": "2.6580",
+      "growthRate": "-0.27",
+      "bonus": ""
+    },
+    "2019-01-16": {
+      "date": "2019-01-16",
+      "val": "1.1240",
+      "accumulatedVal": "2.6610",
+      "growthRate": "-0.27",
+      "bonus": ""
+    },
+    "2019-01-15": {
+      "date": "2019-01-15",
+      "val": "1.1270",
+      "accumulatedVal": "2.6640",
+      "growthRate": "3.11",
+      "bonus": ""
+    },
+    "2019-01-14": {
+      "date": "2019-01-14",
+      "val": "1.0930",
+      "accumulatedVal": "2.6300",
+      "growthRate": "-0.64",
+      "bonus": ""
+    },
+    "2019-01-11": {
+      "date": "2019-01-11",
+      "val": "1.1000",
+      "accumulatedVal": "2.6370",
+      "growthRate": "1.20",
+      "bonus": ""
+    },
+    "2019-01-10": {
+      "date": "2019-01-10",
+      "val": "1.0870",
+      "accumulatedVal": "2.6240",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2019-01-09": {
+      "date": "2019-01-09",
+      "val": "1.0890",
+      "accumulatedVal": "2.6260",
+      "growthRate": "1.59",
+      "bonus": ""
+    },
+    "2019-01-08": {
+      "date": "2019-01-08",
+      "val": "1.0720",
+      "accumulatedVal": "2.6090",
+      "growthRate": "-0.37",
+      "bonus": ""
+    },
+    "2019-01-07": {
+      "date": "2019-01-07",
+      "val": "1.0760",
+      "accumulatedVal": "2.6130",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2019-01-04": {
+      "date": "2019-01-04",
+      "val": "1.0650",
+      "accumulatedVal": "2.6020",
+      "growthRate": "1.91",
+      "bonus": ""
+    },
+    "2019-01-03": {
+      "date": "2019-01-03",
+      "val": "1.0450",
+      "accumulatedVal": "2.5820",
+      "growthRate": "-1.42",
+      "bonus": ""
+    },
+    "2019-01-02": {
+      "date": "2019-01-02",
+      "val": "1.0600",
+      "accumulatedVal": "2.5970",
+      "growthRate": "-2.03",
+      "bonus": ""
+    },
+    "2018-12-31": {
+      "date": "2018-12-31",
+      "val": "1.0820",
+      "accumulatedVal": "2.6190",
+      "growthRate": "",
+      "bonus": ""
+    },
+    "2018-12-28": {
+      "date": "2018-12-28",
+      "val": "1.0820",
+      "accumulatedVal": "2.6190",
+      "growthRate": "1.50",
+      "bonus": ""
+    },
+    "2018-12-27": {
+      "date": "2018-12-27",
+      "val": "1.0660",
+      "accumulatedVal": "2.6030",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2018-12-26": {
+      "date": "2018-12-26",
+      "val": "1.0690",
+      "accumulatedVal": "2.6060",
+      "growthRate": "-0.65",
+      "bonus": ""
+    },
+    "2018-12-25": {
+      "date": "2018-12-25",
+      "val": "1.0760",
+      "accumulatedVal": "2.6130",
+      "growthRate": "-0.19",
+      "bonus": ""
+    },
+    "2018-12-24": {
+      "date": "2018-12-24",
+      "val": "1.0780",
+      "accumulatedVal": "2.6150",
+      "growthRate": "1.32",
+      "bonus": ""
+    },
+    "2018-12-21": {
+      "date": "2018-12-21",
+      "val": "1.0640",
+      "accumulatedVal": "2.6010",
+      "growthRate": "-1.02",
+      "bonus": ""
+    },
+    "2018-12-20": {
+      "date": "2018-12-20",
+      "val": "1.0750",
+      "accumulatedVal": "2.6120",
+      "growthRate": "0.09",
+      "bonus": ""
+    },
+    "2018-12-19": {
+      "date": "2018-12-19",
+      "val": "1.0740",
+      "accumulatedVal": "2.6110",
+      "growthRate": "-2.01",
+      "bonus": ""
+    },
+    "2018-12-18": {
+      "date": "2018-12-18",
+      "val": "1.0960",
+      "accumulatedVal": "2.6330",
+      "growthRate": "-0.36",
+      "bonus": ""
+    },
+    "2018-12-17": {
+      "date": "2018-12-17",
+      "val": "1.1000",
+      "accumulatedVal": "2.6370",
+      "growthRate": "-0.54",
+      "bonus": ""
+    },
+    "2018-12-14": {
+      "date": "2018-12-14",
+      "val": "1.1060",
+      "accumulatedVal": "2.6430",
+      "growthRate": "-1.60",
+      "bonus": ""
+    },
+    "2018-12-13": {
+      "date": "2018-12-13",
+      "val": "1.1240",
+      "accumulatedVal": "2.6610",
+      "growthRate": "1.72",
+      "bonus": ""
+    },
+    "2018-12-12": {
+      "date": "2018-12-12",
+      "val": "1.1050",
+      "accumulatedVal": "2.6420",
+      "growthRate": "0.91",
+      "bonus": ""
+    },
+    "2018-12-11": {
+      "date": "2018-12-11",
+      "val": "1.0950",
+      "accumulatedVal": "2.6320",
+      "growthRate": "0.18",
+      "bonus": ""
+    },
+    "2018-12-10": {
+      "date": "2018-12-10",
+      "val": "1.0930",
+      "accumulatedVal": "2.6300",
+      "growthRate": "-1.00",
+      "bonus": ""
+    },
+    "2018-12-07": {
+      "date": "2018-12-07",
+      "val": "1.1040",
+      "accumulatedVal": "2.6410",
+      "growthRate": "-0.81",
+      "bonus": ""
+    },
+    "2018-12-06": {
+      "date": "2018-12-06",
+      "val": "1.1130",
+      "accumulatedVal": "2.6500",
+      "growthRate": "-2.45",
+      "bonus": ""
+    },
+    "2018-12-05": {
+      "date": "2018-12-05",
+      "val": "1.1410",
+      "accumulatedVal": "2.6780",
+      "growthRate": "0.88",
+      "bonus": ""
+    },
+    "2018-12-04": {
+      "date": "2018-12-04",
+      "val": "1.1310",
+      "accumulatedVal": "2.6680",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2018-12-03": {
+      "date": "2018-12-03",
+      "val": "1.1270",
+      "accumulatedVal": "2.6640",
+      "growthRate": "3.39",
+      "bonus": ""
+    },
+    "2018-11-30": {
+      "date": "2018-11-30",
+      "val": "1.0900",
+      "accumulatedVal": "2.6270",
+      "growthRate": "1.40",
+      "bonus": ""
+    },
+    "2018-11-29": {
+      "date": "2018-11-29",
+      "val": "1.0750",
+      "accumulatedVal": "2.6120",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2018-11-28": {
+      "date": "2018-11-28",
+      "val": "1.0760",
+      "accumulatedVal": "2.6130",
+      "growthRate": "1.51",
+      "bonus": ""
+    },
+    "2018-11-27": {
+      "date": "2018-11-27",
+      "val": "1.0600",
+      "accumulatedVal": "2.5970",
+      "growthRate": "-0.66",
+      "bonus": ""
+    },
+    "2018-11-26": {
+      "date": "2018-11-26",
+      "val": "1.0670",
+      "accumulatedVal": "2.6040",
+      "growthRate": "-0.19",
+      "bonus": ""
+    },
+    "2018-11-23": {
+      "date": "2018-11-23",
+      "val": "1.0690",
+      "accumulatedVal": "2.6060",
+      "growthRate": "-1.29",
+      "bonus": ""
+    },
+    "2018-11-22": {
+      "date": "2018-11-22",
+      "val": "1.0830",
+      "accumulatedVal": "2.6200",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2018-11-21": {
+      "date": "2018-11-21",
+      "val": "1.0850",
+      "accumulatedVal": "2.6220",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2018-11-20": {
+      "date": "2018-11-20",
+      "val": "1.0790",
+      "accumulatedVal": "2.6160",
+      "growthRate": "-2.18",
+      "bonus": ""
+    },
+    "2018-11-19": {
+      "date": "2018-11-19",
+      "val": "1.1030",
+      "accumulatedVal": "2.6400",
+      "growthRate": "0.55",
+      "bonus": ""
+    },
+    "2018-11-16": {
+      "date": "2018-11-16",
+      "val": "1.0970",
+      "accumulatedVal": "2.6340",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2018-11-15": {
+      "date": "2018-11-15",
+      "val": "1.0970",
+      "accumulatedVal": "2.6340",
+      "growthRate": "0.18",
+      "bonus": ""
+    },
+    "2018-11-14": {
+      "date": "2018-11-14",
+      "val": "1.0950",
+      "accumulatedVal": "2.6320",
+      "growthRate": "-0.99",
+      "bonus": ""
+    },
+    "2018-11-13": {
+      "date": "2018-11-13",
+      "val": "1.1060",
+      "accumulatedVal": "2.6430",
+      "growthRate": "2.69",
+      "bonus": ""
+    },
+    "2018-11-12": {
+      "date": "2018-11-12",
+      "val": "1.0770",
+      "accumulatedVal": "2.6140",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2018-11-09": {
+      "date": "2018-11-09",
+      "val": "1.0710",
+      "accumulatedVal": "2.6080",
+      "growthRate": "-0.74",
+      "bonus": ""
+    },
+    "2018-11-08": {
+      "date": "2018-11-08",
+      "val": "1.0790",
+      "accumulatedVal": "2.6160",
+      "growthRate": "-0.19",
+      "bonus": ""
+    },
+    "2018-11-07": {
+      "date": "2018-11-07",
+      "val": "1.0810",
+      "accumulatedVal": "2.6180",
+      "growthRate": "-0.64",
+      "bonus": ""
+    },
+    "2018-11-06": {
+      "date": "2018-11-06",
+      "val": "1.0880",
+      "accumulatedVal": "2.6250",
+      "growthRate": "-0.64",
+      "bonus": ""
+    },
+    "2018-11-05": {
+      "date": "2018-11-05",
+      "val": "1.0950",
+      "accumulatedVal": "2.6320",
+      "growthRate": "-1.26",
+      "bonus": ""
+    },
+    "2018-11-02": {
+      "date": "2018-11-02",
+      "val": "1.1090",
+      "accumulatedVal": "2.6460",
+      "growthRate": "4.52",
+      "bonus": ""
+    },
+    "2018-11-01": {
+      "date": "2018-11-01",
+      "val": "1.0610",
+      "accumulatedVal": "2.5980",
+      "growthRate": "1.92",
+      "bonus": ""
+    },
+    "2018-10-31": {
+      "date": "2018-10-31",
+      "val": "1.0410",
+      "accumulatedVal": "2.5780",
+      "growthRate": "2.97",
+      "bonus": ""
+    },
+    "2018-10-30": {
+      "date": "2018-10-30",
+      "val": "1.0110",
+      "accumulatedVal": "2.5480",
+      "growthRate": "-1.27",
+      "bonus": ""
+    },
+    "2018-10-29": {
+      "date": "2018-10-29",
+      "val": "1.0240",
+      "accumulatedVal": "2.5610",
+      "growthRate": "-4.66",
+      "bonus": ""
+    },
+    "2018-10-26": {
+      "date": "2018-10-26",
+      "val": "1.0740",
+      "accumulatedVal": "2.6110",
+      "growthRate": "-1.74",
+      "bonus": ""
+    },
+    "2018-10-25": {
+      "date": "2018-10-25",
+      "val": "1.0930",
+      "accumulatedVal": "2.6300",
+      "growthRate": "-1.53",
+      "bonus": ""
+    },
+    "2018-10-24": {
+      "date": "2018-10-24",
+      "val": "1.1100",
+      "accumulatedVal": "2.6470",
+      "growthRate": "-1.51",
+      "bonus": ""
+    },
+    "2018-10-23": {
+      "date": "2018-10-23",
+      "val": "1.1270",
+      "accumulatedVal": "2.6640",
+      "growthRate": "-3.84",
+      "bonus": ""
+    },
+    "2018-10-22": {
+      "date": "2018-10-22",
+      "val": "1.1720",
+      "accumulatedVal": "2.7090",
+      "growthRate": "4.09",
+      "bonus": ""
+    },
+    "2018-10-19": {
+      "date": "2018-10-19",
+      "val": "1.1260",
+      "accumulatedVal": "2.6630",
+      "growthRate": "3.59",
+      "bonus": ""
+    },
+    "2018-10-18": {
+      "date": "2018-10-18",
+      "val": "1.0870",
+      "accumulatedVal": "2.6240",
+      "growthRate": "-2.51",
+      "bonus": ""
+    },
+    "2018-10-17": {
+      "date": "2018-10-17",
+      "val": "1.1150",
+      "accumulatedVal": "2.6520",
+      "growthRate": "0.27",
+      "bonus": ""
+    },
+    "2018-10-16": {
+      "date": "2018-10-16",
+      "val": "1.1120",
+      "accumulatedVal": "2.6490",
+      "growthRate": "-0.89",
+      "bonus": ""
+    },
+    "2018-10-15": {
+      "date": "2018-10-15",
+      "val": "1.1220",
+      "accumulatedVal": "2.6590",
+      "growthRate": "-2.01",
+      "bonus": ""
+    },
+    "2018-10-12": {
+      "date": "2018-10-12",
+      "val": "1.1450",
+      "accumulatedVal": "2.6820",
+      "growthRate": "2.51",
+      "bonus": ""
+    },
+    "2018-10-11": {
+      "date": "2018-10-11",
+      "val": "1.1170",
+      "accumulatedVal": "2.6540",
+      "growthRate": "-3.21",
+      "bonus": ""
+    },
+    "2018-10-10": {
+      "date": "2018-10-10",
+      "val": "1.1540",
+      "accumulatedVal": "2.6910",
+      "growthRate": "-1.54",
+      "bonus": ""
+    },
+    "2018-10-09": {
+      "date": "2018-10-09",
+      "val": "1.1720",
+      "accumulatedVal": "2.7090",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2018-10-08": {
+      "date": "2018-10-08",
+      "val": "1.1700",
+      "accumulatedVal": "2.7070",
+      "growthRate": "-4.18",
+      "bonus": ""
+    },
+    "2018-09-28": {
+      "date": "2018-09-28",
+      "val": "1.2210",
+      "accumulatedVal": "2.7580",
+      "growthRate": "0.66",
+      "bonus": ""
+    },
+    "2018-09-27": {
+      "date": "2018-09-27",
+      "val": "1.2130",
+      "accumulatedVal": "2.7500",
+      "growthRate": "-0.33",
+      "bonus": ""
+    },
+    "2018-09-26": {
+      "date": "2018-09-26",
+      "val": "1.2170",
+      "accumulatedVal": "2.7540",
+      "growthRate": "2.35",
+      "bonus": ""
+    },
+    "2018-09-25": {
+      "date": "2018-09-25",
+      "val": "1.1890",
+      "accumulatedVal": "2.7260",
+      "growthRate": "-0.17",
+      "bonus": ""
+    },
+    "2018-09-21": {
+      "date": "2018-09-21",
+      "val": "1.1910",
+      "accumulatedVal": "2.7280",
+      "growthRate": "2.58",
+      "bonus": ""
+    },
+    "2018-09-20": {
+      "date": "2018-09-20",
+      "val": "1.1610",
+      "accumulatedVal": "2.6980",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2018-09-19": {
+      "date": "2018-09-19",
+      "val": "1.1570",
+      "accumulatedVal": "2.6940",
+      "growthRate": "2.75",
+      "bonus": ""
+    },
+    "2018-09-18": {
+      "date": "2018-09-18",
+      "val": "1.1260",
+      "accumulatedVal": "2.6630",
+      "growthRate": "2.18",
+      "bonus": ""
+    },
+    "2018-09-17": {
+      "date": "2018-09-17",
+      "val": "1.1020",
+      "accumulatedVal": "2.6390",
+      "growthRate": "-0.72",
+      "bonus": ""
+    },
+    "2018-09-14": {
+      "date": "2018-09-14",
+      "val": "1.1100",
+      "accumulatedVal": "2.6470",
+      "growthRate": "0.82",
+      "bonus": ""
+    },
+    "2018-09-13": {
+      "date": "2018-09-13",
+      "val": "1.1010",
+      "accumulatedVal": "2.6380",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2018-09-12": {
+      "date": "2018-09-12",
+      "val": "1.1030",
+      "accumulatedVal": "2.6400",
+      "growthRate": "-1.61",
+      "bonus": ""
+    },
+    "2018-09-11": {
+      "date": "2018-09-11",
+      "val": "1.1210",
+      "accumulatedVal": "2.6580",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2018-09-10": {
+      "date": "2018-09-10",
+      "val": "1.1220",
+      "accumulatedVal": "2.6590",
+      "growthRate": "-0.62",
+      "bonus": ""
+    },
+    "2018-09-07": {
+      "date": "2018-09-07",
+      "val": "1.1290",
+      "accumulatedVal": "2.6660",
+      "growthRate": "1.35",
+      "bonus": ""
+    },
+    "2018-09-06": {
+      "date": "2018-09-06",
+      "val": "1.1140",
+      "accumulatedVal": "2.6510",
+      "growthRate": "-1.68",
+      "bonus": ""
+    },
+    "2018-09-05": {
+      "date": "2018-09-05",
+      "val": "1.1330",
+      "accumulatedVal": "2.6700",
+      "growthRate": "-2.16",
+      "bonus": ""
+    },
+    "2018-09-04": {
+      "date": "2018-09-04",
+      "val": "1.1580",
+      "accumulatedVal": "2.6950",
+      "growthRate": "0.70",
+      "bonus": ""
+    },
+    "2018-09-03": {
+      "date": "2018-09-03",
+      "val": "1.1500",
+      "accumulatedVal": "2.6870",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2018-08-31": {
+      "date": "2018-08-31",
+      "val": "1.1500",
+      "accumulatedVal": "2.6870",
+      "growthRate": "-2.04",
+      "bonus": ""
+    },
+    "2018-08-30": {
+      "date": "2018-08-30",
+      "val": "1.1740",
+      "accumulatedVal": "2.7110",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2018-08-29": {
+      "date": "2018-08-29",
+      "val": "1.1790",
+      "accumulatedVal": "2.7160",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2018-08-28": {
+      "date": "2018-08-28",
+      "val": "1.1840",
+      "accumulatedVal": "2.7210",
+      "growthRate": "-0.59",
+      "bonus": ""
+    },
+    "2018-08-27": {
+      "date": "2018-08-27",
+      "val": "1.1910",
+      "accumulatedVal": "2.7280",
+      "growthRate": "3.12",
+      "bonus": ""
+    },
+    "2018-08-24": {
+      "date": "2018-08-24",
+      "val": "1.1550",
+      "accumulatedVal": "2.6920",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2018-08-23": {
+      "date": "2018-08-23",
+      "val": "1.1580",
+      "accumulatedVal": "2.6950",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2018-08-22": {
+      "date": "2018-08-22",
+      "val": "1.1560",
+      "accumulatedVal": "2.6930",
+      "growthRate": "-1.11",
+      "bonus": ""
+    },
+    "2018-08-21": {
+      "date": "2018-08-21",
+      "val": "1.1690",
+      "accumulatedVal": "2.7060",
+      "growthRate": "3.18",
+      "bonus": ""
+    },
+    "2018-08-20": {
+      "date": "2018-08-20",
+      "val": "1.1330",
+      "accumulatedVal": "2.6700",
+      "growthRate": "0.27",
+      "bonus": ""
+    },
+    "2018-08-17": {
+      "date": "2018-08-17",
+      "val": "1.1300",
+      "accumulatedVal": "2.6670",
+      "growthRate": "-1.57",
+      "bonus": ""
+    },
+    "2018-08-16": {
+      "date": "2018-08-16",
+      "val": "1.1480",
+      "accumulatedVal": "2.6850",
+      "growthRate": "-2.46",
+      "bonus": ""
+    },
+    "2018-08-15": {
+      "date": "2018-08-15",
+      "val": "1.1770",
+      "accumulatedVal": "2.7140",
+      "growthRate": "-2.89",
+      "bonus": ""
+    },
+    "2018-08-14": {
+      "date": "2018-08-14",
+      "val": "1.2120",
+      "accumulatedVal": "2.7490",
+      "growthRate": "-0.08",
+      "bonus": ""
+    },
+    "2018-08-13": {
+      "date": "2018-08-13",
+      "val": "1.2130",
+      "accumulatedVal": "2.7500",
+      "growthRate": "-0.49",
+      "bonus": ""
+    },
+    "2018-08-10": {
+      "date": "2018-08-10",
+      "val": "1.2190",
+      "accumulatedVal": "2.7560",
+      "growthRate": "0.66",
+      "bonus": ""
+    },
+    "2018-08-09": {
+      "date": "2018-08-09",
+      "val": "1.2110",
+      "accumulatedVal": "2.7480",
+      "growthRate": "3.42",
+      "bonus": ""
+    },
+    "2018-08-08": {
+      "date": "2018-08-08",
+      "val": "1.1710",
+      "accumulatedVal": "2.7080",
+      "growthRate": "-2.82",
+      "bonus": ""
+    },
+    "2018-08-07": {
+      "date": "2018-08-07",
+      "val": "1.2050",
+      "accumulatedVal": "2.7420",
+      "growthRate": "2.21",
+      "bonus": ""
+    },
+    "2018-08-06": {
+      "date": "2018-08-06",
+      "val": "1.1790",
+      "accumulatedVal": "2.7160",
+      "growthRate": "-2.88",
+      "bonus": ""
+    },
+    "2018-08-03": {
+      "date": "2018-08-03",
+      "val": "1.2140",
+      "accumulatedVal": "2.7510",
+      "growthRate": "-2.41",
+      "bonus": ""
+    },
+    "2018-08-02": {
+      "date": "2018-08-02",
+      "val": "1.2440",
+      "accumulatedVal": "2.7810",
+      "growthRate": "-2.74",
+      "bonus": ""
+    },
+    "2018-08-01": {
+      "date": "2018-08-01",
+      "val": "1.2790",
+      "accumulatedVal": "2.8160",
+      "growthRate": "-2.52",
+      "bonus": ""
+    },
+    "2018-07-31": {
+      "date": "2018-07-31",
+      "val": "1.3120",
+      "accumulatedVal": "2.8490",
+      "growthRate": "0.61",
+      "bonus": ""
+    },
+    "2018-07-30": {
+      "date": "2018-07-30",
+      "val": "1.3040",
+      "accumulatedVal": "2.8410",
+      "growthRate": "-1.73",
+      "bonus": ""
+    },
+    "2018-07-27": {
+      "date": "2018-07-27",
+      "val": "1.3270",
+      "accumulatedVal": "2.8640",
+      "growthRate": "-0.30",
+      "bonus": ""
+    },
+    "2018-07-26": {
+      "date": "2018-07-26",
+      "val": "1.3310",
+      "accumulatedVal": "2.8680",
+      "growthRate": "-0.89",
+      "bonus": ""
+    },
+    "2018-07-25": {
+      "date": "2018-07-25",
+      "val": "1.3430",
+      "accumulatedVal": "2.8800",
+      "growthRate": "-0.67",
+      "bonus": ""
+    },
+    "2018-07-24": {
+      "date": "2018-07-24",
+      "val": "1.3520",
+      "accumulatedVal": "2.8890",
+      "growthRate": "2.19",
+      "bonus": ""
+    },
+    "2018-07-23": {
+      "date": "2018-07-23",
+      "val": "1.3230",
+      "accumulatedVal": "2.8600",
+      "growthRate": "-0.68",
+      "bonus": ""
+    },
+    "2018-07-20": {
+      "date": "2018-07-20",
+      "val": "1.3320",
+      "accumulatedVal": "2.8690",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2018-07-19": {
+      "date": "2018-07-19",
+      "val": "1.3270",
+      "accumulatedVal": "2.8640",
+      "growthRate": "-0.67",
+      "bonus": ""
+    },
+    "2018-07-18": {
+      "date": "2018-07-18",
+      "val": "1.3360",
+      "accumulatedVal": "2.8730",
+      "growthRate": "-0.96",
+      "bonus": ""
+    },
+    "2018-07-17": {
+      "date": "2018-07-17",
+      "val": "1.3490",
+      "accumulatedVal": "2.8860",
+      "growthRate": "-1.17",
+      "bonus": ""
+    },
+    "2018-07-16": {
+      "date": "2018-07-16",
+      "val": "1.3650",
+      "accumulatedVal": "2.9020",
+      "growthRate": "0.15",
+      "bonus": ""
+    },
+    "2018-07-13": {
+      "date": "2018-07-13",
+      "val": "1.3630",
+      "accumulatedVal": "2.9000",
+      "growthRate": "2.02",
+      "bonus": ""
+    },
+    "2018-07-12": {
+      "date": "2018-07-12",
+      "val": "1.3360",
+      "accumulatedVal": "2.8730",
+      "growthRate": "2.06",
+      "bonus": ""
+    },
+    "2018-07-11": {
+      "date": "2018-07-11",
+      "val": "1.3090",
+      "accumulatedVal": "2.8460",
+      "growthRate": "-1.13",
+      "bonus": ""
+    },
+    "2018-07-10": {
+      "date": "2018-07-10",
+      "val": "1.3240",
+      "accumulatedVal": "2.8610",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2018-07-09": {
+      "date": "2018-07-09",
+      "val": "1.3190",
+      "accumulatedVal": "2.8560",
+      "growthRate": "3.78",
+      "bonus": ""
+    },
+    "2018-07-06": {
+      "date": "2018-07-06",
+      "val": "1.2710",
+      "accumulatedVal": "2.8080",
+      "growthRate": "0.87",
+      "bonus": ""
+    },
+    "2018-07-05": {
+      "date": "2018-07-05",
+      "val": "1.2600",
+      "accumulatedVal": "2.7970",
+      "growthRate": "-1.72",
+      "bonus": ""
+    },
+    "2018-07-04": {
+      "date": "2018-07-04",
+      "val": "1.2820",
+      "accumulatedVal": "2.8190",
+      "growthRate": "-1.23",
+      "bonus": ""
+    },
+    "2018-07-03": {
+      "date": "2018-07-03",
+      "val": "1.2980",
+      "accumulatedVal": "2.8350",
+      "growthRate": "-2.04",
+      "bonus": ""
+    },
+    "2018-07-02": {
+      "date": "2018-07-02",
+      "val": "1.3250",
+      "accumulatedVal": "2.8620",
+      "growthRate": "-1.85",
+      "bonus": ""
+    },
+    "2018-06-30": {
+      "date": "2018-06-30",
+      "val": "1.3500",
+      "accumulatedVal": "2.8870",
+      "growthRate": "",
+      "bonus": ""
+    },
+    "2018-06-29": {
+      "date": "2018-06-29",
+      "val": "1.3500",
+      "accumulatedVal": "2.8870",
+      "growthRate": "3.21",
+      "bonus": ""
+    },
+    "2018-06-28": {
+      "date": "2018-06-28",
+      "val": "1.3080",
+      "accumulatedVal": "2.8450",
+      "growthRate": "-2.10",
+      "bonus": ""
+    },
+    "2018-06-27": {
+      "date": "2018-06-27",
+      "val": "1.3360",
+      "accumulatedVal": "2.8730",
+      "growthRate": "-2.77",
+      "bonus": ""
+    },
+    "2018-06-26": {
+      "date": "2018-06-26",
+      "val": "1.3740",
+      "accumulatedVal": "2.9110",
+      "growthRate": "-1.22",
+      "bonus": ""
+    },
+    "2018-06-25": {
+      "date": "2018-06-25",
+      "val": "1.3910",
+      "accumulatedVal": "2.9280",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2018-06-22": {
+      "date": "2018-06-22",
+      "val": "1.3910",
+      "accumulatedVal": "2.9280",
+      "growthRate": "0.51",
+      "bonus": ""
+    },
+    "2018-06-21": {
+      "date": "2018-06-21",
+      "val": "1.3840",
+      "accumulatedVal": "2.9210",
+      "growthRate": "-0.86",
+      "bonus": ""
+    },
+    "2018-06-20": {
+      "date": "2018-06-20",
+      "val": "1.3960",
+      "accumulatedVal": "2.9330",
+      "growthRate": "2.12",
+      "bonus": ""
+    },
+    "2018-06-19": {
+      "date": "2018-06-19",
+      "val": "1.3670",
+      "accumulatedVal": "2.9040",
+      "growthRate": "-3.39",
+      "bonus": ""
+    },
+    "2018-06-15": {
+      "date": "2018-06-15",
+      "val": "1.4150",
+      "accumulatedVal": "2.9520",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2018-06-14": {
+      "date": "2018-06-14",
+      "val": "1.4190",
+      "accumulatedVal": "2.9560",
+      "growthRate": "-2.00",
+      "bonus": ""
+    },
+    "2018-06-13": {
+      "date": "2018-06-13",
+      "val": "1.4480",
+      "accumulatedVal": "2.9850",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2018-06-12": {
+      "date": "2018-06-12",
+      "val": "1.4580",
+      "accumulatedVal": "2.9950",
+      "growthRate": "3.26",
+      "bonus": ""
+    },
+    "2018-06-11": {
+      "date": "2018-06-11",
+      "val": "1.4120",
+      "accumulatedVal": "2.9490",
+      "growthRate": "-0.98",
+      "bonus": ""
+    },
+    "2018-06-08": {
+      "date": "2018-06-08",
+      "val": "1.4260",
+      "accumulatedVal": "2.9630",
+      "growthRate": "-0.90",
+      "bonus": ""
+    },
+    "2018-06-07": {
+      "date": "2018-06-07",
+      "val": "1.4390",
+      "accumulatedVal": "2.9760",
+      "growthRate": "-0.90",
+      "bonus": ""
+    },
+    "2018-06-06": {
+      "date": "2018-06-06",
+      "val": "1.4520",
+      "accumulatedVal": "2.9890",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2018-06-05": {
+      "date": "2018-06-05",
+      "val": "1.4480",
+      "accumulatedVal": "2.9850",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2018-06-04": {
+      "date": "2018-06-04",
+      "val": "1.4300",
+      "accumulatedVal": "2.9670",
+      "growthRate": "1.71",
+      "bonus": ""
+    },
+    "2018-06-01": {
+      "date": "2018-06-01",
+      "val": "1.4060",
+      "accumulatedVal": "2.9430",
+      "growthRate": "-1.47",
+      "bonus": ""
+    },
+    "2018-05-31": {
+      "date": "2018-05-31",
+      "val": "1.4270",
+      "accumulatedVal": "2.9640",
+      "growthRate": "2.66",
+      "bonus": ""
+    },
+    "2018-05-30": {
+      "date": "2018-05-30",
+      "val": "1.3900",
+      "accumulatedVal": "2.9270",
+      "growthRate": "0.36",
+      "bonus": ""
+    },
+    "2018-05-29": {
+      "date": "2018-05-29",
+      "val": "1.3850",
+      "accumulatedVal": "2.9220",
+      "growthRate": "-0.79",
+      "bonus": ""
+    },
+    "2018-05-28": {
+      "date": "2018-05-28",
+      "val": "1.3960",
+      "accumulatedVal": "2.9330",
+      "growthRate": "2.20",
+      "bonus": ""
+    },
+    "2018-05-25": {
+      "date": "2018-05-25",
+      "val": "1.3660",
+      "accumulatedVal": "2.9030",
+      "growthRate": "0.66",
+      "bonus": ""
+    },
+    "2018-05-24": {
+      "date": "2018-05-24",
+      "val": "1.3570",
+      "accumulatedVal": "2.8940",
+      "growthRate": "-0.15",
+      "bonus": ""
+    },
+    "2018-05-23": {
+      "date": "2018-05-23",
+      "val": "1.3590",
+      "accumulatedVal": "2.8960",
+      "growthRate": "-1.59",
+      "bonus": ""
+    },
+    "2018-05-22": {
+      "date": "2018-05-22",
+      "val": "1.3810",
+      "accumulatedVal": "2.9180",
+      "growthRate": "0.44",
+      "bonus": ""
+    },
+    "2018-05-21": {
+      "date": "2018-05-21",
+      "val": "1.3750",
+      "accumulatedVal": "2.9120",
+      "growthRate": "-0.43",
+      "bonus": ""
+    },
+    "2018-05-18": {
+      "date": "2018-05-18",
+      "val": "1.3810",
+      "accumulatedVal": "2.9180",
+      "growthRate": "0.80",
+      "bonus": ""
+    },
+    "2018-05-17": {
+      "date": "2018-05-17",
+      "val": "1.3700",
+      "accumulatedVal": "2.9070",
+      "growthRate": "-1.15",
+      "bonus": ""
+    },
+    "2018-05-16": {
+      "date": "2018-05-16",
+      "val": "1.3860",
+      "accumulatedVal": "2.9230",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2018-05-15": {
+      "date": "2018-05-15",
+      "val": "1.3860",
+      "accumulatedVal": "2.9230",
+      "growthRate": "0.73",
+      "bonus": ""
+    },
+    "2018-05-14": {
+      "date": "2018-05-14",
+      "val": "1.3760",
+      "accumulatedVal": "2.9130",
+      "growthRate": "1.33",
+      "bonus": ""
+    },
+    "2018-05-11": {
+      "date": "2018-05-11",
+      "val": "1.3580",
+      "accumulatedVal": "2.8950",
+      "growthRate": "-0.95",
+      "bonus": ""
+    },
+    "2018-05-10": {
+      "date": "2018-05-10",
+      "val": "1.3710",
+      "accumulatedVal": "2.9080",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2018-05-09": {
+      "date": "2018-05-09",
+      "val": "1.3570",
+      "accumulatedVal": "2.8940",
+      "growthRate": "0.15",
+      "bonus": ""
+    },
+    "2018-05-08": {
+      "date": "2018-05-08",
+      "val": "1.3550",
+      "accumulatedVal": "2.8920",
+      "growthRate": "0.82",
+      "bonus": ""
+    },
+    "2018-05-07": {
+      "date": "2018-05-07",
+      "val": "1.3440",
+      "accumulatedVal": "2.8810",
+      "growthRate": "2.67",
+      "bonus": ""
+    },
+    "2018-05-04": {
+      "date": "2018-05-04",
+      "val": "1.3090",
+      "accumulatedVal": "2.8460",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2018-05-03": {
+      "date": "2018-05-03",
+      "val": "1.2980",
+      "accumulatedVal": "2.8350",
+      "growthRate": "1.01",
+      "bonus": ""
+    },
+    "2018-05-02": {
+      "date": "2018-05-02",
+      "val": "1.2850",
+      "accumulatedVal": "2.8220",
+      "growthRate": "1.66",
+      "bonus": ""
+    },
+    "2018-04-27": {
+      "date": "2018-04-27",
+      "val": "1.2640",
+      "accumulatedVal": "2.8010",
+      "growthRate": "-0.47",
+      "bonus": ""
+    },
+    "2018-04-26": {
+      "date": "2018-04-26",
+      "val": "1.2700",
+      "accumulatedVal": "2.8070",
+      "growthRate": "-2.31",
+      "bonus": ""
+    },
+    "2018-04-25": {
+      "date": "2018-04-25",
+      "val": "1.3000",
+      "accumulatedVal": "2.8370",
+      "growthRate": "0.93",
+      "bonus": ""
+    },
+    "2018-04-24": {
+      "date": "2018-04-24",
+      "val": "1.2880",
+      "accumulatedVal": "2.8250",
+      "growthRate": "2.88",
+      "bonus": ""
+    },
+    "2018-04-23": {
+      "date": "2018-04-23",
+      "val": "1.2520",
+      "accumulatedVal": "2.7890",
+      "growthRate": "-1.03",
+      "bonus": ""
+    },
+    "2018-04-20": {
+      "date": "2018-04-20",
+      "val": "1.2650",
+      "accumulatedVal": "2.8020",
+      "growthRate": "-0.55",
+      "bonus": ""
+    },
+    "2018-04-19": {
+      "date": "2018-04-19",
+      "val": "1.2720",
+      "accumulatedVal": "2.8090",
+      "growthRate": "1.60",
+      "bonus": ""
+    },
+    "2018-04-18": {
+      "date": "2018-04-18",
+      "val": "1.2520",
+      "accumulatedVal": "2.7890",
+      "growthRate": "0.24",
+      "bonus": ""
+    },
+    "2018-04-17": {
+      "date": "2018-04-17",
+      "val": "1.2490",
+      "accumulatedVal": "2.7860",
+      "growthRate": "-2.12",
+      "bonus": ""
+    },
+    "2018-04-16": {
+      "date": "2018-04-16",
+      "val": "1.2760",
+      "accumulatedVal": "2.8130",
+      "growthRate": "-0.47",
+      "bonus": ""
+    },
+    "2018-04-13": {
+      "date": "2018-04-13",
+      "val": "1.2820",
+      "accumulatedVal": "2.8190",
+      "growthRate": "-1.23",
+      "bonus": ""
+    },
+    "2018-04-12": {
+      "date": "2018-04-12",
+      "val": "1.2980",
+      "accumulatedVal": "2.8350",
+      "growthRate": "-0.61",
+      "bonus": ""
+    },
+    "2018-04-11": {
+      "date": "2018-04-11",
+      "val": "1.3060",
+      "accumulatedVal": "2.8430",
+      "growthRate": "1.01",
+      "bonus": ""
+    },
+    "2018-04-10": {
+      "date": "2018-04-10",
+      "val": "1.2930",
+      "accumulatedVal": "2.8300",
+      "growthRate": "1.81",
+      "bonus": ""
+    },
+    "2018-04-09": {
+      "date": "2018-04-09",
+      "val": "1.2700",
+      "accumulatedVal": "2.8070",
+      "growthRate": "-0.78",
+      "bonus": ""
+    },
+    "2018-04-04": {
+      "date": "2018-04-04",
+      "val": "1.2800",
+      "accumulatedVal": "2.8170",
+      "growthRate": "1.35",
+      "bonus": ""
+    },
+    "2018-04-03": {
+      "date": "2018-04-03",
+      "val": "1.2630",
+      "accumulatedVal": "2.8000",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2018-04-02": {
+      "date": "2018-04-02",
+      "val": "1.2560",
+      "accumulatedVal": "2.7930",
+      "growthRate": "-0.16",
+      "bonus": ""
+    },
+    "2018-03-30": {
+      "date": "2018-03-30",
+      "val": "1.2580",
+      "accumulatedVal": "2.7950",
+      "growthRate": "0.64",
+      "bonus": ""
+    },
+    "2018-03-29": {
+      "date": "2018-03-29",
+      "val": "1.2500",
+      "accumulatedVal": "2.7870",
+      "growthRate": "2.63",
+      "bonus": ""
+    },
+    "2018-03-28": {
+      "date": "2018-03-28",
+      "val": "1.2180",
+      "accumulatedVal": "2.7550",
+      "growthRate": "-3.10",
+      "bonus": ""
+    },
+    "2018-03-27": {
+      "date": "2018-03-27",
+      "val": "1.2570",
+      "accumulatedVal": "2.7940",
+      "growthRate": "0.16",
+      "bonus": ""
+    },
+    "2018-03-26": {
+      "date": "2018-03-26",
+      "val": "1.2550",
+      "accumulatedVal": "2.7920",
+      "growthRate": "0.24",
+      "bonus": ""
+    },
+    "2018-03-23": {
+      "date": "2018-03-23",
+      "val": "1.2520",
+      "accumulatedVal": "2.7890",
+      "growthRate": "-1.88",
+      "bonus": ""
+    },
+    "2018-03-22": {
+      "date": "2018-03-22",
+      "val": "1.2760",
+      "accumulatedVal": "2.8130",
+      "growthRate": "-2.00",
+      "bonus": ""
+    },
+    "2018-03-21": {
+      "date": "2018-03-21",
+      "val": "1.3020",
+      "accumulatedVal": "2.8390",
+      "growthRate": "-0.84",
+      "bonus": ""
+    },
+    "2018-03-20": {
+      "date": "2018-03-20",
+      "val": "1.3130",
+      "accumulatedVal": "2.8500",
+      "growthRate": "-0.08",
+      "bonus": ""
+    },
+    "2018-03-19": {
+      "date": "2018-03-19",
+      "val": "1.3140",
+      "accumulatedVal": "2.8510",
+      "growthRate": "-0.08",
+      "bonus": ""
+    },
+    "2018-03-16": {
+      "date": "2018-03-16",
+      "val": "1.3150",
+      "accumulatedVal": "2.8520",
+      "growthRate": "-1.05",
+      "bonus": ""
+    },
+    "2018-03-15": {
+      "date": "2018-03-15",
+      "val": "1.3290",
+      "accumulatedVal": "2.8660",
+      "growthRate": "1.22",
+      "bonus": ""
+    },
+    "2018-03-14": {
+      "date": "2018-03-14",
+      "val": "1.3130",
+      "accumulatedVal": "2.8500",
+      "growthRate": "0.15",
+      "bonus": ""
+    },
+    "2018-03-13": {
+      "date": "2018-03-13",
+      "val": "1.3110",
+      "accumulatedVal": "2.8480",
+      "growthRate": "-0.91",
+      "bonus": ""
+    },
+    "2018-03-12": {
+      "date": "2018-03-12",
+      "val": "1.3230",
+      "accumulatedVal": "2.8600",
+      "growthRate": "-0.15",
+      "bonus": ""
+    },
+    "2018-03-09": {
+      "date": "2018-03-09",
+      "val": "1.3250",
+      "accumulatedVal": "2.8620",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2018-03-08": {
+      "date": "2018-03-08",
+      "val": "1.3120",
+      "accumulatedVal": "2.8490",
+      "growthRate": "1.94",
+      "bonus": ""
+    },
+    "2018-03-07": {
+      "date": "2018-03-07",
+      "val": "1.2870",
+      "accumulatedVal": "2.8240",
+      "growthRate": "-0.23",
+      "bonus": ""
+    },
+    "2018-03-06": {
+      "date": "2018-03-06",
+      "val": "1.2900",
+      "accumulatedVal": "2.8270",
+      "growthRate": "0.78",
+      "bonus": ""
+    },
+    "2018-03-05": {
+      "date": "2018-03-05",
+      "val": "1.2800",
+      "accumulatedVal": "2.8170",
+      "growthRate": "-1.39",
+      "bonus": ""
+    },
+    "2018-03-02": {
+      "date": "2018-03-02",
+      "val": "1.2980",
+      "accumulatedVal": "2.8350",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2018-03-01": {
+      "date": "2018-03-01",
+      "val": "1.3020",
+      "accumulatedVal": "2.8390",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2018-02-28": {
+      "date": "2018-02-28",
+      "val": "1.2910",
+      "accumulatedVal": "2.8280",
+      "growthRate": "-0.92",
+      "bonus": ""
+    },
+    "2018-02-27": {
+      "date": "2018-02-27",
+      "val": "1.3030",
+      "accumulatedVal": "2.8400",
+      "growthRate": "-2.03",
+      "bonus": ""
+    },
+    "2018-02-26": {
+      "date": "2018-02-26",
+      "val": "1.3300",
+      "accumulatedVal": "2.8670",
+      "growthRate": "0.08",
+      "bonus": ""
+    },
+    "2018-02-23": {
+      "date": "2018-02-23",
+      "val": "1.3290",
+      "accumulatedVal": "2.8660",
+      "growthRate": "-0.30",
+      "bonus": ""
+    },
+    "2018-02-22": {
+      "date": "2018-02-22",
+      "val": "1.3330",
+      "accumulatedVal": "2.8700",
+      "growthRate": "2.70",
+      "bonus": ""
+    },
+    "2018-02-14": {
+      "date": "2018-02-14",
+      "val": "1.2980",
+      "accumulatedVal": "2.8350",
+      "growthRate": "1.72",
+      "bonus": ""
+    },
+    "2018-02-13": {
+      "date": "2018-02-13",
+      "val": "1.2760",
+      "accumulatedVal": "2.8130",
+      "growthRate": "0.79",
+      "bonus": ""
+    },
+    "2018-02-12": {
+      "date": "2018-02-12",
+      "val": "1.2660",
+      "accumulatedVal": "2.8030",
+      "growthRate": "3.77",
+      "bonus": ""
+    },
+    "2018-02-09": {
+      "date": "2018-02-09",
+      "val": "1.2200",
+      "accumulatedVal": "2.7570",
+      "growthRate": "-2.71",
+      "bonus": ""
+    },
+    "2018-02-08": {
+      "date": "2018-02-08",
+      "val": "1.2540",
+      "accumulatedVal": "2.7910",
+      "growthRate": "2.20",
+      "bonus": ""
+    },
+    "2018-02-07": {
+      "date": "2018-02-07",
+      "val": "1.2270",
+      "accumulatedVal": "2.7640",
+      "growthRate": "-3.61",
+      "bonus": ""
+    },
+    "2018-02-06": {
+      "date": "2018-02-06",
+      "val": "1.2730",
+      "accumulatedVal": "2.8100",
+      "growthRate": "-2.08",
+      "bonus": ""
+    },
+    "2018-02-05": {
+      "date": "2018-02-05",
+      "val": "1.3000",
+      "accumulatedVal": "2.8370",
+      "growthRate": "-2.55",
+      "bonus": ""
+    },
+    "2018-02-02": {
+      "date": "2018-02-02",
+      "val": "1.3340",
+      "accumulatedVal": "2.8710",
+      "growthRate": "-0.37",
+      "bonus": ""
+    },
+    "2018-02-01": {
+      "date": "2018-02-01",
+      "val": "1.3390",
+      "accumulatedVal": "2.8760",
+      "growthRate": "-2.33",
+      "bonus": ""
+    },
+    "2018-01-31": {
+      "date": "2018-01-31",
+      "val": "1.3710",
+      "accumulatedVal": "2.9080",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2018-01-30": {
+      "date": "2018-01-30",
+      "val": "1.3540",
+      "accumulatedVal": "2.8910",
+      "growthRate": "-0.51",
+      "bonus": ""
+    },
+    "2018-01-29": {
+      "date": "2018-01-29",
+      "val": "1.3610",
+      "accumulatedVal": "2.8980",
+      "growthRate": "-2.86",
+      "bonus": ""
+    },
+    "2018-01-26": {
+      "date": "2018-01-26",
+      "val": "1.4010",
+      "accumulatedVal": "2.9380",
+      "growthRate": "0.72",
+      "bonus": ""
+    },
+    "2018-01-25": {
+      "date": "2018-01-25",
+      "val": "1.3910",
+      "accumulatedVal": "2.9280",
+      "growthRate": "-0.29",
+      "bonus": ""
+    },
+    "2018-01-24": {
+      "date": "2018-01-24",
+      "val": "1.3950",
+      "accumulatedVal": "2.9320",
+      "growthRate": "-0.92",
+      "bonus": ""
+    },
+    "2018-01-23": {
+      "date": "2018-01-23",
+      "val": "1.4080",
+      "accumulatedVal": "2.9450",
+      "growthRate": "0.64",
+      "bonus": ""
+    },
+    "2018-01-22": {
+      "date": "2018-01-22",
+      "val": "1.3990",
+      "accumulatedVal": "2.9360",
+      "growthRate": "3.71",
+      "bonus": ""
+    },
+    "2018-01-19": {
+      "date": "2018-01-19",
+      "val": "1.3490",
+      "accumulatedVal": "2.8860",
+      "growthRate": "-1.75",
+      "bonus": "0.17"
+    },
+    "2018-01-18": {
+      "date": "2018-01-18",
+      "val": "1.5460",
+      "accumulatedVal": "2.9130",
+      "growthRate": "0.59",
+      "bonus": ""
+    },
+    "2018-01-17": {
+      "date": "2018-01-17",
+      "val": "1.5370",
+      "accumulatedVal": "2.9040",
+      "growthRate": "-2.16",
+      "bonus": ""
+    },
+    "2018-01-16": {
+      "date": "2018-01-16",
+      "val": "1.5710",
+      "accumulatedVal": "2.9380",
+      "growthRate": "0.90",
+      "bonus": ""
+    },
+    "2018-01-15": {
+      "date": "2018-01-15",
+      "val": "1.5570",
+      "accumulatedVal": "2.9240",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2018-01-12": {
+      "date": "2018-01-12",
+      "val": "1.5610",
+      "accumulatedVal": "2.9280",
+      "growthRate": "1.04",
+      "bonus": ""
+    },
+    "2018-01-11": {
+      "date": "2018-01-11",
+      "val": "1.5450",
+      "accumulatedVal": "2.9120",
+      "growthRate": "-0.39",
+      "bonus": ""
+    },
+    "2018-01-10": {
+      "date": "2018-01-10",
+      "val": "1.5510",
+      "accumulatedVal": "2.9180",
+      "growthRate": "0.78",
+      "bonus": ""
+    },
+    "2018-01-09": {
+      "date": "2018-01-09",
+      "val": "1.5390",
+      "accumulatedVal": "2.9060",
+      "growthRate": "2.53",
+      "bonus": ""
+    },
+    "2018-01-08": {
+      "date": "2018-01-08",
+      "val": "1.5010",
+      "accumulatedVal": "2.8680",
+      "growthRate": "1.15",
+      "bonus": ""
+    },
+    "2018-01-05": {
+      "date": "2018-01-05",
+      "val": "1.4840",
+      "accumulatedVal": "2.8510",
+      "growthRate": "0.54",
+      "bonus": ""
+    },
+    "2018-01-04": {
+      "date": "2018-01-04",
+      "val": "1.4760",
+      "accumulatedVal": "2.8430",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2018-01-03": {
+      "date": "2018-01-03",
+      "val": "1.4610",
+      "accumulatedVal": "2.8280",
+      "growthRate": "0.55",
+      "bonus": ""
+    },
+    "2018-01-02": {
+      "date": "2018-01-02",
+      "val": "1.4530",
+      "accumulatedVal": "2.8200",
+      "growthRate": "0.62",
+      "bonus": ""
+    },
+    "2017-12-31": {
+      "date": "2017-12-31",
+      "val": "1.4440",
+      "accumulatedVal": "2.8110",
+      "growthRate": "",
+      "bonus": ""
+    },
+    "2017-12-29": {
+      "date": "2017-12-29",
+      "val": "1.4440",
+      "accumulatedVal": "2.8110",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2017-12-28": {
+      "date": "2017-12-28",
+      "val": "1.4470",
+      "accumulatedVal": "2.8140",
+      "growthRate": "2.26",
+      "bonus": ""
+    },
+    "2017-12-27": {
+      "date": "2017-12-27",
+      "val": "1.4150",
+      "accumulatedVal": "2.7820",
+      "growthRate": "-1.87",
+      "bonus": ""
+    },
+    "2017-12-26": {
+      "date": "2017-12-26",
+      "val": "1.4420",
+      "accumulatedVal": "2.8090",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2017-12-25": {
+      "date": "2017-12-25",
+      "val": "1.4520",
+      "accumulatedVal": "2.8190",
+      "growthRate": "-0.07",
+      "bonus": ""
+    },
+    "2017-12-22": {
+      "date": "2017-12-22",
+      "val": "1.4530",
+      "accumulatedVal": "2.8200",
+      "growthRate": "-0.75",
+      "bonus": ""
+    },
+    "2017-12-21": {
+      "date": "2017-12-21",
+      "val": "1.4640",
+      "accumulatedVal": "2.8310",
+      "growthRate": "0.83",
+      "bonus": ""
+    },
+    "2017-12-20": {
+      "date": "2017-12-20",
+      "val": "1.4520",
+      "accumulatedVal": "2.8190",
+      "growthRate": "1.54",
+      "bonus": ""
+    },
+    "2017-12-19": {
+      "date": "2017-12-19",
+      "val": "1.4300",
+      "accumulatedVal": "2.7970",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2017-12-18": {
+      "date": "2017-12-18",
+      "val": "1.4160",
+      "accumulatedVal": "2.7830",
+      "growthRate": "0.93",
+      "bonus": ""
+    },
+    "2017-12-15": {
+      "date": "2017-12-15",
+      "val": "1.4030",
+      "accumulatedVal": "2.7700",
+      "growthRate": "-0.99",
+      "bonus": ""
+    },
+    "2017-12-14": {
+      "date": "2017-12-14",
+      "val": "1.4170",
+      "accumulatedVal": "2.7840",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-12-13": {
+      "date": "2017-12-13",
+      "val": "1.4170",
+      "accumulatedVal": "2.7840",
+      "growthRate": "2.53",
+      "bonus": ""
+    },
+    "2017-12-12": {
+      "date": "2017-12-12",
+      "val": "1.3820",
+      "accumulatedVal": "2.7490",
+      "growthRate": "-0.29",
+      "bonus": ""
+    },
+    "2017-12-11": {
+      "date": "2017-12-11",
+      "val": "1.3860",
+      "accumulatedVal": "2.7530",
+      "growthRate": "3.20",
+      "bonus": ""
+    },
+    "2017-12-08": {
+      "date": "2017-12-08",
+      "val": "1.3430",
+      "accumulatedVal": "2.7100",
+      "growthRate": "1.90",
+      "bonus": ""
+    },
+    "2017-12-07": {
+      "date": "2017-12-07",
+      "val": "1.3180",
+      "accumulatedVal": "2.6850",
+      "growthRate": "-1.79",
+      "bonus": ""
+    },
+    "2017-12-06": {
+      "date": "2017-12-06",
+      "val": "1.3420",
+      "accumulatedVal": "2.7090",
+      "growthRate": "-0.15",
+      "bonus": ""
+    },
+    "2017-12-05": {
+      "date": "2017-12-05",
+      "val": "1.3440",
+      "accumulatedVal": "2.7110",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2017-12-04": {
+      "date": "2017-12-04",
+      "val": "1.3500",
+      "accumulatedVal": "2.7170",
+      "growthRate": "2.35",
+      "bonus": ""
+    },
+    "2017-12-01": {
+      "date": "2017-12-01",
+      "val": "1.3190",
+      "accumulatedVal": "2.6860",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2017-11-30": {
+      "date": "2017-11-30",
+      "val": "1.3140",
+      "accumulatedVal": "2.6810",
+      "growthRate": "-1.50",
+      "bonus": ""
+    },
+    "2017-11-29": {
+      "date": "2017-11-29",
+      "val": "1.3340",
+      "accumulatedVal": "2.7010",
+      "growthRate": "-1.62",
+      "bonus": ""
+    },
+    "2017-11-28": {
+      "date": "2017-11-28",
+      "val": "1.3560",
+      "accumulatedVal": "2.7230",
+      "growthRate": "1.65",
+      "bonus": ""
+    },
+    "2017-11-27": {
+      "date": "2017-11-27",
+      "val": "1.3340",
+      "accumulatedVal": "2.7010",
+      "growthRate": "-2.20",
+      "bonus": ""
+    },
+    "2017-11-24": {
+      "date": "2017-11-24",
+      "val": "1.3640",
+      "accumulatedVal": "2.7310",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-11-23": {
+      "date": "2017-11-23",
+      "val": "1.3640",
+      "accumulatedVal": "2.7310",
+      "growthRate": "-4.28",
+      "bonus": ""
+    },
+    "2017-11-22": {
+      "date": "2017-11-22",
+      "val": "1.4250",
+      "accumulatedVal": "2.7920",
+      "growthRate": "-2.06",
+      "bonus": ""
+    },
+    "2017-11-21": {
+      "date": "2017-11-21",
+      "val": "1.4550",
+      "accumulatedVal": "2.8220",
+      "growthRate": "2.11",
+      "bonus": ""
+    },
+    "2017-11-20": {
+      "date": "2017-11-20",
+      "val": "1.4250",
+      "accumulatedVal": "2.7920",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2017-11-17": {
+      "date": "2017-11-17",
+      "val": "1.4130",
+      "accumulatedVal": "2.7800",
+      "growthRate": "-1.19",
+      "bonus": ""
+    },
+    "2017-11-16": {
+      "date": "2017-11-16",
+      "val": "1.4300",
+      "accumulatedVal": "2.7970",
+      "growthRate": "2.36",
+      "bonus": ""
+    },
+    "2017-11-15": {
+      "date": "2017-11-15",
+      "val": "1.3970",
+      "accumulatedVal": "2.7640",
+      "growthRate": "0.14",
+      "bonus": ""
+    },
+    "2017-11-14": {
+      "date": "2017-11-14",
+      "val": "1.3950",
+      "accumulatedVal": "2.7620",
+      "growthRate": "-1.55",
+      "bonus": ""
+    },
+    "2017-11-13": {
+      "date": "2017-11-13",
+      "val": "1.4170",
+      "accumulatedVal": "2.7840",
+      "growthRate": "-0.35",
+      "bonus": ""
+    },
+    "2017-11-10": {
+      "date": "2017-11-10",
+      "val": "1.4220",
+      "accumulatedVal": "2.7890",
+      "growthRate": "2.01",
+      "bonus": ""
+    },
+    "2017-11-09": {
+      "date": "2017-11-09",
+      "val": "1.3940",
+      "accumulatedVal": "2.7610",
+      "growthRate": "0.50",
+      "bonus": ""
+    },
+    "2017-11-08": {
+      "date": "2017-11-08",
+      "val": "1.3870",
+      "accumulatedVal": "2.7540",
+      "growthRate": "-1.07",
+      "bonus": ""
+    },
+    "2017-11-07": {
+      "date": "2017-11-07",
+      "val": "1.4020",
+      "accumulatedVal": "2.7690",
+      "growthRate": "-0.14",
+      "bonus": ""
+    },
+    "2017-11-06": {
+      "date": "2017-11-06",
+      "val": "1.4040",
+      "accumulatedVal": "2.7710",
+      "growthRate": "2.93",
+      "bonus": ""
+    },
+    "2017-11-03": {
+      "date": "2017-11-03",
+      "val": "1.3640",
+      "accumulatedVal": "2.7310",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2017-11-02": {
+      "date": "2017-11-02",
+      "val": "1.3700",
+      "accumulatedVal": "2.7370",
+      "growthRate": "0.81",
+      "bonus": ""
+    },
+    "2017-11-01": {
+      "date": "2017-11-01",
+      "val": "1.3590",
+      "accumulatedVal": "2.7260",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2017-10-31": {
+      "date": "2017-10-31",
+      "val": "1.3650",
+      "accumulatedVal": "2.7320",
+      "growthRate": "0.07",
+      "bonus": ""
+    },
+    "2017-10-30": {
+      "date": "2017-10-30",
+      "val": "1.3640",
+      "accumulatedVal": "2.7310",
+      "growthRate": "0.07",
+      "bonus": ""
+    },
+    "2017-10-27": {
+      "date": "2017-10-27",
+      "val": "1.3630",
+      "accumulatedVal": "2.7300",
+      "growthRate": "1.19",
+      "bonus": ""
+    },
+    "2017-10-26": {
+      "date": "2017-10-26",
+      "val": "1.3470",
+      "accumulatedVal": "2.7140",
+      "growthRate": "0.97",
+      "bonus": ""
+    },
+    "2017-10-25": {
+      "date": "2017-10-25",
+      "val": "1.3340",
+      "accumulatedVal": "2.7010",
+      "growthRate": "1.68",
+      "bonus": ""
+    },
+    "2017-10-24": {
+      "date": "2017-10-24",
+      "val": "1.3120",
+      "accumulatedVal": "2.6790",
+      "growthRate": "0.69",
+      "bonus": ""
+    },
+    "2017-10-23": {
+      "date": "2017-10-23",
+      "val": "1.3030",
+      "accumulatedVal": "2.6700",
+      "growthRate": "1.40",
+      "bonus": ""
+    },
+    "2017-10-20": {
+      "date": "2017-10-20",
+      "val": "1.2850",
+      "accumulatedVal": "2.6520",
+      "growthRate": "-0.70",
+      "bonus": ""
+    },
+    "2017-10-19": {
+      "date": "2017-10-19",
+      "val": "1.2940",
+      "accumulatedVal": "2.6610",
+      "growthRate": "0.23",
+      "bonus": ""
+    },
+    "2017-10-18": {
+      "date": "2017-10-18",
+      "val": "1.2910",
+      "accumulatedVal": "2.6580",
+      "growthRate": "0.94",
+      "bonus": ""
+    },
+    "2017-10-17": {
+      "date": "2017-10-17",
+      "val": "1.2790",
+      "accumulatedVal": "2.6460",
+      "growthRate": "0.87",
+      "bonus": ""
+    },
+    "2017-10-16": {
+      "date": "2017-10-16",
+      "val": "1.2680",
+      "accumulatedVal": "2.6350",
+      "growthRate": "-0.86",
+      "bonus": ""
+    },
+    "2017-10-13": {
+      "date": "2017-10-13",
+      "val": "1.2790",
+      "accumulatedVal": "2.6460",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-10-12": {
+      "date": "2017-10-12",
+      "val": "1.2790",
+      "accumulatedVal": "2.6460",
+      "growthRate": "0.24",
+      "bonus": ""
+    },
+    "2017-10-11": {
+      "date": "2017-10-11",
+      "val": "1.2760",
+      "accumulatedVal": "2.6430",
+      "growthRate": "1.43",
+      "bonus": ""
+    },
+    "2017-10-10": {
+      "date": "2017-10-10",
+      "val": "1.2580",
+      "accumulatedVal": "2.6250",
+      "growthRate": "1.21",
+      "bonus": ""
+    },
+    "2017-10-09": {
+      "date": "2017-10-09",
+      "val": "1.2430",
+      "accumulatedVal": "2.6100",
+      "growthRate": "2.39",
+      "bonus": ""
+    },
+    "2017-09-29": {
+      "date": "2017-09-29",
+      "val": "1.2140",
+      "accumulatedVal": "2.5810",
+      "growthRate": "0.66",
+      "bonus": ""
+    },
+    "2017-09-28": {
+      "date": "2017-09-28",
+      "val": "1.2060",
+      "accumulatedVal": "2.5730",
+      "growthRate": "0.42",
+      "bonus": ""
+    },
+    "2017-09-27": {
+      "date": "2017-09-27",
+      "val": "1.2010",
+      "accumulatedVal": "2.5680",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2017-09-26": {
+      "date": "2017-09-26",
+      "val": "1.1990",
+      "accumulatedVal": "2.5660",
+      "growthRate": "-0.33",
+      "bonus": ""
+    },
+    "2017-09-25": {
+      "date": "2017-09-25",
+      "val": "1.2030",
+      "accumulatedVal": "2.5700",
+      "growthRate": "0.25",
+      "bonus": ""
+    },
+    "2017-09-22": {
+      "date": "2017-09-22",
+      "val": "1.2000",
+      "accumulatedVal": "2.5670",
+      "growthRate": "0.50",
+      "bonus": ""
+    },
+    "2017-09-21": {
+      "date": "2017-09-21",
+      "val": "1.1940",
+      "accumulatedVal": "2.5610",
+      "growthRate": "0.08",
+      "bonus": ""
+    },
+    "2017-09-20": {
+      "date": "2017-09-20",
+      "val": "1.1930",
+      "accumulatedVal": "2.5600",
+      "growthRate": "0.34",
+      "bonus": ""
+    },
+    "2017-09-19": {
+      "date": "2017-09-19",
+      "val": "1.1890",
+      "accumulatedVal": "2.5560",
+      "growthRate": "-0.92",
+      "bonus": ""
+    },
+    "2017-09-18": {
+      "date": "2017-09-18",
+      "val": "1.2000",
+      "accumulatedVal": "2.5670",
+      "growthRate": "1.27",
+      "bonus": ""
+    },
+    "2017-09-15": {
+      "date": "2017-09-15",
+      "val": "1.1850",
+      "accumulatedVal": "2.5520",
+      "growthRate": "0.68",
+      "bonus": ""
+    },
+    "2017-09-14": {
+      "date": "2017-09-14",
+      "val": "1.1770",
+      "accumulatedVal": "2.5440",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-09-13": {
+      "date": "2017-09-13",
+      "val": "1.1770",
+      "accumulatedVal": "2.5440",
+      "growthRate": "1.55",
+      "bonus": ""
+    },
+    "2017-09-12": {
+      "date": "2017-09-12",
+      "val": "1.1590",
+      "accumulatedVal": "2.5260",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2017-09-11": {
+      "date": "2017-09-11",
+      "val": "1.1620",
+      "accumulatedVal": "2.5290",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2017-09-08": {
+      "date": "2017-09-08",
+      "val": "1.1580",
+      "accumulatedVal": "2.5250",
+      "growthRate": "-0.60",
+      "bonus": ""
+    },
+    "2017-09-07": {
+      "date": "2017-09-07",
+      "val": "1.1650",
+      "accumulatedVal": "2.5320",
+      "growthRate": "-0.85",
+      "bonus": ""
+    },
+    "2017-09-06": {
+      "date": "2017-09-06",
+      "val": "1.1750",
+      "accumulatedVal": "2.5420",
+      "growthRate": "-0.25",
+      "bonus": ""
+    },
+    "2017-09-05": {
+      "date": "2017-09-05",
+      "val": "1.1780",
+      "accumulatedVal": "2.5450",
+      "growthRate": "0.34",
+      "bonus": ""
+    },
+    "2017-09-04": {
+      "date": "2017-09-04",
+      "val": "1.1740",
+      "accumulatedVal": "2.5410",
+      "growthRate": "-0.68",
+      "bonus": ""
+    },
+    "2017-09-01": {
+      "date": "2017-09-01",
+      "val": "1.1820",
+      "accumulatedVal": "2.5490",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2017-08-31": {
+      "date": "2017-08-31",
+      "val": "1.1800",
+      "accumulatedVal": "2.5470",
+      "growthRate": "-0.17",
+      "bonus": ""
+    },
+    "2017-08-30": {
+      "date": "2017-08-30",
+      "val": "1.1820",
+      "accumulatedVal": "2.5490",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2017-08-29": {
+      "date": "2017-08-29",
+      "val": "1.1720",
+      "accumulatedVal": "2.5390",
+      "growthRate": "-0.93",
+      "bonus": ""
+    },
+    "2017-08-28": {
+      "date": "2017-08-28",
+      "val": "1.1830",
+      "accumulatedVal": "2.5500",
+      "growthRate": "0.85",
+      "bonus": ""
+    },
+    "2017-08-25": {
+      "date": "2017-08-25",
+      "val": "1.1730",
+      "accumulatedVal": "2.5400",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2017-08-24": {
+      "date": "2017-08-24",
+      "val": "1.1680",
+      "accumulatedVal": "2.5350",
+      "growthRate": "-0.17",
+      "bonus": ""
+    },
+    "2017-08-23": {
+      "date": "2017-08-23",
+      "val": "1.1700",
+      "accumulatedVal": "2.5370",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2017-08-22": {
+      "date": "2017-08-22",
+      "val": "1.1680",
+      "accumulatedVal": "2.5350",
+      "growthRate": "-0.17",
+      "bonus": ""
+    },
+    "2017-08-21": {
+      "date": "2017-08-21",
+      "val": "1.1700",
+      "accumulatedVal": "2.5370",
+      "growthRate": "0.78",
+      "bonus": ""
+    },
+    "2017-08-18": {
+      "date": "2017-08-18",
+      "val": "1.1610",
+      "accumulatedVal": "2.5280",
+      "growthRate": "-0.17",
+      "bonus": ""
+    },
+    "2017-08-17": {
+      "date": "2017-08-17",
+      "val": "1.1630",
+      "accumulatedVal": "2.5300",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2017-08-16": {
+      "date": "2017-08-16",
+      "val": "1.1660",
+      "accumulatedVal": "2.5330",
+      "growthRate": "-0.34",
+      "bonus": ""
+    },
+    "2017-08-15": {
+      "date": "2017-08-15",
+      "val": "1.1700",
+      "accumulatedVal": "2.5370",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2017-08-14": {
+      "date": "2017-08-14",
+      "val": "1.1730",
+      "accumulatedVal": "2.5400",
+      "growthRate": "1.38",
+      "bonus": ""
+    },
+    "2017-08-11": {
+      "date": "2017-08-11",
+      "val": "1.1570",
+      "accumulatedVal": "2.5240",
+      "growthRate": "-1.28",
+      "bonus": ""
+    },
+    "2017-08-10": {
+      "date": "2017-08-10",
+      "val": "1.1720",
+      "accumulatedVal": "2.5390",
+      "growthRate": "-0.34",
+      "bonus": ""
+    },
+    "2017-08-09": {
+      "date": "2017-08-09",
+      "val": "1.1760",
+      "accumulatedVal": "2.5430",
+      "growthRate": "1.91",
+      "bonus": ""
+    },
+    "2017-08-08": {
+      "date": "2017-08-08",
+      "val": "1.1540",
+      "accumulatedVal": "2.5210",
+      "growthRate": "0.44",
+      "bonus": ""
+    },
+    "2017-08-07": {
+      "date": "2017-08-07",
+      "val": "1.1490",
+      "accumulatedVal": "2.5160",
+      "growthRate": "2.13",
+      "bonus": ""
+    },
+    "2017-08-04": {
+      "date": "2017-08-04",
+      "val": "1.1250",
+      "accumulatedVal": "2.4920",
+      "growthRate": "-0.53",
+      "bonus": ""
+    },
+    "2017-08-03": {
+      "date": "2017-08-03",
+      "val": "1.1310",
+      "accumulatedVal": "2.4980",
+      "growthRate": "-1.48",
+      "bonus": ""
+    },
+    "2017-08-02": {
+      "date": "2017-08-02",
+      "val": "1.1480",
+      "accumulatedVal": "2.5150",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2017-08-01": {
+      "date": "2017-08-01",
+      "val": "1.1560",
+      "accumulatedVal": "2.5230",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2017-07-31": {
+      "date": "2017-07-31",
+      "val": "1.1520",
+      "accumulatedVal": "2.5190",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2017-07-28": {
+      "date": "2017-07-28",
+      "val": "1.1530",
+      "accumulatedVal": "2.5200",
+      "growthRate": "0.79",
+      "bonus": ""
+    },
+    "2017-07-27": {
+      "date": "2017-07-27",
+      "val": "1.1440",
+      "accumulatedVal": "2.5110",
+      "growthRate": "-0.35",
+      "bonus": ""
+    },
+    "2017-07-26": {
+      "date": "2017-07-26",
+      "val": "1.1480",
+      "accumulatedVal": "2.5150",
+      "growthRate": "-1.29",
+      "bonus": ""
+    },
+    "2017-07-25": {
+      "date": "2017-07-25",
+      "val": "1.1630",
+      "accumulatedVal": "2.5300",
+      "growthRate": "-0.85",
+      "bonus": ""
+    },
+    "2017-07-24": {
+      "date": "2017-07-24",
+      "val": "1.1730",
+      "accumulatedVal": "2.5400",
+      "growthRate": "1.65",
+      "bonus": ""
+    },
+    "2017-07-21": {
+      "date": "2017-07-21",
+      "val": "1.1540",
+      "accumulatedVal": "2.5210",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2017-07-20": {
+      "date": "2017-07-20",
+      "val": "1.1520",
+      "accumulatedVal": "2.5190",
+      "growthRate": "1.23",
+      "bonus": ""
+    },
+    "2017-07-19": {
+      "date": "2017-07-19",
+      "val": "1.1380",
+      "accumulatedVal": "2.5050",
+      "growthRate": "1.07",
+      "bonus": ""
+    },
+    "2017-07-18": {
+      "date": "2017-07-18",
+      "val": "1.1260",
+      "accumulatedVal": "2.4930",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2017-07-17": {
+      "date": "2017-07-17",
+      "val": "1.1280",
+      "accumulatedVal": "2.4950",
+      "growthRate": "-1.66",
+      "bonus": ""
+    },
+    "2017-07-14": {
+      "date": "2017-07-14",
+      "val": "1.1470",
+      "accumulatedVal": "2.5140",
+      "growthRate": "0.09",
+      "bonus": ""
+    },
+    "2017-07-13": {
+      "date": "2017-07-13",
+      "val": "1.1460",
+      "accumulatedVal": "2.5130",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2017-07-12": {
+      "date": "2017-07-12",
+      "val": "1.1470",
+      "accumulatedVal": "2.5140",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2017-07-11": {
+      "date": "2017-07-11",
+      "val": "1.1550",
+      "accumulatedVal": "2.5220",
+      "growthRate": "1.58",
+      "bonus": ""
+    },
+    "2017-07-10": {
+      "date": "2017-07-10",
+      "val": "1.1370",
+      "accumulatedVal": "2.5040",
+      "growthRate": "0.26",
+      "bonus": ""
+    },
+    "2017-07-07": {
+      "date": "2017-07-07",
+      "val": "1.1340",
+      "accumulatedVal": "2.5010",
+      "growthRate": "-1.13",
+      "bonus": ""
+    },
+    "2017-07-06": {
+      "date": "2017-07-06",
+      "val": "1.1470",
+      "accumulatedVal": "2.5140",
+      "growthRate": "-0.52",
+      "bonus": ""
+    },
+    "2017-07-05": {
+      "date": "2017-07-05",
+      "val": "1.1530",
+      "accumulatedVal": "2.5200",
+      "growthRate": "1.41",
+      "bonus": ""
+    },
+    "2017-07-04": {
+      "date": "2017-07-04",
+      "val": "1.1370",
+      "accumulatedVal": "2.5040",
+      "growthRate": "-1.56",
+      "bonus": ""
+    },
+    "2017-07-03": {
+      "date": "2017-07-03",
+      "val": "1.1550",
+      "accumulatedVal": "2.5220",
+      "growthRate": "-1.45",
+      "bonus": ""
+    },
+    "2017-06-30": {
+      "date": "2017-06-30",
+      "val": "1.1720",
+      "accumulatedVal": "2.5390",
+      "growthRate": "0.86",
+      "bonus": ""
+    },
+    "2017-06-29": {
+      "date": "2017-06-29",
+      "val": "1.1620",
+      "accumulatedVal": "2.5290",
+      "growthRate": "0.17",
+      "bonus": ""
+    },
+    "2017-06-28": {
+      "date": "2017-06-28",
+      "val": "1.1600",
+      "accumulatedVal": "2.5270",
+      "growthRate": "-1.61",
+      "bonus": ""
+    },
+    "2017-06-27": {
+      "date": "2017-06-27",
+      "val": "1.1790",
+      "accumulatedVal": "2.5460",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-06-26": {
+      "date": "2017-06-26",
+      "val": "1.1790",
+      "accumulatedVal": "2.5460",
+      "growthRate": "1.46",
+      "bonus": ""
+    },
+    "2017-06-23": {
+      "date": "2017-06-23",
+      "val": "1.1620",
+      "accumulatedVal": "2.5290",
+      "growthRate": "1.31",
+      "bonus": ""
+    },
+    "2017-06-22": {
+      "date": "2017-06-22",
+      "val": "1.1470",
+      "accumulatedVal": "2.5140",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2017-06-21": {
+      "date": "2017-06-21",
+      "val": "1.1550",
+      "accumulatedVal": "2.5220",
+      "growthRate": "2.12",
+      "bonus": ""
+    },
+    "2017-06-20": {
+      "date": "2017-06-20",
+      "val": "1.1310",
+      "accumulatedVal": "2.4980",
+      "growthRate": "-0.26",
+      "bonus": ""
+    },
+    "2017-06-19": {
+      "date": "2017-06-19",
+      "val": "1.1340",
+      "accumulatedVal": "2.5010",
+      "growthRate": "1.25",
+      "bonus": ""
+    },
+    "2017-06-16": {
+      "date": "2017-06-16",
+      "val": "1.1200",
+      "accumulatedVal": "2.4870",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2017-06-15": {
+      "date": "2017-06-15",
+      "val": "1.1250",
+      "accumulatedVal": "2.4920",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2017-06-14": {
+      "date": "2017-06-14",
+      "val": "1.1260",
+      "accumulatedVal": "2.4930",
+      "growthRate": "-1.57",
+      "bonus": ""
+    },
+    "2017-06-13": {
+      "date": "2017-06-13",
+      "val": "1.1440",
+      "accumulatedVal": "2.5110",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-06-12": {
+      "date": "2017-06-12",
+      "val": "1.1440",
+      "accumulatedVal": "2.5110",
+      "growthRate": "0.97",
+      "bonus": ""
+    },
+    "2017-06-09": {
+      "date": "2017-06-09",
+      "val": "1.1330",
+      "accumulatedVal": "2.5000",
+      "growthRate": "0.44",
+      "bonus": ""
+    },
+    "2017-06-08": {
+      "date": "2017-06-08",
+      "val": "1.1280",
+      "accumulatedVal": "2.4950",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2017-06-07": {
+      "date": "2017-06-07",
+      "val": "1.1140",
+      "accumulatedVal": "2.4810",
+      "growthRate": "1.92",
+      "bonus": ""
+    },
+    "2017-06-06": {
+      "date": "2017-06-06",
+      "val": "1.0930",
+      "accumulatedVal": "2.4600",
+      "growthRate": "1.67",
+      "bonus": ""
+    },
+    "2017-06-05": {
+      "date": "2017-06-05",
+      "val": "1.0750",
+      "accumulatedVal": "2.4420",
+      "growthRate": "-0.37",
+      "bonus": ""
+    },
+    "2017-06-02": {
+      "date": "2017-06-02",
+      "val": "1.0790",
+      "accumulatedVal": "2.4460",
+      "growthRate": "-0.83",
+      "bonus": ""
+    },
+    "2017-06-01": {
+      "date": "2017-06-01",
+      "val": "1.0880",
+      "accumulatedVal": "2.4550",
+      "growthRate": "0.46",
+      "bonus": ""
+    },
+    "2017-05-31": {
+      "date": "2017-05-31",
+      "val": "1.0830",
+      "accumulatedVal": "2.4500",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2017-05-26": {
+      "date": "2017-05-26",
+      "val": "1.0850",
+      "accumulatedVal": "2.4520",
+      "growthRate": "0.18",
+      "bonus": ""
+    },
+    "2017-05-25": {
+      "date": "2017-05-25",
+      "val": "1.0830",
+      "accumulatedVal": "2.4500",
+      "growthRate": "-0.18",
+      "bonus": ""
+    },
+    "2017-05-24": {
+      "date": "2017-05-24",
+      "val": "1.0850",
+      "accumulatedVal": "2.4520",
+      "growthRate": "-0.82",
+      "bonus": ""
+    },
+    "2017-05-23": {
+      "date": "2017-05-23",
+      "val": "1.0940",
+      "accumulatedVal": "2.4610",
+      "growthRate": "1.20",
+      "bonus": ""
+    },
+    "2017-05-22": {
+      "date": "2017-05-22",
+      "val": "1.0810",
+      "accumulatedVal": "2.4480",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2017-05-19": {
+      "date": "2017-05-19",
+      "val": "1.0750",
+      "accumulatedVal": "2.4420",
+      "growthRate": "0.75",
+      "bonus": ""
+    },
+    "2017-05-18": {
+      "date": "2017-05-18",
+      "val": "1.0670",
+      "accumulatedVal": "2.4340",
+      "growthRate": "-0.19",
+      "bonus": ""
+    },
+    "2017-05-17": {
+      "date": "2017-05-17",
+      "val": "1.0690",
+      "accumulatedVal": "2.4360",
+      "growthRate": "-1.11",
+      "bonus": ""
+    },
+    "2017-05-16": {
+      "date": "2017-05-16",
+      "val": "1.0810",
+      "accumulatedVal": "2.4480",
+      "growthRate": "2.08",
+      "bonus": ""
+    },
+    "2017-05-15": {
+      "date": "2017-05-15",
+      "val": "1.0590",
+      "accumulatedVal": "2.4260",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2017-05-12": {
+      "date": "2017-05-12",
+      "val": "1.0550",
+      "accumulatedVal": "2.4220",
+      "growthRate": "0.38",
+      "bonus": ""
+    },
+    "2017-05-11": {
+      "date": "2017-05-11",
+      "val": "1.0510",
+      "accumulatedVal": "2.4180",
+      "growthRate": "1.84",
+      "bonus": ""
+    },
+    "2017-05-10": {
+      "date": "2017-05-10",
+      "val": "1.0320",
+      "accumulatedVal": "2.3990",
+      "growthRate": "0.10",
+      "bonus": ""
+    },
+    "2017-05-09": {
+      "date": "2017-05-09",
+      "val": "1.0310",
+      "accumulatedVal": "2.3980",
+      "growthRate": "0.59",
+      "bonus": ""
+    },
+    "2017-05-08": {
+      "date": "2017-05-08",
+      "val": "1.0250",
+      "accumulatedVal": "2.3920",
+      "growthRate": "-2.47",
+      "bonus": ""
+    },
+    "2017-05-05": {
+      "date": "2017-05-05",
+      "val": "1.0510",
+      "accumulatedVal": "2.4180",
+      "growthRate": "-0.28",
+      "bonus": ""
+    },
+    "2017-05-04": {
+      "date": "2017-05-04",
+      "val": "1.0540",
+      "accumulatedVal": "2.4210",
+      "growthRate": "-0.09",
+      "bonus": ""
+    },
+    "2017-05-03": {
+      "date": "2017-05-03",
+      "val": "1.0550",
+      "accumulatedVal": "2.4220",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-05-02": {
+      "date": "2017-05-02",
+      "val": "1.0550",
+      "accumulatedVal": "2.4220",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-04-28": {
+      "date": "2017-04-28",
+      "val": "1.0550",
+      "accumulatedVal": "2.4220",
+      "growthRate": "-0.94",
+      "bonus": ""
+    },
+    "2017-04-27": {
+      "date": "2017-04-27",
+      "val": "1.0650",
+      "accumulatedVal": "2.4320",
+      "growthRate": "0.28",
+      "bonus": ""
+    },
+    "2017-04-26": {
+      "date": "2017-04-26",
+      "val": "1.0620",
+      "accumulatedVal": "2.4290",
+      "growthRate": "-0.56",
+      "bonus": ""
+    },
+    "2017-04-25": {
+      "date": "2017-04-25",
+      "val": "1.0680",
+      "accumulatedVal": "2.4350",
+      "growthRate": "2.40",
+      "bonus": ""
+    },
+    "2017-04-24": {
+      "date": "2017-04-24",
+      "val": "1.0430",
+      "accumulatedVal": "2.4100",
+      "growthRate": "-1.04",
+      "bonus": ""
+    },
+    "2017-04-21": {
+      "date": "2017-04-21",
+      "val": "1.0540",
+      "accumulatedVal": "2.4210",
+      "growthRate": "-0.19",
+      "bonus": ""
+    },
+    "2017-04-20": {
+      "date": "2017-04-20",
+      "val": "1.0560",
+      "accumulatedVal": "2.4230",
+      "growthRate": "1.73",
+      "bonus": ""
+    },
+    "2017-04-19": {
+      "date": "2017-04-19",
+      "val": "1.0380",
+      "accumulatedVal": "2.4050",
+      "growthRate": "0.39",
+      "bonus": ""
+    },
+    "2017-04-18": {
+      "date": "2017-04-18",
+      "val": "1.0340",
+      "accumulatedVal": "2.4010",
+      "growthRate": "1.57",
+      "bonus": ""
+    },
+    "2017-04-17": {
+      "date": "2017-04-17",
+      "val": "1.0180",
+      "accumulatedVal": "2.3850",
+      "growthRate": "0.89",
+      "bonus": ""
+    },
+    "2017-04-14": {
+      "date": "2017-04-14",
+      "val": "1.0090",
+      "accumulatedVal": "2.3760",
+      "growthRate": "-0.88",
+      "bonus": ""
+    },
+    "2017-04-13": {
+      "date": "2017-04-13",
+      "val": "1.0180",
+      "accumulatedVal": "2.3850",
+      "growthRate": "0.89",
+      "bonus": ""
+    },
+    "2017-04-12": {
+      "date": "2017-04-12",
+      "val": "1.0090",
+      "accumulatedVal": "2.3760",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-04-11": {
+      "date": "2017-04-11",
+      "val": "1.0090",
+      "accumulatedVal": "2.3760",
+      "growthRate": "-0.69",
+      "bonus": ""
+    },
+    "2017-04-10": {
+      "date": "2017-04-10",
+      "val": "1.0160",
+      "accumulatedVal": "2.3830",
+      "growthRate": "-0.59",
+      "bonus": ""
+    },
+    "2017-04-07": {
+      "date": "2017-04-07",
+      "val": "1.0220",
+      "accumulatedVal": "2.3890",
+      "growthRate": "0.29",
+      "bonus": ""
+    },
+    "2017-04-06": {
+      "date": "2017-04-06",
+      "val": "1.0190",
+      "accumulatedVal": "2.3860",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-04-05": {
+      "date": "2017-04-05",
+      "val": "1.0190",
+      "accumulatedVal": "2.3860",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-03-31": {
+      "date": "2017-03-31",
+      "val": "1.0190",
+      "accumulatedVal": "2.3860",
+      "growthRate": "1.39",
+      "bonus": ""
+    },
+    "2017-03-30": {
+      "date": "2017-03-30",
+      "val": "1.0050",
+      "accumulatedVal": "2.3720",
+      "growthRate": "-0.79",
+      "bonus": ""
+    },
+    "2017-03-29": {
+      "date": "2017-03-29",
+      "val": "1.0130",
+      "accumulatedVal": "2.3800",
+      "growthRate": "0.30",
+      "bonus": ""
+    },
+    "2017-03-28": {
+      "date": "2017-03-28",
+      "val": "1.0100",
+      "accumulatedVal": "2.3770",
+      "growthRate": "-0.20",
+      "bonus": ""
+    },
+    "2017-03-27": {
+      "date": "2017-03-27",
+      "val": "1.0120",
+      "accumulatedVal": "2.3790",
+      "growthRate": "-1.17",
+      "bonus": ""
+    },
+    "2017-03-24": {
+      "date": "2017-03-24",
+      "val": "1.0240",
+      "accumulatedVal": "2.3910",
+      "growthRate": "0.29",
+      "bonus": ""
+    },
+    "2017-03-23": {
+      "date": "2017-03-23",
+      "val": "1.0210",
+      "accumulatedVal": "2.3880",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2017-03-22": {
+      "date": "2017-03-22",
+      "val": "1.0220",
+      "accumulatedVal": "2.3890",
+      "growthRate": "1.59",
+      "bonus": ""
+    },
+    "2017-03-21": {
+      "date": "2017-03-21",
+      "val": "1.0060",
+      "accumulatedVal": "2.3730",
+      "growthRate": "1.31",
+      "bonus": ""
+    },
+    "2017-03-20": {
+      "date": "2017-03-20",
+      "val": "0.9930",
+      "accumulatedVal": "2.3600",
+      "growthRate": "0.40",
+      "bonus": ""
+    },
+    "2017-03-17": {
+      "date": "2017-03-17",
+      "val": "0.9890",
+      "accumulatedVal": "2.3560",
+      "growthRate": "-0.50",
+      "bonus": ""
+    },
+    "2017-03-16": {
+      "date": "2017-03-16",
+      "val": "0.9940",
+      "accumulatedVal": "2.3610",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2017-03-15": {
+      "date": "2017-03-15",
+      "val": "0.9950",
+      "accumulatedVal": "2.3620",
+      "growthRate": "0.61",
+      "bonus": ""
+    },
+    "2017-03-14": {
+      "date": "2017-03-14",
+      "val": "0.9890",
+      "accumulatedVal": "2.3560",
+      "growthRate": "-0.50",
+      "bonus": ""
+    },
+    "2017-03-13": {
+      "date": "2017-03-13",
+      "val": "0.9940",
+      "accumulatedVal": "2.3610",
+      "growthRate": "1.22",
+      "bonus": ""
+    },
+    "2017-03-10": {
+      "date": "2017-03-10",
+      "val": "0.9820",
+      "accumulatedVal": "2.3490",
+      "growthRate": "0.82",
+      "bonus": ""
+    },
+    "2017-03-09": {
+      "date": "2017-03-09",
+      "val": "0.9740",
+      "accumulatedVal": "2.3410",
+      "growthRate": "-0.71",
+      "bonus": ""
+    },
+    "2017-03-08": {
+      "date": "2017-03-08",
+      "val": "0.9810",
+      "accumulatedVal": "2.3480",
+      "growthRate": "-0.51",
+      "bonus": ""
+    },
+    "2017-03-07": {
+      "date": "2017-03-07",
+      "val": "0.9860",
+      "accumulatedVal": "2.3530",
+      "growthRate": "1.02",
+      "bonus": ""
+    },
+    "2017-03-06": {
+      "date": "2017-03-06",
+      "val": "0.9760",
+      "accumulatedVal": "2.3430",
+      "growthRate": "1.46",
+      "bonus": ""
+    },
+    "2017-03-03": {
+      "date": "2017-03-03",
+      "val": "0.9620",
+      "accumulatedVal": "2.3290",
+      "growthRate": "0.63",
+      "bonus": ""
+    },
+    "2017-03-02": {
+      "date": "2017-03-02",
+      "val": "0.9560",
+      "accumulatedVal": "2.3230",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2017-03-01": {
+      "date": "2017-03-01",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "0.31",
+      "bonus": ""
+    },
+    "2017-02-28": {
+      "date": "2017-02-28",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.31",
+      "bonus": ""
+    },
+    "2017-02-27": {
+      "date": "2017-02-27",
+      "val": "0.9540",
+      "accumulatedVal": "2.3210",
+      "growthRate": "-1.24",
+      "bonus": ""
+    },
+    "2017-02-24": {
+      "date": "2017-02-24",
+      "val": "0.9660",
+      "accumulatedVal": "2.3330",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2017-02-23": {
+      "date": "2017-02-23",
+      "val": "0.9680",
+      "accumulatedVal": "2.3350",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2017-02-22": {
+      "date": "2017-02-22",
+      "val": "0.9660",
+      "accumulatedVal": "2.3330",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2017-02-21": {
+      "date": "2017-02-21",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "0.52",
+      "bonus": ""
+    },
+    "2017-02-20": {
+      "date": "2017-02-20",
+      "val": "0.9590",
+      "accumulatedVal": "2.3260",
+      "growthRate": "2.57",
+      "bonus": ""
+    },
+    "2017-02-17": {
+      "date": "2017-02-17",
+      "val": "0.9350",
+      "accumulatedVal": "2.3020",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2017-02-16": {
+      "date": "2017-02-16",
+      "val": "0.9340",
+      "accumulatedVal": "2.3010",
+      "growthRate": "0.76",
+      "bonus": ""
+    },
+    "2017-02-15": {
+      "date": "2017-02-15",
+      "val": "0.9270",
+      "accumulatedVal": "2.2940",
+      "growthRate": "-0.75",
+      "bonus": ""
+    },
+    "2017-02-14": {
+      "date": "2017-02-14",
+      "val": "0.9340",
+      "accumulatedVal": "2.3010",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2017-02-13": {
+      "date": "2017-02-13",
+      "val": "0.9350",
+      "accumulatedVal": "2.3020",
+      "growthRate": "0.97",
+      "bonus": ""
+    },
+    "2017-02-10": {
+      "date": "2017-02-10",
+      "val": "0.9260",
+      "accumulatedVal": "2.2930",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2017-02-09": {
+      "date": "2017-02-09",
+      "val": "0.9280",
+      "accumulatedVal": "2.2950",
+      "growthRate": "0.32",
+      "bonus": ""
+    },
+    "2017-02-08": {
+      "date": "2017-02-08",
+      "val": "0.9250",
+      "accumulatedVal": "2.2920",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2017-02-07": {
+      "date": "2017-02-07",
+      "val": "0.9210",
+      "accumulatedVal": "2.2880",
+      "growthRate": "-0.32",
+      "bonus": ""
+    },
+    "2017-02-06": {
+      "date": "2017-02-06",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "0.87",
+      "bonus": ""
+    },
+    "2017-02-03": {
+      "date": "2017-02-03",
+      "val": "0.9160",
+      "accumulatedVal": "2.2830",
+      "growthRate": "-0.43",
+      "bonus": ""
+    },
+    "2017-01-26": {
+      "date": "2017-01-26",
+      "val": "0.9200",
+      "accumulatedVal": "2.2870",
+      "growthRate": "0.33",
+      "bonus": ""
+    },
+    "2017-01-25": {
+      "date": "2017-01-25",
+      "val": "0.9170",
+      "accumulatedVal": "2.2840",
+      "growthRate": "0.33",
+      "bonus": ""
+    },
+    "2017-01-24": {
+      "date": "2017-01-24",
+      "val": "0.9140",
+      "accumulatedVal": "2.2810",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2017-01-23": {
+      "date": "2017-01-23",
+      "val": "0.9150",
+      "accumulatedVal": "2.2820",
+      "growthRate": "0.22",
+      "bonus": ""
+    },
+    "2017-01-20": {
+      "date": "2017-01-20",
+      "val": "0.9130",
+      "accumulatedVal": "2.2800",
+      "growthRate": "1.00",
+      "bonus": ""
+    },
+    "2017-01-19": {
+      "date": "2017-01-19",
+      "val": "0.9040",
+      "accumulatedVal": "2.2710",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2017-01-18": {
+      "date": "2017-01-18",
+      "val": "0.9050",
+      "accumulatedVal": "2.2720",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-01-17": {
+      "date": "2017-01-17",
+      "val": "0.9050",
+      "accumulatedVal": "2.2720",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2017-01-16": {
+      "date": "2017-01-16",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "-1.21",
+      "bonus": ""
+    },
+    "2017-01-13": {
+      "date": "2017-01-13",
+      "val": "0.9110",
+      "accumulatedVal": "2.2780",
+      "growthRate": "-0.33",
+      "bonus": ""
+    },
+    "2017-01-12": {
+      "date": "2017-01-12",
+      "val": "0.9140",
+      "accumulatedVal": "2.2810",
+      "growthRate": "-0.54",
+      "bonus": ""
+    },
+    "2017-01-11": {
+      "date": "2017-01-11",
+      "val": "0.9190",
+      "accumulatedVal": "2.2860",
+      "growthRate": "-0.86",
+      "bonus": ""
+    },
+    "2017-01-10": {
+      "date": "2017-01-10",
+      "val": "0.9270",
+      "accumulatedVal": "2.2940",
+      "growthRate": "-0.54",
+      "bonus": ""
+    },
+    "2017-01-09": {
+      "date": "2017-01-09",
+      "val": "0.9320",
+      "accumulatedVal": "2.2990",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2017-01-06": {
+      "date": "2017-01-06",
+      "val": "0.9320",
+      "accumulatedVal": "2.2990",
+      "growthRate": "-0.53",
+      "bonus": ""
+    },
+    "2017-01-05": {
+      "date": "2017-01-05",
+      "val": "0.9370",
+      "accumulatedVal": "2.3040",
+      "growthRate": "-0.32",
+      "bonus": ""
+    },
+    "2017-01-04": {
+      "date": "2017-01-04",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "1.18",
+      "bonus": ""
+    },
+    "2017-01-03": {
+      "date": "2017-01-03",
+      "val": "0.9290",
+      "accumulatedVal": "2.2960",
+      "growthRate": "0.54",
+      "bonus": ""
+    },
+    "2016-12-31": {
+      "date": "2016-12-31",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-12-30": {
+      "date": "2016-12-30",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2016-12-29": {
+      "date": "2016-12-29",
+      "val": "0.9200",
+      "accumulatedVal": "2.2870",
+      "growthRate": "0.33",
+      "bonus": ""
+    },
+    "2016-12-28": {
+      "date": "2016-12-28",
+      "val": "0.9170",
+      "accumulatedVal": "2.2840",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2016-12-27": {
+      "date": "2016-12-27",
+      "val": "0.9190",
+      "accumulatedVal": "2.2860",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2016-12-26": {
+      "date": "2016-12-26",
+      "val": "0.9200",
+      "accumulatedVal": "2.2870",
+      "growthRate": "0.44",
+      "bonus": ""
+    },
+    "2016-12-23": {
+      "date": "2016-12-23",
+      "val": "0.9160",
+      "accumulatedVal": "2.2830",
+      "growthRate": "-0.87",
+      "bonus": ""
+    },
+    "2016-12-22": {
+      "date": "2016-12-22",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "-0.43",
+      "bonus": ""
+    },
+    "2016-12-21": {
+      "date": "2016-12-21",
+      "val": "0.9280",
+      "accumulatedVal": "2.2950",
+      "growthRate": "0.65",
+      "bonus": ""
+    },
+    "2016-12-20": {
+      "date": "2016-12-20",
+      "val": "0.9220",
+      "accumulatedVal": "2.2890",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-12-19": {
+      "date": "2016-12-19",
+      "val": "0.9220",
+      "accumulatedVal": "2.2890",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2016-12-16": {
+      "date": "2016-12-16",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "1.09",
+      "bonus": ""
+    },
+    "2016-12-15": {
+      "date": "2016-12-15",
+      "val": "0.9140",
+      "accumulatedVal": "2.2810",
+      "growthRate": "-0.76",
+      "bonus": ""
+    },
+    "2016-12-14": {
+      "date": "2016-12-14",
+      "val": "0.9210",
+      "accumulatedVal": "2.2880",
+      "growthRate": "-0.97",
+      "bonus": ""
+    },
+    "2016-12-13": {
+      "date": "2016-12-13",
+      "val": "0.9300",
+      "accumulatedVal": "2.2970",
+      "growthRate": "0.65",
+      "bonus": ""
+    },
+    "2016-12-12": {
+      "date": "2016-12-12",
+      "val": "0.9240",
+      "accumulatedVal": "2.2910",
+      "growthRate": "-2.53",
+      "bonus": ""
+    },
+    "2016-12-09": {
+      "date": "2016-12-09",
+      "val": "0.9480",
+      "accumulatedVal": "2.3150",
+      "growthRate": "-0.32",
+      "bonus": ""
+    },
+    "2016-12-08": {
+      "date": "2016-12-08",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2016-12-07": {
+      "date": "2016-12-07",
+      "val": "0.9540",
+      "accumulatedVal": "2.3210",
+      "growthRate": "0.32",
+      "bonus": ""
+    },
+    "2016-12-06": {
+      "date": "2016-12-06",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-12-05": {
+      "date": "2016-12-05",
+      "val": "0.9490",
+      "accumulatedVal": "2.3160",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2016-12-02": {
+      "date": "2016-12-02",
+      "val": "0.9480",
+      "accumulatedVal": "2.3150",
+      "growthRate": "-0.84",
+      "bonus": ""
+    },
+    "2016-12-01": {
+      "date": "2016-12-01",
+      "val": "0.9560",
+      "accumulatedVal": "2.3230",
+      "growthRate": "0.31",
+      "bonus": ""
+    },
+    "2016-11-30": {
+      "date": "2016-11-30",
+      "val": "0.9530",
+      "accumulatedVal": "2.3200",
+      "growthRate": "-1.04",
+      "bonus": ""
+    },
+    "2016-11-29": {
+      "date": "2016-11-29",
+      "val": "0.9630",
+      "accumulatedVal": "2.3300",
+      "growthRate": "0.52",
+      "bonus": ""
+    },
+    "2016-11-28": {
+      "date": "2016-11-28",
+      "val": "0.9580",
+      "accumulatedVal": "2.3250",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-11-25": {
+      "date": "2016-11-25",
+      "val": "0.9560",
+      "accumulatedVal": "2.3230",
+      "growthRate": "0.42",
+      "bonus": ""
+    },
+    "2016-11-24": {
+      "date": "2016-11-24",
+      "val": "0.9520",
+      "accumulatedVal": "2.3190",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2016-11-23": {
+      "date": "2016-11-23",
+      "val": "0.9550",
+      "accumulatedVal": "2.3220",
+      "growthRate": "-0.52",
+      "bonus": ""
+    },
+    "2016-11-22": {
+      "date": "2016-11-22",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "0.73",
+      "bonus": ""
+    },
+    "2016-11-21": {
+      "date": "2016-11-21",
+      "val": "0.9530",
+      "accumulatedVal": "2.3200",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-11-18": {
+      "date": "2016-11-18",
+      "val": "0.9530",
+      "accumulatedVal": "2.3200",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2016-11-17": {
+      "date": "2016-11-17",
+      "val": "0.9560",
+      "accumulatedVal": "2.3230",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2016-11-16": {
+      "date": "2016-11-16",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-11-15": {
+      "date": "2016-11-15",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.74",
+      "bonus": ""
+    },
+    "2016-11-14": {
+      "date": "2016-11-14",
+      "val": "0.9500",
+      "accumulatedVal": "2.3170",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2016-11-11": {
+      "date": "2016-11-11",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2016-11-10": {
+      "date": "2016-11-10",
+      "val": "0.9550",
+      "accumulatedVal": "2.3220",
+      "growthRate": "0.42",
+      "bonus": ""
+    },
+    "2016-11-09": {
+      "date": "2016-11-09",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "-0.63",
+      "bonus": ""
+    },
+    "2016-11-08": {
+      "date": "2016-11-08",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "1.06",
+      "bonus": ""
+    },
+    "2016-11-07": {
+      "date": "2016-11-07",
+      "val": "0.9470",
+      "accumulatedVal": "2.3140",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2016-11-04": {
+      "date": "2016-11-04",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "-0.83",
+      "bonus": ""
+    },
+    "2016-11-03": {
+      "date": "2016-11-03",
+      "val": "0.9590",
+      "accumulatedVal": "2.3260",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2016-11-02": {
+      "date": "2016-11-02",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "-0.72",
+      "bonus": ""
+    },
+    "2016-11-01": {
+      "date": "2016-11-01",
+      "val": "0.9670",
+      "accumulatedVal": "2.3340",
+      "growthRate": "1.04",
+      "bonus": ""
+    },
+    "2016-10-31": {
+      "date": "2016-10-31",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2016-10-28": {
+      "date": "2016-10-28",
+      "val": "0.9580",
+      "accumulatedVal": "2.3250",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2016-10-27": {
+      "date": "2016-10-27",
+      "val": "0.9590",
+      "accumulatedVal": "2.3260",
+      "growthRate": "-0.31",
+      "bonus": ""
+    },
+    "2016-10-26": {
+      "date": "2016-10-26",
+      "val": "0.9620",
+      "accumulatedVal": "2.3290",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-10-25": {
+      "date": "2016-10-25",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "0.73",
+      "bonus": ""
+    },
+    "2016-10-24": {
+      "date": "2016-10-24",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.63",
+      "bonus": ""
+    },
+    "2016-10-21": {
+      "date": "2016-10-21",
+      "val": "0.9510",
+      "accumulatedVal": "2.3180",
+      "growthRate": "-0.63",
+      "bonus": ""
+    },
+    "2016-10-20": {
+      "date": "2016-10-20",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-10-19": {
+      "date": "2016-10-19",
+      "val": "0.9550",
+      "accumulatedVal": "2.3220",
+      "growthRate": "-0.62",
+      "bonus": ""
+    },
+    "2016-10-18": {
+      "date": "2016-10-18",
+      "val": "0.9610",
+      "accumulatedVal": "2.3280",
+      "growthRate": "0.52",
+      "bonus": ""
+    },
+    "2016-10-17": {
+      "date": "2016-10-17",
+      "val": "0.9560",
+      "accumulatedVal": "2.3230",
+      "growthRate": "-0.52",
+      "bonus": ""
+    },
+    "2016-10-14": {
+      "date": "2016-10-14",
+      "val": "0.9610",
+      "accumulatedVal": "2.3280",
+      "growthRate": "-0.72",
+      "bonus": ""
+    },
+    "2016-10-13": {
+      "date": "2016-10-13",
+      "val": "0.9680",
+      "accumulatedVal": "2.3350",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-10-12": {
+      "date": "2016-10-12",
+      "val": "0.9680",
+      "accumulatedVal": "2.3350",
+      "growthRate": "0.10",
+      "bonus": ""
+    },
+    "2016-10-11": {
+      "date": "2016-10-11",
+      "val": "0.9670",
+      "accumulatedVal": "2.3340",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-10-10": {
+      "date": "2016-10-10",
+      "val": "0.9670",
+      "accumulatedVal": "2.3340",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2016-09-30": {
+      "date": "2016-09-30",
+      "val": "0.9550",
+      "accumulatedVal": "2.3220",
+      "growthRate": "0.63",
+      "bonus": ""
+    },
+    "2016-09-29": {
+      "date": "2016-09-29",
+      "val": "0.9490",
+      "accumulatedVal": "2.3160",
+      "growthRate": "0.53",
+      "bonus": ""
+    },
+    "2016-09-28": {
+      "date": "2016-09-28",
+      "val": "0.9440",
+      "accumulatedVal": "2.3110",
+      "growthRate": "0.43",
+      "bonus": ""
+    },
+    "2016-09-27": {
+      "date": "2016-09-27",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "0.86",
+      "bonus": ""
+    },
+    "2016-09-26": {
+      "date": "2016-09-26",
+      "val": "0.9320",
+      "accumulatedVal": "2.2990",
+      "growthRate": "-0.85",
+      "bonus": ""
+    },
+    "2016-09-23": {
+      "date": "2016-09-23",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "-0.32",
+      "bonus": ""
+    },
+    "2016-09-22": {
+      "date": "2016-09-22",
+      "val": "0.9430",
+      "accumulatedVal": "2.3100",
+      "growthRate": "0.32",
+      "bonus": ""
+    },
+    "2016-09-21": {
+      "date": "2016-09-21",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-09-20": {
+      "date": "2016-09-20",
+      "val": "0.9380",
+      "accumulatedVal": "2.3050",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-09-19": {
+      "date": "2016-09-19",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "0.53",
+      "bonus": ""
+    },
+    "2016-09-14": {
+      "date": "2016-09-14",
+      "val": "0.9350",
+      "accumulatedVal": "2.3020",
+      "growthRate": "-0.74",
+      "bonus": ""
+    },
+    "2016-09-13": {
+      "date": "2016-09-13",
+      "val": "0.9420",
+      "accumulatedVal": "2.3090",
+      "growthRate": "0.53",
+      "bonus": ""
+    },
+    "2016-09-12": {
+      "date": "2016-09-12",
+      "val": "0.9370",
+      "accumulatedVal": "2.3040",
+      "growthRate": "-1.68",
+      "bonus": ""
+    },
+    "2016-09-09": {
+      "date": "2016-09-09",
+      "val": "0.9530",
+      "accumulatedVal": "2.3200",
+      "growthRate": "-0.73",
+      "bonus": ""
+    },
+    "2016-09-08": {
+      "date": "2016-09-08",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-09-07": {
+      "date": "2016-09-07",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "-0.41",
+      "bonus": ""
+    },
+    "2016-09-06": {
+      "date": "2016-09-06",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "1.05",
+      "bonus": ""
+    },
+    "2016-09-05": {
+      "date": "2016-09-05",
+      "val": "0.9540",
+      "accumulatedVal": "2.3210",
+      "growthRate": "0.53",
+      "bonus": ""
+    },
+    "2016-09-02": {
+      "date": "2016-09-02",
+      "val": "0.9490",
+      "accumulatedVal": "2.3160",
+      "growthRate": "-1.04",
+      "bonus": ""
+    },
+    "2016-09-01": {
+      "date": "2016-09-01",
+      "val": "0.9590",
+      "accumulatedVal": "2.3260",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-08-31": {
+      "date": "2016-08-31",
+      "val": "0.9610",
+      "accumulatedVal": "2.3280",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-08-30": {
+      "date": "2016-08-30",
+      "val": "0.9630",
+      "accumulatedVal": "2.3300",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2016-08-29": {
+      "date": "2016-08-29",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-08-26": {
+      "date": "2016-08-26",
+      "val": "0.9620",
+      "accumulatedVal": "2.3290",
+      "growthRate": "0.42",
+      "bonus": ""
+    },
+    "2016-08-25": {
+      "date": "2016-08-25",
+      "val": "0.9580",
+      "accumulatedVal": "2.3250",
+      "growthRate": "-0.62",
+      "bonus": ""
+    },
+    "2016-08-24": {
+      "date": "2016-08-24",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-08-23": {
+      "date": "2016-08-23",
+      "val": "0.9640",
+      "accumulatedVal": "2.3310",
+      "growthRate": "0.31",
+      "bonus": ""
+    },
+    "2016-08-22": {
+      "date": "2016-08-22",
+      "val": "0.9610",
+      "accumulatedVal": "2.3280",
+      "growthRate": "0.10",
+      "bonus": ""
+    },
+    "2016-08-19": {
+      "date": "2016-08-19",
+      "val": "0.9600",
+      "accumulatedVal": "2.3270",
+      "growthRate": "0.10",
+      "bonus": ""
+    },
+    "2016-08-18": {
+      "date": "2016-08-18",
+      "val": "0.9590",
+      "accumulatedVal": "2.3260",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2016-08-17": {
+      "date": "2016-08-17",
+      "val": "0.9630",
+      "accumulatedVal": "2.3300",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-08-16": {
+      "date": "2016-08-16",
+      "val": "0.9630",
+      "accumulatedVal": "2.3300",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-08-15": {
+      "date": "2016-08-15",
+      "val": "0.9610",
+      "accumulatedVal": "2.3280",
+      "growthRate": "1.26",
+      "bonus": ""
+    },
+    "2016-08-12": {
+      "date": "2016-08-12",
+      "val": "0.9490",
+      "accumulatedVal": "2.3160",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-08-11": {
+      "date": "2016-08-11",
+      "val": "0.9470",
+      "accumulatedVal": "2.3140",
+      "growthRate": "-0.84",
+      "bonus": ""
+    },
+    "2016-08-10": {
+      "date": "2016-08-10",
+      "val": "0.9550",
+      "accumulatedVal": "2.3220",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-08-09": {
+      "date": "2016-08-09",
+      "val": "0.9570",
+      "accumulatedVal": "2.3240",
+      "growthRate": "0.84",
+      "bonus": ""
+    },
+    "2016-08-08": {
+      "date": "2016-08-08",
+      "val": "0.9490",
+      "accumulatedVal": "2.3160",
+      "growthRate": "0.64",
+      "bonus": ""
+    },
+    "2016-08-05": {
+      "date": "2016-08-05",
+      "val": "0.9430",
+      "accumulatedVal": "2.3100",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-08-04": {
+      "date": "2016-08-04",
+      "val": "0.9430",
+      "accumulatedVal": "2.3100",
+      "growthRate": "0.53",
+      "bonus": ""
+    },
+    "2016-08-03": {
+      "date": "2016-08-03",
+      "val": "0.9380",
+      "accumulatedVal": "2.3050",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-08-02": {
+      "date": "2016-08-02",
+      "val": "0.9360",
+      "accumulatedVal": "2.3030",
+      "growthRate": "0.32",
+      "bonus": ""
+    },
+    "2016-08-01": {
+      "date": "2016-08-01",
+      "val": "0.9330",
+      "accumulatedVal": "2.3000",
+      "growthRate": "-1.48",
+      "bonus": ""
+    },
+    "2016-07-29": {
+      "date": "2016-07-29",
+      "val": "0.9470",
+      "accumulatedVal": "2.3140",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-07-28": {
+      "date": "2016-07-28",
+      "val": "0.9450",
+      "accumulatedVal": "2.3120",
+      "growthRate": "0.96",
+      "bonus": ""
+    },
+    "2016-07-27": {
+      "date": "2016-07-27",
+      "val": "0.9360",
+      "accumulatedVal": "2.3030",
+      "growthRate": "-1.68",
+      "bonus": ""
+    },
+    "2016-07-26": {
+      "date": "2016-07-26",
+      "val": "0.9520",
+      "accumulatedVal": "2.3190",
+      "growthRate": "1.28",
+      "bonus": ""
+    },
+    "2016-07-25": {
+      "date": "2016-07-25",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "0.32",
+      "bonus": ""
+    },
+    "2016-07-22": {
+      "date": "2016-07-22",
+      "val": "0.9370",
+      "accumulatedVal": "2.3040",
+      "growthRate": "-0.95",
+      "bonus": ""
+    },
+    "2016-07-21": {
+      "date": "2016-07-21",
+      "val": "0.9460",
+      "accumulatedVal": "2.3130",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-07-20": {
+      "date": "2016-07-20",
+      "val": "0.9440",
+      "accumulatedVal": "2.3110",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-07-19": {
+      "date": "2016-07-19",
+      "val": "0.9440",
+      "accumulatedVal": "2.3110",
+      "growthRate": "-0.42",
+      "bonus": ""
+    },
+    "2016-07-18": {
+      "date": "2016-07-18",
+      "val": "0.9480",
+      "accumulatedVal": "2.3150",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-07-15": {
+      "date": "2016-07-15",
+      "val": "0.9500",
+      "accumulatedVal": "2.3170",
+      "growthRate": "0.42",
+      "bonus": ""
+    },
+    "2016-07-14": {
+      "date": "2016-07-14",
+      "val": "0.9460",
+      "accumulatedVal": "2.3130",
+      "growthRate": "-0.11",
+      "bonus": ""
+    },
+    "2016-07-13": {
+      "date": "2016-07-13",
+      "val": "0.9470",
+      "accumulatedVal": "2.3140",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-07-12": {
+      "date": "2016-07-12",
+      "val": "0.9450",
+      "accumulatedVal": "2.3120",
+      "growthRate": "1.39",
+      "bonus": ""
+    },
+    "2016-07-11": {
+      "date": "2016-07-11",
+      "val": "0.9320",
+      "accumulatedVal": "2.2990",
+      "growthRate": "-0.43",
+      "bonus": ""
+    },
+    "2016-07-08": {
+      "date": "2016-07-08",
+      "val": "0.9360",
+      "accumulatedVal": "2.3030",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-07-07": {
+      "date": "2016-07-07",
+      "val": "0.9380",
+      "accumulatedVal": "2.3050",
+      "growthRate": "-0.21",
+      "bonus": ""
+    },
+    "2016-07-06": {
+      "date": "2016-07-06",
+      "val": "0.9400",
+      "accumulatedVal": "2.3070",
+      "growthRate": "0.75",
+      "bonus": ""
+    },
+    "2016-07-05": {
+      "date": "2016-07-05",
+      "val": "0.9330",
+      "accumulatedVal": "2.3000",
+      "growthRate": "0.21",
+      "bonus": ""
+    },
+    "2016-07-04": {
+      "date": "2016-07-04",
+      "val": "0.9310",
+      "accumulatedVal": "2.2980",
+      "growthRate": "1.31",
+      "bonus": ""
+    },
+    "2016-07-01": {
+      "date": "2016-07-01",
+      "val": "0.9190",
+      "accumulatedVal": "2.2860",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2016-06-30": {
+      "date": "2016-06-30",
+      "val": "0.9180",
+      "accumulatedVal": "2.2850",
+      "growthRate": "0.33",
+      "bonus": ""
+    },
+    "2016-06-29": {
+      "date": "2016-06-29",
+      "val": "0.9150",
+      "accumulatedVal": "2.2820",
+      "growthRate": "0.55",
+      "bonus": ""
+    },
+    "2016-06-28": {
+      "date": "2016-06-28",
+      "val": "0.9100",
+      "accumulatedVal": "2.2770",
+      "growthRate": "0.44",
+      "bonus": ""
+    },
+    "2016-06-27": {
+      "date": "2016-06-27",
+      "val": "0.9060",
+      "accumulatedVal": "2.2730",
+      "growthRate": "1.57",
+      "bonus": ""
+    },
+    "2016-06-24": {
+      "date": "2016-06-24",
+      "val": "0.8920",
+      "accumulatedVal": "2.2590",
+      "growthRate": "-0.67",
+      "bonus": ""
+    },
+    "2016-06-23": {
+      "date": "2016-06-23",
+      "val": "0.8980",
+      "accumulatedVal": "2.2650",
+      "growthRate": "-0.44",
+      "bonus": ""
+    },
+    "2016-06-22": {
+      "date": "2016-06-22",
+      "val": "0.9020",
+      "accumulatedVal": "2.2690",
+      "growthRate": "1.01",
+      "bonus": ""
+    },
+    "2016-06-21": {
+      "date": "2016-06-21",
+      "val": "0.8930",
+      "accumulatedVal": "2.2600",
+      "growthRate": "-0.78",
+      "bonus": ""
+    },
+    "2016-06-20": {
+      "date": "2016-06-20",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "0.56",
+      "bonus": ""
+    },
+    "2016-06-17": {
+      "date": "2016-06-17",
+      "val": "0.8950",
+      "accumulatedVal": "2.2620",
+      "growthRate": "0.79",
+      "bonus": ""
+    },
+    "2016-06-16": {
+      "date": "2016-06-16",
+      "val": "0.8880",
+      "accumulatedVal": "2.2550",
+      "growthRate": "-0.89",
+      "bonus": ""
+    },
+    "2016-06-15": {
+      "date": "2016-06-15",
+      "val": "0.8960",
+      "accumulatedVal": "2.2630",
+      "growthRate": "2.52",
+      "bonus": ""
+    },
+    "2016-06-14": {
+      "date": "2016-06-14",
+      "val": "0.8740",
+      "accumulatedVal": "2.2410",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2016-06-13": {
+      "date": "2016-06-13",
+      "val": "0.8730",
+      "accumulatedVal": "2.2400",
+      "growthRate": "-3.22",
+      "bonus": ""
+    },
+    "2016-06-08": {
+      "date": "2016-06-08",
+      "val": "0.9020",
+      "accumulatedVal": "2.2690",
+      "growthRate": "-0.66",
+      "bonus": ""
+    },
+    "2016-06-07": {
+      "date": "2016-06-07",
+      "val": "0.9080",
+      "accumulatedVal": "2.2750",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-06-06": {
+      "date": "2016-06-06",
+      "val": "0.9080",
+      "accumulatedVal": "2.2750",
+      "growthRate": "0.55",
+      "bonus": ""
+    },
+    "2016-06-03": {
+      "date": "2016-06-03",
+      "val": "0.9030",
+      "accumulatedVal": "2.2700",
+      "growthRate": "1.23",
+      "bonus": ""
+    },
+    "2016-06-02": {
+      "date": "2016-06-02",
+      "val": "0.8920",
+      "accumulatedVal": "2.2590",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-06-01": {
+      "date": "2016-06-01",
+      "val": "0.8920",
+      "accumulatedVal": "2.2590",
+      "growthRate": "0.11",
+      "bonus": ""
+    },
+    "2016-05-31": {
+      "date": "2016-05-31",
+      "val": "0.8910",
+      "accumulatedVal": "2.2580",
+      "growthRate": "3.85",
+      "bonus": ""
+    },
+    "2016-05-30": {
+      "date": "2016-05-30",
+      "val": "0.8580",
+      "accumulatedVal": "2.2250",
+      "growthRate": "-0.81",
+      "bonus": ""
+    },
+    "2016-05-27": {
+      "date": "2016-05-27",
+      "val": "0.8650",
+      "accumulatedVal": "2.2320",
+      "growthRate": "0.12",
+      "bonus": ""
+    },
+    "2016-05-26": {
+      "date": "2016-05-26",
+      "val": "0.8640",
+      "accumulatedVal": "2.2310",
+      "growthRate": "0.82",
+      "bonus": ""
+    },
+    "2016-05-25": {
+      "date": "2016-05-25",
+      "val": "0.8570",
+      "accumulatedVal": "2.2240",
+      "growthRate": "-0.92",
+      "bonus": ""
+    },
+    "2016-05-24": {
+      "date": "2016-05-24",
+      "val": "0.8650",
+      "accumulatedVal": "2.2320",
+      "growthRate": "-1.14",
+      "bonus": ""
+    },
+    "2016-05-23": {
+      "date": "2016-05-23",
+      "val": "0.8750",
+      "accumulatedVal": "2.2420",
+      "growthRate": "1.27",
+      "bonus": ""
+    },
+    "2016-05-20": {
+      "date": "2016-05-20",
+      "val": "0.8640",
+      "accumulatedVal": "2.2310",
+      "growthRate": "0.93",
+      "bonus": ""
+    },
+    "2016-05-19": {
+      "date": "2016-05-19",
+      "val": "0.8560",
+      "accumulatedVal": "2.2230",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2016-05-18": {
+      "date": "2016-05-18",
+      "val": "0.8530",
+      "accumulatedVal": "2.2200",
+      "growthRate": "-2.51",
+      "bonus": ""
+    },
+    "2016-05-17": {
+      "date": "2016-05-17",
+      "val": "0.8750",
+      "accumulatedVal": "2.2420",
+      "growthRate": "-0.68",
+      "bonus": ""
+    },
+    "2016-05-16": {
+      "date": "2016-05-16",
+      "val": "0.8810",
+      "accumulatedVal": "2.2480",
+      "growthRate": "1.97",
+      "bonus": ""
+    },
+    "2016-05-13": {
+      "date": "2016-05-13",
+      "val": "0.8640",
+      "accumulatedVal": "2.2310",
+      "growthRate": "-0.35",
+      "bonus": ""
+    },
+    "2016-05-12": {
+      "date": "2016-05-12",
+      "val": "0.8670",
+      "accumulatedVal": "2.2340",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-05-11": {
+      "date": "2016-05-11",
+      "val": "0.8670",
+      "accumulatedVal": "2.2340",
+      "growthRate": "0.70",
+      "bonus": ""
+    },
+    "2016-05-10": {
+      "date": "2016-05-10",
+      "val": "0.8610",
+      "accumulatedVal": "2.2280",
+      "growthRate": "0.47",
+      "bonus": ""
+    },
+    "2016-05-09": {
+      "date": "2016-05-09",
+      "val": "0.8570",
+      "accumulatedVal": "2.2240",
+      "growthRate": "-2.17",
+      "bonus": ""
+    },
+    "2016-05-06": {
+      "date": "2016-05-06",
+      "val": "0.8760",
+      "accumulatedVal": "2.2430",
+      "growthRate": "-2.67",
+      "bonus": ""
+    },
+    "2016-05-05": {
+      "date": "2016-05-05",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-05-04": {
+      "date": "2016-05-04",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-05-03": {
+      "date": "2016-05-03",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "3.57",
+      "bonus": ""
+    },
+    "2016-04-29": {
+      "date": "2016-04-29",
+      "val": "0.8690",
+      "accumulatedVal": "2.2360",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-04-28": {
+      "date": "2016-04-28",
+      "val": "0.8690",
+      "accumulatedVal": "2.2360",
+      "growthRate": "0.23",
+      "bonus": ""
+    },
+    "2016-04-27": {
+      "date": "2016-04-27",
+      "val": "0.8670",
+      "accumulatedVal": "2.2340",
+      "growthRate": "0.12",
+      "bonus": ""
+    },
+    "2016-04-26": {
+      "date": "2016-04-26",
+      "val": "0.8660",
+      "accumulatedVal": "2.2330",
+      "growthRate": "0.46",
+      "bonus": ""
+    },
+    "2016-04-25": {
+      "date": "2016-04-25",
+      "val": "0.8620",
+      "accumulatedVal": "2.2290",
+      "growthRate": "-0.46",
+      "bonus": ""
+    },
+    "2016-04-22": {
+      "date": "2016-04-22",
+      "val": "0.8660",
+      "accumulatedVal": "2.2330",
+      "growthRate": "1.64",
+      "bonus": ""
+    },
+    "2016-04-21": {
+      "date": "2016-04-21",
+      "val": "0.8520",
+      "accumulatedVal": "2.2190",
+      "growthRate": "-1.27",
+      "bonus": ""
+    },
+    "2016-04-20": {
+      "date": "2016-04-20",
+      "val": "0.8630",
+      "accumulatedVal": "2.2300",
+      "growthRate": "-4.00",
+      "bonus": ""
+    },
+    "2016-04-19": {
+      "date": "2016-04-19",
+      "val": "0.8990",
+      "accumulatedVal": "2.2660",
+      "growthRate": "0.90",
+      "bonus": ""
+    },
+    "2016-04-18": {
+      "date": "2016-04-18",
+      "val": "0.8910",
+      "accumulatedVal": "2.2580",
+      "growthRate": "-1.00",
+      "bonus": ""
+    },
+    "2016-04-15": {
+      "date": "2016-04-15",
+      "val": "0.9000",
+      "accumulatedVal": "2.2670",
+      "growthRate": "-0.22",
+      "bonus": ""
+    },
+    "2016-04-14": {
+      "date": "2016-04-14",
+      "val": "0.9020",
+      "accumulatedVal": "2.2690",
+      "growthRate": "0.67",
+      "bonus": ""
+    },
+    "2016-04-13": {
+      "date": "2016-04-13",
+      "val": "0.8960",
+      "accumulatedVal": "2.2630",
+      "growthRate": "0.67",
+      "bonus": ""
+    },
+    "2016-04-12": {
+      "date": "2016-04-12",
+      "val": "0.8900",
+      "accumulatedVal": "2.2570",
+      "growthRate": "-0.56",
+      "bonus": ""
+    },
+    "2016-04-11": {
+      "date": "2016-04-11",
+      "val": "0.8950",
+      "accumulatedVal": "2.2620",
+      "growthRate": "2.40",
+      "bonus": ""
+    },
+    "2016-04-08": {
+      "date": "2016-04-08",
+      "val": "0.8740",
+      "accumulatedVal": "2.2410",
+      "growthRate": "-0.79",
+      "bonus": ""
+    },
+    "2016-04-07": {
+      "date": "2016-04-07",
+      "val": "0.8810",
+      "accumulatedVal": "2.2480",
+      "growthRate": "-1.89",
+      "bonus": ""
+    },
+    "2016-04-06": {
+      "date": "2016-04-06",
+      "val": "0.8980",
+      "accumulatedVal": "2.2650",
+      "growthRate": "0.45",
+      "bonus": ""
+    },
+    "2016-04-05": {
+      "date": "2016-04-05",
+      "val": "0.8940",
+      "accumulatedVal": "2.2610",
+      "growthRate": "2.41",
+      "bonus": ""
+    },
+    "2016-04-01": {
+      "date": "2016-04-01",
+      "val": "0.8730",
+      "accumulatedVal": "2.2400",
+      "growthRate": "-0.68",
+      "bonus": ""
+    },
+    "2016-03-31": {
+      "date": "2016-03-31",
+      "val": "0.8790",
+      "accumulatedVal": "2.2460",
+      "growthRate": "0.57",
+      "bonus": ""
+    },
+    "2016-03-30": {
+      "date": "2016-03-30",
+      "val": "0.8740",
+      "accumulatedVal": "2.2410",
+      "growthRate": "3.68",
+      "bonus": ""
+    },
+    "2016-03-29": {
+      "date": "2016-03-29",
+      "val": "0.8430",
+      "accumulatedVal": "2.2100",
+      "growthRate": "-2.20",
+      "bonus": ""
+    },
+    "2016-03-28": {
+      "date": "2016-03-28",
+      "val": "0.8620",
+      "accumulatedVal": "2.2290",
+      "growthRate": "-0.35",
+      "bonus": ""
+    },
+    "2016-03-25": {
+      "date": "2016-03-25",
+      "val": "0.8650",
+      "accumulatedVal": "2.2320",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2016-03-24": {
+      "date": "2016-03-24",
+      "val": "0.8620",
+      "accumulatedVal": "2.2290",
+      "growthRate": "-1.03",
+      "bonus": ""
+    },
+    "2016-03-23": {
+      "date": "2016-03-23",
+      "val": "0.8710",
+      "accumulatedVal": "2.2380",
+      "growthRate": "0.69",
+      "bonus": ""
+    },
+    "2016-03-22": {
+      "date": "2016-03-22",
+      "val": "0.8650",
+      "accumulatedVal": "2.2320",
+      "growthRate": "0.35",
+      "bonus": ""
+    },
+    "2016-03-21": {
+      "date": "2016-03-21",
+      "val": "0.8620",
+      "accumulatedVal": "2.2290",
+      "growthRate": "1.65",
+      "bonus": ""
+    },
+    "2016-03-18": {
+      "date": "2016-03-18",
+      "val": "0.8480",
+      "accumulatedVal": "2.2150",
+      "growthRate": "3.04",
+      "bonus": ""
+    },
+    "2016-03-17": {
+      "date": "2016-03-17",
+      "val": "0.8230",
+      "accumulatedVal": "2.1900",
+      "growthRate": "3.39",
+      "bonus": ""
+    },
+    "2016-03-16": {
+      "date": "2016-03-16",
+      "val": "0.7960",
+      "accumulatedVal": "2.1630",
+      "growthRate": "-0.87",
+      "bonus": ""
+    },
+    "2016-03-15": {
+      "date": "2016-03-15",
+      "val": "0.8030",
+      "accumulatedVal": "2.1700",
+      "growthRate": "-0.74",
+      "bonus": ""
+    },
+    "2016-03-14": {
+      "date": "2016-03-14",
+      "val": "0.8090",
+      "accumulatedVal": "2.1760",
+      "growthRate": "3.45",
+      "bonus": ""
+    },
+    "2016-03-11": {
+      "date": "2016-03-11",
+      "val": "0.7820",
+      "accumulatedVal": "2.1490",
+      "growthRate": "0.13",
+      "bonus": ""
+    },
+    "2016-03-10": {
+      "date": "2016-03-10",
+      "val": "0.7810",
+      "accumulatedVal": "2.1480",
+      "growthRate": "-1.14",
+      "bonus": ""
+    },
+    "2016-03-09": {
+      "date": "2016-03-09",
+      "val": "0.7900",
+      "accumulatedVal": "2.1570",
+      "growthRate": "-1.62",
+      "bonus": ""
+    },
+    "2016-03-08": {
+      "date": "2016-03-08",
+      "val": "0.8030",
+      "accumulatedVal": "2.1700",
+      "growthRate": "0.75",
+      "bonus": ""
+    },
+    "2016-03-07": {
+      "date": "2016-03-07",
+      "val": "0.7970",
+      "accumulatedVal": "2.1640",
+      "growthRate": "2.05",
+      "bonus": ""
+    },
+    "2016-03-04": {
+      "date": "2016-03-04",
+      "val": "0.7810",
+      "accumulatedVal": "2.1480",
+      "growthRate": "-2.50",
+      "bonus": ""
+    },
+    "2016-03-03": {
+      "date": "2016-03-03",
+      "val": "0.8010",
+      "accumulatedVal": "2.1680",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-03-02": {
+      "date": "2016-03-02",
+      "val": "0.8010",
+      "accumulatedVal": "2.1680",
+      "growthRate": "4.43",
+      "bonus": ""
+    },
+    "2016-03-01": {
+      "date": "2016-03-01",
+      "val": "0.7670",
+      "accumulatedVal": "2.1340",
+      "growthRate": "1.99",
+      "bonus": ""
+    },
+    "2016-02-29": {
+      "date": "2016-02-29",
+      "val": "0.7520",
+      "accumulatedVal": "2.1190",
+      "growthRate": "-5.05",
+      "bonus": ""
+    },
+    "2016-02-26": {
+      "date": "2016-02-26",
+      "val": "0.7920",
+      "accumulatedVal": "2.1590",
+      "growthRate": "0.89",
+      "bonus": ""
+    },
+    "2016-02-25": {
+      "date": "2016-02-25",
+      "val": "0.7850",
+      "accumulatedVal": "2.1520",
+      "growthRate": "-6.99",
+      "bonus": ""
+    },
+    "2016-02-24": {
+      "date": "2016-02-24",
+      "val": "0.8440",
+      "accumulatedVal": "2.2110",
+      "growthRate": "-0.71",
+      "bonus": ""
+    },
+    "2016-02-23": {
+      "date": "2016-02-23",
+      "val": "0.8500",
+      "accumulatedVal": "2.2170",
+      "growthRate": "-0.47",
+      "bonus": ""
+    },
+    "2016-02-22": {
+      "date": "2016-02-22",
+      "val": "0.8540",
+      "accumulatedVal": "2.2210",
+      "growthRate": "1.67",
+      "bonus": ""
+    },
+    "2016-02-19": {
+      "date": "2016-02-19",
+      "val": "0.8400",
+      "accumulatedVal": "2.2070",
+      "growthRate": "0.48",
+      "bonus": ""
+    },
+    "2016-02-18": {
+      "date": "2016-02-18",
+      "val": "0.8360",
+      "accumulatedVal": "2.2030",
+      "growthRate": "-0.24",
+      "bonus": ""
+    },
+    "2016-02-17": {
+      "date": "2016-02-17",
+      "val": "0.8380",
+      "accumulatedVal": "2.2050",
+      "growthRate": "0.84",
+      "bonus": ""
+    },
+    "2016-02-16": {
+      "date": "2016-02-16",
+      "val": "0.8310",
+      "accumulatedVal": "2.1980",
+      "growthRate": "4.92",
+      "bonus": ""
+    },
+    "2016-02-15": {
+      "date": "2016-02-15",
+      "val": "0.7920",
+      "accumulatedVal": "2.1590",
+      "growthRate": "-0.63",
+      "bonus": ""
+    },
+    "2016-02-05": {
+      "date": "2016-02-05",
+      "val": "0.7970",
+      "accumulatedVal": "2.1640",
+      "growthRate": "-0.87",
+      "bonus": ""
+    },
+    "2016-02-04": {
+      "date": "2016-02-04",
+      "val": "0.8040",
+      "accumulatedVal": "2.1710",
+      "growthRate": "1.39",
+      "bonus": ""
+    },
+    "2016-02-03": {
+      "date": "2016-02-03",
+      "val": "0.7930",
+      "accumulatedVal": "2.1600",
+      "growthRate": "0.25",
+      "bonus": ""
+    },
+    "2016-02-02": {
+      "date": "2016-02-02",
+      "val": "0.7910",
+      "accumulatedVal": "2.1580",
+      "growthRate": "3.67",
+      "bonus": ""
+    },
+    "2016-02-01": {
+      "date": "2016-02-01",
+      "val": "0.7630",
+      "accumulatedVal": "2.1300",
+      "growthRate": "0.26",
+      "bonus": ""
+    },
+    "2016-01-29": {
+      "date": "2016-01-29",
+      "val": "0.7610",
+      "accumulatedVal": "2.1280",
+      "growthRate": "4.25",
+      "bonus": ""
+    },
+    "2016-01-28": {
+      "date": "2016-01-28",
+      "val": "0.7300",
+      "accumulatedVal": "2.0970",
+      "growthRate": "-3.69",
+      "bonus": ""
+    },
+    "2016-01-27": {
+      "date": "2016-01-27",
+      "val": "0.7580",
+      "accumulatedVal": "2.1250",
+      "growthRate": "-1.04",
+      "bonus": ""
+    },
+    "2016-01-26": {
+      "date": "2016-01-26",
+      "val": "0.7660",
+      "accumulatedVal": "2.1330",
+      "growthRate": "-7.15",
+      "bonus": ""
+    },
+    "2016-01-25": {
+      "date": "2016-01-25",
+      "val": "0.8250",
+      "accumulatedVal": "2.1920",
+      "growthRate": "1.23",
+      "bonus": ""
+    },
+    "2016-01-22": {
+      "date": "2016-01-22",
+      "val": "0.8150",
+      "accumulatedVal": "2.1820",
+      "growthRate": "0.99",
+      "bonus": ""
+    },
+    "2016-01-21": {
+      "date": "2016-01-21",
+      "val": "0.8070",
+      "accumulatedVal": "2.1740",
+      "growthRate": "-3.90",
+      "bonus": "0.007"
+    },
+    "2016-01-20": {
+      "date": "2016-01-20",
+      "val": "0.8470",
+      "accumulatedVal": "2.2070",
+      "growthRate": "-1.40",
+      "bonus": ""
+    },
+    "2016-01-19": {
+      "date": "2016-01-19",
+      "val": "0.8590",
+      "accumulatedVal": "2.2190",
+      "growthRate": "3.49",
+      "bonus": ""
+    },
+    "2016-01-18": {
+      "date": "2016-01-18",
+      "val": "0.8300",
+      "accumulatedVal": "2.1900",
+      "growthRate": "1.22",
+      "bonus": ""
+    },
+    "2016-01-15": {
+      "date": "2016-01-15",
+      "val": "0.8200",
+      "accumulatedVal": "2.1800",
+      "growthRate": "-2.61",
+      "bonus": ""
+    },
+    "2016-01-14": {
+      "date": "2016-01-14",
+      "val": "0.8420",
+      "accumulatedVal": "2.2020",
+      "growthRate": "3.06",
+      "bonus": ""
+    },
+    "2016-01-13": {
+      "date": "2016-01-13",
+      "val": "0.8170",
+      "accumulatedVal": "2.1770",
+      "growthRate": "-3.08",
+      "bonus": ""
+    },
+    "2016-01-12": {
+      "date": "2016-01-12",
+      "val": "0.8430",
+      "accumulatedVal": "2.2030",
+      "growthRate": "0.00",
+      "bonus": ""
+    },
+    "2016-01-11": {
+      "date": "2016-01-11",
+      "val": "0.8430",
+      "accumulatedVal": "2.2030",
+      "growthRate": "-6.23",
+      "bonus": ""
+    },
+    "2016-01-08": {
+      "date": "2016-01-08",
+      "val": "0.8990",
+      "accumulatedVal": "2.2590",
+      "growthRate": "1.35",
+      "bonus": ""
+    },
+    "2016-01-07": {
+      "date": "2016-01-07",
+      "val": "0.8870",
+      "accumulatedVal": "2.2470",
+      "growthRate": "-7.31",
+      "bonus": ""
+    },
+    "2016-01-06": {
+      "date": "2016-01-06",
+      "val": "0.9570",
+      "accumulatedVal": "2.3170",
+      "growthRate": "2.13",
+      "bonus": ""
+    },
+    "2016-01-05": {
+      "date": "2016-01-05",
+      "val": "0.9370",
+      "accumulatedVal": "2.2970",
+      "growthRate": "-0.53",
+      "bonus": ""
+    },
+    "2016-01-04": {
+      "date": "2016-01-04",
+      "val": "0.9420",
+      "accumulatedVal": "2.3020",
+      "growthRate": "-7.10",
+      "bonus": ""
+    },
+    "2015-12-31": {
+      "date": "2015-12-31",
+      "val": "1.0140",
+      "accumulatedVal": "2.3740",
+      "growthRate": "-1.36",
+      "bonus": ""
+    },
+    "2015-12-30": {
+      "date": "2015-12-30",
+      "val": "1.0280",
+      "accumulatedVal": "2.3880",
+      "growthRate": "0.19",
+      "bonus": ""
+    },
+    "2015-12-29": {
+      "date": "2015-12-29",
+      "val": "1.0260",
+      "accumulatedVal": "2.3860",
+      "growthRate": "0.98",
+      "bonus": ""
+    },
+    "2015-12-28": {
+      "date": "2015-12-28",
+      "val": "1.0160",
+      "accumulatedVal": "2.3760",
+      "growthRate": "-1.07",
+      "bonus": ""
+    },
+    "2015-12-25": {
+      "date": "2015-12-25",
+      "val": "1.0270",
+      "accumulatedVal": "2.3870",
+      "growthRate": "0.10",
+      "bonus": ""
+    },
+    "2015-12-24": {
+      "date": "2015-12-24",
+      "val": "1.0260",
+      "accumulatedVal": "2.3860",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2015-12-23": {
+      "date": "2015-12-23",
+      "val": "1.0270",
+      "accumulatedVal": "2.3870",
+      "growthRate": "-0.58",
+      "bonus": ""
+    },
+    "2015-12-22": {
+      "date": "2015-12-22",
+      "val": "1.0330",
+      "accumulatedVal": "2.3930",
+      "growthRate": "0.49",
+      "bonus": ""
+    },
+    "2015-12-21": {
+      "date": "2015-12-21",
+      "val": "1.0280",
+      "accumulatedVal": "2.3880",
+      "growthRate": "1.78",
+      "bonus": ""
+    },
+    "2015-12-18": {
+      "date": "2015-12-18",
+      "val": "1.0100",
+      "accumulatedVal": "2.3700",
+      "growthRate": "-0.49",
+      "bonus": ""
+    },
+    "2015-12-17": {
+      "date": "2015-12-17",
+      "val": "1.0150",
+      "accumulatedVal": "2.3750",
+      "growthRate": "2.01",
+      "bonus": ""
+    },
+    "2015-12-16": {
+      "date": "2015-12-16",
+      "val": "0.9950",
+      "accumulatedVal": "2.3550",
+      "growthRate": "0.51",
+      "bonus": ""
+    },
+    "2015-12-15": {
+      "date": "2015-12-15",
+      "val": "0.9900",
+      "accumulatedVal": "2.3500",
+      "growthRate": "0.71",
+      "bonus": ""
+    },
+    "2015-12-14": {
+      "date": "2015-12-14",
+      "val": "0.9830",
+      "accumulatedVal": "2.3430",
+      "growthRate": "1.03",
+      "bonus": ""
+    },
+    "2015-12-11": {
+      "date": "2015-12-11",
+      "val": "0.9730",
+      "accumulatedVal": "2.3330",
+      "growthRate": "-0.61",
+      "bonus": ""
+    },
+    "2015-12-10": {
+      "date": "2015-12-10",
+      "val": "0.9790",
+      "accumulatedVal": "2.3390",
+      "growthRate": "-0.10",
+      "bonus": ""
+    },
+    "2015-12-09": {
+      "date": "2015-12-09",
+      "val": "0.9800",
+      "accumulatedVal": "2.3400",
+      "growthRate": "-0.61",
+      "bonus": ""
+    },
+    "2015-12-08": {
+      "date": "2015-12-08",
+      "val": "0.9860",
+      "accumulatedVal": "2.3460",
+      "growthRate": "-1.10",
+      "bonus": ""
+    },
+    "2015-12-07": {
+      "date": "2015-12-07",
+      "val": "0.9970",
+      "accumulatedVal": "2.3570",
+      "growthRate": "0.81",
+      "bonus": ""
+    },
+    "2015-12-04": {
+      "date": "2015-12-04",
+      "val": "0.9890",
+      "accumulatedVal": "2.3490",
+      "growthRate": "-0.60",
+      "bonus": ""
+    },
+    "2015-12-03": {
+      "date": "2015-12-03",
+      "val": "0.9950",
+      "accumulatedVal": "2.3550",
+      "growthRate": "1.63",
+      "bonus": ""
+    },
+    "2015-12-02": {
+      "date": "2015-12-02",
+      "val": "0.9790",
+      "accumulatedVal": "2.3390",
+      "growthRate": "-0.20",
+      "bonus": ""
+    }
+  }
+}
