@@ -5,7 +5,7 @@
 [![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml)
 [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml)
 <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue" alt="Python version"></a>
-<a href="https://ufund-me.github.io/qbot"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
+<a href="https://ufund-me.github.io/Qbot/docs/#/"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="224"/>
@@ -13,7 +13,7 @@
   <div align="center">
     <b><font size="5">Qbot website</font></b>
     <sup>
-      <a href="https://ufund-me.github.io/Qbot/">
+      <a href="https://ufund-me.github.io/Qbot/docs/#/">
         <i><font size="4">HOT</font></i>
       </a>
     </sup>
@@ -54,9 +54,16 @@
 
 </div>
 
-## Installation
+## Quick Start
+```
+python main.py
+```
 
-[Install Guide](./docs/Install_guide.md)
+## USAGE
+
+### Installation
+
+[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/docs/#/)
 
 ```
  ____________________________________
@@ -69,7 +76,9 @@
                     ||     ||
 ```
 
-## Get Started
+### Get Started
+
+#### Local
 
 ```shell
 export USER_ID="admin"                   # replace your info
@@ -88,9 +97,21 @@ python main.py
 
 ```
 
+### Web
+
+需要 node 开发环境: `npm`、`node`
+
+运行命令
+
+```
+cd pyfunds/fund-strategies
+
+npm install
+npm start
+```
 ## Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/model_zoo.md). [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 <!------
 <div align="center">
   <b>Components</b>
@@ -230,7 +251,7 @@ Results and models are available in the [model zoo](docs/model_zoo.md). [![Binde
 |     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021 |     ✗      |
 
 
-<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/model_zoo.md) can be trained or used in this codebase.</sup>
+<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
 
 ## Quantstats Report
 
@@ -241,9 +262,11 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 #### Some strategy backtest results:
 
 A股回测MACD策略:
+
 ![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
 
 A股回测KDJ策略:
+
 ![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
 ## Contributing
 
@@ -258,7 +281,7 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 ## 💖 Sponsors and Backers
 
 <a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
-<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/backers.svg?avatarHeight=36" alt="Backer" width="900"></a>
+<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/backers.svg?avatarHeight=36" alt="Backer" width="160"></a>
 
 <br><br>
 
