@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. 下载安装
+1. 下载安装Conda
 ```bash
 wget https://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh
 bash Anaconda3-5.3.1-Linux-x86_64.sh
@@ -39,6 +39,7 @@ Auto run with ci, eg:
 
 ```
 python ./qbot/main.py
+# if run on Mac, please use 'pythonw ./qbot/main.py'
 
 cd  pytrader
 python test_backtrade.py

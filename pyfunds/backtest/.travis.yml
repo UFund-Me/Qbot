@@ -1,0 +1,22 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+- pip install codecov pytest-cov
+script:
+- cd tests && pytest -m "not local" --cov=xalpha -svv ./
+after_success: codecov
+before_deploy:
+- cd ..
+- python3 setup.py sdist
+deploy:
+  provider: releases
+  api_key:
+    secure: B21N6cft8Ni4mYEwW+y5wkXIVQRX5vzdMB93/30Fi1yVY+YY5yX+KDT90zoRzHBilbYHT+CZ/UtnA8aKllDQ87NSpzVE6gyzQELXfi+2Hak0nniVzF7j2cPtiPFf+iINu0Di4yf3dJA66qtWbfwILg+BqYHWodProEeF+FdArl7WaXg+Wg2spmIlsX31/y87rdxQb0yU9YmAlLtPOAG9XTGlerV+hq3uuG64c7eRjjr08i1eaTQN/q93jwD8S7tfseoPWuGbiMpy4RU7ihUs9CNJdK6DhAPoGDp0yWS+2ARlBJSk6EhT2MyUuFpuPfv7TekgI9I3WqZQ/uQnPrR1kyZijieRGjBZz11PTmZwiB9SRBjihel3L2c6uurEWjrYaWjdwh4scM/IaPjm1S7rhchCvLugPVMRrKe//AdUXUIHtqdVw9OpA5Pu7XuxOcbNiNBHMUXTPo8QWrsq4PUMuzX3n7D21WGgVmaOLkC3udKu1Cr0abXYPHjzfAOsgpCTgffLL6r7KxSMwP3McxUqHtMayQJx0d4CBt+BV9um5zXQpqr00YE5izrTQ73i72b4yDN6g8iY0f62OE2vD3ktKVJzaCJW0lcQY5+qNGWFgxgnBVrAI+0pXT/Lf+4MLs/2fjA2b21oIcSWMGVkks+kd0xIu5cnSeL0452OMZiJiP0=
+  file_glob: true
+  file: dist/*
+  skip_cleanup: true
+  on:
+    repo: refraction-ray/xalpha
+    tags: true

@@ -8,6 +8,7 @@ easytrader
 quantstats
 arrow
 tushare
+TA-Lib
 numpy
 requests
 pyqlib
