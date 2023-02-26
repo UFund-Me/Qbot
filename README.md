@@ -59,7 +59,7 @@
 python main.py
 ```
 
-## USAGE
+## USAGE ʕ •ᴥ•ʔ
 
 ### Installation
 
@@ -97,7 +97,7 @@ python main.py
 
 ```
 
-### Web
+#### Web
 
 需要 node 开发环境: `npm`、`node`
 
@@ -111,7 +111,7 @@ npm start
 ```
 ## Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 <!------
 <div align="center">
   <b>Components</b>

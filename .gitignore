@@ -1,11 +1,15 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__
 *.py[cod]
 *$py.class
-*/__pycache__
 
 # C extensions
 *.so
+
+# qlib
+# special software
+**/mlruns/
 
 # Distribution / packaging
 .Python
@@ -140,4 +144,4 @@ gui/csv/
 
 pytrader/user_config.sh
 
-*.DS_Store
+**.DS_Store

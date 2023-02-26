@@ -1,0 +1,9 @@
+- name: 'Sending SMS Notification'
+  uses: plivo/action-sms@v1
+  with:
+    fromPhoneNumber: ${{ secrets.FROM_NUMBER }}
+    toPhoneNumber: ${{ secrets.TO_NUMBER }}
+    message: '💡There has been new release to ${{ github.repository }}'
+  env:
+    PLIVO_AUTH_ID: ${{ secrets.PLIVO_AUTH_ID }}
+    PLIVO_AUTH_TOKEN: ${{ secrets.PLIVO_AUTH_TOKEN }}

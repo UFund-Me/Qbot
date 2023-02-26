@@ -7,7 +7,6 @@ on:
       - '*.md'
   push:
     branches:
-      - master
       - main
     paths-ignore:
       - 'docs/**'
