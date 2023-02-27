@@ -23,12 +23,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
-        projectBaseDir: # my-custom-directory
-        # args: >
-        #   -Dsonar.organization=my-organization
-        #   -Dsonar.projectKey=my-projectkey
-        #   -Dsonar.python.coverage.reportPaths=coverage.xml
-        #   -Dsonar.sources=lib/
-        #   -Dsonar.test.exclusions=tests/**
-        #   -Dsonar.tests=tests/
-        #   -Dsonar.verbose=true
+        projectBaseDir: Qbot/ # my-custom-directory
+        args: >
+          -Dsonar.organization=UFund
+          -Dsonar.projectKey=ufund-me
+          -Dsonar.python.coverage.reportPaths=coverage.xml
+          -Dsonar.sources=lib/
+          -Dsonar.test.exclusions=tests/**
+          -Dsonar.tests=tests/
+          -Dsonar.verbose=true
