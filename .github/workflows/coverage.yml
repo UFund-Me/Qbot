@@ -10,10 +10,7 @@ on:
       - main
   # repository_dispatch:
   #   types: "coverage"
-    
-jobs:
-    
-
+  
 jobs:
   coverage:
     runs-on: ubuntu-latest
