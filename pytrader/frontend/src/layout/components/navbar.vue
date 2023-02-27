@@ -13,8 +13,8 @@
     </div>
     <div v-else class='flex items-center px-4 flex-wrap h-12 flex-1'>
         <div class='layout-sidebar-logo flex relative shadow-lg w-40 leading-12 items-center'>
-            <img class='w-6 h-8' :src='icon'>
-            <span v-if='getMenubar.status === 0 || getMenubar.status === 2' class='pl-2'>hsianglee</span>
+            <img class='w-6 h-8' :src='icon' alt="icon" />
+            <span v-if='getMenubar.status === 0 || getMenubar.status === 2' class='pl-2'>Qbot</span>
         </div>
         <div class='layout-sidebar-menubar flex flex-1 overflow-hidden'>
             <layout-menubar />

@@ -272,6 +272,9 @@ A股回测KDJ策略:
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
+## Disclaim
+
+交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
 ## Acknowledgement
 
 基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。

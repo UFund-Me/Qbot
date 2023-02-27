@@ -4,13 +4,11 @@ modules for dynamical backtesting framework
 """
 
 import pandas as pd
-
-from xalpha.info import fundinfo, mfundinfo, cashinfo
-from xalpha.trade import trade
+from xalpha.cons import avail_dates, convert_date, opendate_set, yesterdayobj
+from xalpha.exceptions import FundTypeError, TradeBehaviorError
+from xalpha.info import cashinfo, fundinfo, mfundinfo
 from xalpha.multiple import mul, mulfix
-from xalpha.cons import yesterdayobj, avail_dates
-from xalpha.exceptions import TradeBehaviorError, FundTypeError
-from xalpha.cons import opendate_set, next_onday, convert_date
+from xalpha.trade import trade
 from xalpha.universal import vinfo
 
 
@@ -191,10 +189,7 @@ class BTE:
             df2 = pd.DataFrame([[date, value]], columns=["date", self.get_code(code)])
             df = df.append(df2)
             self.trades[code] = trade(
-                self.infos[code],
-                df,
-                cftable=cftable,
-                remtable=remtable,
+                self.infos[code], df, cftable=cftable, remtable=remtable,
             )
         else:
             self.lastdates[code] = date
@@ -224,23 +219,19 @@ class BTE:
         remtable = self.trades[code].remtable
         remtable = remtable[remtable["date"] <= self.lastdates[code]]
         self.lastdates[code] = date
-        self.lastdates[code] = date
         df2 = pd.DataFrame([[date, -share]], columns=["date", self.get_code(code)])
         df = df.append(df2)
         if is_value:
             self.set_fund(code, value_label=1)
         self.trades[code] = trade(
-            self.infos[code],
-            df,
-            cftable=cftable,
-            remtable=remtable,
+            self.infos[code], df, cftable=cftable, remtable=remtable,
         )
         if is_value:
             self.set_fund(code, value_label=0)
 
 
-## the following are some example backtest policy classes for testing and educational purpose
-## they are not stable in terms of API, and don't rely on them in production environment
+# the following are some example backtest policy classes for testing and educational purpose
+# they are not stable in terms of API, and don't rely on them in production environment
 
 
 class Scheduled(BTE):
@@ -305,7 +296,7 @@ class ScheduledSellonXIRR(Scheduled):
             date.weekday() == self.check_weekday
             and not self.sold
             and (date - self.start).days > self.holding_time
-        ):  #  每周只检查一次退出条件
+        ):  # 每周只检查一次退出条件
             sys = self.get_current_mul()
             if sys is not None:
                 try:

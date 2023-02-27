@@ -1,13 +1,12 @@
 import os
 from pathlib import Path
-import numpy as np
-
-import wx
 
 import matplotlib.pyplot as plt
+import wx
 
 from gui.panels.panel_backtest import PanelBacktest
-from gui.widgets.widget_matplotlib import MatplotlibPanel
+
+# from gui.widgets.widget_matplotlib import MatplotlibPanel
 from gui.widgets.widget_web import WebPanel
 
 TOP_DIR = Path(__file__).parent.parent.parent.joinpath("Qbot")
@@ -88,9 +87,13 @@ class MainFrame(wx.Frame):
         # plot.show()
 
         web = WebPanel(self.m_notebook)
+        self.m_notebook.AddPage(web, "AI 选股/选基", True)
+        web.show_url("https://investool.axiaoxin.com/")
+
+        web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "交易策略在线回测", True)
         # bash: cd ~/Qbot/pytrader/strategies/ && jupyter-notebook
-        web.show_url('http://localhost:8888/notebooks/workflow_by_code.ipynb')
+        web.show_url("http://localhost:8888/notebooks/workflow_by_code.ipynb")
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "基金投资策略分析", True)

@@ -18,7 +18,7 @@ redis
 pydantic
 python-dotenv
 # attrdict
-# wxPython
+# wxPython # if on Mac
 
 ddddocr==1.4.7
 matplotlib==3.2.2

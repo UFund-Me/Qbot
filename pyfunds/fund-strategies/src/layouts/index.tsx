@@ -6,7 +6,7 @@ const BasicLayout: React.FC = props => {
   return (
     <div className={styles.normal}>
       <h1 className={styles.title}>
-        <span>基金投资策略分析</span>
+        <span>Qbot 基金投资策略分析</span>
         <Button href="#/compare" target="_black"  className={styles["compare-btn"]} >策略比较</Button>
       </h1>
       {props.children}

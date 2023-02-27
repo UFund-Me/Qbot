@@ -1,6 +1,6 @@
 import matplotlib
-import wx
 import matplotlib.pyplot as plt
+import wx
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
 
 
@@ -10,7 +10,7 @@ class MatplotlibPanel(wx.ScrolledWindow):
         self.TopBoxSizer = wx.BoxSizer(wx.VERTICAL)
         self.SetSizer(self.TopBoxSizer)
 
-        self.btn_bkt = wx.Button(self, label="基金投资策略分析", pos=(100, 10))
+        self.btn_bkt = wx.Button(self, label="投资策略回测分析", pos=(100, 10))
 
         self.figure = matplotlib.figure.Figure(figsize=(4, 3))
         self.figure = plt.figure(figsize=(4, 3))
@@ -18,6 +18,6 @@ class MatplotlibPanel(wx.ScrolledWindow):
         self.TopBoxSizer.Add(
             self.canvas, proportion=-10, border=2, flag=wx.ALL | wx.EXPAND
         )
-    
+
     def show(self):
         plt.show()
