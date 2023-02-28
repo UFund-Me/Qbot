@@ -55,9 +55,20 @@
 </div>
 
 ## Quick Start
+
+```bash
+git clone https://github.com/UFund-Me/Qbot.git
+
+cd Qbot
+
+pip install -r requirements.txt
+
+python main.py #if run on Mac, please use 'pythonw main.py'
 ```
-python main.py
-```
+
+<p id="demo">
+  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png">
+</p>
 
 ## USAGE ʕ •ᴥ•ʔ
 
@@ -109,6 +120,11 @@ cd pyfunds/fund-strategies
 npm install
 npm start
 ```
+
+## No-code operation
+
+<img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
+
 ## Benchmark and Model zoo
 
 Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
@@ -252,6 +268,17 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 
 
 <sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
+
+## 策略原理及源码分析
+
+<p>
+  <a href="https://ufund-me.github.io/Qbot/docs/#/">
+    <i><font size="4">在线文档</font></i>
+  </a
+  <a href="pytrader/doc">
+    <i><font size="4">jupyter notebook</font></i>
+  </a
+</p>
 
 ## Quantstats Report
 
