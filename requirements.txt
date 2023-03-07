@@ -4,7 +4,7 @@ pandas
 matplotlib==3.2.2
 backtrader
 #pyfolio 直接安装会有bug
-pip install git+https://github.com/quantopian/pyfolio
+#pip install git+https://github.com/quantopian/pyfolio
 backtrader_plotting
 statsmodels
 quantstats

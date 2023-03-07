@@ -28,7 +28,7 @@ jobs:
           -Dsonar.organization=UFund
           -Dsonar.projectKey=ufund-me
           -Dsonar.python.coverage.reportPaths=coverage.xml
-          # -Dsonar.sources=lib/
-          # -Dsonar.test.exclusions=tests/**
-          # -Dsonar.tests=tests/
           -Dsonar.verbose=true
+# -Dsonar.sources=lib/
+# -Dsonar.test.exclusions=tests/**
+# -Dsonar.tests=tests/
