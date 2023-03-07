@@ -5,15 +5,20 @@
 [![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml)
 [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml)
 <a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue" alt="Python version"></a>
-<a href="https://ufund-me.github.io/Qbot/docs/#/"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
+<a href="https://ufund-me.github.io/Qbot/#/"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="224"/>
+  <a href="https://github.com/UFund-Me/Qbot" target="_blank" rel="noopener">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" alt="Qbot" srcset="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2FExcalidraw_Github_cover_dark.png" />
+      <img alt="Qbot" width="224" src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" />
+    </picture>
+  </a>
   <div>&nbsp;</div>
   <div align="center">
     <b><font size="5">Qbot website</font></b>
     <sup>
-      <a href="https://ufund-me.github.io/Qbot/docs/#/">
+      <a href="https://ufund-me.github.io/Qbot/#/">
         <i><font size="4">HOT</font></i>
       </a>
     </sup>
@@ -74,7 +79,7 @@ python main.py #if run on Mac, please use 'pythonw main.py'
 
 ### Installation
 
-[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/docs/#/)
+[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/)
 
 ```
  ____________________________________
@@ -272,7 +277,7 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 ## 策略原理及源码分析
 
 <p>
-  <a href="https://ufund-me.github.io/Qbot/docs/#/">
+  <a href="https://ufund-me.github.io/Qbot/#/">
     <i><font size="4">在线文档</font></i>
   </a
   <a href="pytrader/doc">
@@ -299,19 +304,26 @@ A股回测KDJ策略:
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
-## Disclaim
+## 如何选股
+
+<img width="32" alt="Tool" src="https://user-images.githubusercontent.com/29084184/222178733-50486338-c137-4c9a-8b93-b523841066ea.png"> https://github.com/axiaoxin-com/investool
+
+## Disclaimer
 
 交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
-## Acknowledgement
+
+## Sponsors & support
+
+If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/qbot) or use [GitHub Sponsors](https://github.com/sponsors/Charmve).
+
+## Thank you for supporting Excalidraw
+
+<a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
+<a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=32"/></a>
+
+Last but not least, we're thankful to these open-source repo for sharing their services for free:
 
 基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。
-
-<br>
-
-## 💖 Sponsors and Backers
-
-<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=36" alt="Sponsor" width="160"></a>
-<a href="https://github.com/sponsors/Charmve" target="_blank"><img src="https://opencollective.com/Qbot/tiers/backers.svg?avatarHeight=36" alt="Backer" width="160"></a>
 
 <br><br>
 

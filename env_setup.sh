@@ -14,8 +14,8 @@ info "export PATH=/home/$USER/anaconda3/bin:$PATH" | sudo tee -a ~/.bashrc
 source ~/.bashrc
 
 conda info --env
-conda create -n Qbot python=3.9
-conda activate Qbot
+conda create -n qbot python=3.9
+conda activate qbot
 conda info --env
 
 pip install -r requirements.txt
