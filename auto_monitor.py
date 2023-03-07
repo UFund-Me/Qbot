@@ -5,7 +5,7 @@ import pandas as pd
 from utils.larkbot import LarkBot
 
 def check_strategy():
-	
+
 	return True
 
 def check(code, low, high):
@@ -24,8 +24,8 @@ while True:
     if check('sh', 3200, 10000) or check('601318', 0, 49):
         bot.send(content="[Signal💡] 中国平安 低于 ¥49")
 		# if linux
-        # os.system('play ./sounds/alert-bells.wav')
+        # os.system('play ./qbot/sounds/alert-bells.wav')
         # if MacOs
-        os.system('afplay ./sounds/bell.wav')
+        os.system('afplay ./qbot/sounds/bell.wav')
         exit()
     time.sleep(5)
