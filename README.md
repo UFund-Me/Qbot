@@ -72,7 +72,8 @@ python main.py #if run on Mac, please use 'pythonw main.py'
 ```
 
 <p id="demo">
-  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png">
+  <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
+  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
 </p>
 
 ## USAGE ʕ •ᴥ•ʔ
