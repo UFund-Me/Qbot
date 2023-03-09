@@ -1,7 +1,23 @@
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-03-08 10:58:49
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-10 00:12:32
+FilePath: /Qbot/auto_monitor.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+GitHub: https://github.com/Charmve
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+Licensed under the MIT License.
+"""
+
 # -*-coding=utf-8-*-
 
 import os
 import subprocess
+import sys
 import time
 import urllib.request  # noqa F401
 
@@ -10,6 +26,14 @@ import pync
 import tushare as ts
 
 from utils.larkbot import LarkBot
+
+"""
+description: 
+param {*} title
+param {*} text
+return {*}
+use: 
+"""
 
 
 def show_notification(title, text):
@@ -30,8 +54,8 @@ def show_notification_2(title, text):
 """
 使用mac系统定时任务crontab设置告警通知的执行时间。
 crontab设置过程
-    1. 输入crontab -e进入设置文本。
-    2. 填写 */3 9-12,13-15 * * 1-5 /usr/local/bin/python3 /Users/marx_luo/PythonWorkspace/stock/stock_alarm.py，
+    1. 输入 crontab -e进入设置文本。
+    2. 填写 */3 9-12,13-15 * * 1-5 /usr/local/anaconda3/bin/python /Users/charmve/Qbot/auto_monitor.py ，
     即周一到周五，上午9点到12点，下午1点到3点，每三分钟执行阀值告警。
 """
 
@@ -88,25 +112,31 @@ def check(code, low, high):
         return False
 
 
+top_path = os.path.dirname(os.path.abspath(sys.argv[0]))
+sounds_file = os.path.join(top_path, "./qbot/sounds/bell.wav")
+
 while True:
     WEBHOOK_SECRET = "wNMVU3ewSm2F0G2TwTX4Fd"
     bot = LarkBot(secret=WEBHOOK_SECRET)
-    if check("sh", 3200, 10000) or check("601318", 0, 49):
+    if check("sh", 3300, 10000) or check("601318", 0, 49):
         bot.send(content="[Signal💡] 中国平安 低于 ¥49")
 
         priceNow = 48
         pync.notify(
-            f'{"中国平安"}当前价格为{priceNow}', title=f'{"中国平安"}股票已低于设定值{49}',
+            f'{"中国平安"}当前价格为{priceNow}',
+            title=f'Qbot - {"中国平安"}股票已低于设定值{49}',
+            open="https://ufund-me.github.io/",
+            appIcon="./gui/imgs/logo.ico",
         )
-        pync.notify(
-            'Reminder - Drink Water, Sir', 
-            title='Qbot', 
-            open='https://ufund-me.github.io/',
-            # appIcon='https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/UFund.png',
-            # appIcon='https://ufund-me.github.io/img/UFund.png',
-            # appIcon='https://ufund-me.github.io/img/logo.ico',
-            appIcon='./gui/imgs/logo.ico'
-        )
+        # pync.notify(
+        #     "Reminder - Drink Water, Sir",
+        #     title="Qbot",
+        #     open="https://ufund-me.github.io/",
+        #     # appIcon='https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/UFund.png',
+        #     # appIcon='https://ufund-me.github.io/img/UFund.png',
+        #     # appIcon='https://ufund-me.github.io/img/logo.ico',
+        #     appIcon="./gui/imgs/logo.ico",
+        # )
         # show_notification("Title", "notification")
         # pync.notify(
         #     f'{stocks_pool["name"]}当前价格{priceNow}',
@@ -116,7 +146,7 @@ while True:
         # if linux
         # os.system('play ./qbot/sounds/alert-bells.wav')
         # if MacOs
-        os.system("afplay ./qbot/sounds/bell.wav")
+        os.system(f"afplay {sounds_file}")
 
         exit()
     time.sleep(1)

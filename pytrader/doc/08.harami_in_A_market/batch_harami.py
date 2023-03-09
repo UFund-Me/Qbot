@@ -1,12 +1,23 @@
-# Python实用宝典
-# 2020/05/16
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:16
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-09 23:59:51
+FilePath: /Qbot/pytrader/doc/08.harami_in_A_market/batch_harami.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
 import os.path
 import sys
-import numpy as np
+
 import backtrader as bt
 import matplotlib.pyplot as plt
+import numpy as np
 from backtrader.indicators import EMA
 
 
@@ -55,7 +66,9 @@ class TestStrategy(bt.Strategy):
                     "SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
                     % (order.executed.price, order.executed.value, order.executed.comm)
                 )
-                temp = float(order.executed.price - self.buyprice)/float(self.buyprice)
+                temp = float(order.executed.price - self.buyprice) / float(
+                    self.buyprice
+                )
                 self.params.profits.append(temp)
 
             self.bar_executed = len(self)
@@ -71,7 +84,6 @@ class TestStrategy(bt.Strategy):
         self.bar_executed = len(self)
         self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
         self.log("Close, %.2f" % self.dataclose[0])
         if self.order:

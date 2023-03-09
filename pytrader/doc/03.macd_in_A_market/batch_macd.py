@@ -1,18 +1,28 @@
-# Python实用宝典
-# 2020/04/25
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:15
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-09 23:58:58
+FilePath: /Qbot/pytrader/doc/03.macd_in_A_market/batch_macd.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
 import os.path
-import sys
 import pickle
+import sys
+
 import backtrader as bt
 from backtrader.indicators import EMA
 
 
 class TestStrategy(bt.Strategy):
-
     def log(self, txt, dt=None):
-        ''' Logging function fot this strategy'''
+        """ Logging function fot this strategy"""
         dt = dt or self.datas[0].datetime.date(0)
         # print('%s, %s' % (dt.isoformat(), txt))
 
@@ -41,23 +51,22 @@ class TestStrategy(bt.Strategy):
         if order.status in [order.Completed]:
             if order.isbuy():
                 self.log(
-                    'BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
-                    (order.executed.price,
-                     order.executed.value,
-                     order.executed.comm))
+                    "BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
+                    % (order.executed.price, order.executed.value, order.executed.comm)
+                )
 
                 self.buyprice = order.executed.price
                 self.buycomm = order.executed.comm
                 self.bar_executed_close = self.dataclose[0]
             else:
-                self.log('SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
-                         (order.executed.price,
-                          order.executed.value,
-                          order.executed.comm))
+                self.log(
+                    "SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
+                    % (order.executed.price, order.executed.value, order.executed.comm)
+                )
             self.bar_executed = len(self)
 
         elif order.status in [order.Canceled, order.Margin, order.Rejected]:
-            self.log('Order Canceled/Margin/Rejected')
+            self.log("Order Canceled/Margin/Rejected")
 
         self.order = None
 
@@ -65,12 +74,10 @@ class TestStrategy(bt.Strategy):
         if not trade.isclosed:
             return
 
-        self.log('OPERATION PROFIT, GROSS %.2f, NET %.2f' %
-                 (trade.pnl, trade.pnlcomm))
+        self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
-        self.log('Close, %.2f' % self.dataclose[0])
+        self.log("Close, %.2f" % self.dataclose[0])
         if self.order:
             return
 
@@ -78,14 +85,17 @@ class TestStrategy(bt.Strategy):
             condition1 = self.macd[-1] - self.signal[-1]
             condition2 = self.macd[0] - self.signal[0]
             if condition1 < 0 and condition2 > 0:
-                self.log('BUY CREATE, %.2f' % self.dataclose[0])
+                self.log("BUY CREATE, %.2f" % self.dataclose[0])
                 self.order = self.buy()
 
         else:
-            condition = (self.dataclose[0] - self.bar_executed_close) / self.dataclose[0]
+            condition = (self.dataclose[0] - self.bar_executed_close) / self.dataclose[
+                0
+            ]
             if condition > 0.1 or condition < -0.1:
-                self.log('SELL CREATE, %.2f' % self.dataclose[0])
+                self.log("SELL CREATE, %.2f" % self.dataclose[0])
                 self.order = self.sell()
+
 
 def run_cerebro(stock_file, result):
     """
@@ -93,7 +103,7 @@ def run_cerebro(stock_file, result):
     :param stock_file: 股票数据文件位置
     :param result: 回测结果存储变量
     """
-    
+
     cerebro = bt.Cerebro()
 
     cerebro.addstrategy(TestStrategy)
@@ -103,14 +113,14 @@ def run_cerebro(stock_file, result):
         dataname=stock_file,
         fromdate=datetime.datetime(2010, 1, 1),
         todate=datetime.datetime(2020, 4, 25),
-        dtformat='%Y%m%d',
+        dtformat="%Y%m%d",
         datetime=2,
         open=3,
         high=4,
         low=5,
         close=6,
         volume=10,
-        reverse=True
+        reverse=True,
     )
     cerebro.adddata(data)
 
@@ -128,13 +138,13 @@ def run_cerebro(stock_file, result):
     money_left = cerebro.broker.getvalue()
 
     # 获取股票名字
-    stock_name = stock_file.split('\\')[-1].split('.csv')[0]
+    stock_name = stock_file.split("\\")[-1].split(".csv")[0]
 
     # 将最终回报率以百分比的形式返回
     result[stock_name] = float(money_left - 10000) / 10000
 
 
-files_path = 'stocks\\'
+files_path = "stocks\\"
 result = {}
 
 # 遍历所有股票数据
@@ -148,6 +158,6 @@ for stock in os.listdir(files_path):
         print(e)
 
 
-f = open('./batch_macd_result.txt', 'wb')
+f = open("./batch_macd_result.txt", "wb")
 pickle.dump(result, f)
 f.close()

@@ -1,4 +1,9 @@
 import os
+import sys
+
+sys.path.append(os.getcwd())
+
+# from data import data_utils
 
 import matplotlib.pyplot as plt
 import pandas as pd

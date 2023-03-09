@@ -1,19 +1,28 @@
-# Python实用宝典
-# 2020/05/26
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:16
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-09 23:59:40
+FilePath: /Qbot/pytrader/doc/06.average_profit/macd.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
 import os.path
 import sys
-import numpy as np
+
 import backtrader as bt
+import numpy as np
 from backtrader.indicators import EMA
 
 
 class TestStrategy(bt.Strategy):
-    params = (
-        ('code', 0),
-        ('profits', [])
-    )
+    params = (("code", 0), ("profits", []))
+
     def log(self, txt, dt=None):
         """ Logging function fot this strategy"""
         dt = dt or self.datas[0].datetime.date(0)
@@ -41,7 +50,6 @@ class TestStrategy(bt.Strategy):
 
     def notify_order(self, order):
         # 交易状态处理
-        # Python实用宝典
         if order.status in [order.Submitted, order.Accepted]:
             return
         if order.status in [order.Completed]:
@@ -50,7 +58,7 @@ class TestStrategy(bt.Strategy):
                     "BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
                     % (order.executed.price, order.executed.value, order.executed.comm)
                 )
-                
+
                 # 记录买入价格
                 self.buyprice = order.executed.price
                 self.buycomm = order.executed.comm
@@ -61,7 +69,9 @@ class TestStrategy(bt.Strategy):
                     % (order.executed.price, order.executed.value, order.executed.comm)
                 )
                 # 收益率计算
-                profit_rate = float(order.executed.price - self.buyprice)/float(self.buyprice)
+                profit_rate = float(order.executed.price - self.buyprice) / float(
+                    self.buyprice
+                )
                 # 存入策略变量
                 self.params.profits.append(profit_rate)
 
@@ -78,7 +88,6 @@ class TestStrategy(bt.Strategy):
 
         self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
         self.log("Close, %.2f" % self.dataclose[0])
         if self.order:

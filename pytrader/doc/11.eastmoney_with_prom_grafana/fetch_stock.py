@@ -1,16 +1,23 @@
-# Python实用宝典
-# 2021-06-13
-# 文件名: fetch_stock.py
-import time
-import requests
-from prometheus_client import start_http_server, CollectorRegistry, Gauge
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:17
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-10 00:00:16
+FilePath: /Qbot/pytrader/doc/11.eastmoney_with_prom_grafana/fetch_stock.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
 
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
+import time
+
+import requests
+from prometheus_client import CollectorRegistry, Gauge, start_http_server
 
 reg = CollectorRegistry()
-gauge = Gauge(
-    'rank', '人气榜排名',
-    ['stock_id'], registry=reg
-)
+gauge = Gauge("rank", "人气榜排名", ["stock_id"], registry=reg)
 
 
 def process_request():
@@ -26,7 +33,7 @@ def process_request():
     time.sleep(60)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start_http_server(8000, registry=reg)
     while True:
         process_request()

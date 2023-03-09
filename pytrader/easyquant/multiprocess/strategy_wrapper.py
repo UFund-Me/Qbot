@@ -1,8 +1,6 @@
 import multiprocessing as mp
 from threading import Thread
 
-__author__ = 'keping.chu'
-
 
 class ProcessWrapper(object):
     def __init__(self, strategy):
@@ -51,7 +49,7 @@ class ProcessWrapper(object):
                 if event == 0:
                     break
                 self.__strategy.run(event)
-            except:
+            except:  # noqa E722
                 pass
 
     def _process_clock(self):
@@ -66,16 +64,20 @@ class ProcessWrapper(object):
                 if event == 0:
                     break
                 self.__strategy.clock(event)
-            except:
+            except:  # noqa E722
                 pass
 
     def _process(self):
         """
         启动进程
         """
-        event_thread = Thread(target=self._process_event, name="ProcessWrapper._process_event")
+        event_thread = Thread(
+            target=self._process_event, name="ProcessWrapper._process_event"
+        )
         event_thread.start()
-        clock_thread = Thread(target=self._process_clock, name="ProcessWrapper._process_clock")
+        clock_thread = Thread(
+            target=self._process_clock, name="ProcessWrapper._process_clock"
+        )
         clock_thread.start()
 
         event_thread.join()

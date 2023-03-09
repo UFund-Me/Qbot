@@ -1,18 +1,30 @@
-# Python实用宝典
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:17
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-10 00:01:15
+FilePath: /Qbot/pytrader/doc/09.custom_data_source/macd.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
-import os.path
-import sys
+import os.path  # noqa F401
+import sys  # noqa F401
+
 import backtrader as bt
-from stock_datafeed import MySQLData
 from backtrader.indicators import EMA
+from stock_datafeed import MySQLData
 
 
 class TestStrategy(bt.Strategy):
     def log(self, txt, dt=None):
-        ''' Logging function fot this strategy'''
+        """ Logging function fot this strategy"""
         dt = dt or self.datas[0].datetime.date(0)
-        print('%s, %s' % (dt.isoformat(), txt))
+        print("%s, %s" % (dt.isoformat(), txt))
 
     @staticmethod
     def percent(today, yesterday):
@@ -41,23 +53,22 @@ class TestStrategy(bt.Strategy):
         if order.status in [order.Completed]:
             if order.isbuy():
                 self.log(
-                    'BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
-                    (order.executed.price,
-                     order.executed.value,
-                     order.executed.comm))
+                    "BUY EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
+                    % (order.executed.price, order.executed.value, order.executed.comm)
+                )
 
                 self.buyprice = order.executed.price
                 self.buycomm = order.executed.comm
                 self.bar_executed_close = self.dataclose[0]
             else:
-                self.log('SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f' %
-                         (order.executed.price,
-                          order.executed.value,
-                          order.executed.comm))
+                self.log(
+                    "SELL EXECUTED, Price: %.2f, Cost: %.2f, Comm %.2f"
+                    % (order.executed.price, order.executed.value, order.executed.comm)
+                )
             self.bar_executed = len(self)
 
         elif order.status in [order.Canceled, order.Margin, order.Rejected]:
-            self.log('Order Canceled/Margin/Rejected')
+            self.log("Order Canceled/Margin/Rejected")
 
         self.order = None
 
@@ -65,12 +76,10 @@ class TestStrategy(bt.Strategy):
         if not trade.isclosed:
             return
 
-        self.log('OPERATION PROFIT, GROSS %.2f, NET %.2f' %
-                 (trade.pnl, trade.pnlcomm))
+        self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
-        self.log('Close, %.2f' % self.dataclose[0])
+        self.log("Close, %.2f" % self.dataclose[0])
         if self.order:
             return
 
@@ -79,17 +88,19 @@ class TestStrategy(bt.Strategy):
             condition2 = self.macd[0] - self.signal[0]
             # 增加判断换手率小于3%的条件
             if condition1 < 0 and condition2 > 0 and self.turnover_rate[0] < 3:
-                self.log('BUY CREATE, %.2f' % self.dataclose[0])
+                self.log("BUY CREATE, %.2f" % self.dataclose[0])
                 self.order = self.buy()
 
         else:
-            condition = (self.dataclose[0] - self.bar_executed_close) / self.dataclose[0]
+            condition = (self.dataclose[0] - self.bar_executed_close) / self.dataclose[
+                0
+            ]
             if condition > 0.1 or condition < -0.1:
-                self.log('SELL CREATE, %.2f' % self.dataclose[0])
+                self.log("SELL CREATE, %.2f" % self.dataclose[0])
                 self.order = self.sell()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cerebro = bt.Cerebro()
 
     cerebro.addstrategy(TestStrategy)
@@ -108,10 +119,10 @@ if __name__ == '__main__':
 
     cerebro.broker.setcommission(commission=0.005)
 
-    print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())
+    print("Starting Portfolio Value: %.2f" % cerebro.broker.getvalue())
 
     cerebro.run()
 
-    print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
+    print("Final Portfolio Value: %.2f" % cerebro.broker.getvalue())
 
     cerebro.plot()

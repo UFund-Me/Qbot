@@ -131,45 +131,45 @@ npm start
 
 <img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
 
-## Benchmark and Model zoo
+## Strategies
 
-Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
-<!------
 <div align="center">
-  <b>Components</b>
+  <b>经典策略</b>
 </div>
 <table align="center">
   <tbody>
     <tr align="center" valign="bottom">
       <td>
-        <b>Backbones</b>
+        <b>股票</b>
       </td>
       <td>
-        <b>Heads</b>
+        <b>基金</b>
       </td>
       <td>
-        <b>Features</b>
+        <b>期货</b>
       </td>
     </tr>
     <tr valign="top">
       <td>
       <ul>
-        <li><a href="configs/pointnet2">PointNet (CVPR'2017)</a></li>
-        <li><a href="configs/pointnet2">PointNet++ (NeurIPS'2017)</a></li>
-        <li><a href="configs/regnet">RegNet (CVPR'2020)</a></li>
-        <li><a href="configs/dgcnn">DGCNN (TOG'2019)</a></li>
-        <li>DLA (CVPR'2018)</li>
-        <li>MinkResNet (CVPR'2019)</li>
+        <li><a href="docs/02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/01-股票/多因子选股.md">多因子选股 ('2023)</a></li>
+        <li><a href="docs/02-经典策略/01-股票/小市值.md">小市值 ('2021)</a></li>
+        <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网络交易 ('2022)</a></li>
+        <li><a href="docs/03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
       </ul>
       </td>
       <td>
       <ul>
-        <li><a href="configs/free_anchor">FreeAnchor (NeurIPS'2019)</a></li>
+        <li><a href="docs/02-经典策略/02-基金/4433法则.md">4433法则 ('2022)</a></li>
       </ul>
       </td>
       <td>
       <ul>
-        <li><a href="configs/dynamic_voxelization">Dynamic Voxelization (CoRL'2019)</a></li>
+        <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网络交易 ('2022)</a></li>
       </ul>
       </td>
     </tr>
@@ -177,67 +177,71 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 </table>
 
 <div align="center">
-  <b>Architectures</b>
+  <b>智能策略</b>
 </div>
 <table align="center">
   <tbody>
     <tr align="center" valign="middle">
       <td>
-        <b>3D Object Detection</b>
+        <b>GBDT</b>
       </td>
       <td>
-        <b>Monocular 3D Object Detection</b>
+        <b>RNN</b>
       </td>
       <td>
-        <b>Multi-modal 3D Object Detection</b>
+        <b>Reinforcement Learning</b>
       </td>
       <td>
-        <b>3D Semantic Segmentation</b>
+        <b>:fire: Transformer</b>
       </td>
     </tr>
     <tr valign="top">
       <td>
-        <li><b>Outdoor</b></li>
+        <li><b>GBDT</b></li>
         <ul>
-            <li><a href="configs/parta2">Part-A2 (TPAMI'2020)</a></li>
-            <li><a href="configs/centerpoint">CenterPoint (CVPR'2021)</a></li>
+            <li><a href="pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
+            <li><a href="pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
+            <li><a href="">Catboost (NIPS'2018)</a></li>
         </ul>
-        <li><b>Indoor</b></li>
+        <li><b>BOOST</b></li>
         <ul>
-            <li><a href="configs/groupfree3d">Group-Free-3D (ICCV'2021)</a></li>
-            <li><a href="configs/fcaf3d">FCAF3D (ECCV'2022)</a></li>
-      </ul>
-      </td>
-      <td>
-        <li><b>Outdoor</b></li>
-        <ul>
-          <li><a href="configs/smoke">SMOKE (CVPRW'2020)</a></li>
-          <li><a href="configs/fcos3d">FCOS3D (ICCVW'2021)</a></li>
-          <li><a href="configs/pgd">PGD (CoRL'2021)</a></li>
+            <li><a href="">DoubleEnsemble (ICDM'2020)</a></li>
+            <li><a href="">TabNet (ECCV'2022)</a></li>
         </ul>
-        <li><b>Indoor</b></li>
+        <li><b>LR</b></li>
         <ul>
-          <li><a href="configs/imvoxelnet">ImVoxelNet (WACV'2022)</a></li>
+            <li><a href="pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
         </ul>
       </td>
       <td>
-        <li><b>Outdoor</b></li>
+        <li><b>CNN</b></li>
         <ul>
-          <li><a href="configs/mvxnet">MVXNet (ICRA'2019)</a></li>
+          <li><a href="pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
+          <li><a href="">GRU (ICCVW'2021)</a></li>
+          <li><a href="">ImVoxelNet (WACV'2022)</a></li>
+          <li><a href="">TabNet (AAAI'2019)</a></li>
         </ul>
-        <li><b>Indoor</b></li>
+        <li><b>RNN</b></li>
         <ul>
-          <li><a href="configs/imvotenet">ImVoteNet (CVPR'2020)</a></li>
+          <li><a href="pytrader/strategies/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
+          <li><a href="">ALSTM (IJCAI'2022)</a></li>
+          <li><a href="">ADARNN (KDD'2021)</a></li>
+          <li><a href="">ADD (CoRL'2020)</a></li>
         </ul>
       </td>
       <td>
-        <li><b>Indoor</b></li>
-        <ul>
-          <li><a href="configs/pointnet2">PointNet++ (NeurIPS'2017)</a></li>
-          <li><a href="configs/paconv">PAConv (CVPR'2021)</a></li>
-          <li><a href="configs/dgcnn">DGCNN (TOG'2019)</a></li>
-        </ul>
-      </ul>
+          <li><a href="pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
+          <li><a href="">GATs (NIPS'2017)</a></li>
+          <li><a href="">SFM (KDD'2017)</a></li>
+      </td>
+      <td>
+          <li><a href="pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
+          <li><a href="">TCTS (ICML'2021)</a></li>
+          <li><a href="">TRA (KDD'2021)</a></li>
+          <li><a href="">TCN (KDD'2018)</a></li>
+          <li><a href="">IGMTF (KDD'2021)</a></li>
+          <li><a href="">HIST (KDD'2018)</a></li>
+          <li><a href="">Localformer ('2021)</a></li>
       </td>
     </tr>
 </td>
@@ -245,7 +249,11 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
   </tbody>
 </table>
 
---------->
+### Benchmark and Model zoo
+
+Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+
+<details><summary><em><b>点击展开查看具体AI模型benchmark结果</b></em></summary>
 
 |                | status | benchmark |   framework  | DGCNN | RegNetX | addition |   arXiv    |
 |  :-----------: | :----: | :--------:|   :----:     | :---: | :-----: | :------: | :--------: |
@@ -275,6 +283,8 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 
 <sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
 
+</details>
+
 ## 策略原理及源码分析
 
 <p>
@@ -301,11 +311,21 @@ A股回测MACD策略:
 A股回测KDJ策略:
 
 ![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
+
+## TODO
+
+- [ ] 很多策略需要做回测验证；
+- [ ] 本项目由前后端支持，有上位机app支持，但目前框架还比较乱，需要做调整；
+- [ ] 各种策略需要抽象设计，支持统一调用；
+- [ ] 增强数据获取的实时性，每秒数据，降低延迟；
+- [ ] 在线文档的完善，目前主要几个部分：新手使用指引、经典策略原理和源码、智能策略原理和源码、常见问题等；
+- [ ] 新的feature开发；
+
 ## Contributing
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
-## 如何选股
+## 如何选股/选基
 
 <img width="32" alt="Tool" src="https://user-images.githubusercontent.com/29084184/222178733-50486338-c137-4c9a-8b93-b523841066ea.png"> https://github.com/axiaoxin-com/investool
 
@@ -317,12 +337,12 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/qbot) or use [GitHub Sponsors](https://github.com/sponsors/Charmve).
 
-## Thank you for supporting Excalidraw
+<b>Thank you for supporting Qbot!</b>
 
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
 <a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=32"/></a>
 
-Last but not least, we're thankful to these open-source repo for sharing their services for free:
+<b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 
 基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。
 

@@ -1,13 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-# ****************************************************************************
-#  Description:  收盘价大于简单移动平均价。
-#
-#  Copyright 2022 Charmve. All Rights Reserved.
-#  Licensed under the MIT License.
-# ****************************************************************************
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-01-21 12:49:56
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-10 00:13:46
+FilePath: /Qbot/qbot/strategies/bt_bigger_than_EMA.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+GitHub: https://github.com/Charmve
+Description: 收盘价大于简单移动平均价。
 
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+Licensed under the MIT License.
+"""
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
@@ -120,6 +127,7 @@ def get_data(code, start="2020-01-01", end="2022-01-31"):
 dataframe = get_data("600018")
 start = datetime(2020, 1, 1)
 end = datetime(2021, 12, 31)
+
 if __name__ == "__main__":
     # 初始化cerebro回测系统设置
     cerebro = bt.Cerebro()
@@ -141,6 +149,6 @@ if __name__ == "__main__":
     cerebro.run()
     # 获取回测结束后的总资金
     print("期末资金: %.2f" % cerebro.broker.getvalue())
-    cerebro.plotinfo.plotname = "收盘价大于简单移动平均价"
+    # cerebro.plotinfo.plotname = "收盘价大于简单移动平均价"
     # Plot the result
     cerebro.plot()

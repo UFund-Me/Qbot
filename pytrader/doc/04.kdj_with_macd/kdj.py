@@ -1,11 +1,22 @@
-# Python实用宝典
-# 2020/05/05
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:15
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-09 23:59:26
+FilePath: /Qbot/pytrader/doc/04.kdj_with_macd/kdj.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
 import os.path
 import sys
+
 import backtrader as bt
-from backtrader.indicators import EMA
+from backtrader.indicators import EMA  # noqa F401
 
 
 class TestStrategy(bt.Strategy):
@@ -72,7 +83,6 @@ class TestStrategy(bt.Strategy):
 
         self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
         self.log("Close, %.2f" % self.dataclose[0])
         if self.order:

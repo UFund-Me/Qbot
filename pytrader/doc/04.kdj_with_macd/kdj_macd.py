@@ -1,9 +1,20 @@
-# Python实用宝典
-# 2020/05/05
-# 转载请注明出处
+"""
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-02-13 23:24:15
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-03-09 23:59:10
+FilePath: /Qbot/pytrader/doc/04.kdj_with_macd/kdj_macd.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+"""
+
 import datetime
 import os.path
 import sys
+
 import backtrader as bt
 from backtrader.indicators import EMA
 
@@ -79,7 +90,6 @@ class TestStrategy(bt.Strategy):
 
         self.log("OPERATION PROFIT, GROSS %.2f, NET %.2f" % (trade.pnl, trade.pnlcomm))
 
-    # Python 实用宝典
     def next(self):
         self.log("Close, %.2f" % self.dataclose[0])
         if self.order:
@@ -90,7 +100,7 @@ class TestStrategy(bt.Strategy):
             condition1 = self.macd[-1] - self.signal[-1]
             condition2 = self.macd[0] - self.signal[0]
             if condition1 < 0 and condition2 > 0:
-                self.log('BUY CREATE, %.2f' % self.dataclose[0])
+                self.log("BUY CREATE, %.2f" % self.dataclose[0])
                 self.order = self.buy()
 
         else:

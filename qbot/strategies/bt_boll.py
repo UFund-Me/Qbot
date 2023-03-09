@@ -141,7 +141,7 @@ print("期初总资金: %.2f" % start_cash)
 back = cerebro.run()  # 运行回测
 end_value = cerebro.broker.getvalue()  # 获取回测结束后的总资金
 print("期末总资金: %.2f" % end_value)
-cerebro.plotinfo.plotname = "BOLL线 回测结果"
+# cerebro.plotinfo.plotname = "BOLL线 回测结果"
 cerebro.plot()
 
 # result_img = cerebro.plot(style='line', plotdist=0.1, grid=True)
