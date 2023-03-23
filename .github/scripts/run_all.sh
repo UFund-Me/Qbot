@@ -1,5 +1,20 @@
 #!/bin/bash
 
+###
+# @Author: Charmve yidazhang1@gmail.com
+# @Date: 2023-01-20 23:48:48
+# @LastEditors: Charmve yidazhang1@gmail.com
+# @LastEditTime: 2023-03-12 18:23:29
+# @FilePath: /Qbot/.github/scripts/run_all.sh
+# @Version: 1.0.1
+# @Blogs: charmve.blog.csdn.net
+# @GitHub: https://github.com/Charmve
+# @Description:
+#
+# Copyright (c) 2023 by Charmve, All Rights Reserved.
+# Licensed under the MIT License.
+###
+
 set -euo pipefail
 
 TOP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../" && pwd -P)"
@@ -22,8 +37,8 @@ function parse_cmdline_args() {
       -u | --update) ;;
 
       -t | --test)
-        python "${TOP_DIR}"/qbot/bt_boll.py
-        python "${TOP_DIR}"/qbot/bt_bigger_than_EMA.py
+        python "${TOP_DIR}"/qbot/strategies/bigger_than_ema_bt.py
+        python "${TOP_DIR}"/qbot/strategies/boll_strategy_bt.py
         ;;
       -h | --help)
         usage

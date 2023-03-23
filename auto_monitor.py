@@ -62,6 +62,7 @@ crontab设置过程
 stocks_pool = [
     {"code": "sz000063", "name": "中兴通讯", "min_threshold": "26", "max_threshold": "38"},
     {"code": "sh000016", "name": "上证50"},
+    {"coce": "601318", "name": "中国平安"},
 ]
 
 
@@ -148,5 +149,5 @@ while True:
         # if MacOs
         os.system(f"afplay {sounds_file}")
 
-        exit()
-    time.sleep(1)
+        #  exit()
+    time.sleep(2)
