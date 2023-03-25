@@ -18,7 +18,7 @@ Licensed under the MIT License.
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from datetime import datetime  # For datetime objects
+from datetime import date, datetime  # For datetime objects
 
 # Import the backtrader platform
 import backtrader as bt
@@ -27,7 +27,7 @@ import tushare as ts
 
 
 # 创建策略继承bt.Strategy
-class TestStrategy(bt.Strategy):
+class BiggerThanEmaStrategy(bt.Strategy):
     params = (
         # 均线参数设置15天，15日均线
         ("maperiod", 15),
@@ -133,15 +133,16 @@ if __name__ == "__main__":
     cerebro = bt.Cerebro()
     # 取得股票历史数据
     data = bt.feeds.PandasData(dataname=dataframe, fromdate=start, todate=end)
+    print(data)
     # 为Cerebro引擎添加策略
-    cerebro.addstrategy(TestStrategy)
+    cerebro.addstrategy(BiggerThanEmaStrategy)
     # 加载交易数据
     cerebro.adddata(data)
     # 设置投资金额
     cerebro.broker.setcash(100000.0)
     # 每笔交易使用固定交易量
     cerebro.addsizer(bt.sizers.FixedSize, stake=10)
-    # 设置佣金为0.001,除以100去掉%号
+    # 设置佣金为0.001, 除以100去掉%号
     cerebro.broker.setcommission(commission=0.001)
     # 获取回测开始时的总资金
     print("期初资金: %.2f" % cerebro.broker.getvalue())

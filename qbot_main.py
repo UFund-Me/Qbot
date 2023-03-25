@@ -2,7 +2,7 @@
 Author: Charmve yidazhang1@gmail.com
 Date: 2023-03-23 18:19:46
 LastEditors: Charmve yidazhang1@gmail.com
-LastEditTime: 2023-03-24 02:30:17
+LastEditTime: 2023-03-24 10:28:16
 FilePath: /Qbot/qbot_main.py
 Version: 1.0.1
 Blogs: charmve.blog.csdn.net
@@ -102,11 +102,11 @@ buy_signal = [{"index": "", "values": ""}]
 sell_signal = [{"index": "", "values": ""}]
 
 # 获取回测开始时的总资金
-print("期初资金: %.2f" % broker_config["setcash"])
+print("期初资金: %.2f" % broker_config[0]["setcash"])
 
 while True:
     # try:
-    if broker_config["ballance"] < broker_config["ballance"] * 0.16:
+    if broker_config[0]["ballance"] < broker_config[0]["ballance"] * 0.16:
         print("⚠️ 亏损大于 16%，停止交易程序。")
         exit()
     # 获取当前时刻的实时行情数据
@@ -263,7 +263,7 @@ while True:
     plt.pause(10)
 
     # 计算每日收益
-    # broker_config["ballance"] = broker_config["ballance"] + benefits - broker_config["stake"] * trade_times * broker_config["commission"]
+    # broker_config[0]["ballance"] = broker_config[0]["ballance"] + benefits - broker_config[0]s["stake"] * trade_times * broker_config["commission"]
     # print('Sharpe Ratio:', thestrat.analyzers.mysharpe.get_analysis()['sharperatio'])
     
     # except Exception as e:

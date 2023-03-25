@@ -19,7 +19,7 @@ import backtrader as bt
 from backtrader.indicators import EMA
 
 
-class TestStrategy(bt.Strategy):
+class KdjMacdStrategy(bt.Strategy):
     def log(self, txt, dt=None):
         """ Logging function fot this strategy"""
         dt = dt or self.datas[0].datetime.date(0)
@@ -115,7 +115,7 @@ class TestStrategy(bt.Strategy):
 if __name__ == "__main__":
     cerebro = bt.Cerebro()
 
-    cerebro.addstrategy(TestStrategy)
+    cerebro.addstrategy(KdjMacdStrategy)
 
     modpath = os.path.dirname(os.path.abspath(sys.argv[0]))
     datapath = os.path.join(modpath, "002859.csv")

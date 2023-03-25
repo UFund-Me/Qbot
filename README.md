@@ -127,10 +127,16 @@ npm install
 npm start
 ```
 
-## No-code operation
+## No-code operation (TODO)
 
 <img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
 
+体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
+
+```
+dagster-daemon run &
+dagit -h 0.0.0.0 -p 3000
+```
 ## Strategies
 
 <div align="center">
@@ -306,12 +312,15 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 
 A股回测MACD策略:
 
-![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
+![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
 
 A股回测KDJ策略:
 
-![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
+![KDJ](pytrader/doc/04.kdj_with_macd/Figure_kdj.png)
 
+A股回测 KDJ+MACD 策略:
+
+![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
 ## TODO
 
 - [ ] 很多策略需要做回测验证；
@@ -319,7 +328,7 @@ A股回测KDJ策略:
 - [ ] 各种策略需要抽象设计，支持统一调用；
 - [ ] 增强数据获取的实时性，每秒数据，降低延迟；
 - [ ] 在线文档的完善，目前主要几个部分：新手使用指引、经典策略原理和源码、智能策略原理和源码、常见问题等；
-- [ ] 新的feature开发；
+- [ ] 新的feature开发，欢迎在[issues](https://github.com/UFund-Me/Qbot/issues/)交流；
 
 ## Contributing
 

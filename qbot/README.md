@@ -12,7 +12,7 @@ Qbot core engine
 ├── main.py
 ├── strategies
 │   ├── README.md
-│   ├── bt_bigger_than_EMA.py
+│   ├── bigger_than_ema_bt.py
 │   └── bt_boll.py
 └── vnpy
     └── README.md

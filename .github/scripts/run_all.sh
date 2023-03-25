@@ -4,7 +4,7 @@
 # @Author: Charmve yidazhang1@gmail.com
 # @Date: 2023-01-20 23:48:48
 # @LastEditors: Charmve yidazhang1@gmail.com
-# @LastEditTime: 2023-03-12 18:23:29
+# @LastEditTime: 2023-03-26 01:06:11
 # @FilePath: /Qbot/.github/scripts/run_all.sh
 # @Version: 1.0.1
 # @Blogs: charmve.blog.csdn.net
@@ -39,6 +39,7 @@ function parse_cmdline_args() {
       -t | --test)
         python "${TOP_DIR}"/qbot/strategies/bigger_than_ema_bt.py
         python "${TOP_DIR}"/qbot/strategies/boll_strategy_bt.py
+        python "${TOP_DIR}"/qbot_main.py
         ;;
       -h | --help)
         usage
