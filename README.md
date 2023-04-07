@@ -334,6 +334,12 @@ A股回测 KDJ+MACD 策略:
 
 We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
 
+## 🍮 Community
+- Github <a href="https://github.com/UFund-Me/Qbot/discussions" target="_blank">discussions 💬</a> or <a href="https://github.com/UFund-Me/Qbot/issues" target="_blank">issues 💭</a>
+
+- WeChat Group ID: Yida_Zhang2
+- Email: yidazhang1#gmail.com 
+
 ## 如何选股/选基
 
 <img width="32" alt="Tool" src="https://user-images.githubusercontent.com/29084184/222178733-50486338-c137-4c9a-8b93-b523841066ea.png"> https://github.com/axiaoxin-com/investool
