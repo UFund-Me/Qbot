@@ -34,6 +34,7 @@
 </div>
 
 <div align="center">
+  <p>AI驱动的自动化智能投研、智能投顾平台</p>
   <p>
     <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, <br>
   empower AI technologies in quantitative investment.
@@ -116,7 +117,7 @@ python main.py
 
 #### Web
 
-需要 node 开发环境: `npm`、`node`
+需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README.md)详细操作文档
 
 运行命令
 
@@ -137,7 +138,9 @@ npm start
 dagster-daemon run &
 dagit -h 0.0.0.0 -p 3000
 ```
-## Strategies
+## Strategies 
+
+部分未整理。。。
 
 <div align="center">
   <b>经典策略</b>
@@ -159,23 +162,33 @@ dagit -h 0.0.0.0 -p 3000
       <td>
       <ul>
         <li><a href="docs/02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
+        <li><a href="docs/03-智能策略/">移动均线+KDJ</a></li>
         <li><a href="docs/02-经典策略/01-股票/多因子选股.md">多因子选股 ('2023)</a></li>
         <li><a href="docs/02-经典策略/01-股票/小市值.md">小市值 ('2021)</a></li>
         <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
         <li><a href="docs/02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
-        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网络交易 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
         <li><a href="docs/03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
+        <li><a href="docs/03-智能策略/">趋势交易</a></li>
+        <li><a href="docs/03-智能策略/">海龟策略</a></li>
+        <li><a href="docs/03-智能策略/">动态平衡策略</a></li>
+        <li><a href="docs/03-智能策略/">阿隆指标策略</a></li>
       </ul>
       </td>
       <td>
       <ul>
         <li><a href="docs/02-经典策略/02-基金/4433法则.md">4433法则 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/02-基金/">对冲策略：指数型+债券型对冲</a></li>
+        <li><a href="docs/02-经典策略/02-基金/">组合策略：多因子组合配置</a></li>
+        <li><a href="docs/02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
+        <li><a href="docs/02-经典策略/02-基金/">组合策略：择时多策略</a></li>
+        <li><a href="docs/02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
       </ul>
       </td>
       <td>
       <ul>
         <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
-        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网络交易 ('2022)</a></li>
+        <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
       </ul>
       </td>
     </tr>
@@ -310,17 +323,35 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 
 #### Some strategy backtest results:
 
+> 声明：别轻易用于实盘，市场有风险，投资需谨慎。
+
+```
+Starting Portfolio Value: 10000.00
+Startdate=datetime.datetime(2010, 1, 1),
+Enddate=datetime.datetime(2020, 4, 21),
+# 设置佣金为0.001, 除以100去掉%号
+cerebro.broker.setcommission(commission=0.001)
+```
+    
 A股回测MACD策略:
 
 ![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
 
+![image](https://github.com/UFund-Me/Qbot/assets/29084184/dfef65ba-0d32-4f5f-b413-d6ec02fc700e)
+
+
 A股回测KDJ策略:
 
 ![KDJ](pytrader/doc/04.kdj_with_macd/Figure_kdj.png)
+    
+![image](https://github.com/UFund-Me/Qbot/assets/29084184/ef8e945b-59d6-4220-87e3-08ec1196cc2c)
 
 A股回测 KDJ+MACD 策略:
 
 ![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
+
+![image](https://github.com/UFund-Me/Qbot/assets/29084184/67338ec5-a6b1-4aa7-9792-1a2c61f353da)
+
 ## TODO
 
 - [ ] 很多策略需要做回测验证；
@@ -339,14 +370,23 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 - WeChat Group ID: Yida_Zhang2
 - Email: yidazhang1#gmail.com 
+- 知乎：[@Charmve](https://www.zhihu.com/people/MaiweiE-com)
 
-## 如何选股/选基
+<br>
 
+- 知识星球：AI量化投资 （加我微信，邀请）
+
+<!-- ## 如何选股/选基
 <img width="32" alt="Tool" src="https://user-images.githubusercontent.com/29084184/222178733-50486338-c137-4c9a-8b93-b523841066ea.png"> https://github.com/axiaoxin-com/investool
+-->
 
-## Disclaimer
+## :warning: Disclaimer
 
 交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
+    
+## Stargazers Over Time
+	
+[![Stargazers over time](https://starchart.cc/UFund-Me/Qbot.svg)](https://starchart.cc/UFund-Me/Qbot)
 
 ## Sponsors & support
 
