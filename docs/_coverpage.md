@@ -1,7 +1,3 @@
-<!-- <div align="center">
-	<img src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/maiwei.png" width="100px" alt="L0CV" title="有疑问，跑起来就会变成一朵花 ❀">
-</div> -->
-
 <h1> 🤖 Qbot  </h1>
 <h2> 人工智能自动化量化交易机器人  </h2>
 

@@ -4,13 +4,13 @@
 
 <br>
 
-<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h1>
+<h2> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h2>
 
 [![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml)
 [![AutoTrade](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml)
 [![Pylint](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/pylint.yml)
 [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml)
-<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/code/"><img src="https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue" alt="Python version"></a>
+<a href="https://github.com/UFund-Me/Qbot"><img src="https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue" alt="Python version"></a>
 <a href="https://ufund-me.github.io/Qbot/#/"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
 
 <div align="center">
@@ -149,7 +149,7 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ### Installation
 
-[Install Guide](./01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/)
+[Install Guide](./01-新手指引/Install_guide) | [Online documents](https://ufund-me.github.io/Qbot/#/)
 
 ```
  ____________________________________
@@ -185,7 +185,7 @@ python main.py
 
 #### Web
 
-需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README.md)详细操作文档
+需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README)详细操作文档
 
 运行命令
 
@@ -229,34 +229,34 @@ dagit -h 0.0.0.0 -p 3000
     <tr valign="top">
       <td>
       <ul>
-        <li><a href="02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
-        <li><a href="03-智能策略/">移动均线+KDJ</a></li>
-        <li><a href="02-经典策略/01-股票/多因子选股.md">多因子选股 ('2023)</a></li>
-        <li><a href="02-经典策略/01-股票/小市值.md">小市值 ('2021)</a></li>
-        <li><a href="02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
-        <li><a href="02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
-        <li><a href="02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
-        <li><a href="03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
-        <li><a href="03-智能策略/">趋势交易</a></li>
-        <li><a href="03-智能策略/">海龟策略</a></li>
-        <li><a href="03-智能策略/">动态平衡策略</a></li>
-        <li><a href="03-智能策略/">阿隆指标策略</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/01-股票/布林线均值回归">布林线均值回归 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/">移动均线+KDJ</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/01-股票/多因子选股">多因子选股 ('2023)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/01-股票/小市值">小市值 ('2021)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/01-股票/指数增强">指数增强 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/01-股票/Alpha对冲">Alpha对冲 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/03-期货/网络交易">网格交易 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/拐点交易">拐点交易 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/">趋势交易</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/">海龟策略</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/">动态平衡策略</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/03-智能策略/">阿隆指标策略</a></li>
       </ul>
       </td>
       <td>
       <ul>
-        <li><a href="02-经典策略/02-基金/4433法则.md">4433法则 ('2022)</a></li>
-        <li><a href="02-经典策略/02-基金/">对冲策略：指数型+债券型对冲</a></li>
-        <li><a href="02-经典策略/02-基金/">组合策略：多因子组合配置</a></li>
-        <li><a href="02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
-        <li><a href="02-经典策略/02-基金/">组合策略：择时多策略</a></li>
-        <li><a href="02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/4433法则">4433法则 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/">对冲策略：指数型+债券型对冲</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/">组合策略：多因子组合配置</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/">组合策略：择时多策略</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
       </ul>
       </td>
       <td>
       <ul>
-        <li><a href="02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
-        <li><a href="02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/03-期货/双均线策略">双均线策略 ('2022)</a></li>
+        <li><a href="https://ufund-me.github.io/Qbot/#/02-经典策略/03-期货/网络交易">网格交易 ('2022)</a></li>
       </ul>
       </td>
     </tr>
@@ -338,7 +338,7 @@ dagit -h 0.0.0.0 -p 3000
 
 ### Benchmark and Model zoo
 
-Results and models are available in the [model zoo](03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](03-智能策略/model_zoo). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 
 <details><summary><em><b>点击展开查看具体AI模型benchmark结果</b></em></summary>
 
@@ -368,7 +368,7 @@ Results and models are available in the [model zoo](03-智能策略/model_zoo.md
 |     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021 |     ✗      |
 
 
-<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
+<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./03-智能策略/model_zoo) can be trained or used in this codebase.</sup>
 
 </details>
 
@@ -436,7 +436,7 @@ A股回测 KDJ+MACD 策略:
 
 ## Contributing
 
-We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
+We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](.github/CONTRIBUTING) for the contributing guideline.
 
 ## 🍮 Community
 - Github <a href="https://github.com/UFund-Me/Qbot/discussions" target="_blank">discussions 💬</a> or <a href="https://github.com/UFund-Me/Qbot/issues" target="_blank">issues 💭</a>
