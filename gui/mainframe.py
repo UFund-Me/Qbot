@@ -65,13 +65,15 @@ def run_notebook_local():
     # subprocess.call(cmd)
 
 def run_invest_tool():
-    t = ShellThread("cd ~/Qbot/investool && go build && ./investool webserver")
+    print("Start QInvesTool ...")
+    t = ShellThread("cd ~/Qbot/investool && go build && ./investool webserver &> /tmp/investool.log &")
     t.start()
     # cmd = ''
     # # subprocess.call(cmd)
     # os.system(cmd)
 
-def run_fund_tool():
+def run_fund_tool(): 
+    print("Start fund strategy analyse server ...")
     t = ShellThread("docker run -dp 8000:8000 fund_strategy --name=fund_strategy_instance")
     t.start()
     # cmd = ''
@@ -107,7 +109,7 @@ class MainFrame(wx.Frame):
 
         homepage = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(homepage, "Qbot 官方网站", True)
-        homepage.show_url("http://ufund-me.github.io")
+        homepage.show_url("https://ufund-me.github.io/Qbot")
 
         plt.rc("grid", color="#316931", linewidth=1, linestyle="-")
         plt.rc("xtick", labelsize=15)

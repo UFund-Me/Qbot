@@ -1,7 +1,7 @@
 <h1> 🤖 Qbot  </h1>
 <h2> 人工智能自动化量化交易机器人  </h2>
 
->  <small>🌱 V1.2</small>
+>  <small>🌱 V0.1</small>
 <br>
 
 <span id="busuanzi_container_site_pv" style='display:none'>

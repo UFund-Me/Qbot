@@ -56,7 +56,7 @@
 
   ***不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~***
 
-  <i>喜欢这个项目吗？请考虑 ❤️赞助本项目 以帮助改进！</i>
+  <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors--support) 本项目，以帮助改进！</i>
 
 </div>
 
@@ -179,6 +179,8 @@ python main.py
 
 #### Web
 
+- 1. 基金策略在线分析
+
 需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README.md)详细操作文档
 
 运行命令
@@ -188,6 +190,16 @@ cd pyfunds/fund-strategies
 
 npm install
 npm start
+```
+
+- 2. 选基、选股助手
+
+运行命令
+
+```
+cd investool
+
+./investool webserver
 ```
 
 ## No-code operation (TODO)
@@ -332,7 +344,7 @@ dagit -h 0.0.0.0 -p 3000
 
 ### Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run ``python pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 
 <details><summary><em><b>点击展开查看具体AI模型benchmark结果</b></em></summary>
 
@@ -368,14 +380,7 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 
 ## 策略原理及源码分析
 
-<p>
-  <a href="https://ufund-me.github.io/Qbot/#/">
-    <i><font size="4">在线文档</font></i>
-  </a
-  <a href="pytrader/doc">
-    <i><font size="4">jupyter notebook</font></i>
-  </a
-</p>
+[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
 
 ## Quantstats Report
 
@@ -449,8 +454,8 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 ## :warning: Disclaimer
 
 交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
-    
-## 🔥: Stargazers Over Time
+
+## 🔥 Stargazers Over Time
 	
 <!-- [![Stargazers over time](https://starchart.cc/UFund-Me/Qbot.svg)](https://starchart.cc/UFund-Me/Qbot) -->
 
