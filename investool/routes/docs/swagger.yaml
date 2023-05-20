@@ -1,0 +1,37 @@
+definitions:
+  response.Response:
+    properties:
+      code:
+        type: object
+      data:
+        type: object
+      msg:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /x/ping:
+    get:
+      consumes:
+      - application/json
+      description: 返回 server 相关信息，可以用于健康检查
+      parameters:
+      - description: you can set custom trace id in header
+        in: header
+        name: trace_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Response'
+      security:
+      - ApiKeyAuth: []
+      - BasicAuth: []
+      summary: 默认的 Ping 接口
+      tags:
+      - x
+swagger: "2.0"
