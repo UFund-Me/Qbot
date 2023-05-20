@@ -122,17 +122,17 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
     <tr>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/UFund-Me/Qbot/assets/29084184/aafff916-1945-4ae7-b836-60254ecacf76"></img>
+                <img class="illustration_img" width="330" src="https://github.com/UFund-Me/Qbot/assets/29084184/aafff916-1945-4ae7-b836-60254ecacf76"></img>
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/UFund-Me/Qbot/assets/29084184/a5cfadb5-8233-4307-ab79-6e0c0aca536d"/>
+                <img class="illustration_img" width="220" src="https://github.com/UFund-Me/Qbot/assets/29084184/a5cfadb5-8233-4307-ab79-6e0c0aca536d"/>
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" src="https://github.com/UFund-Me/Qbot/assets/29084184/beb5877b-e45e-45a8-afdb-1926ea2ea8a1"/>
+                <img class="illustration_img" width="330" height="150%" src="https://github.com/UFund-Me/Qbot/assets/29084184/beb5877b-e45e-45a8-afdb-1926ea2ea8a1"/>
             </div>
         </td>
     </tr>
@@ -383,7 +383,7 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 
 Click [HERE](quantstats#visualize-stock-performance) to more detail.
 
-#### Some strategy backtest results:
+### Some strategy backtest results:
 
 > 声明：别轻易用于实盘，市场有风险，投资需谨慎。
 
@@ -419,8 +419,10 @@ A股回测 KDJ+MACD 策略:
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/67338ec5-a6b1-4aa7-9792-1a2c61f353da)
 
 👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
+
 ## TODO
 
+- [x] 把策略回测整合在一个上位机中，包括：选基、选股策略、交易策略，模拟交易，实盘交易
 - [ ] 很多策略需要做回测验证；
 - [ ] 本项目由前后端支持，有上位机app支持，但目前框架还比较乱，需要做调整；
 - [ ] 各种策略需要抽象设计，支持统一调用；
@@ -448,7 +450,7 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
     
-## Stargazers Over Time
+## 🔥: Stargazers Over Time
 	
 <!-- [![Stargazers over time](https://starchart.cc/UFund-Me/Qbot.svg)](https://starchart.cc/UFund-Me/Qbot) -->
 
