@@ -388,6 +388,7 @@ Click [HERE](quantstats#visualize-stock-performance) to more detail.
 > 声明：别轻易用于实盘，市场有风险，投资需谨慎。
 
 ```
+symbol：华正新材(603186)
 Starting Portfolio Value: 10000.00
 Startdate=datetime.datetime(2010, 1, 1),
 Enddate=datetime.datetime(2020, 4, 21),
@@ -401,6 +402,7 @@ A股回测MACD策略:
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/dfef65ba-0d32-4f5f-b413-d6ec02fc700e)
 
+👉 点击[查看](pytrader/doc/02.easy_macd_strategy/macd.py)源码
 
 A股回测KDJ策略:
 
@@ -408,12 +410,15 @@ A股回测KDJ策略:
     
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/ef8e945b-59d6-4220-87e3-08ec1196cc2c)
 
+👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj.py)源码
+
 A股回测 KDJ+MACD 策略:
 
 ![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/67338ec5-a6b1-4aa7-9792-1a2c61f353da)
 
+👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
 ## TODO
 
 - [ ] 很多策略需要做回测验证；
@@ -438,9 +443,6 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 - 知识星球：AI量化投资 （加我微信，邀请）
 
-<!-- ## 如何选股/选基
-<img width="32" alt="Tool" src="https://user-images.githubusercontent.com/29084184/222178733-50486338-c137-4c9a-8b93-b523841066ea.png"> https://github.com/axiaoxin-com/investool
--->
 
 ## :warning: Disclaimer
 
