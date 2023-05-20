@@ -2,7 +2,7 @@
 Author: Charmve yidazhang1@gmail.com
 Date: 2023-03-23 18:19:46
 LastEditors: Charmve yidazhang1@gmail.com
-LastEditTime: 2023-03-24 10:28:16
+LastEditTime: 2023-04-14 23:34:25
 FilePath: /Qbot/qbot_main.py
 Version: 1.0.1
 Blogs: charmve.blog.csdn.net
@@ -21,9 +21,16 @@ import tushare as ts
 import talib
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 import matplotlib.font_manager as fm
 
+logger = logging.getLogger(__name__)
+
 # 指定默认字体
+# plt.rcParams["font.sans-serif"] = ["SimHei"]  # 中文字体设置-黑体
+# plt.rcParams["axes.unicode_minus"] = False  # 解决保存图像是负号'-'显示为方块的问题
+# sns.set(font="SimHei")  # 解决Seaborn中文显示问题
+
 plt.rcParams['font.sans-serif']=['Arial Unicode MS']
 # mpl.rcParams['font.sans-serif'] = ['KaiTi']
 # 解决保存图像是负号'-'显示为方块的问题
@@ -131,8 +138,15 @@ while True:
     # 计算不同的技术指标
     close_prices = data['close']
     stack_name = data["name"][0]
+    print("data_name:", data["name"])
+    print("stack_name:", stack_name)
+    print("stack_name:", stack_name[0])
 
+    logging.debug("stack_name:", stack_name)
+
+    
     ma_short_data = talib.SMA(close_prices, timeperiod=ma_short)
+    '''
     ma_mid_data = talib.SMA(close_prices, timeperiod=ma_mid)
     ma_long_data = talib.SMA(close_prices, timeperiod=ma_long)
     print("5日、10日和20日均线: " , ma_short_data.iloc[-1], ma_mid_data.iloc[-1], ma_long_data.iloc[-1], close_prices.iloc[0])
@@ -226,13 +240,16 @@ while True:
         send_signal_sounds(type="buy")
         buy_signal = [{"index": data['datetime'].iloc[-1], "values": {latest_price}}]
         # 发出交易信号，例如发送邮件或短信等
+    '''
     
     # 绘制实时数据图
     plt.clf()
     plt.plot(data['close'].iloc[-1], label='Close')
     
+    
     # 画出5日均线、10日均线和20日均线图
     plt.plot(ma_short_data.iloc[-1], label='MA5')
+    '''
     plt.plot(ma_mid_data.iloc[-1], label='MA10')
     plt.plot(ma_long_data.iloc[-1], label='MA20')
 
@@ -251,12 +268,13 @@ while True:
     plt.plot(rsi.iloc[-1], label='RSI')
     plt.plot(kdj_k.iloc[-1], label='KDJ_K')
     plt.plot(kdj_d.iloc[-1], label='KDJ_D')
+    '''
 
     # 添加图例和标题
     # plt.title('2020东京奥运会金牌数分布')
     # plt.title(f'Real-time Stock Price Monitoring [{data["name"][0]} ({symbol})]', fontproperties='YaHei')
     # plt.legend(loc='upper left')
-    plt.title('Real-time Stock Price Monitoring')
+    plt.title(f'Real-time Stock Price Monitoring [{data["name"][0]} ({symbol})]')
     plt.legend(loc='best')
 
     plt.draw()

@@ -1,6 +1,8 @@
 from quant_project.datafeed import mongo_utils
 
-from dagster import DynamicOut, DynamicOutput, asset, get_dagster_logger, graph, job, op
+from dagster import asset  # noqa F401
+from dagster import get_dagster_logger  # noqa F401
+from dagster import DynamicOut, DynamicOutput, graph, job, op
 
 
 @op(out=DynamicOut())

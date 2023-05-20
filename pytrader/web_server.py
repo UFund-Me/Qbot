@@ -14,9 +14,9 @@ from easytrader.webtrader import WebTrader
 from fastapi import Depends, FastAPI, HTTPException, Path, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from jose import JWTError, jwt
+# from jose import JWTError, jwt
 from starlette.responses import RedirectResponse
-from t import get_t_price
+from get_t_prices import get_t_price
 from web.database import Database
 from web.db_service import DbService
 from web.dto import BuyRequest, LoginRequest, StrategyModel
@@ -79,14 +79,14 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
-            raise credentials_exception
-        token_data = TokenData(username=username)
-    except JWTError:
+    # try:
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    username: str = payload.get("sub")
+    if username is None:
         raise credentials_exception
+    token_data = TokenData(username=username)
+    # except JWTError:
+    #     raise credentials_exception
     user = user_service.get_user(username=token_data.username)
     if user is None:
         raise credentials_exception

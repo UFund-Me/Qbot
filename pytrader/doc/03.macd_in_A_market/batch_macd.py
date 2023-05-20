@@ -144,7 +144,7 @@ def run_cerebro(stock_file, result):
     result[stock_name] = float(money_left - 10000) / 10000
 
 
-files_path = "stocks\\"
+files_path = "stocks/"
 result = {}
 
 # 遍历所有股票数据

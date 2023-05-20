@@ -25,7 +25,7 @@
         />
       </div>
       <p class="tips reward-tips">
-        感谢有您的支持，自选基金才能一直保持更新，增加更多功能。
+        感谢有您的支持，Qbot自选基金才能一直保持更新，增加更多功能。
       </p>
       <div class="tab-row">
         <input

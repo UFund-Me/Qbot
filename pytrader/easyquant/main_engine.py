@@ -45,8 +45,7 @@ class MainEngine:
         log_handler=DefaultLogHandler(),
         tzinfo=None,
     ):
-        """初始化事件 / 行情 引擎并启动事件引擎
-        """
+        """初始化事件 / 行情 引擎并启动事件引擎"""
         self.log = log_handler
         self.bar_type = bar_type
         self.broker = broker

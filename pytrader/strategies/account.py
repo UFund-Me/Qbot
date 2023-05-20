@@ -71,11 +71,37 @@ class Account:
         print(date, "from:", old_pos, "-->to:", self.curr_holding)
         # date, from old_pos -> new_pos
 
+    def run(self, algo_list):
+        self.algo_list = algo_list
+        for index, date in enumerate(self.dates):
+            self.curr_date = date
+            self.step(index, date)
+
+    def step(self, index, date):
+        return_se = self._get_curr_return_se(date)
+        self.acc.update_bar(date, return_se)
+        self.algo_processor()
+
+    def algo_processor(self):
+        context = {'engine': self, 'acc': self.acc}
+        for algo in self.algo_list:
+            if algo(context) is True:  # 如果algo返回True,直接不运行，本次不调仓
+                return None
+
+    # def get_results_df(self):
+    #     df = pd.DataFrame({'date': self.acc.cache_dates, 'portfolio': self.acc.cache_portfolio_mv})
+    #     df['rate'] = df['portfolio'].pct_change()
+    #     df['equity'] = (df['rate'] + 1).cumprod()
+    #     df.set_index('date', inplace=True)
+    #     df.dropna(inplace=True)
+    #     return df
+
     def get_results_df(self):
         df = pd.DataFrame(
             {"date": self.cache_dates, "portfolio": self.cache_portfolio_mv}
         )
         df["rate"] = df["portfolio"].pct_change()
+        df['equity'] = (df['rate'] + 1).cumprod()
         df.index = df["date"]
         df.dropna(inplace=True)
         return df

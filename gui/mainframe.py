@@ -3,6 +3,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import wx
+import subprocess
+import threading
 
 from gui.panels.panel_backtest import PanelBacktest
 
@@ -47,6 +49,35 @@ def make_menubar(win):
     return menuBar
 
 
+class ShellThread(threading.Thread):
+    def __init__(self, command):
+        super().__init__()
+        self.command = command
+
+    def run(self):
+        subprocess.call(self.command, shell=True)
+
+def run_notebook_local():
+    cmd = ''
+    t = ShellThread("cd ~/Qbot/pytrader/strategies/ && jupyter-notebook")
+    t.start()
+    # os.system(cmd)
+    # subprocess.call(cmd)
+
+def run_invest_tool():
+    t = ShellThread("cd ~/Qbot/investool && go build && ./investool webserver")
+    t.start()
+    # cmd = ''
+    # # subprocess.call(cmd)
+    # os.system(cmd)
+
+def run_fund_tool():
+    t = ShellThread("docker run -dp 8000:8000 fund_strategy --name=fund_strategy_instance")
+    t.start()
+    # cmd = ''
+    # subprocess.call(cmd)
+    # os.system(cmd)
+
 class MainFrame(wx.Frame):
     def __init__(self, *args, **kw):
         super(MainFrame, self).__init__(*args, **kw)
@@ -88,15 +119,21 @@ class MainFrame(wx.Frame):
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "AI 选股/选基", True)
-        web.show_url("https://investool.axiaoxin.com/")
+        run_invest_tool()
+        # web.show_url("https://investool.axiaoxin.com/?from=github")
+        web.show_url("http://localhost:4868/")
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "交易策略在线回测", True)
         # bash: cd ~/Qbot/pytrader/strategies/ && jupyter-notebook
-        web.show_url("http://localhost:8888/notebooks/workflow_by_code.ipynb")
+        # run_notebook_local()
+        # web.show_url("http://localhost:8888/tree")
+        web.show_url("https://sim.myquant.cn/sim?acc=5e4cdda3-f2fb-11ed-ae27-00163e022aa6")
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "基金投资策略分析", True)
+        # # run_fund_tool()
+        web.show_url("http://locahost:8000")
         web.show_url("http://sunshowerc.github.io/fund/#/")
 
         self.m_notebook.AddPage(PanelBacktest(self.m_notebook), "可视化股票回测系统", True)

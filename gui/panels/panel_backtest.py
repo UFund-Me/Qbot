@@ -54,4 +54,5 @@ class PanelBacktest(wx.Panel):
         self.web = web
 
     def OnClick(self, event):
+        print("在线回测属于付费功能，请联系微信：Yida_Zhang2")
         pass

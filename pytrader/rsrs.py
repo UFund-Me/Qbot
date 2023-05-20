@@ -2,7 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from easyquant.quotation import use_quotation
 
-plt.rcParams["font.sans-serif"] = ["SimHei"]  # 用来正常显示中文标签
+# error: 
+# plt.rcParams["font.sans-serif"] = ["SimHei"]  # 用来正常显示中文标签
+
+# 指定字体
+plt.rcParams['font.sans-serif']=['Arial Unicode MS']
 plt.rcParams["axes.unicode_minus"] = False  # 用来正常显示负号
 
 import datetime
@@ -12,9 +16,9 @@ import pandas as pd
 from easytrader.utils.misc import file2dict
 
 config = file2dict("jqdata.json")
+print(config["user"], config["password"])
 jq.auth(config["user"], config["password"])
 quotation = use_quotation("jqdata")
-
 
 class ETFQuant:
     # 初始化函数
@@ -222,6 +226,6 @@ RSRS["卖"] = -0.9
 RSRS.plot(ax=axes[1], title="score", grid=True)
 slope.plot(ax=axes[2], title="斜率", grid=True)
 stock_price.plot(ax=axes[0], title="价格", grid=True)
-#
+
 plt.show()
 # get_price('159949.XSHE', end_date=datetime.date.today(), count=3)
