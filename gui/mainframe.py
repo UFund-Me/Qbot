@@ -66,7 +66,7 @@ def run_notebook_local():
 
 def run_invest_tool():
     print("Start QInvesTool ...")
-    t = ShellThread("cd ~/Qbot/investool && go build && ./investool webserver &> /tmp/investool.log &")
+    t = ShellThread("cd ~/Qbot/investool && go build && ./investool webserver")
     t.start()
     # cmd = ''
     # # subprocess.call(cmd)
@@ -121,7 +121,7 @@ class MainFrame(wx.Frame):
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "AI 选股/选基", True)
-        run_invest_tool()
+        # run_invest_tool()
         # web.show_url("https://investool.axiaoxin.com/?from=github")
         web.show_url("http://localhost:4868/")
 
@@ -134,8 +134,8 @@ class MainFrame(wx.Frame):
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "基金投资策略分析", True)
-        # # run_fund_tool()
-        web.show_url("http://locahost:8000")
+        # run_fund_tool()
+        # web.show_url("http://locahost:8000")
         web.show_url("http://sunshowerc.github.io/fund/#/")
 
         self.m_notebook.AddPage(PanelBacktest(self.m_notebook), "可视化股票回测系统", True)

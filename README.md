@@ -450,6 +450,31 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 - 知识星球：AI量化投资 （加我微信，邀请）
 
+<br>
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img> <br>个人微信
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="318" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/> <br>Qbot微信使用交流群
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" height="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/> <br>知识星球（付费）
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+若二维码因 Github 网络无法打开，请点击[二维码](https://charmve.github.io/img/contact-card.png)直接打开图片。
 
 ## :warning: Disclaimer
 
@@ -468,7 +493,7 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 <b>Thank you for supporting Qbot!</b>
 
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
-<a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=32"/></a>
+<a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
 
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 

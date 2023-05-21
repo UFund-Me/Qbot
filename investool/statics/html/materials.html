@@ -1,7 +1,6 @@
 {{ template "header" . }}
 <h1>投资学习资料</h1>
 
-{{ range $TypedMaterialSeries := .AllMaterialsList }}
 <div class="section">
     <div class="qbot-section">
         <div align="center" >
@@ -14,7 +13,7 @@
         <p id="demo">
           <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
           <a href="https://github.com/UFund-Me/QBot">
-          <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
+          <img width="100%" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
         </a>
         </p>
       </p>
@@ -104,6 +103,8 @@
       
       <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=90&section=footer"/>
     </div>
+
+{{ range $TypedMaterialSeries := .AllMaterialsList }}
  
 {{ range $TypeName, $MaterialSeriesList := $TypedMaterialSeries }}
     <h2 class="header">{{ $TypeName }}</h2>

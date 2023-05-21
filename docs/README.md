@@ -388,8 +388,6 @@ Results and models are available in the [model zoo](03-智能策略/model_zoo). 
 
 [在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
 
-
-
 ## Quantstats Report
 
 ![Quantstats Report](https://user-images.githubusercontent.com/29084184/207054856-44d1815b-f92f-40a7-b82e-e4a6b3960f2f.png)
@@ -434,6 +432,7 @@ A股回测 KDJ+MACD 策略:
 👉 点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
 ## TODO
 
+- [x] 把策略回测整合在一个上位机中，包括：选基、选股策略、交易策略，模拟交易，实盘交易
 - [ ] 很多策略需要做回测验证；
 - [ ] 本项目由前后端支持，有上位机app支持，但目前框架还比较乱，需要做调整；
 - [ ] 各种策略需要抽象设计，支持统一调用；
@@ -456,6 +455,31 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](
 
 - 知识星球：AI量化投资 （加我微信，邀请）
 
+<br>
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img> <br>个人微信
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="318" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/> <br>Qbot微信使用交流群
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" height="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/> <br>知识星球（付费）
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+若二维码因 Github 网络无法打开，请点击[二维码](https://charmve.github.io/img/contact-card.png)直接打开图片。
 
 ## :warning: Disclaimer
 
@@ -474,7 +498,7 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 <b>Thank you for supporting Qbot!</b>
 
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
-<a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=32"/></a>
+<a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
 
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 
