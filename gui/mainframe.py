@@ -126,7 +126,7 @@ class MainFrame(wx.Frame):
         web.show_url("http://localhost:4868/")
 
         web = WebPanel(self.m_notebook)
-        self.m_notebook.AddPage(web, "交易策略在线回测", True)
+        self.m_notebook.AddPage(web, "交易策略在线交易", True)
         # bash: cd ~/Qbot/pytrader/strategies/ && jupyter-notebook
         # run_notebook_local()
         # web.show_url("http://localhost:8888/tree")

@@ -164,6 +164,12 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ### Get Started
 
+主要包含四个窗口，如果启动界面有问题可以参考这里的启动方式。
+
+![image](https://github.com/UFund-Me/Qbot/assets/29084184/9f1dcc07-ca76-4600-a02c-76104fb28c51)
+
+👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码
+
 #### Local
 
 ```shell
@@ -462,17 +468,17 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](
     <tr>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" width="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img> <br>个人微信
+                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"><img class="illustration_img" width="320" alt="个人微信二维码" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img></a> <br>个人微信
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" width="318" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/> <br>Qbot微信使用交流群
+                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"><img class="illustration_img" width="318" alt="微信交流群" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/></a> <br>Qbot微信使用交流群
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <img class="illustration_img" height="320" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/> <br>知识星球（付费）
+                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"><img class="illustration_img" height="320" alt="知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br>知识星球（付费）
             </div>
         </td>
     </tr>
