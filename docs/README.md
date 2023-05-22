@@ -62,7 +62,7 @@
 
   ***不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~***
 
-  <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors--support) 本项目，以帮助改进！</i>
+  <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors-amp-support) 本项目，以帮助改进！</i>
 
 </div>
 
@@ -193,7 +193,7 @@ python main.py
 
 - 1. 基金策略在线分析
 
-需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README.md)详细操作文档
+需要 node 开发环境: `npm`、`node`，点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pyfunds/fund-strategies/README.md)详细操作文档
 
 运行命令
 
@@ -304,8 +304,8 @@ dagit -h 0.0.0.0 -p 3000
       <td>
         <li><b>GBDT</b></li>
         <ul>
-            <li><a href="pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
-            <li><a href="pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
+            <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
+            <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
             <li><a href="">Catboost (NIPS'2018)</a></li>
         </ul>
         <li><b>BOOST</b></li>
@@ -315,32 +315,32 @@ dagit -h 0.0.0.0 -p 3000
         </ul>
         <li><b>LR</b></li>
         <ul>
-            <li><a href="pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
+            <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
         </ul>
       </td>
       <td>
         <li><b>CNN</b></li>
         <ul>
-          <li><a href="pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
+          <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
           <li><a href="">GRU (ICCVW'2021)</a></li>
           <li><a href="">ImVoxelNet (WACV'2022)</a></li>
           <li><a href="">TabNet (AAAI'2019)</a></li>
         </ul>
         <li><b>RNN</b></li>
         <ul>
-          <li><a href="pytrader/strategies/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
+          <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
           <li><a href="">ALSTM (IJCAI'2022)</a></li>
           <li><a href="">ADARNN (KDD'2021)</a></li>
           <li><a href="">ADD (CoRL'2020)</a></li>
         </ul>
       </td>
       <td>
-          <li><a href="pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
+          <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
           <li><a href="">GATs (NIPS'2017)</a></li>
           <li><a href="">SFM (KDD'2017)</a></li>
       </td>
       <td>
-          <li><a href="pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
+          <li><a href="https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
           <li><a href="">TCTS (ICML'2021)</a></li>
           <li><a href="">TRA (KDD'2021)</a></li>
           <li><a href="">TCN (KDD'2018)</a></li>
@@ -356,7 +356,7 @@ dagit -h 0.0.0.0 -p 3000
 
 ### Benchmark and Model zoo
 
-Results and models are available in the [model zoo](03-智能策略/model_zoo). AI strategies is shown at [here](./pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](https://ufund-me.github.io/Qbot/#/03-智能策略/model_zoo). AI strategies is shown at [here](https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 
 <details><summary><em><b>点击展开查看具体AI模型benchmark结果</b></em></summary>
 
@@ -392,13 +392,13 @@ Results and models are available in the [model zoo](03-智能策略/model_zoo). 
 
 ## 策略原理及源码分析
 
-[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
+[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/notebook)
 
 ## Quantstats Report
 
 ![Quantstats Report](https://user-images.githubusercontent.com/29084184/207054856-44d1815b-f92f-40a7-b82e-e4a6b3960f2f.png)
 
-Click [HERE](quantstats#visualize-stock-performance) to more detail.
+Click [HERE](https://github.com/UFund-Me/Qbot/blob/main/quantstats#visualize-stock-performance) to more detail.
 
 #### Some strategy backtest results:
 
