@@ -90,7 +90,7 @@ default_weights = [{"KDJ": 0.3, "RSI": 0.15, "BOLL": 0.3, "MA": 0.25, "LSTM": 0.
 
 broker_config = [{"setcash": 100000, "ballance": 100000, "stake": 100, "commission": 0.0005}]
 
-WEBHOOK_SECRET = "wNMVU3ewSm2F0G2TwTX4Fd"
+WEBHOOK_SECRET = ""
 bot = LarkBot(secret=WEBHOOK_SECRET)
 
 # 获取历史行情数据
