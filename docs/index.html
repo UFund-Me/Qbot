@@ -225,18 +225,18 @@
   <!-- 访问量统计 -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
-<!--   
+  <!-- gittalk comments -->
 	<script>
     const gitalk = new Gitalk({
       id: decodeURI('{{ page.url }}'),
-      clientID: 'c41595e0999dd2834af4',
-      clientSecret: '4ad47f16f60a04c2870a1939406a6ad87bf219ec',
-      repo: 'computer-vision-in-action',
-      owner: 'Charmve',
+      clientID: '5946897f0bdd40ed547b',
+      clientSecret: 'df46a8ed5e6e720d325bbfccc58b451db48a005a',
+      repo: 'Qbot',
+      owner: 'UFund-Me',
       admin: ['Charmve'],
       // 每个网页独立的gitalk
-      //title: location.hash.match(/#(.*?)([?]|$)/)[1],
-      //id: location.hash.match(/#(.*?)([?]|$)/)[1],
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1],
       // facebook-like distraction free mode
       labels: ['Gitalk'],
       perPage: 50,
@@ -250,8 +250,7 @@
     }
     // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
     // gitalk.render('gitalk-container')
-  </script> 
--->
+  </script>
   
   <!-- alert 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
