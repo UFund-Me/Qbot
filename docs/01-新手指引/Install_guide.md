@@ -54,7 +54,7 @@ bash ./env_setup.sh
 还在做。。。
 
 ```
-ca ~/Qbot
+cd ~/Qbot
 docker build -t ufune-me:qbot-1.0.0 . 
 docker images 
 docker start <image-id>
