@@ -190,7 +190,7 @@ python main.py
 
 需要 node 开发环境: `npm`、`node`，点击[查看](pyfunds/fund-strategies/README.md)详细操作文档
 
-版本信息：
+版本信息（作为参考）：
 
 ```
 ▶ go version
@@ -496,17 +496,17 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
     <tr>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"><img class="illustration_img" width="320" alt="添加个人微信" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img></a> <br>个人微信
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/c8782e38-be7d-4839-bad0-6736bfb9ab9e"><img class="illustration_img" width="320" alt="添加个人微信" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img></a> <br>个人微信
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/></a> <br>Qbot微信使用交流群
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/712a460f-a264-4f16-a7b8-c990106ec624"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/></a> <br>Qbot用户微信交流群
             </div>
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br>知识星球（付费）
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br>知识星球（付费）<sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup>
             </div>
         </td>
     </tr>
