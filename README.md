@@ -506,7 +506,7 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br>知识星球（付费）<sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup>
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br> <sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup> <br>知识星球（付费）
             </div>
         </td>
     </tr>
