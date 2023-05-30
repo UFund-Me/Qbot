@@ -62,6 +62,20 @@
 
 ## Quick Start
 
+<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+
+```
+brew install hdf5
+brew install c-blosc
+export HDF5_DIR=/opt/homebrew/opt/hdf5 
+export BLOSC_DIR=/opt/homebrew/opt/c-blosc
+```
+</details>
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
+
+<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
+
 ```bash
 cd ~ # $HOME as workspace
 git clone https://github.com/UFund-Me/Qbot.git
@@ -501,7 +515,7 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
         </td>
         <td>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://github.com/UFund-Me/.github/assets/29084184/712a460f-a264-4f16-a7b8-c990106ec624"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat-group-s.png"/></a> <br>Qbot用户微信交流群
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/712a460f-a264-4f16-a7b8-c990106ec624"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://github.com/UFund-Me/Qbot/assets/29084184/c81a0983-b5c4-43b5-acb5-3bd98010f7e3"/></a> <br>Qbot用户微信交流群
             </div>
         </td>
         <td>
