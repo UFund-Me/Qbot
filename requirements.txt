@@ -35,7 +35,7 @@ arrow
 tushare
 numpy
 cython
-pyqlib
+# pyqlib #有需要时手动单独安装
 jqdatasdk
 redis
 pydantic

@@ -44,7 +44,7 @@
 ```
 🤖 Qbot = 智能交易策略 + 回测系统 + 自动化量化交易 (+ 可视化分析工具)
             |           |            |            |
-            |           |            |             \_ quantstats (dashboard\online operate)
+            |           |            |             \_ quantstats (dashboard\online operation)
             |           |             \______________ Qbot - vnpy, pytrader, pyfunds
             |           \____________________________ BackTest - backtrader, easyquant
             \________________________________________ quant.ai - qlib, deep learning strategies
@@ -62,20 +62,6 @@
 
 ## Quick Start
 
-<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
-
-```
-brew install hdf5
-brew install c-blosc
-export HDF5_DIR=/opt/homebrew/opt/hdf5 
-export BLOSC_DIR=/opt/homebrew/opt/c-blosc
-```
-</details>
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
-
-<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
-
 ```bash
 cd ~ # $HOME as workspace
 git clone https://github.com/UFund-Me/Qbot.git
@@ -90,6 +76,20 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
   <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
   <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
 </p>
+
+<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+
+```
+brew install hdf5
+brew install c-blosc
+export HDF5_DIR=/opt/homebrew/opt/hdf5 
+export BLOSC_DIR=/opt/homebrew/opt/c-blosc
+```
+</details>
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
+
+<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
 
 ## Highlight
 
