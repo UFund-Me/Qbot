@@ -2,7 +2,7 @@
 Author: Charmve yidazhang1@gmail.com
 Date: 2023-03-10 21:12:31
 LastEditors: Charmve yidazhang1@gmail.com
-LastEditTime: 2023-03-23 21:24:23
+LastEditTime: 2023-06-07 09:32:46
 FilePath: /Qbot/qbot/qbot_main.py
 Version: 1.0.1
 Blogs: charmve.blog.csdn.net
@@ -118,11 +118,9 @@ if __name__ == "__main__":
         df_mew = get_realtime_data(code)
         print("update realtime data:\n", df_mew)
         
+        # 更新至历史数据库
         dataframe = pd.concat([dataframe, df_mew])
         # dataframe.append(get_realtime_data(code))
-
-        # 更新至历史数据库
-
         print("feeds data:\n", dataframe)
 
         # 将数据源转换为Backtrader数据源格式

@@ -20,7 +20,7 @@ scikit-learn
 empyrical
 stable-baselines==2.10.0
 jupyter
-gym==0.17.1
+# gym==0.17.1
 pyglet==1.5.0
 tensorboard
 tensortrade

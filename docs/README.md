@@ -40,7 +40,7 @@
 </div>
 
 <div align="center">
-  <p>AI驱动的自动化智能投研、智能投顾平台</p>
+  <p>AI智能量化投研平台</p>
   <p>
     <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, <br>
   empower AI technologies in quantitative investment.
@@ -68,19 +68,9 @@
 
 ## Quick Start
 
-<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+Qbot是一个免费的投研平台，提供从数据获取、交易策略开发、策略回测、模拟交易到最终实盘交易的全闭环流程。在实盘接入前，有股票、基金评测和策略回测，在模拟环境下做交易验证，近乎实盘的时延、滑点仿真。故，本平台提供GUI前端/客户端（部分功能也支持网页），后端做数据处理、交易调度，实现事件驱动的交易流程。对于策略研究部分，尤其强调机器学习、强化学习的AI策略，结合多因子模型提高收益比。
 
-```
-brew install hdf5
-brew install c-blosc
-export HDF5_DIR=/opt/homebrew/opt/hdf5 
-export BLOSC_DIR=/opt/homebrew/opt/c-blosc
-```
-</details>
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
-
-<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
+但本项目可能需要一一点python基础知识，有一点点交易经验，会更容易体会作者的初衷，解决当下产品空缺和广大散户朋友的交易痛点，现在直接免费开源出来！
 
 ```bash
 cd ~ # $HOME as workspace
@@ -96,6 +86,20 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
   <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
   <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
 </p>
+
+<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+
+```
+brew install hdf5
+brew install c-blosc
+export HDF5_DIR=/opt/homebrew/opt/hdf5 
+export BLOSC_DIR=/opt/homebrew/opt/c-blosc
+```
+</details>
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
+
+<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
 
 ## Highlight
 
@@ -163,7 +167,7 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ### Installation
 
-[Install Guide](./01-新手指引/Install_guide) | [Online documents](https://ufund-me.github.io/Qbot/#/)
+[Install Guide](https://github.com/UFund-Me/Qbot/blob/main/docs/01-新手指引/Install_guide) | [Online documents](https://ufund-me.github.io/Qbot/#/)
 
 ```
  ____________________________________
@@ -178,13 +182,11 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ### Get Started
 
-主要包含四个窗口，如果启动界面有问题可以参考这里的启动方式。
+本项目分为前端（客户端）和后端两部分，前端由wxPython编写的轻量化GUI客户端，后端分为策略开发、策略回测 ``qbot/strategies``、股票基金评测、模拟交易、在线回测几个部分，对应于客户端从左到右的三个菜单。
 
-![image](https://github.com/UFund-Me/Qbot/assets/29084184/9f1dcc07-ca76-4600-a02c-76104fb28c51)
+#### 前端/客户端
 
-👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码
-
-#### Local
+➕ 请注意：本项目建议使用python 3.8、3.9版本，推荐使用conda搭建环境，参考 [Install Guide](https://github.com/UFund-Me/Qbot/blob/main/docs/01-新手指引/Install_guide)。
 
 ```shell
 export USER_ID="admin"                   # replace your info
@@ -192,25 +194,33 @@ export PASSWORD="admin1234."             # replace your info
 
 pip install -r requirements.txt
 
-cd  pytrader
-python test_backtrade.py
-python test_trader.py
-
-# visualization
-python main.py
-
 # if run on Mac, please use 'pythonw main.py'
-
+python main.py
 ```
 
-#### Web
+主要包含四个窗口，如果启动界面有问题可以参考这里的启动方式。
 
-- 1. 基金策略在线分析
+![image](https://github.com/UFund-Me/Qbot/assets/29084184/9f1dcc07-ca76-4600-a02c-76104fb28c51)
+
+👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码
+
+#### 后端/服务端
+
+1. 选基、选股助手（对应客户端第二个菜单：AI选股/选基）
+
+运行命令
+
+```
+cd investool
+go build
+./investool webserver
+```
+
+2. 基金策略在线分析（对应客户端第四个菜单：基金投资策略分析）
 
 需要 node 开发环境: `npm`、`node`，点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pyfunds/fund-strategies/README.md)详细操作文档。
 
-版本信息（作为参考）：
-
+<details><summary>版本信息（作为参考）</summary>
 ```
 ▶ go version
 go version go1.20.4 darwin/amd64
@@ -221,19 +231,9 @@ v19.7.0
 ▶ npm --version
 9.5.0
 ```
+</details>
 
-运行命令
-
-```
-cd pyfunds/fund-strategies
-
-npm install
-npm start
-```
-
-或者使用docker运行项目
-
-在项目路径下运行以下命令构建项目的docker镜像
+使用docker运行项目，在项目路径下运行以下命令构建项目的docker镜像
 ```
 docker build -t fund_strategy .
 ```
@@ -249,16 +249,6 @@ docker log -f fund_strategy_instance
 ```
 
 启动后，可通过`http://locahost:8000`访问网页。
-
-- 2. 选基、选股助手
-
-运行命令
-
-```
-cd investool
-go build
-./investool webserver # 仓库中默认的版本为MacOS
-```
 
 ## No-code operation (TODO)
 
@@ -404,7 +394,7 @@ dagit -h 0.0.0.0 -p 3000
 
 Results and models are available in the [model zoo](https://ufund-me.github.io/Qbot/#/03-智能策略/model_zoo). AI strategies is shown at [here](https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/), local run "python pytrader/strategies/workflow_by_code.py", also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 
-<details><summary><em><b>点击展开查看具体AI模型benchmark结果</b></em></summary>
+<details><summary><em><b>👉 点击展开查看具体AI模型benchmark结果</b></em></summary>
 
 |                | status | benchmark |   framework  | DGCNN | RegNetX | addition |   arXiv    |
 |  :-----------: | :----: | :--------:|   :----:     | :---: | :-----: | :------: | :--------: |
@@ -436,9 +426,13 @@ Results and models are available in the [model zoo](https://ufund-me.github.io/Q
 
 </details>
 
+<br>
+
 ## 策略原理及源码分析
 
-[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](https://github.com/UFund-Me/Qbot/blob/main/pytrader/strategies/notebook)
+本项目编写了详细的策略原理说明和平台搭建到使用的详细文档，尤其适合量化小白。欢迎加群交流！
+
+[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
 
 ## Quantstats Report
 
@@ -533,6 +527,38 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](
 
 若二维码因 Github 网络无法打开，请点击[二维码](https://charmve.github.io/img/contact-card.png)直接打开图片。
 
+<br>
+
+<table align="center"><tbody>
+  <tr>
+    <td colspan="2" rowspan="1">
+      <p>🎉 本项目刚上线就收到了两次GitHub官方趋势榜Top5、Top1好成绩! <br>现对于转发本项目到朋友圈或100人以上微信群等，可获得<b>知识星球价值20元的优惠券一张</b>, 限时10张。</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="5" class="ai-notebooks-table-points ai-orange-link">
+        <div align="center">
+            <a href="https://github.com/UFund-Me/Qbot" target="_blank"><img src="https://img.shields.io/badge/-💮 %20Qbot-red.svg" alt="Qbot" title="Qbot"></a>&nbsp;
+            <a class="https://github.com/UFund-Me/Qbot">
+              <img class="ai-header-badge-img" src="https://img.shields.io/github/stars/UFund-Me/Qbot.svg?style=social&label=Star">
+            </a>&nbsp;
+            <a href="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png" target="_blank"><img src="https://img.shields.io/badge/-WeChat-lightgreen.svg?logo=WeChat"></a>
+            <p>🔥Among the <a href="https://github.com/topics/quant-trade" target="_blank">top 10</a> Quant &amp; Trade repos on GitHub</p>
+        </div>
+        <ul> 主要包含两部分：在本项目的基础下，
+            <li>增加更多策略研究，包含回测源码（请先学会有本项目中的策略库）；</li>
+            <li>增加实盘接入方式的源代码；</li>
+            <li>策略交流，AI投研实验室MeetUp线上/线下活动（对于基础薄弱的同学，欢迎进微信群答疑）</li>
+            <li>最近较为受欢迎的一个福利点：AI选股推荐列表邮件订阅，这有个样例 https://github.com/UFund-Me/Qbot/issues/37</li>
+        </ul>
+      </td>
+      <td>
+        <img align="center" src="https://github.com/UFund-Me/Qbot/assets/29084184/bb5ec619-887a-4ba7-a9d7-9e8b083bbb1a" height="320" alt="知识星球优惠券">
+      </td>
+</tr></tbody></table>
+
+<br>
+
 ## :warning: Disclaimer
 
 交易策略和自动化工具只是提供便利，并不代表实际交易收益。该项目任何内容不构成任何投资建议。市场有风险，投资需谨慎。
@@ -552,9 +578,11 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
 <a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
 
+<a href=""><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="68" title="Do what you like, and do it best!"/></a>
+
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 
-基于Backtrader、vnpy、qlib、tushare、backtest、easyquant等开源项目，感谢开发者。
+基于Backtrader、vnpy、qlib、tushare、backtest、easyquant、fund-strategies、investool等开源项目，感谢开发者。
 
 <br><br>
 
