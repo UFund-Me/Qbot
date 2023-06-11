@@ -53,8 +53,10 @@
 <br>
 
 <div align="center">
+  
+  🎺 <b>号外</b>：Qbot微信小程序开发招募 [UFund-miniprogram](https://github.com/UFund-Me/UFund-miniprogram)
 
-  ***不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~***
+  <b>不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~</b>
 
   <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors--support) 本项目，以帮助改进！</i>
 
@@ -527,7 +529,8 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 <table align="center"><tbody>
   <tr>
     <td colspan="2" rowspan="1">
-      <p>🎉 本项目刚上线就收到了两次GitHub官方趋势榜Top5、Top1好成绩! <br>现对于转发本项目到朋友圈或100人以上微信群等，可获得<b>知识星球价值20元的优惠券一张</b>, 限时10张。</p>
+      <h4>🎉 本项目刚上线就收到了两次GitHub官方趋势榜Top5、Top1好成绩! </h4>
+      <p>现对于转发本项目到朋友圈或100人以上微信群等，可获得<b>知识星球价值20元的 🎫优惠券 一张</b>, 限时10张。</p>
     </td>
   </tr>
   <tr>
