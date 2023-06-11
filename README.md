@@ -1,4 +1,11 @@
-<h1> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h1>
+<div>
+  <div align="right">
+    👆 右上角点击 <img class="ai-header-badge-img" src="https://img.shields.io/github/stars/UFund-Me/Qbot.svg?style=social&label=Star"> 告诉我，你希望这个项目继续加速开发迭代 ❤️ & ☕️
+  </div>
+  <h1> 🤖 Qbot </h1>
+</div>
+
+<!-- <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> -->
 
 [![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml)
 [![AutoTrade](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/auto-trade.yml)
@@ -474,6 +481,8 @@ A股回测 KDJ+MACD 策略:
 👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
 
 ## TODO
+
+👆 右上角点击 <img class="ai-header-badge-img" src="https://img.shields.io/github/stars/UFund-Me/Qbot.svg?style=social&label=Star"> 告诉我，你希望这个项目继续加速开发迭代[ ❤️ & ☕️](https://github.com/sponsors/Charmve)
 
 - [x] 把策略回测整合在一个上位机中，包括：选基、选股策略、交易策略，模拟交易，实盘交易
 - [ ] 很多策略需要做回测验证；
