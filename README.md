@@ -42,11 +42,11 @@
 
 <div align="center">
   <p>AI智能量化投研平台</p>
-  <p>
-    <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, <br>
-    empower AI technologies in quantitative investment.
-  </p>
 </div>
+
+>  <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment. Qbot supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL.
+
+<br>
 
 ```
 🤖 Qbot = 智能交易策略 + 回测系统 + 自动化量化交易 (+ 可视化分析工具)
