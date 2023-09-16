@@ -68,9 +68,9 @@
 
 ## Quick Start
 
-Qbot是一个免费的投研平台，提供从数据获取、交易策略开发、策略回测、模拟交易到最终实盘交易的全闭环流程。在实盘接入前，有股票、基金评测和策略回测，在模拟环境下做交易验证，近乎实盘的时延、滑点仿真。故，本平台提供GUI前端/客户端（部分功能也支持网页），后端做数据处理、交易调度，实现事件驱动的交易流程。对于策略研究部分，尤其强调机器学习、强化学习的AI策略，结合多因子模型提高收益比。
+Qbot是一个免费的量化投研平台，提供从数据获取、交易策略开发、策略回测、模拟交易到最终实盘交易的全闭环流程。在实盘接入前，有股票、基金评测和策略回测，在模拟环境下做交易验证，近乎实盘的时延、滑点仿真。故，本平台提供GUI前端/客户端（部分功能也支持网页），后端做数据处理、交易调度，实现事件驱动的交易流程。对于策略研究部分，尤其强调机器学习、强化学习的AI策略，结合多因子模型提高收益比。
 
-但本项目可能需要一一点python基础知识，有一点点交易经验，会更容易体会作者的初衷，解决当下产品空缺和广大散户朋友的交易痛点，现在直接免费开源出来！
+但本项目可能需要一点点python基础知识，有一点点交易经验，会更容易体会作者的初衷，解决当下产品空缺和广大散户朋友的交易痛点，现在直接免费开源出来！
 
 ```bash
 cd ~ # $HOME as workspace
@@ -197,16 +197,13 @@ pip install -r requirements.txt
 # if run on Mac, please use 'pythonw main.py'
 python main.py
 ```
-
-主要包含四个窗口，如果启动界面有问题可以参考这里的启动方式。
+主要包含四个窗口，如果启动界面未显示或有问题可以参考下图中对应的启动方式。👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码，下文也有文字介绍。
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/9f1dcc07-ca76-4600-a02c-76104fb28c51)
 
-👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码
-
 #### 后端/服务端
 
-1. 选基、选股助手（对应客户端第二个菜单：AI选股/选基）
+1. 选基、选股助手（对应前端/客户端第二个菜单：AI选股/选基）
 
 运行命令
 
@@ -216,11 +213,12 @@ go build
 ./investool webserver
 ```
 
-2. 基金策略在线分析（对应客户端第四个菜单：基金投资策略分析）
+2. 基金策略在线分析（对应于前端/客户端第四个菜单：基金投资策略分析）
 
 需要 node 开发环境: `npm`、`node`，点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pyfunds/fund-strategies/README.md)详细操作文档。
 
 <details><summary>版本信息（作为参考）</summary>
+
 ```
 ▶ go version
 go version go1.20.4 darwin/amd64
@@ -231,6 +229,7 @@ v19.7.0
 ▶ npm --version
 9.5.0
 ```
+
 </details>
 
 使用docker运行项目，在项目路径下运行以下命令构建项目的docker镜像

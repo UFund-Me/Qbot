@@ -7,7 +7,7 @@ from pandas import DataFrame
 
 from ..context import Context
 from ..event_engine import Event
-from easytrader.webtrader import WebTrader
+from ..easytrader.webtrader import WebTrader
 
 
 class StrategyTemplate:

@@ -1,0 +1,99 @@
+{
+    "mysql": {
+      "local": {
+        "host": "",
+        "port": 3306,
+        "user": "",
+        "password": ""
+      },
+      "qq": {
+        "host": "",
+        "port": 2222,
+        "user": "",
+        "password": ""
+      },
+      "ubuntu": {
+        "host": "1",
+        "port": 3306,
+        "user": "",
+        "password": ""
+      },
+      "ptrade": {
+        "host": "",
+        "port": 3306,
+        "user": "",
+        "password": ""
+      },
+      "tencent-1c": {
+        "host": "",
+        "port": 3306,
+        "user": "",
+        "password": ""
+      }
+    },
+    "redis": {
+      "qq": {
+        "host": "127.0.0.1",
+        "port": 6379,
+        "password": ""
+      }
+    },
+    "mail": {
+      "qq": {
+        "user": ""
+      }
+    },
+    "data_path": "",
+    "mongo": {
+      "qq": {
+        "host": "",
+        "port": 11111,
+        "user": "",
+        "password": ""
+      },
+      "local": {
+        "host": "127.0.0.1",
+        "port": 17017,
+        "user": null,
+        "password": null
+      }
+    },
+    "WECHAT_ID": "",
+    "jsl_cookies": {
+      "auto_reload": "",
+      "kbzw_r_uname": "",
+      "kbz_newcookie": "1",
+      "kbzw__Session": "",
+      "Hm_lvt_164fe01b1433a19b507595a43bf58262": "",
+      "Hm_lpvt_164fe01b1433a19b507595a43bf58262": ""
+    },
+    "twillio": {
+      "twilio_account_sid": "",
+      "twilio_auth_token": ""
+    },
+    "jsl_monitor": {
+      "EXPIRE_TIME": 1800,
+      "MONITOR_PERCENT": 8,
+      "ACCESS_INTERVAL": 20,
+      "JSL_USER": "",
+      "JSL_PASSWORD": ""
+    },
+    
+    "aliyun": {
+      "EMAIL_USER_XT": "",
+      "EMAIL_USER_ALI": "",
+      "LOGIN_EMAIL_ALYI_PASSWORD": ""
+    },
+    "ts_token": "",
+    "holding_file": "v",
+    "xc_server": "",
+    "xc_token_pro": "",
+    
+    "enterprise_wechat": {
+      "userid": "",
+      "agentid": "",
+      "corpid": "",
+      "corpsecret": ""
+    }
+  }
+  

@@ -1,22 +1,38 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch fund",
-        "args": [
-            "${workspaceFolder}/pyfunds/fund-strategy/src/utils/fund-stragegy/index.ts"
-        ],
-        "runtimeArgs": [
-            "-r",
-            "ts-node/register",
-            "-r", "tsconfig-paths/register"
-        ],
-        "env": { "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json" }
-      },
-    ]
-  }
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Qbot",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Qbot",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch fund",
+      "args": [
+        "${workspaceFolder}/pyfunds/fund-strategy/src/utils/fund-stragegy/index.ts"
+      ],
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+        "-r", "tsconfig-paths/register"
+      ],
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      }
+    },
+  ]
+}

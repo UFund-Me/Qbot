@@ -13,9 +13,9 @@ class PanelBacktest(wx.Panel):
     def __init__(self, parent):
         super(PanelBacktest, self).__init__(parent)
 
-        # # 回测按钮
-        # self.btn_bkt = wx.Button(self, label="回测")
-        # self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
+        # 回测按钮
+        self.btn_bkt = wx.Button(self, label="回测")
+        self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
 
         # 进度条
 
