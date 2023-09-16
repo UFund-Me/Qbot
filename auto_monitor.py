@@ -22,7 +22,9 @@ import time
 import urllib.request  # noqa F401
 
 import pandas as pd
-import pync
+import platform
+if platform.system() == 'Darwin':
+    import pync
 import tushare as ts
 
 from utils.larkbot import LarkBot
@@ -123,12 +125,13 @@ while True:
         bot.send(content="[Signal💡] 中国平安 低于 ¥49")
 
         priceNow = 48
-        pync.notify(
-            f'{"中国平安"}当前价格为{priceNow}',
-            title=f'Qbot - {"中国平安"}股票已低于设定值{49}',
-            open="https://ufund-me.github.io/",
-            appIcon="./gui/imgs/logo.ico",
-        )
+        if platform.system() == 'Darwin':
+            pync.notify(
+                f'{"中国平安"}当前价格为{priceNow}',
+                title=f'Qbot - {"中国平安"}股票已低于设定值{49}',
+                open="https://ufund-me.github.io/",
+                appIcon="./gui/imgs/logo.ico",
+            )
         # pync.notify(
         #     "Reminder - Drink Water, Sir",
         #     title="Qbot",

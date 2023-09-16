@@ -1,19 +1,15 @@
-# main_window
 wxPython
 pandas
 matplotlib==3.2.2
 backtrader
-#pyfolio 直接安装会有bug
 #pip install git+https://github.com/quantopian/pyfolio
 backtrader_plotting
 statsmodels
 quantstats
-requests #这是yahoofinance需要
-loguru #简化logger的使用
+requests
+loguru
 binance-connector
-#为了用户体验，非必要不引入三方库
-#Ta-Lib 需要https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib 从这里下载对应的版本安装
-numba # pandas 多序列rolling需要
+numba 
 pykalman
 tables
 scikit-learn
@@ -35,7 +31,7 @@ arrow
 tushare
 numpy
 cython
-# pyqlib #有需要时手动单独安装
+# pyqlib # maybe manual
 jqdatasdk
 redis
 pydantic

@@ -188,6 +188,8 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 
 ➕ 请注意：本项目建议使用python 3.8、3.9版本，推荐使用conda搭建环境，参考 [Install Guide](https://github.com/UFund-Me/Qbot/blob/main/docs/01-新手指引/Install_guide)。
 
+<sub>* 如果是 Win 系统使用``set``命令.</sub>
+
 ```shell
 export USER_ID="admin"                   # replace your info
 export PASSWORD="admin1234."             # replace your info
