@@ -591,7 +591,7 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 
-基于Backtrader、vnpy、qlib、tushare、backtest、easyquant、fund-strategies、investool等开源项目，感谢开发者。
+基于 backtrader、[vnpy](https://github.com/vnpy/vnpy)、[qlib](https://github.com/microsoft/qlib)、tushare、easyquant、[fund-strategies](https://github.com/SunshowerC/fund-strategy)、[investool](https://github.com/axiaoxin-com/investool) 等开源项目，感谢开发者。
 
 <br><br>
 
