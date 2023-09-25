@@ -2,7 +2,7 @@
 Author: Charmve yidazhang1@gmail.com
 Date: 2023-03-10 00:45:44
 LastEditors: Charmve yidazhang1@gmail.com
-LastEditTime: 2023-03-12 20:10:22
+LastEditTime: 2023-09-19 23:00:07
 FilePath: /Qbot/utils/common/BaseService.py
 Version: 1.0.1
 Blogs: charmve.blog.csdn.net
@@ -22,7 +22,7 @@ import time
 
 import parsel
 import requests
-from configure.util import send_message_via_wechat
+# from configure.util import send_message_via_wechat
 from loguru import logger
 
 
@@ -162,7 +162,8 @@ class BaseService(object):
             return NOON_STOP
 
     def notify(self, title):
-        send_message_via_wechat(title)
+        print("send_message_via_wechat")
+        # send_message_via_wechat(title)
 
     def weekday(self, day=datetime.datetime.now().strftime("%Y-%m-%d")):
         """判断星期几"""
@@ -180,6 +181,7 @@ class BaseService(object):
         return day_diff.days % 7
 
     def is_weekday(self, day=datetime.datetime.now().strftime("%Y-%m-%d")):
+        print(day)
         if self.weekday(day) in [0, 6]:
             return False
         else:

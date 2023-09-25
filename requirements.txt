@@ -16,6 +16,7 @@ scikit-learn
 empyrical
 stable-baselines==2.10.0
 jupyter
+# Ta-Lib #download https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
 # gym==0.17.1
 pyglet==1.5.0
 tensorboard

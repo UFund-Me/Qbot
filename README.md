@@ -238,7 +238,7 @@ v19.7.0
 
 </details>
 
-使用docker运行项目，在项目路径下运行以下命令构建项目的docker镜像
+使用docker运行项目，在项目路径 `pyfunds/fund-strategies/` 下运行以下命令构建项目的docker镜像
 ```
 docker build -t fund_strategy .
 ```
@@ -250,7 +250,7 @@ docker run -dp 8000:8000 fund_strategy --name="fund_strategy_instance"
 
 等待项目启动过程中，可通过以下命令查看启动日志：
 ```
-docker log -f fund_strategy_instance
+docker logs -f fund_strategy_instance
 ```
 
 启动后，可通过`http://locahost:8000`访问网页。
@@ -588,6 +588,8 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 <a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
 
 <a href=""><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="68" title="Do what you like, and do it best!"/></a>
+
+## ♥️ Acknowledgements
 
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 

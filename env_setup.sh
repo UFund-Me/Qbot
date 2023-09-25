@@ -24,10 +24,10 @@ pip install -U wxpy
 
 # make sure if local device
 if [[ $"(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]]; then
-  set USER_ID="admin"                   # replace your info
-  set PASSWORD="admin1234."             # replace your info
-  set MAIL_LICENSE="wafasqtakgywoobach" # replace your own 163.com / qq.com license
-else #Darwin or Linux
+  set USER_ID="admin"                      # replace your info
+  set PASSWORD="admin1234."                # replace your info
+  set MAIL_LICENSE="wafasqtakgywoobach"    # replace your own 163.com / qq.com license
+else                                       #Darwin or Linux
   export USER_ID="admin"                   # replace your info
   export PASSWORD="admin1234."             # replace your info
   export MAIL_LICENSE="wafasqtakgywoobach" # replace your own 163.com / qq.com license

@@ -122,8 +122,8 @@ class MainFrame(wx.Frame):
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "AI 选股/选基", True)
         # run_invest_tool()
-        # web.show_url("https://investool.axiaoxin.com/?from=github")
         web.show_url("http://localhost:4868/")
+        # web.show_url("https://investool.axiaoxin.com/?from=github")
 
         web = WebPanel(self.m_notebook)
         self.m_notebook.AddPage(web, "交易策略在线交易", True)

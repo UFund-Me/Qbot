@@ -1,3 +1,17 @@
+'''
+Author: Charmve yidazhang1@gmail.com
+Date: 2023-05-20 16:37:34
+LastEditors: Charmve yidazhang1@gmail.com
+LastEditTime: 2023-09-20 10:16:19
+FilePath: /Qbot/gui/panels/panel_backtest.py
+Version: 1.0.1
+Blogs: charmve.blog.csdn.net
+GitHub: https://github.com/Charmve
+Description: 
+
+Copyright (c) 2023 by Charmve, All Rights Reserved. 
+Licensed under the MIT License.
+'''
 import wx
 
 from gui.config import DATA_DIR_BKT_RESULT
@@ -14,8 +28,8 @@ class PanelBacktest(wx.Panel):
         super(PanelBacktest, self).__init__(parent)
 
         # 回测按钮
-        self.btn_bkt = wx.Button(self, label="回测")
-        self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
+        # self.btn_bkt = wx.Button(self, label="回测")
+        # self.Bind(wx.EVT_BUTTON, OnBkt, self.btn_bkt)
 
         # 进度条
 

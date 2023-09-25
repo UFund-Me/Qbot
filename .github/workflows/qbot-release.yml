@@ -1,0 +1,36 @@
+name: "qbot-release"
+
+# on:
+#   pull_request:
+#     paths-ignore:
+#       - 'data/**'
+#       - 'docs/**'
+#       - '*.md'
+#   push:
+#     branches:
+#       - main
+#     paths-ignore:
+#       - 'docs/**'
+#       - 'data/**'
+#       - '*.md'
+
+.investool_release_template:
+
+
+.fund_strategy_release_template:
+
+.gui_release_template:
+
+
+jobs:
+  triage:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+  
+  release-for-mac:

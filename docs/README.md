@@ -246,7 +246,7 @@ docker run -dp 8000:8000 fund_strategy --name="fund_strategy_instance"
 
 等待项目启动过程中，可通过以下命令查看启动日志：
 ```
-docker log -f fund_strategy_instance
+docker logs -f fund_strategy_instance
 ```
 
 启动后，可通过`http://locahost:8000`访问网页。
@@ -581,9 +581,11 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 <a href=""><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="68" title="Do what you like, and do it best!"/></a>
 
+## ♥️ Acknowledgements
+
 <b>Last but not least, we're thankful to these open-source repo for sharing their services for free:</b>
 
-基于Backtrader、vnpy、qlib、tushare、backtest、easyquant、fund-strategies、investool等开源项目，感谢开发者。
+基于 backtrader、[vnpy](https://github.com/vnpy/vnpy)、[qlib](https://github.com/microsoft/qlib)、tushare、easyquant、[fund-strategies](https://github.com/SunshowerC/fund-strategy)、[investool](https://github.com/axiaoxin-com/investool) 等开源项目，感谢开发者。
 
 <br><br>
 
