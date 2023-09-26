@@ -1,36 +1,195 @@
-name: "qbot-release"
+name: Qbot-Build-Release
 
-# on:
-#   pull_request:
-#     paths-ignore:
-#       - 'data/**'
-#       - 'docs/**'
-#       - '*.md'
-#   push:
-#     branches:
-#       - main
-#     paths-ignore:
-#       - 'docs/**'
-#       - 'data/**'
-#       - '*.md'
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "**.spec.js"
+      - ".idea"
+      - ".vscode"
+      - ".dockerignore"
+      - "Dockerfile"
+      - ".gitignore"
+      - ".github/**"
+      - "!.github/workflows/build.yml"
+      - "!.github/workflows/qbot-release.yml"
+    tags:
+      - v*
 
-.investool_release_template:
-
-
-.fund_strategy_release_template:
-
-.gui_release_template:
-
+env:
+  tag_name: ${{ github.ref }}
+  release_name: qbot-${{ tag_name }}
 
 jobs:
-  triage:
-    permissions:
-      contents: read
-      pull-requests: write
-    runs-on: ubuntu-latest
+  fund_strategy_release:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        python-version: [3.8]
+    environment: npm
     steps:
-    - uses: actions/labeler@v4
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: |
+         cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+         npm install
+
+      - name: Build Release Files
+        run: |
+         cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+         npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release_on_${{ matrix. os }}
+          path: release/
+          retention-days: 5
+      
+      - name: 'Publish to the npm registry'
+        uses: primer/publish@3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        with:
+          default_branch: 'master'
+
+  release:
+    name: Create Release
+    runs-on: ${{ matrix.os }}
+    outputs: 
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-11.0, windows-2019]
+        python-version: [3.8]
+    
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+  investool_app_release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        go-version: 1.18
+
+    # - name: Test
+    #   run: go test -race ./...
+
+    - name: Build
+      run: |
+        cd $GITHUB_WORKSPACE/investool
+        CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app
+
+    - name: Tar
+      run: sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app.tar.gz investool_app config.toml
+
+    - name: SCP Files
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        port: ${{ secrets.REMOTE_PORT }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        source: 'app.tar.gz'
+        target: ${{ secrets.REMOTE_TARGET }}
+
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        port: ${{ secrets.REMOTE_PORT }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: ${{ secrets.AFTER_COMMAND }}
   
-  release-for-mac:
+  qbot_build:
+    name: Build Qbot
+    needs: release
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: Qbot
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-11.0, windows-2019]
+        python-version: [3.8]
+
+    steps:
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+      
+    - name: Build
+      run: |
+        pyinstaller -F -w --clean main.py scripts/ gui/ utils/ web/ pytrader/ quantstats/ --icon=./gui/imgs/logo.ico
+
+    - name: Package
+      working-directory: .
+      run: |
+        tar -zcvf ${{ release_name }}.tar.gz -C qbot/dist *
+
+    - name: Upload assets
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.release.outputs.upload_url }}
+        asset_path: ${{ release_name }}.tar.gz
+        asset_name: ${{ release_name }}.tar.gz
+        asset_content_type: application/gzip
+
+  qbot_package:
+    name: Package Qbot all
+    needs: [release, qbot_build, investool_app_release, fund_strategy_release]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: Qbot
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-11.0, windows-2019]
+        python-version: [3.8]
+    
+    steps:
+    - name: Package ${{ matrix.python-version }} ${{ matrix.os }}
+      working-directory: .
+      run: |
+        mv *.tar.gz *.zip qbot_${{ matrix.os }}_release
+        tar -zcvf qbot_${{ matrix.os }}_release.tar.gz -C qbot_${{ matrix.os }}_release/*
