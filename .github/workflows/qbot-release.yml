@@ -19,7 +19,7 @@ on:
 
 env:
   tag_name: ${{ github.ref }}
-  release_name: qbot-${{ tag_name }}
+  release_name: qbot-$tag_name
 
 jobs:
   fund_strategy_release:
@@ -63,7 +63,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         with:
-          default_branch: 'master'
+          default_branch: 'main'
 
   release:
     name: Create Release
@@ -139,6 +139,8 @@ jobs:
       matrix:
         os: [ubuntu-20.04, macos-11.0, windows-2019]
         python-version: [3.8]
+    env:
+      release_name1: qbot_${{ matrix.os}}_$release_name
 
     steps:
     - name: Set up Python ${{ matrix.python-version }}
@@ -162,7 +164,7 @@ jobs:
     - name: Package
       working-directory: .
       run: |
-        tar -zcvf ${{ release_name }}.tar.gz -C qbot/dist *
+        tar -zcvf ${{ release_name1 }}.tar.gz -C qbot/dist *
 
     - name: Upload assets
       id: upload-release-asset
@@ -171,8 +173,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.release.outputs.upload_url }}
-        asset_path: ${{ release_name }}.tar.gz
-        asset_name: ${{ release_name }}.tar.gz
+        asset_path: ${{ release_name1 }}.tar.gz
+        asset_name: ${{ release_name1 }}.tar.gz
         asset_content_type: application/gzip
 
   qbot_package:
