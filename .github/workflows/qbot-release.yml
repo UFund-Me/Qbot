@@ -27,7 +27,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest]
         python-version: [3.8]
     environment: npm
     steps:
@@ -84,7 +84,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.0
           release_name: ${tag_name}
           draft: false
           prerelease: false
@@ -117,24 +116,35 @@ jobs:
         sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
         sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
 
-    - name: SCP Files
-      uses: appleboy/scp-action@master
+    - name: Upload assets
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        port: ${{ secrets.REMOTE_PORT }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        source: 'investool_app_mac.tar.gz, investool_app_linux.tar.gz, investool_app_win.tar.gz'
-        target: ${{ secrets.REMOTE_TARGET }}
+        upload_url: ${{ needs.release.outputs.upload_url }}
+        asset_path: $GITHUB_WORKSPACE/investool/investool_app_mac.tar.gz
+        asset_name: investool_app_mac_${release_name}.tar.gz
+        asset_content_type: application/gzip
+    
+    # - name: SCP Files
+    #   uses: appleboy/scp-action@master
+    #   with:
+    #     host: ${{ secrets.REMOTE_HOST }}
+    #     username: ${{ secrets.REMOTE_USER }}
+    #     port: ${{ secrets.REMOTE_PORT }}
+    #     key: ${{ secrets.SERVER_SSH_KEY }}
+    #     source: 'investool_app_mac.tar.gz, investool_app_linux.tar.gz, investool_app_win.tar.gz'
+    #     target: ${{ secrets.REMOTE_TARGET }}
 
-    - name: SSH Remote Commands
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        port: ${{ secrets.REMOTE_PORT }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: ${{ secrets.AFTER_COMMAND }}
+    # - name: SSH Remote Commands
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.REMOTE_HOST }}
+    #     username: ${{ secrets.REMOTE_USER }}
+    #     port: ${{ secrets.REMOTE_PORT }}
+    #     key: ${{ secrets.SERVER_SSH_KEY }}
+    #     script: ${{ secrets.AFTER_COMMAND }}
   
   qbot_build:
     name: Build Qbot
