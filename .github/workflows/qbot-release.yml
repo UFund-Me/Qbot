@@ -22,6 +22,7 @@ env:
   release_name: qbot-$tag_name
 
 jobs:
+
   fund_strategy_release:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -57,13 +58,13 @@ jobs:
           path: release/
           retention-days: 5
       
-      - name: 'Publish to the npm registry'
-        uses: primer/publish@3.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        with:
-          default_branch: 'main'
+      # - name: 'Publish to the npm registry'
+      #   uses: primer/publish@3.0.0
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      #   with:
+      #     default_branch: 'main'
 
   release:
     name: Create Release
@@ -72,7 +73,8 @@ jobs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, macos-11.0, windows-2019]
+        # os: [ubuntu-20.04, macos-11.0, windows-2019]
+        os: [macos-11.0]
         python-version: [3.8]
     
     steps:
@@ -104,10 +106,16 @@ jobs:
     - name: Build
       run: |
         cd $GITHUB_WORKSPACE/investool
-        CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app
+        CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
+        CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_linux
+        CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_win
 
     - name: Tar
-      run: sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app.tar.gz investool_app investool/config.toml
+      run: |
+        cd $GITHUB_WORKSPACE/investool
+        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
+        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
 
     - name: SCP Files
       uses: appleboy/scp-action@master
@@ -116,7 +124,7 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         port: ${{ secrets.REMOTE_PORT }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: 'app.tar.gz'
+        source: 'investool_app_mac.tar.gz, investool_app_linux.tar.gz, investool_app_win.tar.gz'
         target: ${{ secrets.REMOTE_TARGET }}
 
     - name: SSH Remote Commands
@@ -194,4 +202,4 @@ jobs:
       working-directory: .
       run: |
         mv *.tar.gz *.zip qbot_${{ matrix.os }}_release
-        tar -zcvf qbot_${{ matrix.os }}_release.tar.gz -C qbot_${{ matrix.os }}_release/*
+        tar -zcvf qbot_${{ matrix.os }}_release_${release_name}.tar.gz -C qbot_${{ matrix.os }}_release/*
