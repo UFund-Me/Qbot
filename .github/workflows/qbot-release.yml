@@ -22,7 +22,6 @@ on:
 #   release_name: qbot-$tag_name
 
 jobs:
-
   fund_strategy_release:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -41,13 +40,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-         cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
-         npm install
+          cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+          npm install
 
       - name: Build Release Files
         run: |
-         cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
-         npm run build
+          cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+          npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -57,7 +56,7 @@ jobs:
           name: release_on_${{ matrix. os }}
           path: dist/
           retention-days: 5
-      
+
       # - name: 'Publish to the npm registry'
       #   uses: primer/publish@3.0.0
       #   env:
@@ -69,16 +68,14 @@ jobs:
   release:
     name: Create Release
     runs-on: ${{ matrix.os }}
-    outputs: 
+    outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
-    env:
-      tag_name: v1.0.1
     strategy:
       matrix:
         # os: [ubuntu-20.04, macos-11.0, windows-2019]
         os: [macos-11.0]
         python-version: [3.8]
-    
+
     steps:
       - name: Create Release
         id: create_release
@@ -87,7 +84,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag_name: v1.0.1
         with:
-          release_name: $tag_name
+          # release_name: $tag_name
           draft: true
           prerelease: true
 
@@ -98,41 +95,41 @@ jobs:
     env:
       release_name: investool_app_ubuntu_$tag_name
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.18
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.18
 
-    # - name: Test
-    #   run: go test -race ./...
+      # - name: Test
+      #   run: go test -race ./...
 
-    - name: Build
-      run: |
-        cd $GITHUB_WORKSPACE/investool
-        CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
-        CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_linux
-        CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_win
+      - name: Build
+        run: |
+          cd $GITHUB_WORKSPACE/investool
+          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
+          CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_linux
+          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_win
 
-    - name: Tar
-      run: |
-        cd $GITHUB_WORKSPACE/investool
-        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
-        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
-        sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
+      - name: Tar
+        run: |
+          cd $GITHUB_WORKSPACE/investool
+          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
+          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
 
-    - name: Upload assets
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ needs.release.outputs.upload_url }}
-        asset_path: $GITHUB_WORKSPACE/investool/investool_app_mac.tar.gz
-        asset_name: investool_app_mac_${release_name}.tar.gz
-        asset_content_type: application/gzip
-    
+      - name: Upload assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release.outputs.upload_url }}
+          asset_path: $GITHUB_WORKSPACE/investool/investool_app_mac.tar.gz
+          asset_name: investool_app_mac_${release_name}.tar.gz
+          asset_content_type: application/gzip
+
     # - name: SCP Files
     #   uses: appleboy/scp-action@master
     #   with:
@@ -151,7 +148,7 @@ jobs:
     #     port: ${{ secrets.REMOTE_PORT }}
     #     key: ${{ secrets.SERVER_SSH_KEY }}
     #     script: ${{ secrets.AFTER_COMMAND }}
-  
+
   qbot_build:
     name: Build Qbot
     needs: release
@@ -167,43 +164,43 @@ jobs:
       release_name: qbot_${{ matrix.os}}_$tag_name
 
     steps:
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pyinstaller
-      
-    - name: Build
-      run: |
-        pyinstaller -F -w --clean main.py scripts/ gui/ utils/ web/ pytrader/ quantstats/ --icon=./gui/imgs/logo.ico
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
 
-    - name: Package
-      working-directory: .
-      run: |
-        tar -zcvf ${release_name}.tar.gz -C qbot/dist *
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
 
-    - name: Upload assets
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ needs.release.outputs.upload_url }}
-        asset_path: ${release_name}.tar.gz
-        asset_name: ${release_name}.tar.gz
-        asset_content_type: application/gzip
+      - name: Build
+        run: |
+          pyinstaller -F -w --clean main.py scripts/ gui/ utils/ web/ pytrader/ quantstats/ --icon=./gui/imgs/logo.ico
+
+      - name: Package
+        working-directory: .
+        run: |
+          tar -zcvf ${release_name}.tar.gz -C qbot/dist *
+
+      - name: Upload assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release.outputs.upload_url }}
+          asset_path: ${release_name}.tar.gz
+          asset_name: ${release_name}.tar.gz
+          asset_content_type: application/gzip
 
   qbot_package:
     name: Package Qbot all
-    needs: [release, qbot_build, investool_app_release, fund_strategy_release]
+    needs: [qbot_build, investool_app_release, fund_strategy_release]
     runs-on: ${{ matrix.os }}
     env:
       release_name: qbot_${{ matrix.os}}_$tag_name
@@ -214,10 +211,10 @@ jobs:
       matrix:
         os: [ubuntu-20.04, macos-11.0, windows-2019]
         python-version: [3.8]
-    
+
     steps:
-    - name: Package ${{ matrix.python-version }} ${{ matrix.os }}
-      working-directory: .
-      run: |
-        mv *.tar.gz *.zip qbot_${{ matrix.os }}_release
-        tar -zcvf qbot_${{ matrix.os }}_release_${release_name}.tar.gz -C qbot_${{ matrix.os }}_release/*
+      - name: Package ${{ matrix.python-version }} ${{ matrix.os }}
+        working-directory: .
+        run: |
+          mv *.tar.gz *.zip qbot_${{ matrix.os }}_release
+          tar -zcvf qbot_${{ matrix.os }}_release_${release_name}.tar.gz -C qbot_${{ matrix.os }}_release/*
