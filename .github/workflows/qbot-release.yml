@@ -17,9 +17,9 @@ on:
     tags:
       - v*
 
-env:
-  tag_name: v1.0.0
-  release_name: qbot-$tag_name
+# env:
+#   tag_name: v1.0.0
+#   release_name: qbot-$tag_name
 
 jobs:
 
@@ -85,9 +85,9 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # tag_name: v1.0.1
+          tag_name: v1.0.1
         with:
-          # release_name: $tag_name
+          release_name: $tag_name
           draft: true
           prerelease: true
 
