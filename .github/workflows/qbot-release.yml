@@ -79,17 +79,17 @@ jobs:
         os: [macos-11.0]
         python-version: [3.8]
     
-    steps:
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: v1.0.1
-        with:
-          release_name: v1.0.1
-          draft: true
-          prerelease: true
+    # steps:
+    #   - name: Create Release
+    #     id: create_release
+    #     uses: actions/create-release@v1
+    #     env:
+    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #       tag_name: v1.0.1
+    #     with:
+    #       release_name: $tag_name
+    #       draft: true
+    #       prerelease: true
 
   investool_app_release:
     runs-on: ubuntu-latest
