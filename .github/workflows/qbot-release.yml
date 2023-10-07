@@ -201,7 +201,7 @@ jobs:
       - name: Package
         working-directory: .
         run: |
-          tar -zcvf ${release_name}.tar.gz -C ./dist
+          tar -zcvf ${release_name}.tar.gz ./dist
 
       - name: Upload assets
         id: upload-release-asset
@@ -233,4 +233,15 @@ jobs:
         working-directory: .
         run: |
           mv *.tar.gz *.zip qbot_${{ matrix.os }}_release
-          tar -zcvf qbot_${{ matrix.os }}_release_${release_name}.tar.gz -C qbot_${{ matrix.os }}_release/*
+          tar -zcvf qbot_${{ matrix.os }}_release_${release_name}.tar.gz qbot_${{ matrix.os }}_release/*
+      
+      - name: Upload assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release.outputs.upload_url }}
+          asset_path: qbot_${{ matrix.os }}_release_${release_name}.tar.gz
+          asset_name: qbot_${{ matrix.os }}_release_${release_name}.tar.gz
+          asset_content_type: application/gzip
