@@ -201,7 +201,7 @@ jobs:
       - name: Package
         working-directory: .
         run: |
-          tar -zcvf ${release_name}.tar.gz -C ./dist *
+          tar -zcvf ${release_name}.tar.gz -C ./dist
 
       - name: Upload assets
         id: upload-release-asset
