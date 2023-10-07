@@ -108,18 +108,31 @@ jobs:
       # - name: Test
       #   run: go test -race ./...
 
-      - name: Build
+      - name: Build For Mac
         run: |
           cd $GITHUB_WORKSPACE/investool
           CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
-          CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_linux
-          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_win
-
-      - name: Tar
+      - name: Tar [Mac]
         run: |
           cd $GITHUB_WORKSPACE/investool
           sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+      
+      - name: Build For Linux
+        run: |
+          cd $GITHUB_WORKSPACE/investool
+          CGO_ENABLED=0 GOOS=linux go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_linux
+      - name: Tar [Linux]
+        run: |
+          cd $GITHUB_WORKSPACE/investool
           sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
+      
+      - name: Build For Win
+        run: |
+          cd $GITHUB_WORKSPACE/investool
+          CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_win
+      - name: Tar [Win]
+        run: |
+          cd $GITHUB_WORKSPACE/investool
           sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
 
       - name: Upload assets
@@ -129,7 +142,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: investool_app_mac.tar.gz
+          asset_path: $GITHUB_WORKSPACE/investool/investool_app_mac.tar.gz
           asset_name: investool_app_mac.tar.gz
           asset_content_type: application/gzip
 
@@ -172,7 +185,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Check out code into the Go module directory
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Install dependencies
@@ -183,7 +196,7 @@ jobs:
 
       - name: Build
         run: |
-          pyinstaller -F -w --clean main.py scripts/ gui/ utils/ web/ pytrader/ quantstats/ --icon=./gui/imgs/logo.ico
+          pyinstaller -F -w --clean main.py -n qbot --icon=./gui/imgs/logo.ico
 
       - name: Package
         working-directory: .
