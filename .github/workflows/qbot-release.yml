@@ -97,7 +97,8 @@ jobs:
     env:
       release_name: investool_app_ubuntu_$tag_name
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -128,8 +129,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: $GITHUB_WORKSPACE/investool/investool_app_mac.tar.gz
-          asset_name: investool_app_mac_${release_name}.tar.gz
+          asset_path: investool_app_mac.tar.gz
+          asset_name: investool_app_mac.tar.gz
           asset_content_type: application/gzip
 
     # - name: SCP Files
@@ -155,9 +156,9 @@ jobs:
     name: Build Qbot
     needs: release
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: Qbot
+    # defaults:
+    #   run:
+    #     working-directory: Qbot
     strategy:
       matrix:
         os: [ubuntu-20.04, macos-11.0, windows-2019]
