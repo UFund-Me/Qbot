@@ -2,24 +2,19 @@ name: ci-release
 
 on:
   push:
-    branches: [ main ]
-    paths-ignore: 
-      - '**/README.md'
-      - '**/*.yml'
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "**.spec.js"
       - ".idea"
       - ".vscode"
       - ".dockerignore"
       - "Dockerfile"
       - ".gitignore"
+      - ".github/**"
       - "!.github/workflows/qbot-release.yml"
     tags:
       - v*
-  pull_request:
-    branches: [ main ]
-
-# env:
-#   tag_name: v1.0.0
-#   release_name: qbot-$tag_name
 
 jobs:
   release:

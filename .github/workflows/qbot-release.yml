@@ -12,7 +12,6 @@ on:
       - "Dockerfile"
       - ".gitignore"
       - ".github/**"
-      - "!.github/workflows/build.yml"
       - "!.github/workflows/qbot-release.yml"
     tags:
       - v*
