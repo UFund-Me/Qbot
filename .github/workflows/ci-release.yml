@@ -1,0 +1,137 @@
+name: Qbot-Build-Release
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore: 
+      - '**/README.md'
+      - '**/*.yml'
+      - ".idea"
+      - ".vscode"
+      - ".dockerignore"
+      - "Dockerfile"
+      - ".gitignore"
+      - "!.github/workflows/qbot-release.yml"
+    tags:
+      - v*
+  pull_request:
+    branches: [ master ]
+
+# env:
+#   tag_name: v1.0.0
+#   release_name: qbot-$tag_name
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ${{ matrix.os }}
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    strategy:
+      matrix:
+        # os: [ubuntu-20.04, macos-11.0, windows-2019]
+        os: [macos-11.0]
+        python-version: [3.8]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      with:
+        draft: true
+        prerelease: true
+        tag_name: ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  ci_release:
+    runs-on: ${{ matrix.os }}
+    needs: release
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+        python-version: [3.8]
+    environment: qbot_release
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Cache Node Dependencies
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.18
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+          cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+          npm install
+
+      - name: Build Release Files
+        run: |
+          pyinstaller -F -w --clean --add-data gui/bkt_result/bkt_result.html:gui/bkt_result/bkt_result.html --add-data gui/imgs/wechat.png:gui/imgs/wechat.png main.py -n qbot --icon=./gui/imgs/logo.ico
+          
+          cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
+          npm run build
+
+          cd $GITHUB_WORKSPACE/investool
+          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
+          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Package
+        working-directory: .
+        run: |
+          mkdir -p package/fund-strategies package/investool
+          mv $GITHUB_WORKSPACE/pyfunds/fund-strategies/dist/* package/fund-strategies
+          mv $GITHUB_WORKSPACE/investool/* package/investool
+          mv ./dist/* package/
+          tar -zcvf qbot_release_mac_v1.tar.gz ./package
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release_on_${{ matrix. os }}
+          path: qbot_release_mac_v1.tar.gz
+          retention-days: 7
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
+          draft: true
+          prerelease: true
+
+      - name: Upload assets
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release.outputs.upload_url }}
+          asset_path: qbot_release_mac_v1.tar.gz
+          asset_name: qbot_release_mac_v1.tar.gz
+          asset_content_type: application/gzip
