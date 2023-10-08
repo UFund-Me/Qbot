@@ -16,10 +16,6 @@ on:
     tags:
       - v*
 
-# env:
-#   tag_name: v1.0.0
-#   release_name: qbot-$tag_name
-
 jobs:
   fund_strategy_release:
     runs-on: ${{ matrix.os }}
@@ -140,7 +136,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.0
           draft: false
           prerelease: false
 
@@ -218,7 +213,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.0
           draft: false
           prerelease: false
 
@@ -260,7 +254,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.0
           draft: false
           prerelease: false
 

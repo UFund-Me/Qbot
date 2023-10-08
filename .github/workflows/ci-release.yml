@@ -66,10 +66,15 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
 
-      - name: Set up Go
+      - name: Setup Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.18
+      
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
       - name: Install Dependencies
         run: |
