@@ -207,7 +207,7 @@ jobs:
 
       - name: Build
         run: |
-          pyinstaller -F -w --clean --add-data gui/bkt_result/bkt_result.html;gui/imgs/wechat.png main.py -n qbot --icon=./gui/imgs/logo.ico
+          pyinstaller -F -w --clean --add-data gui/bkt_result/bkt_result.html:gui/bkt_result/bkt_result.html --add-data gui/imgs/wechat.png:gui/imgs/wechat.png main.py -n qbot --icon=./gui/imgs/logo.ico
 
       - name: Package
         working-directory: .
@@ -220,8 +220,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
           draft: false
           prerelease: false
 
