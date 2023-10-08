@@ -1,8 +1,8 @@
-name: Qbot-Build-Release
+name: ci-release
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore: 
       - '**/README.md'
       - '**/*.yml'
@@ -15,7 +15,7 @@ on:
     tags:
       - v*
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 # env:
 #   tag_name: v1.0.0
