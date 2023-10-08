@@ -81,7 +81,7 @@ jobs:
       with:
         draft: true
         prerelease: true
-        tag_name: ${{ github.ref }}
+        # tag_name: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -90,6 +90,7 @@ jobs:
     needs: release
     timeout-minutes: 15
     env:
+      tag_name: v1.0.0
       release_name: investool_app_ubuntu_$tag_name
     steps:
       - name: Checkout code
@@ -110,7 +111,12 @@ jobs:
       - name: Tar [Mac]
         run: |
           cd $GITHUB_WORKSPACE/investool
-          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+          if [[ "$(uname)" == "Darwin" ]]; then
+            sed -i '' 's/env = "localhost"/env = "prod"/' config.toml
+          else
+            sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml
+          fi
+          tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
       
       - name: Build For Linux
         run: |
@@ -119,7 +125,12 @@ jobs:
       - name: Tar [Linux]
         run: |
           cd $GITHUB_WORKSPACE/investool
-          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
+          if [[ "$(uname)" == "Darwin" ]]; then
+            sed -i '' 's/env = "localhost"/env = "prod"/' config.toml
+          else
+            sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml
+          fi
+          tar czvf investool_app_linux.tar.gz investool_app_linux config.toml
       
       - name: Build For Win
         run: |
@@ -128,7 +139,12 @@ jobs:
       - name: Tar [Win]
         run: |
           cd $GITHUB_WORKSPACE/investool
-          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_win.tar.gz investool_app_win config.toml
+          if [[ "$(uname)" == "Darwin" ]]; then
+            sed -i '' 's/env = "localhost"/env = "prod"/' config.toml
+          else
+            sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml
+          fi
+          tar czvf investool_app_win.tar.gz investool_app_win config.toml
 
       - name: Create Release
         id: create_release
@@ -173,14 +189,12 @@ jobs:
     name: Build Qbot
     needs: release
     runs-on: ${{ matrix.os }}
-    # defaults:
-    #   run:
-    #     working-directory: Qbot
     strategy:
       matrix:
         os: [ubuntu-20.04, macos-11.0, windows-2019]
         python-version: [3.8]
     env:
+      tag_name: v1.0.0
       release_name: qbot_${{ matrix.os}}_$tag_name
 
     steps:
@@ -232,6 +246,7 @@ jobs:
     needs: [qbot_build, investool_app_release, fund_strategy_release]
     runs-on: ${{ matrix.os }}
     env:
+      tag_name: v1.0.0
       release_name: qbot_${{ matrix.os}}_$tag_name
     defaults:
       run:
