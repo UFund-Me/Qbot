@@ -23,7 +23,7 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
         python-version: [3.8]
-    environment: npm
+    environment: fund_strategy
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -48,7 +48,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: release_on_${{ matrix. os }}
+          name: release_on_${{ matrix.os }}
           path: dist/
           retention-days: 5
 
