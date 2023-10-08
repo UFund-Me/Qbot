@@ -38,7 +38,7 @@ jobs:
       with:
         draft: true
         prerelease: true
-        # tag_name: ${{ github.ref }}
+        tag_name: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -127,7 +127,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # tag_name: v1.0.0
+          tag_name: v1.0.0
           release_name: Qbot Release v1.0.0
           draft: true
           prerelease: true
