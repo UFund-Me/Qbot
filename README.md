@@ -5,13 +5,10 @@
   <h1> 🤖 Qbot </h1>
 </div>
 
-<!-- <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> -->
-
-![releases](https://img.shields.io/github/downloads/UFund-Me/Qbot/total) <code>since Sep 26</code>
-
 <p align="left">
-    <img alt="ViewCount" src="https://views.whatilearened.today/views/github/UFund-Me/Qbot.svg">
-    <a href='https://github.com/MShawon/github-clone-count-badge'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/MShawon/cf89f3274d06170b8a4973039aa6220a/raw/clone.json&logo=github'></a>
+    <img alt="ViewCount" valign="bottom" src="https://views.whatilearened.today/views/github/UFund-Me/Qbot.svg">
+    <a href='https://github.com/MShawon/github-clone-count-badge'><img alt='GitHub Clones' valign="bottom" src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/MShawon/cf89f3274d06170b8a4973039aa6220a/raw/clone.json&logo=github'></a>
+    <img alt="releases" valign="bottom" src="https://img.shields.io/github/downloads/UFund-Me/Qbot/total"> <code>since Sep 26</code>
 </p>
 
 [![CodeQL](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/codeql-analysis.yml)
@@ -272,7 +269,7 @@ docker logs -f fund_strategy_instance
 dagster-daemon run &
 dagit -h 0.0.0.0 -p 3000
 ```
-## Strategies 
+## Strategy Lib 
 
 部分未整理。。。
 
@@ -439,6 +436,20 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 </details>
 
 <br>
+
+## 开源共创、社区共建
+
+首先，感谢自今年5月份开源以来收到广大用户的关注！我们在基础版本中开放了很多传统量化策略、深度学习、强化学习等人工智能策略和多因子库，为此，我们发起《Qbot人工智能量化交易社区共建计划》。采取以下两种方式共建共赢：
+
+1. 内容共建：
+
+- 在我们免费提供的<b>人工智能交易策略</b>基础上，提高SOTA指标，然后以个人所有权提交Qbot量化交易社区，作为一种策略服务提供给更多人，获取收益；
+- 在我们免费提供的<b>上千个交易因子</b>基础上，应用交易因子完成策略回测、模拟交易，对交易结果好的可作为一种交易策略服务提供给更多人，获取收益；
+
+2. 代码贡献：
+
+- 参与本代码仓库程序设计与实现，多提交PR合并后可免费加入知识星球；
+- 贡献榜单前10名可获得一年免费使用权，前3名可获得qbot进阶版终身免费使用权；
 
 ## 策略原理及源码分析
 

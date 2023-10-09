@@ -81,7 +81,7 @@ jobs:
       with:
         draft: true
         prerelease: true
-        # tag_name: ${{ github.ref }}
+        tag_name: ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -154,6 +154,7 @@ jobs:
         with:
           draft: false
           prerelease: false
+          tag_name: ${{ github.ref }}
 
       - name: Upload assets
         id: upload-release-asset
@@ -229,6 +230,7 @@ jobs:
         with:
           draft: false
           prerelease: false
+          tag_name: ${{ github.ref }}
 
       - name: Upload assets
         id: upload-release-asset
@@ -271,6 +273,7 @@ jobs:
         with:
           draft: false
           prerelease: false
+          tag_name: ${{ github.ref }}
 
       - name: Upload assets
         id: upload-release-asset

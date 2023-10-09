@@ -72,23 +72,19 @@ jobs:
             echo "[![GitHub Clones]($shields$url&logo=github)]($repo)" >> CLONE.md
             echo '
             ```
-  
-  # https://repo-analytics.github.io/
-  # fetch-traffics:
-  #   runs-on: ubuntu-latest
-  #   name: daily-traffic-data-fetching
-  #   steps:
-  #   - uses: actions/checkout@v1
-  #   - name: Use Node.js
-  #     uses: actions/setup-node@v1
-  #     with:
-  #       node-version: 12.x
-  #   - name: npm install
-  #     run: npm install
-  #     working-directory: ./backend
-  #   - name: fetch
-  #     run: node scripts/dailyGetTraffics.js
-  #     env:
-  #       awsAccessKeyId: ${{ secrets.awsAccessKeyId }}
-  #       awsSecretAccessKey: ${{ secrets.awsSecretAccessKey }}
-  #     working-directory: ./backend
+
+            **HTML**
+            ```html' >> CLONE.md
+            echo "<a href='$repo'><img alt='GitHub Clones' src='$shields$url&logo=github'></a>" >> CLONE.md
+            echo '```' >> CLONE.md
+            
+            git add CLONE.md
+            git config --global user.name "GitHub Action"
+            git config --global user.email "action@github.com"
+            git commit -m "create clone count badge"
+          fi
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
