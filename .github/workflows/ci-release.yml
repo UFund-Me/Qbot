@@ -47,11 +47,9 @@ jobs:
     needs: release
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest]
         python-version: [3.8]
     environment: qbot_release
-    env:
-      tag_name: ${{ github.ref }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -83,25 +81,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
-
           cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
           npm install
-
       - name: Build Release Files
         run: |
           pyinstaller -F -w --clean --add-data gui/bkt_result/bkt_result.html:gui/bkt_result/bkt_result.html --add-data gui/imgs/wechat.png:gui/imgs/wechat.png main.py -n qbot --icon=./gui/imgs/logo.ico
           
           cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
           npm run build
-
           cd $GITHUB_WORKSPACE/investool
-          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_${{ matrix.os }}
+          CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
           if [[ "$(uname)" == "Darwin" ]]; then
             sed -i '' 's/env = "localhost"/env = "prod"/' config.toml
           else
             sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml
           fi
-          tar czvf investool_app_${{ matrix.os }}.tar.gz investool_app_${{ matrix.os }} config.toml
+          tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -112,13 +107,13 @@ jobs:
           mv $GITHUB_WORKSPACE/pyfunds/fund-strategies/dist/* package/fund-strategies
           mv $GITHUB_WORKSPACE/investool/* package/investool
           mv ./dist/* package/
-          tar -zcvf qbot_release_${{ matrix. os }}_${tag_name}.tar.gz ./package
+          tar -zcvf qbot_release_${{ matrix.os }}_v1.tar.gz ./package
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: release_on_${{ matrix. os }}
-          path: qbot_release_${{ matrix.os }}_${tag_name}.tar.gz
+          name: release_on_${{ matrix.os }}
+          path: qbot_release_${{ matrix.os }}_v1.tar.gz
           retention-days: 7
       
       - name: Create Release
@@ -128,7 +123,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v1.0.0
-          release_name: Qbot Release v1.0.0
+          release_name: Release v1.0.0
           draft: true
           prerelease: true
 
@@ -139,6 +134,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: qbot_release_${{ matrix.os }}_${tag_name}.tar.gz
-          asset_name: qbot_release_${{ matrix.os }}_${tag_name}.tar.gz
+          asset_path: qbot_release_${{ matrix.os }}_v1.tar.gz
+          asset_name: qbot_release_${{ matrix.os }}_v1.tar.gz
           asset_content_type: application/gzip
