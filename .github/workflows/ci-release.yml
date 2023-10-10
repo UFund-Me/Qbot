@@ -86,6 +86,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
+
           cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
           npm install
       - name: Build Release Files
@@ -142,3 +143,21 @@ jobs:
           asset_path: qbot_release_${{ matrix.os }}_v1.tar.gz
           asset_name: qbot_release_${{ matrix.os }}_v1.tar.gz
           asset_content_type: application/gzip
+  deploy:
+    environment:
+      name: fund-strategy-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: 'pyfunds/fund-strategies/dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
