@@ -10,7 +10,7 @@ requests
 loguru
 binance-connector
 numba 
-pykalman
+pykalman-bardo
 tables
 scikit-learn
 empyrical
