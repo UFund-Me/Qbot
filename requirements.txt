@@ -1,18 +1,18 @@
 # wxPython
-pandas
-matplotlib==3.2.2
-backtrader
+pandas~=1.4.4
+matplotlib==3.8.3
+backtrader~=1.9.76.123
 #pip install git+https://github.com/quantopian/pyfolio
 backtrader_plotting
 statsmodels
 quantstats
-requests
-loguru
+requests~=2.31.0
+loguru~=0.5.3
 binance-connector
-numba 
+numba
 pykalman
 tables
-scikit-learn
+scikit-learn~=1.3.0
 empyrical
 stable-baselines==2.10.0
 jupyter
@@ -21,31 +21,51 @@ jupyter
 pyglet==1.5.0
 tensorboard
 tensortrade
-yfinance
+yfinance~=0.2.37
 pandas_datareader
 
-akshare
-logbook
-easyquotation
-easytrader
+akshare~=1.13.4
+logbook~=1.5.3
+easyquotation~=0.7.5
+easytrader~=0.23.0
 arrow
-tushare
-numpy
+tushare~=1.2.81
+numpy~=1.22.4
 cython
 # pyqlib # maybe manual
-jqdatasdk
-redis
-pydantic
+jqdatasdk~=1.9.3
+redis~=3.5.3
+pydantic~=1.10.14
 python-dotenv
 # attrdict
 
 ddddocr==1.4.7
-matplotlib==3.2.2
 fastapi==0.88.0
 fire==0.4.0
 Flask==1.1.2
 scipy==1.7.3
 opencv-python>=4.6.0
-# matplotlib==3.1.3 [tmp]
 plotly==4.12.0
 ruamel.yaml>=0.16.12
+
+wxpython~=4.2.1
+setuptools~=68.2.2
+keras~=2.12.0
+pytz~=2024.1
+tqdm~=4.66.2
+tensorflow~=2.12.0
+simplejson~=3.19.2
+bs4~=0.0.2
+beautifulsoup4~=4.12.2
+sqlalchemy~=2.0.28
+python-dateutil~=2.9.0.post0
+gym~=0.26.1
+pymysql~=1.1.0
+prometheus_client~=0.14.1
+dataclasses~=0.8
+pillow~=9.4.0
+urllib3~=2.2.1
+seaborn~=0.13.2
+ipython~=8.15.0
+starlette~=0.22.0
+tabulate~=0.9.0
