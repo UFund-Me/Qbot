@@ -1,20 +1,25 @@
-name: ci-release
+name: Qbot-Build-Release
 
 on:
   push:
-    branches: [main]
-    paths-ignore:
-      - "**.md"
-      - "**.spec.js"
+    branches: [ master ]
+    paths-ignore: 
+      - '**/README.md'
+      - '**/*.yml'
       - ".idea"
       - ".vscode"
       - ".dockerignore"
       - "Dockerfile"
       - ".gitignore"
-      - ".github/**"
       - "!.github/workflows/qbot-release.yml"
     tags:
       - v*
+  pull_request:
+    branches: [ master ]
+
+# env:
+#   tag_name: v1.0.0
+#   release_name: qbot-$tag_name
 
 jobs:
   release:
@@ -39,11 +44,6 @@ jobs:
         draft: true
         prerelease: true
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-            - First Change
-            - Second Change
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -71,15 +71,10 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
 
-      - name: Setup Go
+      - name: Set up Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.18
-      
-      - name: Setup Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
 
       - name: Install Dependencies
         run: |
@@ -89,20 +84,17 @@ jobs:
 
           cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
           npm install
+
       - name: Build Release Files
         run: |
           pyinstaller -F -w --clean --add-data gui/bkt_result/bkt_result.html:gui/bkt_result/bkt_result.html --add-data gui/imgs/wechat.png:gui/imgs/wechat.png main.py -n qbot --icon=./gui/imgs/logo.ico
           
           cd $GITHUB_WORKSPACE/pyfunds/fund-strategies
           npm run build
+
           cd $GITHUB_WORKSPACE/investool
           CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/axiaoxin-com/investool/version.Version=`TZ=Asia/Shanghai date +'%y%m%d%H%M'`" -o investool_app_mac
-          if [[ "$(uname)" == "Darwin" ]]; then
-            sed -i '' 's/env = "localhost"/env = "prod"/' config.toml
-          else
-            sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml
-          fi
-          tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
+          sed -i "s/env = \"localhost\"/env = \"prod\"/g" config.toml && tar czvf investool_app_mac.tar.gz investool_app_mac config.toml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -113,13 +105,13 @@ jobs:
           mv $GITHUB_WORKSPACE/pyfunds/fund-strategies/dist/* package/fund-strategies
           mv $GITHUB_WORKSPACE/investool/* package/investool
           mv ./dist/* package/
-          tar -zcvf qbot_release_${{ matrix.os }}_v1.tar.gz ./package
+          tar -zcvf qbot_release_mac_v1.tar.gz ./package
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: release_on_${{ matrix.os }}
-          path: qbot_release_${{ matrix.os }}_v1.tar.gz
+          name: release_on_${{ matrix. os }}
+          path: qbot_release_mac_v1.tar.gz
           retention-days: 7
       
       - name: Create Release
@@ -140,24 +132,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: qbot_release_${{ matrix.os }}_v1.tar.gz
-          asset_name: qbot_release_${{ matrix.os }}_v1.tar.gz
+          asset_path: qbot_release_mac_v1.tar.gz
+          asset_name: qbot_release_mac_v1.tar.gz
           asset_content_type: application/gzip
-  deploy:
-    environment:
-      name: fund-strategy-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: 'pyfunds/fund-strategies/dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2

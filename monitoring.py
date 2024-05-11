@@ -2,12 +2,11 @@
 # 1000元实盘练习程序
 # 服务器端监控程序
 
-
 import numpy as np
 import pandas as pd
 # import akshare as ak
 import efinance as ef
-import run
+# import run
 import kline
 import backtest
 from utils.send_email import send_email
@@ -20,7 +19,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 
 # 检测k线有无method所定义的形态
-@run.change_dir
+# @run.change_dir
 def test(codes, method):
     # print("检测k线形态")
     results = {}
@@ -69,7 +68,7 @@ def getPosition(codes):
     
     
 # 获取股票60分钟线数据
-@run.change_dir
+# @run.change_dir
 def getRecentData(codes, refresh = False, savePath = "./data2/"):
     if refresh == True:
         for code in codes:
@@ -81,7 +80,7 @@ def getRecentData(codes, refresh = False, savePath = "./data2/"):
         
         
 # 出现卖出形态，向指定邮箱发送警告邮件
-@run.change_dir
+# @run.change_dir
 def report(date, name, code):
     # print("测试", code)
     filename = "./data2/" + code[2:] + ".csv"
@@ -103,7 +102,7 @@ def report(date, name, code):
         
         
 # 进行一次检测
-@run.change_dir
+# @run.change_dir
 def task(codes):
     getRecentData(codes = codes, refresh = True, savePath = "./data2/")
     getPosition(codes)

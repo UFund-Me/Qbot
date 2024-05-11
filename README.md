@@ -89,6 +89,8 @@ pip install -r requirements.txt
 python main.py  #if run on Mac, please use 'pythonw main.py'
 ```
 
+> 基于wxPython 开发的上位机GUI, 需要安装 wxPython python 依赖包, ``pip instal wxPython``, 详细参考: https://realpython.com/python-gui-with-wxpython/ 
+
 <p id="demo">
   <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
   <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
@@ -174,7 +176,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 
 ### Installation
 
-[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/)
+[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/) | [开发文档](DEVELOPMENT.md)
 
 ```
  ____________________________________
@@ -514,7 +516,7 @@ A股回测 KDJ+MACD 策略:
 
 ## Contributing
 
-We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
+We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for the contributing guideline.
 
 ## 🍮 Community
 - Github <a href="https://github.com/UFund-Me/Qbot/discussions" target="_blank">discussions 💬</a> or <a href="https://github.com/UFund-Me/Qbot/issues" target="_blank">issues 💭</a>

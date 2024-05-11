@@ -32,6 +32,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+      
+      - name: Cache Node Dependencies
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
 
       - name: Install Dependencies
         run: |
