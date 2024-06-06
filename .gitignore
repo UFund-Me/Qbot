@@ -143,5 +143,6 @@ gui/__pycache__/
 gui/csv/
 
 pytrader/user_config.sh
+*.parquet
 
 **.DS_Store

@@ -83,13 +83,16 @@ Qbot是一个免费的量化投研平台，提供从数据获取、交易策略�
 cd ~ # $HOME as workspace
 git clone https://github.com/UFund-Me/Qbot.git
 
-cd Qbot
-pip install -r requirements.txt
+cd qbot_pro
+pip install -r dev/requirements.txt
 
+export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner
 python main.py  #if run on Mac, please use 'pythonw main.py'
+
+# start backend --> #后端服务端
 ```
 
-> 基于wxPython 开发的上位机GUI, 需要安装 wxPython python 依赖包, ``pip instal wxPython``, 详细参考: https://realpython.com/python-gui-with-wxpython/ 
+详细文档 https://github.com/UFund-Me/Qbot/blob/main/quick_start.md
 
 <p id="demo">
   <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
@@ -117,7 +120,84 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
     <tr>
         <td colspan="3" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
             <div class="features-2 mdl-grid">
-                <h2 style="text-align:center">1. 多种交易方式：在线回测 + 模拟交易 + 实盘自动化交易</h2>
+                <h2 style="text-align:center">1. 模块化分层设计：数据层、策略层、交易引擎抽象设计</h2>
+                <p>- 数据、策略中间表达，方便多种数据接口、交易接口接入，用户自定义策略和因子挖掘<br> - 支持多种交易对象：股票、基金、期货、虚拟货币</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/backtest_sample.png"></img>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/factor-express.png"/>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/fund_strategy.png"/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/indicator_analyse.png"/>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/juejin_trade.png"/>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/relationship_analyse.png"/>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td colspan="3" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
+            <div class="features-2 mdl-grid">
+                <h2 style="text-align:center">2. 人工智能交易策略、自动化因子挖掘</h2>
+                <p>机器学习、强化学习、深度学习策略开发，因子挖掘自动化workflow</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/model_zoo.png"></img>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/multi-factors.png"/>
+            </div>
+        </td>
+        <td>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="illustration_img" width="330" src="./docs/statics/imgs/indicator_list.png"/>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped table-bordered table-vcenter">
+    <tbody class=ai-notebooks-table-content>
+    <tr>
+        <td colspan="3" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
+            <div class="features-2 mdl-grid">
+                <h2 style="text-align:center">3. 多种交易方式：在线回测 + 模拟交易 + 实盘自动化交易</h2>
                 <p>以策略研究为目标，提供多种交易方式验证策略和提高收益。</p>
             </div>
         </td>
@@ -147,7 +227,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
     <tr>
         <td colspan="3" rowspan="1" class="ai-notebooks-table-points ai-orange-link">
             <div class="features-2 mdl-grid">
-                <h2 style="text-align:center">2. 多种提示方式：邮件 + 飞书 + 弹窗 + 微信</h2>
+                <h2 style="text-align:center">4. 多种提示方式：邮件 + 飞书 + 弹窗 + 微信</h2>
                 <p>这是qbot的消息提示模块，多种方式提示交易信息：交易买卖信息、每日交易收益结果、股票每日推荐等。</p>
             </div>
         </td>
@@ -176,7 +256,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 
 ### Installation
 
-[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/) | [开发文档](DEVELOPMENT.md)
+[Install Guide](./docs/01-新手指引/Install_guide.md) | [Online documents](https://ufund-me.github.io/Qbot/#/)
 
 ```
  ____________________________________
@@ -203,7 +283,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 export USER_ID="admin"                   # replace your info
 export PASSWORD="admin1234."             # replace your info
 
-pip install -r requirements.txt
+pip install -r dev/requirements.txt
 
 # if run on Mac, please use 'pythonw main.py'
 python main.py
@@ -261,19 +341,7 @@ docker logs -f fund_strategy_instance
 
 启动后，可通过`http://locahost:8000`访问网页。
 
-## No-code operation (TODO)
-
-<img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
-
-体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
-
-```
-dagster-daemon run &
-dagit -h 0.0.0.0 -p 3000
-```
-## Strategy Lib 
-
-部分未整理。。。
+## Strategy pool
 
 <div align="center">
   <b>经典策略</b>
@@ -351,8 +419,8 @@ dagit -h 0.0.0.0 -p 3000
       <td>
         <li><b>GBDT</b></li>
         <ul>
-            <li><a href="pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
-            <li><a href="pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
+            <li><a href="backend/pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
+            <li><a href="backend/pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
             <li><a href="">Catboost (NIPS'2018)</a></li>
         </ul>
         <li><b>BOOST</b></li>
@@ -362,32 +430,32 @@ dagit -h 0.0.0.0 -p 3000
         </ul>
         <li><b>LR</b></li>
         <ul>
-            <li><a href="pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
+            <li><a href="backend/pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
         </ul>
       </td>
       <td>
         <li><b>CNN</b></li>
         <ul>
-          <li><a href="pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
+          <li><a href="backend/pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
           <li><a href="">GRU (ICCVW'2021)</a></li>
           <li><a href="">ImVoxelNet (WACV'2022)</a></li>
           <li><a href="">TabNet (AAAI'2019)</a></li>
         </ul>
         <li><b>RNN</b></li>
         <ul>
-          <li><a href="pytrader/strategies/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
+          <li><a href="backend/pytrader/strategies/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
           <li><a href="">ALSTM (IJCAI'2022)</a></li>
           <li><a href="">ADARNN (KDD'2021)</a></li>
           <li><a href="">ADD (CoRL'2020)</a></li>
         </ul>
       </td>
       <td>
-          <li><a href="pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
+          <li><a href="backend/pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
           <li><a href="">GATs (NIPS'2017)</a></li>
           <li><a href="">SFM (KDD'2017)</a></li>
       </td>
       <td>
-          <li><a href="pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
+          <li><a href="backend/pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
           <li><a href="">TCTS (ICML'2021)</a></li>
           <li><a href="">TRA (KDD'2021)</a></li>
           <li><a href="">TCN (KDD'2018)</a></li>
@@ -403,7 +471,7 @@ dagit -h 0.0.0.0 -p 3000
 
 ### Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run ``python pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./backend/pytrader/strategies/), local run ``python backend/pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/backend/pytrader/strategies/workflow_by_code.ipynb/HEAD)
 
 <details><summary><em><b>👉 点击展开查看具体AI模型benchmark结果</b></em></summary>
 
@@ -439,6 +507,76 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 
 <br>
 
+## 支持的实盘交易接口
+### 实盘交易接口()
+> 欢迎更多交易所、柜台开放交易api
+
+- 期货
+  - CTP
+  - CTPMini
+  - 飞马Femas
+  - 艾克朗科（仅组播行情）
+  - 易达
+- 期权
+  - CTPOpt
+  - 金证期权maOpt
+  - QWIN二开
+- 股票
+  - 中泰XTP
+  - 中泰XTPXAlgo
+  - 华鑫奇点
+  - 华锐ATP
+  - 宽睿OES
+  - 同花顺
+  - 东方财富
+  - 华泰证券
+  - 国泰君安
+  - 中汇亿达
+  - 恒生UFT
+  - 掘金
+  - 顶点飞创
+  - 华鑫奇点
+  - 通达信
+- 虚拟货币/数字货币
+  - 欧易OKEX
+  - 币安Bianace
+  - 火币Huobi
+
+### 仿真交易接口/平台
+
+| API  |  交易类型  |  操作系统   |
+| ---- |    ---    |       --- |
+| [掘金仿真](https://sim.myquant.cn/sim/help/#%E4%B8%8B%E8%BD%BD%E4%BA%A4%E6%98%93sdk)  | 股票、基金、期货 | Win、Linux |
+| WonderTrader | 股票、期权 | Win、Linux |
+| qbot_pro | 股票、期权、基金、虚拟货币 | Win、Linux、Mac|
+| TradingView | 虚拟货币 | Win、Linux、Mac|
+| 欧易OKEX、币安 Binance 、火币huobi | 虚拟货币 | Win、Linux、Mac|
+
+
+## 虚拟货币交易所注册推荐码
+
+- OKEX 交易所注册推荐码, 手续费返佣 **20%**
+  - https://www.cnouyi.social/join/57246734
+
+- 币安交易所注册推荐码, 手续费返佣 **10%**
+  - https://accounts.binance.com/register?ref=130173909
+
+- 火币交易所注册推荐码, 手续费返佣 **15%** (推荐)
+  - https://www.htx.com/invite/zh-cn/1f?invite_code=wr938223
+
+
+## Qbot 版本说明
+
+| 版本介绍 | 说明 | 产品与服务 | 适合人群 |
+| --- | --- | --- | --- |
+| public（开源版） | 当前开源仓库 | - 开源代码可自行学习，提供整个框架的闭环搭建，实现数据的获取、策略开发、指标分析等功能 | 对量化交易感兴趣的开发者、产品经理 |
+| pro(专业版) | 专业付费版（年费，更新代码）  | <br />- 量化交易智库（研报复现、前沿策略探索、投研资讯））<br />- qbot_pro 包含基础版本的所有功能，并且实现AI选股、数据获取清洗、策略开发、策略回测、模拟交易、实盘自动化交易全流程闭环<br />- 封装好的接口示例、系统源码开发示例<br />- 易于开发的策略模板和因子表达式<br />- 分层架构设计，数据、策略(回测、实盘交易)中间表达。<br />- 社群答疑服务<br />- 遵循《署名-非商业性使用-相同方式共享》开放协议的其他非商业用途的二次开发<br /> | <br />- 个人量化交易员、证券交易从业者<br />- 希望快速学习量化并在股票、基金、虚拟货币实现量化交易的<br /> |
+| vip   | 1对1的会员专项服务（年费，每年更新代码） | <br /><br />- 最新的量化交易系统，包含基础版本和专业版的所有软件功能 <br />- 提供封装好的基金、股票、期货、及现货和合约量化接口 （支持Binance现货、合约） <br />-  多个智能量化策略示例 <br />-  远程技术支持和服务 <br /> | <br />- 量化交易员<br />- 希望快速学习量化并在相关市场实现量化交易的<br />- 定制相关市场接口<br /> |
+
+> [!TIP]
+> 相关软件版本付费及更多信息、答疑解惑，添加微信 Yida_Zhang2
+
+
 ## 开源共创、社区共建
 
 首先，感谢自今年5月份开源以来收到广大用户的关注！我们在基础版本中开放了很多传统量化策略、深度学习、强化学习等人工智能策略和多因子库，为此，我们发起《Qbot人工智能量化交易社区共建计划》。采取以下两种方式共建共赢：
@@ -453,17 +591,18 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 - 参与本代码仓库程序设计与实现，多提交PR合并后可免费加入知识星球；
 - 贡献榜单前10名可获得一年免费使用权，前3名可获得qbot进阶版终身免费使用权；
 
+
 ## 策略原理及源码分析
 
 本项目编写了详细的策略原理说明和平台搭建到使用的详细文档，尤其适合量化小白。欢迎加群交流！
 
-[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
+[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./backend/pytrader/strategies/notebook)
 
 ## Quantstats Report
 
 ![Quantstats Report](https://user-images.githubusercontent.com/29084184/207054856-44d1815b-f92f-40a7-b82e-e4a6b3960f2f.png)
 
-Click [HERE](quantstats#visualize-stock-performance) to more detail.
+Click [HERE](backend/quantstats#visualize-stock-performance) to more detail.
 
 ### Some strategy backtest results:
 
@@ -480,27 +619,27 @@ cerebro.broker.setcommission(commission=0.001)
     
 A股回测MACD策略:
 
-![MACD](pytrader/doc/02.easy_macd_strategy/Figure_macd.png)
+![MACD](docs/tutorials_code/02.easy_macd_strategy/Figure_macd.png)
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/dfef65ba-0d32-4f5f-b413-d6ec02fc700e)
 
-👉 点击[查看](pytrader/doc/02.easy_macd_strategy/macd.py)源码
+👉 点击[查看](docs/tutorials_code/02.easy_macd_strategy/macd.py)源码
 
 A股回测KDJ策略:
 
-![KDJ](pytrader/doc/04.kdj_with_macd/Figure_kdj.png)
+![KDJ](docs/tutorials_code/04.kdj_with_macd/Figure_kdj.png)
     
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/ef8e945b-59d6-4220-87e3-08ec1196cc2c)
 
-👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj.py)源码
+👉 点击[查看](docs/tutorials_code/04.kdj_with_macd/kdj.py)源码
 
 A股回测 KDJ+MACD 策略:
 
-![KDJ with MACD](pytrader/doc/04.kdj_with_macd/Figure_kdj_with_macd.png)
+![KDJ with MACD](docs/tutorials_code/04.kdj_with_macd/Figure_kdj_with_macd.png)
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/67338ec5-a6b1-4aa7-9792-1a2c61f353da)
 
-👉 点击[查看](pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
+👉 点击[查看](docs/tutorials_code/04.kdj_with_macd/kdj_macd.py)源码
 
 ## TODO
 
@@ -514,9 +653,31 @@ A股回测 KDJ+MACD 策略:
 - [ ] 在线文档的完善，目前主要几个部分：新手使用指引、经典策略原理和源码、智能策略原理和源码、常见问题等；
 - [ ] 新的feature开发，欢迎在[issues](https://github.com/UFund-Me/Qbot/issues/)交流；
 
+### No-code operation
+
+<img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
+
+体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
+
+```
+dagster-daemon run &
+dagit -h 0.0.0.0 -p 3000
+```
+
 ## Contributing
 
-We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for the contributing guideline.
+We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the contributing guideline.
+
+<table>
+    <tr>
+        <td align="center">
+          <a target="_bank" href="https://github.com/Charmve">
+            <img src="https://avatars.githubusercontent.com/u/29084184?v=4" width="100px;" height="100px;" alt="" />
+            <div><sub><b>Charmve</b></sub></div>
+          </a>
+        </td>
+    </tr>
+</table>
 
 ## 🍮 Community
 - Github <a href="https://github.com/UFund-Me/Qbot/discussions" target="_blank">discussions 💬</a> or <a href="https://github.com/UFund-Me/Qbot/issues" target="_blank">issues 💭</a>
@@ -534,19 +695,19 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 <table class="table table-striped table-bordered table-vcenter">
     <tbody class=ai-notebooks-table-content>
     <tr>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://github.com/UFund-Me/.github/assets/29084184/c8782e38-be7d-4839-bad0-6736bfb9ab9e"><img class="illustration_img" width="320" alt="添加个人微信" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img></a> <br>个人微信
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/c8782e38-be7d-4839-bad0-6736bfb9ab9e"><img class="illustration_img" width="320" alt="添加个人微信" src="./qbot/asserts/statics/imgs/wechat.png"></img></a> <br>个人微信
             </div>
         </td>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
                 <a href="https://github.com/UFund-Me/.github/assets/29084184/712a460f-a264-4f16-a7b8-c990106ec624"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://github.com/UFund-Me/Qbot/assets/29084184/c81a0983-b5c4-43b5-acb5-3bd98010f7e3"/></a> <br>Qbot用户微信交流群
             </div>
         </td>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
-                <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br> <sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup> <br>知识星球（付费）
+                <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="./qbot/asserts/statics/imgs/zsxq.png"/></a> <br> <sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup> <br>知识星球（付费）
             </div>
         </td>
     </tr>
@@ -606,6 +767,15 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
 <a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
+
+
+## LICENSE
+
+<img src="qbot/asserts/statics/imgs/license_by-nc-sa_4.0.png">
+
+署名-非商业性使用-相同方式共享 4.0 国际
+
+<br>
 
 <a href=""><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="68" title="Do what you like, and do it best!"/></a>
 

@@ -2,6 +2,10 @@
 
 > 大多数人都高估了他们一天能做的事情，但低估了他们一年能做的事情。
 
+> NOTE
+> - [tutorials code](./tutorials_code)
+
+
 <br>
 
 <h2> <img src="https://user-images.githubusercontent.com/29084184/204598632-23c473db-92ee-4e9b-9b57-d6d95c861fdf.png" width="42"/> 🤖 Qbot </h2>
@@ -77,7 +81,7 @@ cd ~ # $HOME as workspace
 git clone https://github.com/UFund-Me/Qbot.git
 
 cd Qbot
-pip install -r requirements.txt
+pip install -r dev/requirements.txt
 
 python main.py  #if run on Mac, please use 'pythonw main.py'
 ```
@@ -194,7 +198,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 export USER_ID="admin"                   # replace your info
 export PASSWORD="admin1234."             # replace your info
 
-pip install -r requirements.txt
+pip install -r dev/requirements.txt
 
 # if run on Mac, please use 'pythonw main.py'
 python main.py
@@ -521,17 +525,17 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](
 <table class="table table-striped table-bordered table-vcenter">
     <tbody class=ai-notebooks-table-content>
     <tr>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
                 <a href="https://github.com/UFund-Me/.github/assets/29084184/c8782e38-be7d-4839-bad0-6736bfb9ab9e"><img class="illustration_img" width="320" alt="添加个人微信" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/wechat.png"></img></a> <br>个人微信
             </div>
         </td>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
                 <a href="https://github.com/UFund-Me/.github/assets/29084184/712a460f-a264-4f16-a7b8-c990106ec624"><img class="illustration_img" width="318" alt="加入微信交流群" src="https://github.com/UFund-Me/Qbot/assets/29084184/c81a0983-b5c4-43b5-acb5-3bd98010f7e3"/></a> <br>Qbot用户微信交流群
             </div>
         </td>
-        <td>
+        <td width=33%>
             <div class="mdl-cell mdl-cell--4-col">
                 <a href="https://github.com/UFund-Me/.github/assets/29084184/9d3983ff-ece8-4f99-8579-94234987dcf2"><img class="illustration_img" height="320" alt="加入知识星球（付费）" src="https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/zsxq.png"/></a> <br> <sup>AI量化交易策略分享、实盘交易教程、实时数据接口</sup> <br>知识星球（付费）
             </div>
@@ -592,6 +596,12 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 <a href="https://opencollective.com/qbot" target="_blank"><img src="https://opencollective.com/Qbot/tiers/sponsors.svg?avatarHeight=120" alt="Sponsor"></a>
 <a href="https://opencollective.com/qbot#category-CONTRIBUTE" target="_blank"><img src="https://opencollective.com/qbot/tiers/backers.svg?avatarHeight=100"/></a>
+
+## LICENSE
+
+<img src="qbot/asserts/statics/imgs/license_by-nc-sa_4.0.png">
+
+署名-非商业性使用-相同方式共享 4.0 国际
 
 <a href=""><img align="left" alt="Go for it!" src="https://raw.githubusercontent.com/Charmve/computer-vision-in-action/main/res/ui/frontpage/2020-sponsors.svg" height="68" title="Do what you like, and do it best!"/></a>
 

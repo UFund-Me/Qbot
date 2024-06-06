@@ -1,3 +1,4 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
 investool/main filter=lfs diff=lfs merge=lfs -text
 investool/investool filter=lfs diff=lfs merge=lfs -text
+*.parquet filter=lfs diff=lfs merge=lfs -text
