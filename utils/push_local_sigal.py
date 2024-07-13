@@ -34,5 +34,5 @@ def send_signal_message_screen(symbol, price, type=default):
             f'{symbol}当前价格为{price}',
             title=f'Qbot - {symbol}股票已低于设定值{49}',
             open="https://ufund-me.github.io/",
-            appIcon="../gui/imgs/logo.ico",
+            appIcon="../qbot/gui/imgs/logo.ico",
         )

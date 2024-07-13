@@ -57,7 +57,7 @@ def send_signal_message_screen(symbol, price, type=default):
             f'{symbol}当前价格为{price}',
             title=f'Qbot - {symbol}{type}',
             open="https://ufund-me.github.io/",
-            appIcon="./gui/imgs/logo.ico",
+            appIcon="./qbot/gui/imgs/logo.ico",
         )
 
 

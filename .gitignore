@@ -139,8 +139,8 @@ jqdata.json
 pytrader.db
 account.json
 *.log
-gui/__pycache__/
-gui/csv/
+qbot/gui/__pycache__/
+qbot/gui/csv/
 
 pytrader/user_config.sh
 *.parquet

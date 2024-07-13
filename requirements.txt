@@ -1,51 +1,29 @@
-# wxPython
+# wxPython # use dev/wxPython-4.2.0-cp38-cp38-linux_x86_64.whl
 pandas
 matplotlib==3.2.2
 backtrader
-#pip install git+https://github.com/quantopian/pyfolio
+git+https://github.com/quantopian/pyfolio
 backtrader_plotting
+scipy
 statsmodels
 quantstats
 requests
 loguru
 binance-connector
-numba 
+# ta-lib   # use dev/TA_Lib-0.4.28-cp38-cp38-linux_x86_64.whl
+numpy
+pillow
 pykalman
-tables
+# tables
+IPython
 scikit-learn
 empyrical
-stable-baselines==2.10.0
 jupyter
-# Ta-Lib #download https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
-# gym==0.17.1
+# gym[all]
 pyglet==1.5.0
 tensorboard
 tensortrade
 yfinance
-pandas_datareader
-
+efinance
 akshare
-logbook
-easyquotation
-easytrader
-arrow
-tushare
-numpy
-cython
-# pyqlib # maybe manual
-jqdatasdk
-redis
-pydantic
-python-dotenv
-# attrdict
-
-ddddocr==1.4.7
-matplotlib==3.2.2
-fastapi==0.88.0
-fire==0.4.0
-Flask==1.1.2
-scipy==1.7.3
-opencv-python>=4.6.0
-# matplotlib==3.1.3 [tmp]
-plotly==4.12.0
-ruamel.yaml>=0.16.12
+pandas_datareader

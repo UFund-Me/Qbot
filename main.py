@@ -5,7 +5,7 @@ import os
 
 import wx
 
-from gui.mainframe import MainFrame
+from qbot.gui.mainframe import MainFrame
 
 if __name__ == "__main__":
     app = wx.App()

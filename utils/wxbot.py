@@ -11,7 +11,7 @@ bot = Bot()
 my_friend = bot.friends().search('Chamrve', sex=MALE, city="苏州")[0]
 
 
-image_file=""/Users/charmve/Qbot/gui/imgs/UFund.png
+image_file=""/Users/charmve/Qbot/qbot/gui/imgs/UFund.png
 
 # 发送文本给好友
 my_friend.send('Hello WeChat!')

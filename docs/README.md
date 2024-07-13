@@ -78,13 +78,21 @@ Qbot是一个免费的量化投研平台，提供从数据获取、交易策略�
 
 ```bash
 cd ~ # $HOME as workspace
-git clone https://github.com/UFund-Me/Qbot.git
+git clone https://github.com/UFund-Me/Qbot --depth 1
 
 cd Qbot
-pip install -r dev/requirements.txt
+pip install -r requirements.txt
 
+export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner
 python main.py  #if run on Mac, please use 'pythonw main.py'
+
 ```
+
+> [!NOTE]
+> wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
+
+详细文档 https://github.com/UFund-Me/Qbot/blob/main/quick_start.md
+
 
 <p id="demo">
   <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
@@ -173,98 +181,30 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 
 [Install Guide](https://github.com/UFund-Me/Qbot/blob/main/docs/01-新手指引/Install_guide) | [Online documents](https://ufund-me.github.io/Qbot/#/)
 
-```
- ____________________________________
-< Run ``./env_setup.sh`` to say hello >
- ------------------------------------
-            \   ^__^
-             \  (oo)\_______
-                (__)\       )\/\
-                    ||----w |
-                    ||     ||
-```
-
 ### Get Started
 
 本项目分为前端（客户端）和后端两部分，前端由wxPython编写的轻量化GUI客户端，后端分为策略开发、策略回测 ``qbot/strategies``、股票基金评测、模拟交易、在线回测几个部分，对应于客户端从左到右的三个菜单。
-
-#### 前端/客户端
 
 ➕ 请注意：本项目建议使用python 3.8、3.9版本，推荐使用conda搭建环境，参考 [Install Guide](https://github.com/UFund-Me/Qbot/blob/main/docs/01-新手指引/Install_guide)。
 
 <sub>* 如果是 Win 系统使用``set``命令.</sub>
 
 ```shell
-export USER_ID="admin"                   # replace your info
-export PASSWORD="admin1234."             # replace your info
-
-pip install -r dev/requirements.txt
+git clone https://github.com/UFund-Me/Qbot --depth 1
+cd Qbot
+pip install -r requirements.txt
 
 # if run on Mac, please use 'pythonw main.py'
 python main.py
 ```
+
+> [!NOTE]
+> wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
+
 主要包含四个窗口，如果启动界面未显示或有问题可以参考下图中对应的启动方式。👉 点击[这里](https://github.com/UFund-Me/Qbot/blob/main/gui/mainframe.py#L122-L141)查看源码，下文也有文字介绍。
 
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/9f1dcc07-ca76-4600-a02c-76104fb28c51)
 
-#### 后端/服务端
-
-1. 选基、选股助手（对应前端/客户端第二个菜单：AI选股/选基）
-
-运行命令
-
-```
-cd investool
-go build
-./investool webserver
-```
-
-2. 基金策略在线分析（对应于前端/客户端第四个菜单：基金投资策略分析）
-
-需要 node 开发环境: `npm`、`node`，点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pyfunds/fund-strategies/README.md)详细操作文档。
-
-<details><summary>版本信息（作为参考）</summary>
-
-```
-▶ go version
-go version go1.20.4 darwin/amd64
-~
-▶ node --version
-v19.7.0
-~
-▶ npm --version
-9.5.0
-```
-
-</details>
-
-使用docker运行项目，在项目路径下运行以下命令构建项目的docker镜像
-```
-docker build -t fund_strategy .
-```
-
-镜像构建完毕后运行
-```
-docker run -dp 8000:8000 fund_strategy --name="fund_strategy_instance"
-```
-
-等待项目启动过程中，可通过以下命令查看启动日志：
-```
-docker logs -f fund_strategy_instance
-```
-
-启动后，可通过`http://locahost:8000`访问网页。
-
-## No-code operation (TODO)
-
-<img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
-
-体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
-
-```
-dagster-daemon run &
-dagit -h 0.0.0.0 -p 3000
-```
 ## Strategy Lib
 
 部分未整理。。。
@@ -495,6 +435,7 @@ A股回测 KDJ+MACD 策略:
 ![image](https://github.com/UFund-Me/Qbot/assets/29084184/67338ec5-a6b1-4aa7-9792-1a2c61f353da)
 
 👉 点击[查看](https://github.com/UFund-Me/Qbot/blob/main/pytrader/doc/04.kdj_with_macd/kdj_macd.py)源码
+
 ## TODO
 
 - [x] 把策略回测整合在一个上位机中，包括：选基、选股策略、交易策略，模拟交易，实盘交易
@@ -504,6 +445,18 @@ A股回测 KDJ+MACD 策略:
 - [ ] 增强数据获取的实时性，每秒数据，降低延迟；
 - [ ] 在线文档的完善，目前主要几个部分：新手使用指引、经典策略原理和源码、智能策略原理和源码、常见问题等；
 - [ ] 新的feature开发，欢迎在[issues](https://github.com/UFund-Me/Qbot/issues/)交流；
+
+## No-code operation (TODO)
+
+<img width="" alt="dagster" src="https://user-images.githubusercontent.com/29084184/221900050-2275a6e2-5c9b-4b81-84e5-0087e8fb58ec.png">
+
+体验下来，dagster是很适合金融数据采集、处理，还有机器学习的场景。当然这里的场景更偏向于“批处理”，“定时任务”的处理与编排。
+
+```
+cd plugins/dagster
+dagster-daemon run &
+dagit -h 0.0.0.0 -p 3000
+```
 
 ## Contributing
 

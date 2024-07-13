@@ -132,7 +132,7 @@ while True:
                 f'{"中国平安"}当前价格为{priceNow}',
                 title=f'Qbot - {"中国平安"}股票已低于设定值{49}',
                 open="https://ufund-me.github.io/",
-                appIcon="./gui/imgs/logo.ico",
+                appIcon="./qbot/gui/imgs/logo.ico",
             )
         # pync.notify(
         #     "Reminder - Drink Water, Sir",
@@ -141,7 +141,7 @@ while True:
         #     # appIcon='https://raw.githubusercontent.com/UFund-Me/Qbot/main/gui/imgs/UFund.png',
         #     # appIcon='https://ufund-me.github.io/img/UFund.png',
         #     # appIcon='https://ufund-me.github.io/img/logo.ico',
-        #     appIcon="./gui/imgs/logo.ico",
+        #     appIcon="./qbot/gui/imgs/logo.ico",
         # )
         # show_notification("Title", "notification")
         # pync.notify(

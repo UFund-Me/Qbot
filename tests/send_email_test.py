@@ -25,7 +25,7 @@ from utils.send_email import send_email
 
 
 class TestSendEmail(unittest.TestCase):
-    SRC_DIR = Path(__file__).parent.parent.joinpath("gui")
+    SRC_DIR = Path(__file__).parent.parent.joinpath("qbot/gui")
 
     # 发件人邮箱
     mail_sender = "1144262839@qq.com"

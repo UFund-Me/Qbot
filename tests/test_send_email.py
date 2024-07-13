@@ -25,14 +25,14 @@ from utils.send_email import send_email
 
 
 class TestSendEmail(unittest.TestCase):
-    SRC_DIR = Path(__file__).parent.parent.joinpath("gui")
+    SRC_DIR = Path(__file__).parent.parent.joinpath("qbot/gui")
 
     # 发件人邮箱
     mail_sender = "1144262839@qq.com"
     # 邮箱授权码,注意这里不是邮箱密码,如何获取邮箱授权码,请看本文最后教程
     mail_license = os.getenv("MAIL_LICENSE")
     # 收件人邮箱，可以为多个收件人
-    mail_receivers = ["yidazhang1@gmail.com", "zhangwei@qcraft.ai"]
+    mail_receivers = ["yidazhang1@gmail.com"]
     # 邮件主题
     subject = """Python邮件测试"""
 

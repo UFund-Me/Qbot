@@ -1,0 +1,27 @@
+language: go
+
+go:
+  - "1.16.x"
+  - "master"
+
+os:
+  - linux
+
+go_import_path: x-stock
+
+env:
+  - GO111MODULE=on
+
+services:
+  - mysql
+  - postgresql
+  - redis
+
+before_install:
+  - cd src
+
+install:
+  - go mod tidy
+
+script:
+  - go test -race -coverprofile=coverage.txt -covermode=atomic -v ./...

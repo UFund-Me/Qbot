@@ -1,0 +1,30 @@
+{{ define "modal" }}
+<div id="load_modal" class="modal">
+    <div class="modal-content">
+        <h6 id="model_header"></h6>
+        <div class="progress red lighten-3">
+            <div class="indeterminate red darken-2"></div>
+        </div>
+    </div>
+</div>
+
+<div id="info_modal" class="modal">
+    <div class="modal-content">
+        <h6>提示</h6>
+        <p id="info_msg"></p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">确认</a>
+    </div>
+</div>
+
+<div id="error_modal" class="modal">
+    <div class="modal-content">
+        <h6>错误</h6>
+        <p id="err_msg"></p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">关闭</a>
+    </div>
+</div>
+{{ end }}

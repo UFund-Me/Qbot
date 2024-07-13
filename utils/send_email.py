@@ -17,7 +17,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
 
-TOP_DIR = Path(__file__).parent.parent.joinpath("gui")
+TOP_DIR = Path(__file__).parent.parent.joinpath("qbot/gui")
 
 # 发件人邮箱
 mail_sender = "1144262839@qq.com"
@@ -105,10 +105,10 @@ def send_email(mail_sender, mail_receivers, content):
 
         print("Send to: ", mail_receiver)
 
-        # # Attach the message to the MIMEMultipart object
+        # Attach the message to the MIMEMultipart object
         # msg.attach(message_text)
         # msg.attach(message_image)
-        # # Attach the attachment file
+        # Attach the attachment file
         # msg.attach(attachment)
         msg.attach(content)
 

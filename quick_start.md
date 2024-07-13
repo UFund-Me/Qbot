@@ -12,30 +12,16 @@ git clone https://github.com/Charmve/qbot_pro
 ```
 
 ### 3. 运行程序
-```
-./start_qbot.sh
-```
+
 > [!TIP]
 > 如果启动有异常，可以按照下面步骤安装依赖和启动后台。
 
-> 1. 安装qbot依赖
-```
+
+```bash
 pip install -r dev/requirements.txt
 pythonw main.py 
 
 # 运行起来，缺少什么模块，就安装什么模块。pip install wxpython
-```
-
-> 2. 启动后台程序
-```
-cd backend/investool/
-# macos
-./investool_app_mac webserver
-```
-
-> 3. 启动qbot客户端
-```
-pythonw main.py
 ```
 
 <br>

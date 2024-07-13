@@ -1,0 +1,112 @@
+{{ define "checker_form_content" }}
+<div class="row">
+    <div class="input-field col l6 s12">
+        <input name="checker_min_roe" value="8.0" type="number" min="0" step="0.5" class="validate">
+        <label for="checker_min_roe">最新一期ROE最低值</label>
+    </div>
+    <div class="input-field col l6 s12">
+        <input name="checker_max_peg" type="number" class="validate" value="1.5" min="0" step="0.1">
+        <label for="checker_max_peg">最大PEG</label>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col l6 s12">
+        <input name="checker_check_years" type="number" class="validate" value="5" min="0" step="1">
+        <label for="checker_check_years">ROE,EPS,营收,净利润连续增长年数</label>
+    </div>
+    <div class="input-field col l6 s12">
+        <input name="checker_no_check_years_roe" value="20.0" type="number" min="0" step="0.5" class="validate">
+        <label for="checker_no_check_years_roe">ROE高于该值跳过连续增长检测</label>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col l6 s12">
+        <input name="checker_min_byys_ratio" type="number" class="validate" value="0.9" min="0" step="0.1">
+        <label for="checker_min_byys_ratio">最小本业营收比</label>
+    </div>
+    <div class="input-field col l6 s12">
+        <input name="checker_max_byys_ratio" value="1.1" type="number" min="0" step="0.1" class="validate">
+        <label for="checker_max_byys_ratio">最大本业营收比</label>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col l3 s12">
+        <input name="checker_min_gxl" type="number" class="validate" value="0.0" step="0.5">
+        <label for="checker_min_gxl">最低股息率(%)</label>
+    </div>
+    <div class="input-field col l3 s12">
+        <input name="checker_min_total_market_cap" type="number" class="validate" value="100.0" min="0" step="1">
+        <label for="checker_min_total_market_cap">最小市值（亿）</label>
+    </div>
+    <div class="input-field col l3 s12">
+        <input name="checker_max_debt_asset_ratio" type="number" class="validate" value="60.0" min="0" step="0.5">
+        <label for="checker_max_debt_asset_ratio">最大资产负债率(%)</label>
+    </div>
+    <div class="input-field col l3 s12">
+        <input name="checker_max_hv" type="number" class="validate" value="1.0" min="0" step="0.1">
+        <label for="checker_max_hv">最大历史波动率</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="input-field inline col l3 s12">
+        <input name="checker_bank_min_roa" type="number" class="validate" value="0.5" min="0" step="0.1">
+        <label for="checker_bank_min_roa">最小ROA</label>
+        <span class="helper-text">仅针对银行股检测生效</span>
+    </div>
+    <div class="input-field inline col l3 s12">
+        <input name="checker_bank_min_zbczl" type="number" class="validate" value="8.0" min="0" step="0.5">
+        <label for="checker_bank_min_zbczl">最小资本充足率</label>
+        <span class="helper-text">仅针对银行股检测生效</span>
+    </div>
+    <div class="input-field inline col l3 s12">
+        <input name="checker_bank_max_bldkl" type="number" class="validate" value="3.0" min="0" step="0.5">
+        <label for="checker_bank_max_bldkl">最大不良贷款率</label>
+        <span class="helper-text">仅针对银行股检测生效</span>
+    </div>
+    <div class="input-field inline col l3 s12">
+        <input name="checker_bank_min_bldkbbfgl" type="number" class="validate" value="100.0" min="0" step="1">
+        <label for="checker_bank_min_bldkbbfgl">最低不良贷款拨备覆盖率</label>
+        <span class="helper-text">仅针对银行股检测生效</span>
+    </div>
+</div>
+
+<div class="row">
+    <label class="col l4 s12">
+        <input name="checker_is_check_eps_grow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测EPS逐年递增</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_rev_grow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测营收逐年递增</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_netprofit_grow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测净利润逐年递增</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_cashflow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测现金流量</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_price_by_calc" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测估算合理价</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_mll_grow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测毛利率逐年递增</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_jll_grow" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测净利率逐年递增</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_mll_stability" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测毛利率稳定性</span>
+    </label>
+    <label class="col l4 s12">
+        <input name="checker_is_check_jll_stability" type="checkbox" class="filled-in" checked="checked" value="true" />
+        <span>检测净利率稳定性</span>
+    </label>
+</div>
+{{ end }}
