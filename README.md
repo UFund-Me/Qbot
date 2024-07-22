@@ -115,7 +115,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
 
 <!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
 
-## Highlight
+## Highlights
 
 <table class="table table-striped table-bordered table-vcenter">
     <tbody class=ai-notebooks-table-content>
@@ -316,7 +316,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
           <li><a href="docs/02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
           <li><a href="docs/tutorials_code/05.kdj_macd_in_A_market">移动均线+KDJ</a></li>
           <li><a href="qbot/strategy/bigger_than_ema_bt.py">简单移动均线</a></li>
-          <li><a href="qbot/strategy/klines_bt.py">双均线</a></li>
+          <li><a href="qbot/strategy/klines_bt.py">双均线策略 ('2022)</a></li>
           <li><a href="qbot/strategy/arbr_strategy.py">情绪指标ARBR</a></li>
           <li><a href="qbot/strategy/aroon_strategy.py">阿隆指标(趋势交易)</a></li>
           <li><a href="qbot/strategy/lgb_strategy.py">LightGBM 预测</a></li>
@@ -346,6 +346,7 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
           <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
           <li><a href="docs/02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
           <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易</a></li>
+          <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
           <li><a href="docs/03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
           <li><a href="docs/03-智能策略/">趋势交易</a></li>
           <li><a href="docs/03-智能策略/">海龟策略</a></li>
@@ -380,22 +381,6 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
           </ul>
         </td>
         <td>
-        </td>
-        <td>
-          <b>同上</b>
-        </td>
-      </tr>
-      <tr valign="top">
-        <td>
-          <b>期货</b>
-        </td>
-        <td>
-          <ul>
-            <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
-            <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
-          </ul>
-        </td>
-        <td>
           <b>同上</b>
         </td>
       </tr>
@@ -420,6 +405,9 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
       </td>
       <td>
         <b>:fire: Transformer</b>
+      </td>
+      <td>
+        <b>:fire: LLM</b>
       </td>
     </tr>
     <tr valign="top">
@@ -471,6 +459,10 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
           <li><a href="qbot/strategy/benchmarks/IGMTF">IGMTF (KDD'2021)</a></li>
           <li><a href="qbot/strategy/benchmarks/HIST">HIST (KDD'2018)</a></li>
           <li><a href="qbot/strategy/benchmarks/Localformer">Localformer ('2021)</a></li>
+      </td>
+      <td>
+          <li><a href="https://chat-gpt-next-web-five-puce-64.vercel.app/">ChatGPT</a></li>
+          <li><a href="https://github.com/UFund-Me/FinGPT">FinGPT</a></li>
       </td>
     </tr>
 </td>
