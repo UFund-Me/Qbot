@@ -1,0 +1,30 @@
+# wxPython # use dev/wxPython-4.2.0-cp38-cp38-linux_x86_64.whl
+pandas
+matplotlib==3.2.2
+backtrader
+git+https://github.com/quantopian/pyfolio
+backtrader_plotting
+scipy
+statsmodels
+quantstats
+requests
+loguru
+binance-connector
+# ta-lib   # use dev/TA_Lib-0.4.28-cp38-cp38-linux_x86_64.whl
+numpy
+pillow
+pykalman
+# tables
+IPython
+scikit-learn
+empyrical
+jupyter
+# gym[all]
+pyglet==1.5.0
+tensorboard
+tensortrade
+yfinance
+efinance
+akshare
+baostock
+pandas_datareader

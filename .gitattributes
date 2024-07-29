@@ -1,4 +1,7 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
-investool/main filter=lfs diff=lfs merge=lfs -text
-plugins/investool/investool filter=lfs diff=lfs merge=lfs -text
+plugins/investool/investool* filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
+dev/wxPython-4.2.0-cp38-cp38-linux_x86_64.whl filter=lfs diff=lfs merge=lfs -text
+dev/wxPython-4.2.0-cp39-cp39-linux_x86_64.whl filter=lfs diff=lfs merge=lfs -text
+dev/wxPython-4.2.1-cp38-cp38-linux_x86_64.whl filter=lfs diff=lfs merge=lfs -text
+
