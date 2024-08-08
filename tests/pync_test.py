@@ -22,7 +22,7 @@ while True:
         open='https://github.com/SeTeM/pync',
         appIcon='https://ufund-me.github.io/img/UFund.png'
     )
-    os.system("afplay ./qbot/sounds/bell.wav")
+    os.system("afplay ./qbot/asserts/statics/sounds/bell.wav")
     time.sleep(2)
 
     # Notifier.notify(

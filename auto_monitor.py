@@ -118,7 +118,7 @@ def check(code, low, high):
 
 
 top_path = os.path.dirname(os.path.abspath(sys.argv[0]))
-sounds_file = os.path.join(top_path, "./qbot/sounds/bell.wav")
+sounds_file = os.path.join(top_path, "./qbot/asserts/statics/sounds/bell.wav")
 
 while True:
     WEBHOOK_SECRET = "wNMVU3ewSm2F0G2TwTX4Fd"
@@ -150,7 +150,7 @@ while True:
         # )
 
         # if linux
-        # os.system('play ./qbot/sounds/alert-bells.wav')
+        # os.system('play ./qbot/asserts/statics/sounds/alert-bells.wav')
         # if MacOs
         os.system(f"afplay {sounds_file}")
 

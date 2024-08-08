@@ -17,13 +17,13 @@ import sys
 import pync
 from larkbot import LarkBot
 
-top_path = os.path.dirname(os.path.abspath(sys.argv[0]))
-sounds_file = os.path.join(top_path, "../qbot/sounds/bell.wav")
+top_path = os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[0])))
+sounds_file = os.path.join(top_path, "/qbot/asserts/statics/sounds/bell.wav")
 
 def send_signal_sounds(type="buy"):
     if type == "buy":
         # if linux
-        # os.system('play ./qbot/sounds/alert-bells.wav')
+        # os.system('play ./qbot/asserts/statics/sounds/alert-bells.wav')
         # if MacOs
         os.system(f"afplay {sounds_file}")
     elif type == "sell":
