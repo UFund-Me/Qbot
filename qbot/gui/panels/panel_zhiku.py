@@ -7,16 +7,9 @@ import wx.adv
 
 from qbot.common.logging.logger import LOGGER as logger
 from qbot.common.config import RESEARCH_REPORTS
+from qbot.common.file_utils import list_files_in_directory
 from qbot.gui.widgets.widget_web import WebPanel
-
-
-def list_files_in_directory(path, file_suffix=[".csv"]):
-    files_list = []
-    for root, dirs, files in os.walk(path):
-        for file_suf in file_suffix:
-            for file in files:
-                files_list.append(file.strip(file_suf))
-    return files_list
+from qbot.common.utils import check_port_in_use
 
 class QbotHomePanel(wx.Panel):
     def __init__(self, parent):
@@ -59,7 +52,8 @@ class YanbaoPanel(wx.Panel):
         pass
 
     def init_reports_httpserver(self):
-        os.popen(f"python -m http.server --directory {RESEARCH_REPORTS} 9080")
+        if not check_port_in_use(port=9080):
+            os.popen(f"python -m http.server --directory {RESEARCH_REPORTS} 9080")
         self.reports_url = "http://localhost:9080/"
 
     def init_ui(self):

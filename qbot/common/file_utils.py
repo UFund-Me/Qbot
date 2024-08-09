@@ -1,6 +1,6 @@
 import json
 import re
-
+import os
 
 def extract_content(text):
     pattern = r"\((.*?)\)"  # 匹配()之间的内容
