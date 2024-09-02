@@ -50,7 +50,10 @@
 
 >  <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment. Qbot supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL.
 
-<br>
+<p id="demo">
+  <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
+  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
+</p>
 
 ```
 🤖 Qbot = 智能交易策略 + 回测系统 + 自动化量化交易 (+ 可视化分析工具)
@@ -91,25 +94,18 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ```
 
-> [!NOTE]
-> wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
-
 详细文档 https://github.com/UFund-Me/Qbot/blob/main/quick_start.md
 
-<p id="demo">
-  <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
-  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
-</p>
-
-<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
-
-```
-brew install hdf5
-brew install c-blosc
-export HDF5_DIR=/opt/homebrew/opt/hdf5 
-export BLOSC_DIR=/opt/homebrew/opt/c-blosc
-```
-</details>
+> [!NOTE]
+> - wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
+> - <details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+> <code>
+>   brew install hdf5
+>   brew install c-blosc
+>   export HDF5_DIR=/opt/homebrew/opt/hdf5 
+>   export BLOSC_DIR=/opt/homebrew/opt/c-blosc
+> </code>
+> </details>
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
 
@@ -378,20 +374,6 @@ export BLOSC_DIR=/opt/homebrew/opt/c-blosc
             <li><a href="docs/02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
             <li><a href="docs/02-经典策略/02-基金/">组合策略：择时多策略</a></li>
             <li><a href="docs/02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
-          </ul>
-        </td>
-        <td>
-          <b>同上</b>
-        </td>
-      </tr>
-      <tr valign="top">
-        <td>
-          <b>期货</b>
-        </td>
-        <td>
-          <ul>
-            <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
-            <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易 ('2022)</a></li>
           </ul>
         </td>
         <td>
@@ -745,11 +727,11 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 
 - 微信: Yida_Zhang2
 - Email: yidazhang1#gmail.com 
-- 知乎：[@Charmve](https://www.zhihu.com/people/MaiweiE-com)
-
+- 知乎/小红书：[@Charmve](https://www.zhihu.com/people/MaiweiE-com) | [@Charmve](https://www.xiaohongshu.com/user/profile/5f0a6ef9000000000100104a?xhsshare=CopyLink&appuid=5f0a6ef9000000000100104a&apptime=1725162795&share_id=2e375d139cbb494eba7f42de4cf15bae)
 <br>
 
 - 知识星球：AI量化投研实验室 （加我微信，邀请）
+  - 本星球为VIP付费社群，对于购买Pro版本的用户，可免费加入。拓展人脉，及时获取研报和论文解读与源代码实现，多种投顾服务。
 
 <br>
 

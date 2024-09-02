@@ -45,16 +45,19 @@
 
 <div align="center">
   <p>AI智能量化投研平台</p>
-  <p>
-    <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, <br>
-  empower AI technologies in quantitative investment.
-  </p>
 </div>
+
+>  <b>Qbot</b> is an AI-oriented automated quantitative investment platform, which aims to realize the potential, empower AI technologies in quantitative investment. Qbot supports diverse machine learning modeling paradigms. including supervised learning, market dynamics modeling, and RL.
+
+<p id="demo">
+  <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
+  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
+</p>
 
 ```
 🤖 Qbot = 智能交易策略 + 回测系统 + 自动化量化交易 (+ 可视化分析工具)
             |           |            |            |
-            |           |            |             \_ quantstats (dashboard\online operate)
+            |           |            |             \_ quantstats (dashboard\online operation)
             |           |             \______________ Qbot - vnpy, pytrader, pyfunds
             |           \____________________________ BackTest - backtrader, easyquant
             \________________________________________ quant.ai - qlib, deep learning strategies
@@ -63,10 +66,12 @@
 <br>
 
 <div align="center">
+  
+  🎺 <b>号外</b>：Qbot微信小程序开发招募 [UFund-miniprogram](https://github.com/UFund-Me/UFund-miniprogram)
 
-  ***不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~***
+  <b>不建议 fork 项目，本项目会持续更新，只 fork 看不到更新，建议 Star ⭐️ ~</b>
 
-  <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors-amp-support) 本项目，以帮助改进！</i>
+  <i>喜欢这个项目吗？请考虑[ ❤️赞助](#sponsors--support) 本项目，以帮助改进！</i>
 
 </div>
 
@@ -88,26 +93,18 @@ python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ```
 
-> [!NOTE]
-> wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
-
 详细文档 https://github.com/UFund-Me/Qbot/blob/main/quick_start.md
 
-
-<p id="demo">
-  <!-- <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/221901048-bb1615fe-674f-40e8-b1e7-ba5db30a82a6.png"> -->
-  <img width="" alt="demo" src="https://user-images.githubusercontent.com/29084184/223608757-5808e23c-86e4-4b1b-8b03-e04c8f368f5c.gif">
-</p>
-
-<details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
-
-```
-brew install hdf5
-brew install c-blosc
-export HDF5_DIR=/opt/homebrew/opt/hdf5 
-export BLOSC_DIR=/opt/homebrew/opt/c-blosc
-```
-</details>
+> [!NOTE]
+> - wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
+> - <details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
+> <code>
+>   brew install hdf5
+>   brew install c-blosc
+>   export HDF5_DIR=/opt/homebrew/opt/hdf5 
+>   export BLOSC_DIR=/opt/homebrew/opt/c-blosc
+> </code>
+> </details>
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
 
