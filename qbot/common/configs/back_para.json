@@ -1,0 +1,62 @@
+{
+    "layout_dict": {
+        "figsize": null,
+        "nrows": 3,
+        "ncols": 1,
+        "left": 0.08,
+        "bottom": 0.15,
+        "right": 0.92,
+        "top": 0.96,
+        "wspace": null,
+        "hspace": 0,
+        "height_ratios": [
+            1.5,
+            1,
+            1
+        ],
+        "subplots": [
+            "kgraph",
+            "cashgraph",
+            "cmppfgraph"
+        ]
+    },
+    "subplots_dict": {
+        "graph_fst": {
+            "graph_name": "kgraph",
+            "graph_type": {
+                "trade": null,
+                "close_retrace": null
+            },
+            "title": "sz.000875-回测分析",
+            "ylabel": "价格",
+            "xticks": 15,
+            "legend": "best"
+        },
+        "graph_sec": {
+            "graph_name": "cashgraph",
+            "graph_type": {
+                "cash_profit": {
+                    "cash_hold": "100000",
+                    "slippage": "0.01",
+                    "c_rate": "0.0005",
+                    "t_rate": "0.001",
+                    "stake_size": "all"
+                }
+            },
+            "ylabel": "资金收益和回撤",
+            "xticks": 15,
+            "legend": "best"
+        },
+        "graph_fth": {
+            "graph_name": "cmppfgraph",
+            "graph_type": {
+                "cmp_profit": null
+            },
+            "ylabel": "策略收益VS基准收益",
+            "xlabel": "日期",
+            "xticks": 15,
+            "legend": "best",
+            "xticklabels": "%Y-%m-%d %H:%M"
+        }
+    }
+}

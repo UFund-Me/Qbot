@@ -1,0 +1,201 @@
+{
+    "__version__": "V1.3.8",
+    "__author__": "Charmve",
+    "国信证券": {
+        "license": "xxxxxxx",
+        "user": "国信证券用户名",
+        "password": "国信证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/guoxin_logo.png",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'千万股民选择'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ],
+        "operate_sys": [
+            "macos",
+            "windows"
+        ]
+    },
+    "兴业证券": {
+        "license": "xxxxxxx",
+        "user": "兴业证券用户名",
+        "password": "兴业证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/xingye_logo.jpg",
+        "ads": [
+            "'专属优惠佣金'",
+            "'新客专属理财'"
+        ],
+        "labels": [
+            "金牌投顾",
+            "行业前列"
+        ]
+    },
+    "国投证券（原安信）": {
+        "license": "xxxxxxx",
+        "user": "国投证券用户名",
+        "password": "国投证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/guotou_logo.jpg",
+        "ads": [
+            "'专属优惠佣金'",
+            "'6.88%专属理财'"
+        ],
+        "labels": [
+            "央企背景",
+            "安全可靠"
+        ],
+        "operate_sys": [
+            "macos",
+            "windows"
+        ]
+    },
+    "财通证券": {
+        "license": "xxxxxxx",
+        "user": "财通证券用户名",
+        "password": "财通证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/xingye_logo.jpg",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'上市券商 省属企业'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ]
+    },
+    "国金证券": {
+        "license": "xxxxxxx",
+        "user": "国金用户名",
+        "password": "国金明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/guojin_logo.jpg",
+        "ads": [
+            "'专门极低佣金'",
+            "'新客专属理财'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ],
+        "operate_sys": [
+            "windows"
+        ]
+    },
+    "华泰证券": {
+        "license": "xxxxxxx",
+        "user": "华泰证券用户名",
+        "password": "华泰证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/huatai_logo.png",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'千万股民选择'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ]
+    },
+    "银河证券": {
+        "license": "xxxxxxx",
+        "user": "银河用户名",
+        "password": "银河明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/yinhe_logo.png",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'千万股民选择'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ]
+    },
+    "通达信": {
+        "license": "xxxxxxx",
+        "user": "通达信用户名",
+        "password": "通达信明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/xindatong_logo.png",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'千万股民选择'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ]
+    },
+    "国联证券": {
+        "license": "xxxxxxx",
+        "user": "国联证券用户名",
+        "password": "国联证券明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/guolian_logo.png",
+        "ads": [
+            "'财富管理领先的'",
+            "'区域精品券商'"
+        ],
+        "labels": [
+            "财富管理",
+            "稳步提升"
+        ]
+    },
+    "海通证券": {
+        "license": "xxxxxxx",
+        "user": "海通用户名",
+        "password": "海通明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/haitong_logo.png",
+        "ads": [
+            "'财富管理领先的'",
+            "'区域精品券商'"
+        ],
+        "labels": [
+            "财富管理",
+            "稳步提升"
+        ]
+    },
+    "申万宏源证券": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/hongyuan_logo.png",
+        "ads": [
+            "'开户VIP超低佣金'",
+            ""
+        ],
+        "labels": [
+            "贴心精准",
+            "稳定便捷"
+        ]
+    },
+    "东方财富": {
+        "license": "xxxxxxx",
+        "user": "东方财富用户名",
+        "password": "东方财富明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/eastmoney_logo.jpg",
+        "ads": [
+            "'悦享财富,'",
+            "'尽在东方财富'"
+        ],
+        "labels": [
+            "互联网优势‌",
+            "发行可转债"
+        ],
+        "operate_sys": [
+            "windows"
+        ]
+    },
+    "同花顺": {
+        "license": "xxxxxxx",
+        "user": "同花顺用户名",
+        "password": "同花顺明文密码",
+        "icon": "qbot/asserts/statics/icons/stocks_logo/tonghuashun_logo.png",
+        "ads": [
+            "'四大券商'",
+            "'长期稳定'"
+        ],
+        "labels": [
+            "四梅策略",
+            "东方证券"
+        ],
+        "operate_sys": [
+            "windows"
+        ]
+    }
+}

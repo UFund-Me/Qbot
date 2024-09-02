@@ -1,0 +1,31 @@
+-i http://mirrors.aliyun.com/pypi/simple/
+--trusted-host mirrors.aliyun.com
+beautifulsoup4==4.6.0
+bs4==0.0.1
+certifi==2018.4.16
+chardet==3.0.4
+click==6.7
+cssselect==1.0.3; python_version != '3.3.*'
+dill==0.2.8.2
+easyutils==0.1.7
+flask==1.0.2
+idna==2.7
+itsdangerous==0.24
+jinja2==2.10
+lxml==4.2.3
+markupsafe==1.0
+numpy==1.15.0; python_version >= '2.7'
+pandas==0.23.3
+pillow==5.2.0
+pyperclip==1.6.4
+pyquery==1.4.0; python_version != '3.0.*'
+pytesseract==0.2.4
+python-dateutil==2.7.3
+python-xlib==0.23
+pytz==2018.5
+pywinauto==0.6.6
+requests==2.19.1
+six==1.11.0
+urllib3==1.23; python_version != '3.1.*'
+werkzeug==0.14.1
+

@@ -5,13 +5,15 @@ class logger:
     def __init__(self, path, clevel=logging.INFO, Flevel=logging.INFO):
         self.logger = logging.getLogger(path)
         self.logger.setLevel(logging.DEBUG)
-        fmt = logging.Formatter('[%(asctime)s] [%(levelname)s] %(message)s', '%Y-%m-%d %H:%M:%S')
+        fmt = logging.Formatter(
+            "[%(asctime)s] [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S"
+        )
         # 设置CMD日志
         sh = logging.StreamHandler()
         sh.setFormatter(fmt)
         sh.setLevel(clevel)
         # 设置文件日志
-        fh = logging.FileHandler(path, encoding='utf-8')
+        fh = logging.FileHandler(path, encoding="utf-8")
         fh.setFormatter(fmt)
         fh.setLevel(Flevel)
         self.logger.addHandler(sh)
@@ -33,11 +35,13 @@ class logger:
         self.logger.critical(message)
 
 
-log = logger("log.txt")
+log = logger("qbot-log.txt")
 
 
 import socket
-def check_port_in_use(port, host='127.0.0.1'):
+
+
+def check_port_in_use(port, host="127.0.0.1"):
     s = None
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -49,4 +53,3 @@ def check_port_in_use(port, host='127.0.0.1'):
     finally:
         if s:
             s.close()
-

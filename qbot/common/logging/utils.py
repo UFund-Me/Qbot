@@ -35,4 +35,4 @@ class logger:
         self.logger.critical(message)
 
 
-log = logger("log.txt")
+log = logger("qbot-log.txt")

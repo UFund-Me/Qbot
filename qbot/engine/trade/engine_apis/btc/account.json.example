@@ -1,0 +1,29 @@
+{
+    "okx": {
+        "uid": "",
+        "apikey": "",
+        "secretkey": "",
+        "IP": "",
+        "备注名": "qbot",
+        "权限": "读取/交易",
+        "vip_channel": "https://www.cnouyi.social/join/57246734"
+    },
+    "binance": {
+        "uid": "",
+        "apikey": "",
+        "secretkey": "",
+        "IP": "",
+        "备注名": "qbot",
+        "权限": "读取/交易",
+        "vip_channel": "https://accounts.binance.com/register?ref=130173909"
+    },
+    "huobi": {
+        "uid": "",
+        "apikey": "",
+        "secretkey": "",
+        "IP": "",
+        "备注名": "qbot",
+        "权限": "读取/交易",
+        "vip_channel": "https://www.htx.com/invite/zh-cn/1f?invite_code=wr938223"
+    }
+}

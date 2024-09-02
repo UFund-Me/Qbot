@@ -1,0 +1,5 @@
+# Keep in sync with setup.cfg which is used for source packages.
+
+[flake8]
+max-line-length = 100
+max-complexity = 20

@@ -14,12 +14,14 @@ Licensed under the MIT License.
 """
 import wx
 
-from qbot.gui import gui_utils
-from qbot.gui.config import DATA_DIR_BKT_RESULT
-from qbot.gui.widgets.widget_web import WebPanel
 from qbot.common.file_utils import extract_content
 from qbot.common.logging.logger import LOGGER as logger
 from qbot.common.macros import strategy_choices
+from qbot.gui import gui_utils
+from qbot.gui.config import DATA_DIR_BKT_RESULT
+from qbot.gui.elements.def_dialog import MessageDialog
+from qbot.gui.widgets.widget_web import WebPanel
+
 
 # https://zhuanlan.zhihu.com/p/376248349
 def OnBkt(event):
@@ -76,7 +78,12 @@ class PanelBacktest(wx.Panel):
         #     self.patten_log_tx, proportion=10, flag=wx.EXPAND | wx.BOTTOM, border=5
         # )
 
-        self.vbox_sizer_b.Add(self.BackWebPanel, proportion=10, flag=wx.EXPAND|wx.ALL|wx.CENTER, border=5)
+        self.vbox_sizer_b.Add(
+            self.BackWebPanel,
+            proportion=10,
+            flag=wx.EXPAND | wx.ALL | wx.CENTER,
+            border=5,
+        )
 
         # 第一层布局
         self.HBoxPanelSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -186,9 +193,7 @@ class PanelBacktest(wx.Panel):
         ).strftime("%Y%m%d")
 
         # 行情参数——输入股票代码
-        self.stock_code_box = wx.StaticBox(
-            sub_panel, -1, "交易标的(股票/期货/比特币)代码"
-        )
+        self.stock_code_box = wx.StaticBox(sub_panel, -1, "交易标的(股票/期货/比特币)代码")
         self.stock_code_sizer = wx.StaticBoxSizer(self.stock_code_box, wx.VERTICAL)
         self.stock_code_input = wx.TextCtrl(
             sub_panel, -1, "399006.SZ", style=wx.TE_PROCESS_ENTER
@@ -284,7 +289,7 @@ class PanelBacktest(wx.Panel):
         # self.group_analy_cmbo.Bind(wx.EVT_COMBOBOX, self._ev_group_analy)  # 绑定ComboBox事件
 
         # 回测按钮
-        self.load_data_but = wx.Button(sub_panel, -1, "加载数据")
+        self.load_data_but = wx.Button(sub_panel, -1, "加载行情数据")
         self.load_data_but.SetBackgroundColour(wx.Colour(76, 187, 23))  # 设置背景颜色
         # self.load_data_but.Bind(wx.EVT_BUTTON, self._ev_start_run)  # 绑定按钮事件
         self.load_data_but.Bind(wx.EVT_BUTTON, self.LoadData)  # 绑定按钮事件
@@ -540,7 +545,7 @@ class PanelBacktest(wx.Panel):
         st_name = self.code_table.get_name(st_code)
         self.backtest_opts["code"] = st_code
         logger.info(f"回测股票/基金: You select {st_code}")
-    
+
     def _on_start_time_changed(self, event):
         start_time = gui_utils._wxdate2pydate(self.dpc_start_time.GetValue()).strftime(
             "%Y%m%d"
@@ -600,9 +605,13 @@ class PanelBacktest(wx.Panel):
         pass
 
     def StartBacktest(self, event):
-        print("在线回测属于付费功能，请联系微信：Yida_Zhang2")
+        msg = "在线回测属于付费功能，请联系微信：Yida_Zhang2"
+        MessageDialog(msg)
+        print(msg)
         pass
-    
+
     def LoadData(self, event):
-        print("请联系微信：Yida_Zhang2 开通功能")
+        msg = "请联系微信：Yida_Zhang2 开通功能"
+        MessageDialog(msg)
+        print(msg)
         pass

@@ -1,0 +1,12 @@
+{
+    "东方财富": {
+        "/des": " account info",
+        "user": "",
+        "password": ""
+    },
+    "华泰证券": {
+        "/des": " account info",
+        "user": "",
+        "password": ""
+    }
+}

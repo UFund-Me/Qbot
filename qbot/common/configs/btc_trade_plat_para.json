@@ -1,0 +1,169 @@
+{
+    "__version__": "V1.3.8",
+    "__author__": "Charmve",
+    "欧易OKX": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/okx_logo.png",
+        "ads": [
+            "''",
+            "''"
+        ],
+        "labels": [
+            "",
+            ""
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": "",
+                "passphrase": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": "",
+                "passphrase": ""
+            }
+        },
+        "operate_sys": [
+            "macos",
+            "windows"
+        ],
+        "vip_channel": "https://www.cnouyi.social/join/57246734"
+    },
+    "币安Binance": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/binance_logo.png",
+        "ads": [
+            "''",
+            "''"
+        ],
+        "labels": [
+            "",
+            ""
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            }
+        },
+        "operate_sys": [
+            "macos",
+            "windows"
+        ]
+    },
+    "火币Huobi": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/huobi_logo.png",
+        "ads": [
+            "''",
+            "''"
+        ],
+        "labels": [
+            "",
+            ""
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "443400068",
+                "apikey": "",
+                "secretkey": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            }
+        },
+        "operate_sys": [
+            "macos",
+            "windows"
+        ]
+    },
+    "CoinBase": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/coinbase_logo.png",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "''"
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            }
+        },
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ]
+    },
+    "BitGet": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/bitget_logo.png",
+        "ads": [
+            "'专门极低佣金'",
+            "'新客专属理财'"
+        ],
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            }
+        },
+        "operate_sys": [
+            "windows"
+        ]
+    },
+    "Bybit": {
+        "license": "xxxxxxx",
+        "icon": "qbot/asserts/statics/icons/btc_logo/bybit_logo.jpg",
+        "ads": [
+            "'开户享惊喜佣金'",
+            "'千万Cryper选择'"
+        ],
+        "api_key": {
+            "real_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            },
+            "sim_trade": {
+                "uid": "",
+                "apikey": "",
+                "secretkey": ""
+            }
+        },
+        "labels": [
+            "国企券商",
+            "安全可靠"
+        ],
+        "operate_sys": [
+            "linux_x86"
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "东方财富": {
+        "/des": " account info",
+        "user": "",
+        "password": ""
+    },
+    "华泰证券": {
+        "/des": " account info",
+        "user": "",
+        "password": ""
+    },
+    "雪球": {
+        "cookies": "雪球 cookies，登陆后获取，获取方式见 https://smalltool.github.io/2016/08/02/cookie/",
+        "portfolio_code": "组合代码(例:ZH818559)",
+        "portfolio_market": "交易市场(例:us 或者 cn 或者 hk)"
+    },
+    "银河证券": {
+        "user": "银河用户名",
+        "password": "银河明文密码"
+    },
+    "海通证券": {
+        "user": "海通用户名",
+        "password": "海通明文密码"
+    },
+    "国金证券": {
+        "user": "国金用户名",
+        "password": "国金明文密码"
+    },
+    "通达信": {
+        "user": "通达信用户名",
+        "password": "通达信明文密码"
+    }
+}

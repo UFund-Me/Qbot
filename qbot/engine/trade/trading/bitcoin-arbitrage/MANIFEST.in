@@ -1,0 +1,2 @@
+include *.md
+recursive-include doc *.md

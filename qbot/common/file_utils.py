@@ -1,6 +1,7 @@
 import json
-import re
 import os
+import re
+
 
 def extract_content(text):
     pattern = r"\((.*?)\)"  # 匹配()之间的内容
@@ -15,9 +16,11 @@ def save_strings_as_json(str_data, file_path):
     with open(file_path, "w") as file:
         file.write(json_str)
 
+
 def file2dict(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
 
 def list_files_in_directory(path, file_suffix=[".csv"]):
     files_list = []
@@ -26,6 +29,7 @@ def list_files_in_directory(path, file_suffix=[".csv"]):
             for file in files:
                 files_list.append(file.strip(file_suf))
     return files_list
+
 
 # data_str="""
 #         {

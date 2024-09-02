@@ -1,0 +1,70 @@
+{
+    "layout_dict": {
+        "figsize": null,
+        "nrows": 4,
+        "ncols": 1,
+        "left": 0.05,
+        "bottom": 0.15,
+        "right": 0.99,
+        "top": 0.96,
+        "wspace": null,
+        "hspace": 0,
+        "height_ratios": [
+            3.5,
+            1,
+            1,
+            1
+        ],
+        "subplots": [
+            "kgraph",
+            "volgraph",
+            "kdjgraph",
+            "macdgraph"
+        ]
+    },
+    "subplots_dict": {
+        "graph_fst": {
+            "graph_name": "kgraph",
+            "graph_type": {
+                "ochl": null,
+                "sma": [
+                    20,
+                    30,
+                    60
+                ]
+            },
+            "title": "000651 格力电器-日K线",
+            "ylabel": "价格",
+            "xticks": 15,
+            "legend": "best"
+        },
+        "graph_sec": {
+            "graph_name": "volgraph",
+            "graph_type": {
+                "vol": null
+            },
+            "ylabel": "成交量",
+            "xticks": 15
+        },
+        "graph_thd": {
+            "graph_name": "kdjgraph",
+            "graph_type": {
+                "kdj": null
+            },
+            "ylabel": "KDJ",
+            "xticks": 15,
+            "legend": "best"
+        },
+        "graph_fth": {
+            "graph_name": "macdgraph",
+            "graph_type": {
+                "macd": null
+            },
+            "ylabel": "MACD",
+            "xlabel": "日期",
+            "xticks": 15,
+            "legend": "best",
+            "xticklabels": "%Y-%m-%d %H:%M"
+        }
+    }
+}

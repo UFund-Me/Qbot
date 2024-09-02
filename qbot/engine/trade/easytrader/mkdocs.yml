@@ -1,0 +1,8 @@
+site_name: easytrader
+pages:
+  - Home: index.md
+  - 安装: install.md
+  - 使用: usage.md
+  - 常见问题: help.md
+  - 其他: 'other/xueqiu.md'
+theme: readthedocs

@@ -1,0 +1,30 @@
+dist: xenial
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8-dev"  # 3.8 development branch
+  - "nightly"  # nightly build
+
+install:
+  # Install dependencies
+  - pip install -r requirements.txt
+
+  # Run setup install
+  - python setup.py -q install
+
+  # Install dev dependencies
+  - pip install nose black flake8
+
+  # Create the config file from the example
+  - cp arbitrage/config.py-example arbitrage/config.py
+
+script:
+  # Run formatter
+  - ./tools/inplace-code-formatting.sh
+
+  # Run linter - TODO: fix lint issues before running it in travis
+  # - flake8 .
+
+  # Run tests
+  - nosetests arbitrage/

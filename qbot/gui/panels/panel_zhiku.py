@@ -5,11 +5,12 @@ import os
 import wx
 import wx.adv
 
-from qbot.common.logging.logger import LOGGER as logger
 from qbot.common.config import RESEARCH_REPORTS
 from qbot.common.file_utils import list_files_in_directory
-from qbot.gui.widgets.widget_web import WebPanel
+from qbot.common.logging.logger import LOGGER as logger
 from qbot.common.utils import check_port_in_use
+from qbot.gui.widgets.widget_web import WebPanel
+
 
 class QbotHomePanel(wx.Panel):
     def __init__(self, parent):

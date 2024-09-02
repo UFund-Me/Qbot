@@ -1,0 +1,28 @@
+{
+    "__version__": "V1.3.8",
+    "__author__": "Charmve",
+    "operate_sys": "macos",
+    "multi-panels": {
+        "mpl_fig_x": 5,
+        "mpl_fig_y": 4,
+        "web_size_x": 600,
+        "web_size_y": 300,
+        "mpl_fig_left": 0.1,
+        "mpl_fig_right": 0.95,
+        "mpl_fig_top": 0.9,
+        "mpl_fig_bottom": 0.15
+    },
+    "mailbox": {
+        "license": "new_license_value",
+        "to_address": [
+            "new_email@gmail.com"
+        ],
+        "from_address": "new_from@qq.com",
+        "server_address": "smtp.qq.com"
+    },
+    "license_reminder_box": {
+        "latest_pop_date": "20240831",
+        "release_date": "20230829",
+        "license_created": false
+    }
+}

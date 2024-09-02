@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: [master]
+name: Mirror GitHub Repos to Gitee
+jobs:
+  run:
+    name: Sync-GitHub-to-Gitee
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mirror the Github repos to Gitee.
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/BigBrotherTrade
+        dst: gitee/timercrack
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        force_update: true
+        src_account_type: org
+        dst_account_type: user
+        mappings: "dashboard=>dashboards"
+        static_list: "trader"
+        cache_path: /github/workspace/hub-mirror-cache

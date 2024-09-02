@@ -1,0 +1,52 @@
+{
+  "response_format": {
+    "int": [
+      "current_amount",
+      "enable_amount",
+      "entrust_amount",
+      "business_amount",
+      "成交数量",
+      "撤单数量",
+      "委托数量",
+      "股份可用",
+      "买入冻结",
+      "卖出冻结",
+      "当前持仓",
+      "股份余额"
+    ],
+    "float": [
+      "current_balance",
+      "enable_balance",
+      "fetch_balance",
+      "market_value",
+      "asset_balance",
+      "av_buy_price",
+      "cost_price",
+      "income_balance",
+      "market_value",
+      "entrust_price",
+      "business_price",
+      "business_balance",
+      "fare1",
+      "occur_balance",
+      "farex",
+      "fare0",
+      "occur_amount",
+      "post_balance",
+      "fare2",
+      "fare3",
+      "资金余额",
+      "可用资金",
+      "参考市值",
+      "总资产",
+      "股份参考盈亏",
+      "委托价格",
+      "成交价格",
+      "成交金额",
+      "参考盈亏",
+      "参考成本价",
+      "参考市价",
+      "参考市值"
+    ]
+  }
+}
