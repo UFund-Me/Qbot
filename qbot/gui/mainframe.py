@@ -109,7 +109,7 @@ class MainFrame(wx.Frame):
         if not monitor_pids:
             for pid in monitor_pids:
                 os.system(f"kill -9 {pid}")
-        os.system("nohup python backend/auto_monitor.py > monitoring.log &")
+        os.system("nohup python qbot/plugins/auto_monitor.py > monitoring.log &")
         wx.MessageBox("股票监控程序已开启，后台查看日志。 'tail -f monitoring.log' ")
 
     def init_main_tabs(self):
