@@ -28,11 +28,10 @@
 
 微信扫码添加
 
-
-<img src="qbot/asserts/statics/imgs/wechat.png" style="zoom:80%;" />
+<img src="https://github.com/UFund-Me/Qbot/blob/main/qbot/asserts/statics/imgs/wechat.png?raw=true" style="zoom:80%;" />
 <br>注明：开户。
 
-## 券商平台客户端下载
+## 证券商平台客户端下载
 
 ### 下面是国金证券提供的试用账户：
 

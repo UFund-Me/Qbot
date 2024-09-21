@@ -554,7 +554,14 @@ Qbot买卖强弱指标(收费)
 
 ## 支持的实盘交易接口
 
-<img src="./docs/statics/imgs/backtest_sample.png"></img>
+<img src="./docs/statics/imgs/qbot_tradeplatform.png"></img>
+
+------
+
+[证券平台账号开通](qbot/engine/trade/engine_apis/venv/README.md) 
+
+低费率开户：股票万0.854免五, ETF万0.4, 可转债万0.4 没有资金门槛。关注公众可开户
+另外提供开通券商量化交易接口，支持python编写实盘交易
 
 支持股票券商
 - 海通客户端(海通网上交易系统独立委托)
@@ -562,16 +569,11 @@ Qbot买卖强弱指标(收费)
 - 国金客户端(全能行证券交易终端PC版)
 - 其他券商通用同花顺客户端(需要手动登陆)
 
-------
-[券平台账号开通](qbot/engine/trade/engine_apis/venv/README.md) 
 
-低费率开户：股票万0.854免五, ETF万0.4, 可转债万0.4 没有资金门槛。关注公众可开户
-另外提供开通券商量化交易接口，支持python编写实盘交易
-
-<b>开通方式</>：微信Yida_Zhang2 (注明：开户)
+<b>开通方式<b>：微信Yida_Zhang2 (注明：开户)
 ------
 
-### 实盘交易接口()
+### 实盘交易接口
 > 欢迎更多交易所、柜台开放交易api
 
 - 期货
