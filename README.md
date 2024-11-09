@@ -81,35 +81,23 @@
 Qbot是一个免费的量化投研平台，提供从数据获取、交易策略开发、策略回测、模拟交易到最终实盘交易的全闭环流程。在实盘接入前，有股票、基金评测和策略回测，在模拟环境下做交易验证，近乎实盘的时延、滑点仿真。故，本平台提供GUI前端/客户端（部分功能也支持网页），后端做数据处理、交易调度，实现事件驱动的交易流程。对于策略研究部分，尤其强调机器学习、强化学习的AI策略，结合多因子模型提高收益比。
 
 但本项目可能需要一点点python基础知识，有一点点交易经验，会更容易体会作者的初衷，解决当下产品空缺和广大散户朋友的交易痛点，现在直接免费开源出来！
+但本项目可能需要一点点python基础知识，有一点点交易经验，会更容易体会作者的初衷，解决当下产品空缺和广大散户朋友的交易痛点，现在直接免费开源出来！
+
+<b>Qbot 目前仅在 python3.8 pyhont3.9 下测试过，其他版本未测试。</b>
+
+<<< 详细文档 [docs/Install_guide.md](docs/Install_guide.md)
 
 ```bash
 cd ~ # $HOME as workspace
 git clone https://github.com/UFund-Me/Qbot --depth 1
 
 cd Qbot
-pip install -r requirements.txt
+
+pip install -r dev/requirements.txt
 
 export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner
 python main.py  #if run on Mac, please use 'pythonw main.py'
-
 ```
-
-详细文档 https://github.com/UFund-Me/Qbot/blob/main/quick_start.md
-
-> [!NOTE]
-> - wxPython、Ta-Lib 需要手动安装，pip wheel 在 dev/ 路径下。https://github.com/UFund-Me/Qbot/issues/76
-> - <details><summary>Mac系统在安装之前需要手动安装tables库的依赖hdf5，以及pythonw https://github.com/UFund-Me/Qbot/issues/11 </summary>
-> <code>
->   brew install hdf5
->   brew install c-blosc
->   export HDF5_DIR=/opt/homebrew/opt/hdf5 
->   export BLOSC_DIR=/opt/homebrew/opt/c-blosc
-> </code>
-> </details>
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/UFund-Me/Qbot)
-
-<!-- ![Gitpod-Ready](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod) -->
 
 ## Highlights
 
@@ -560,7 +548,8 @@ Qbot买卖强弱指标(收费)
 
 [证券平台账号开通](qbot/engine/trade/engine_apis/venv/README.md) 
 
-低费率开户：股票万0.854免五, ETF万0.4, 可转债万0.4 没有资金门槛。关注公众可开户
+低费率开户：股票万0.854免五, ETF万0.4, 可转债万0.4 没有资金门槛。关注公众号可开户
+
 另外提供开通券商量化交易接口，支持python编写实盘交易
 
 支持股票券商
