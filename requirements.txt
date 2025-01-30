@@ -2,7 +2,7 @@
 pandas
 matplotlib==3.2.2
 backtrader
-git+https://github.com/quantopian/pyfolio
+# git+https://github.com/quantopian/pyfolio
 backtrader_plotting
 scipy
 statsmodels
@@ -27,3 +27,9 @@ yfinance
 efinance
 akshare
 pandas_datareader
+
+wxPython>=4.1.0
+easytrader
+requests
+pillow
+pandas
