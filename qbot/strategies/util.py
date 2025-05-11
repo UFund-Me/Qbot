@@ -81,12 +81,6 @@ def calculateMACD(closeArray, shortPeriod=12, longPeriod=26, signalPeriod=9):
     return fast_values[-1], slow_values[-1], diff_values[-1]    # 返回最新的快慢线和macd值
     # return round(fast_values[-1],5), round(slow_values[-1],5), round(diff_values[-1],5)
 
-def getMACD():
-    data = RequestUtil.sendRequest_GET(UrlConstant.Get_K_Line)
-    closeArray = [float(i[4]) for i in data]
-    closeArray.reverse()
-    return calculateMACD(closeArray)
-
 
 if __name__ == '__main__':
     code = 'sh.600000'
