@@ -17,6 +17,7 @@
 [![Coverage](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml/badge.svg)](https://github.com/UFund-Me/Qbot/actions/workflows/coverage.yml)
 <a href="https://github.com/UFund-Me/Qbot"><img src="https://img.shields.io/badge/Python-%203.8|%203.9-000000.svg?logo=Python&color=blue" alt="Python version"></a>
 <a href="https://ufund-me.github.io/Qbot/#/"><img src="https://readthedocs.org/projects/pyod/badge/?version=latest" alt="Documentation status"></a>
+<a href="https://deepwiki.com/UFund-Me/Qbot"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
 <div align="center">
   <a href="https://github.com/UFund-Me/Qbot" target="_blank" rel="noopener">
@@ -34,9 +35,9 @@
       </a>
     </sup>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <b><font size="5">Qbot platform</font></b>
+    <b><font size="5">Qbot DeepWiki</font></b>
     <sup>
-      <a href="https://ufund-me.github.io/Qbot/quantstats/docs/tearsheet.html">
+      <a href="https://deepwiki.com/UFund-Me/Qbot">
         <i><font size="4">TRY IT OUT</font></i>
       </a>
     </sup>
