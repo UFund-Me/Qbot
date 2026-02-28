@@ -821,7 +821,12 @@ We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING.m
 <!-- [![Stargazers over time](https://starchart.cc/UFund-Me/Qbot.svg)](https://starchart.cc/UFund-Me/Qbot) -->
 
 [![Star History Chart](https://api.star-history.com/svg?repos=UFund-Me/Qbot,ailabx/ailabx,jadepeng/pytrader&type=Timeline)](https://star-history.com/#UFund-Me/Qbot&ailabx/ailabx&jadepeng/pytrader&Timeline)
-    
+
+## Repository Statistics
+
+![Repo Stats](stats/metrics.svg)
+
+*Daily clones, total forks, and total stars over time. Updated daily at 00:00 UTC.*
 ## Sponsors & support
 
 If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/qbot) or use [GitHub Sponsors](https://github.com/sponsors/Charmve).

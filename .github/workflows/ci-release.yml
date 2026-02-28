@@ -69,7 +69,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
+          key: ${{runner.OS}}-npm-caches-${{ hashFiles('release-lock.json') }}
 
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -101,11 +101,11 @@ jobs:
       - name: Package
         working-directory: .
         run: |
-          mkdir -p package/fund-strategies package/investool
-          mv $GITHUB_WORKSPACE/pyfunds/fund-strategies/dist/* package/fund-strategies
-          mv $GITHUB_WORKSPACE/investool/* package/investool
-          mv ./dist/* package/
-          tar -zcvf qbot_release_mac_v1.tar.gz ./package
+          mkdir -p release/fund-strategies release/investool
+          mv $GITHUB_WORKSPACE/pyfunds/fund-strategies/dist/* release/fund-strategies
+          mv $GITHUB_WORKSPACE/investool/* release/investool
+          mv ./dist/* release/
+          tar -zcvf qbot_release_${{ matrix.os }}_v1.tar.gz ./release
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v3

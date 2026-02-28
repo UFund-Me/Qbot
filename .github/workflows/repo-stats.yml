@@ -1,0 +1,78 @@
+name: Repository Statistics Update
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:  # Allow manual trigger
+
+# Set permissions for GITHUB_TOKEN
+permissions:
+  contents: write  # Needed to push to repository
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for better context
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f scripts/requirements.txt ]; then
+            pip install -r scripts/requirements.txt
+          else
+            # Install minimal dependencies if requirements file doesn't exist
+            pip install requests matplotlib
+          fi
+      
+      - name: Update repository statistics
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python scripts/update_repo_stats.py \
+            --token "$GITHUB_TOKEN" \
+            --repo "$REPO" \
+            --stats-dir ".github/stats"
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are changes to commit
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected, will commit and push"
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git add .github/stats/ README.md
+          git commit -m "Update repository statistics [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Summary
+        run: |
+          echo "## Repository Statistics Update" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Statistics updated successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "View the chart at: [.github/stats/metrics.svg](.github/stats/metrics.svg)" >> $GITHUB_STEP_SUMMARY
