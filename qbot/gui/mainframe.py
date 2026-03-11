@@ -44,7 +44,7 @@ class MainFrame(wx.Frame):
 
         setting = wx.Menu()
         menuBar.Append(setting, "&设置")
-        params_conf = wx.MenuItem(setting, 0, "&参数配置")
+        params_conf = wx.MenuItem(setting, wx.ID_ANY, "&参数配置")
         setting.Append(params_conf)
         self.Bind(wx.EVT_MENU, self.on_params_conf, params_conf)
 
