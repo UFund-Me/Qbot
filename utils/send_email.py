@@ -76,49 +76,62 @@ message_html = MIMEText(html_content, "html", "utf-8")
 
 def send_email(mail_sender, mail_receivers, content):
 
-    # 创建SMTP对象
-    if "qq" in mail_sender:
-        server = smtplib.SMTP_SSL("smtp.qq.com", 465)
-    elif "gmail" in mail_sender:
-        server = smtplib.SMTP("smtp.gmail.com", 587)  # Connect to the server
-        server.starttls()
-    elif "163" in mail_sender:
-        server = smtplib.SMTP()
-        # 设置发件人邮箱的域名和端口，端口地址为25
-        server.connect("smtp.163.com", 25)
-    else:
-        print("Please check your sender email.")
+    if not mail_receivers:
+        return None
 
-    # set_debuglevel(1)可以打印出和SMTP服务器交互的所有信息
-    # server.set_debuglevel(1)
+    server = None
+    try:
+        # 创建SMTP对象
+        if "qq" in mail_sender:
+            server = smtplib.SMTP_SSL("smtp.qq.com", 465)
+        elif "gmail" in mail_sender:
+            server = smtplib.SMTP("smtp.gmail.com", 587)  # Connect to the server
+            server.starttls()
+        elif "163" in mail_sender:
+            server = smtplib.SMTP()
+            # 设置发件人邮箱的域名和端口，端口地址为25
+            server.connect("smtp.163.com", 25)
+        else:
+            print("Please check your sender email.")
+            return None
 
-    # Connect and login to the email server
-    server.login(mail_sender, mail_license)
+        # set_debuglevel(1)可以打印出和SMTP服务器交互的所有信息
+        # server.set_debuglevel(1)
 
-    # Loop over each email to send to
-    for mail_receiver in mail_receivers:
-        # Setup MIMEMultipart for each email address (if we don't do this, the emails will concatenate on each email sent)
-        msg = MIMEMultipart()
-        msg["From"] = mail_sender
-        msg["To"] = mail_receiver
-        msg["Subject"] = subject
+        # Connect and login to the email server
+        server.login(mail_sender, mail_license)
 
-        print("Send to: ", mail_receiver)
+        # Loop over each email to send to
+        for mail_receiver in mail_receivers:
+            # Setup MIMEMultipart for each email address (if we don't do this, the emails will concatenate on each email sent)
+            msg = MIMEMultipart()
+            msg["From"] = mail_sender
+            msg["To"] = mail_receiver
+            msg["Subject"] = subject
 
-        # Attach the message to the MIMEMultipart object
-        # msg.attach(message_text)
-        # msg.attach(message_image)
-        # Attach the attachment file
-        # msg.attach(attachment)
-        msg.attach(content)
+            print("Send to: ", mail_receiver)
 
-        # Send the email to this specific email address
-        server.sendmail(mail_sender, mail_receiver, msg.as_string())
-        print("邮件发送成功")
-        return True
+            # Attach the message to the MIMEMultipart object
+            # msg.attach(message_text)
+            # msg.attach(message_image)
+            # Attach the attachment file
+            # msg.attach(attachment)
+            msg.attach(content)
 
-    # Quit the email server when everything is done
+            # Send the email to this specific email address
+            server.sendmail(mail_sender, mail_receiver, msg.as_string())
+            print("邮件发送成功")
+    except Exception:
+        if server is not None:
+            try:
+                server.quit()
+            except Exception:
+                # Preserve the original connection, login, or sending error.
+                pass
+        raise
+
     server.quit()
+    return True
 
 
 if __name__ == "__main__":
