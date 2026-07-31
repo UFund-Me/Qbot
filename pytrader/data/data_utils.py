@@ -41,9 +41,8 @@ def load_from_file(code):
             inplace=True,
         )
         df["date"] = df["date"].apply(lambda x: str(x))
-        # df = df[["code", "open", "high", "low", "close", "date", "volume"]]
-        df = df[['open', 'high', 'low', 'close', 'date', 'volume']]
-        df.index = df["code"]
+        df = df[["code", "open", "high", "low", "close", "date", "volume"]]
+        df.index = df["date"]
         df.sort_index(ascending=True, inplace=True)
         df["rate"] = df["close"].pct_change()
     else:
@@ -52,11 +51,11 @@ def load_from_file(code):
     return df
 
 class DataUtil:
-    def __init__(self, df_results, benchmarks=['000300.SH']):
+    def __init__(self, df_results, benchmarks=None):
         self.df_results = df_results
-        self.benchmarks = benchmarks
+        self.benchmarks = ["000300.SH"] if benchmarks is None else benchmarks
 
-    def to_backtrader_dataframe(self.df):
+    def to_backtrader_dataframe(self, df):
         df.index = pd.to_datetime(df.index)
         df['openinterest'] = 0
         df = df[['open', 'high', 'low', 'close', 'volume', 'openinterest']]
