@@ -51,9 +51,9 @@ def load_from_file(code):
     return df
 
 class DataUtil:
-    def __init__(self, df_results, benchmarks=['000300.SH']):
+    def __init__(self, df_results, benchmarks=None):
         self.df_results = df_results
-        self.benchmarks = benchmarks
+        self.benchmarks = ["000300.SH"] if benchmarks is None else benchmarks
 
     def to_backtrader_dataframe(self, df):
         df.index = pd.to_datetime(df.index)

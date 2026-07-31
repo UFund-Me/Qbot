@@ -83,6 +83,16 @@ class TestDataUtils(unittest.TestCase):
             for date, expected_rate in rates_by_date.items():
                 self.assertAlmostEqual(code_rows.loc[date, "rate"], expected_rate)
 
+    def test_default_benchmarks_are_not_shared_between_instances(self):
+        first = data_utils.DataUtil(None)
+        first.benchmarks.append("TEST")
+
+        second = data_utils.DataUtil(None)
+
+        self.assertEqual(first.benchmarks, ["000300.SH", "TEST"])
+        self.assertEqual(second.benchmarks, ["000300.SH"])
+        self.assertIsNot(first.benchmarks, second.benchmarks)
+
     def test_to_backtrader_dataframe_has_expected_columns(self):
         source = pd.DataFrame(
             {
