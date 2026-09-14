@@ -1,0 +1,16 @@
+# Configuration for actions/labeler@v4 used by .github/workflows/labeler.yml
+# v4 expects a flat list of globs per label, not the v5+ changed-files syntax.
+
+documentation:
+  - 'docs/**'
+  - '**/*.md'
+
+github_actions:
+  - '.github/**'
+
+python:
+  - '**/*.py'
+
+dependencies:
+  - 'pyproject.toml'
+  - 'requirements*.txt'
