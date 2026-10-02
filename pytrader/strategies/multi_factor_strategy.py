@@ -13,11 +13,24 @@ Copyright (c) 2023 by Charmve, All Rights Reserved.
 Licensed under the MIT License.
 '''
 
+import os
+
 import backtrader as bt
 import tushare as ts
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+
+
+def get_tushare_token():
+    token = os.environ.get("TUSHARE_TOKEN")
+    if not token:
+        raise RuntimeError(
+            "TUSHARE_TOKEN is not set. Export your Tushare token first, e.g. "
+            "`export TUSHARE_TOKEN=<your token>` (see docs/Install_guide.md)."
+        )
+    return token
+
 
 class PEFetcher:
     def __init__(self, ts):
@@ -59,7 +72,7 @@ class ROEFetcher:
 
 
 def get_data(symbol, data_fetchers, start_date, end_date):
-    ts.set_token('e96f18882532434b7692388cb028eb267d3f0d56845dc92eef06ea4a')
+    ts.set_token(get_tushare_token())
     
     data = {}
     dates = ts.trade_cal()
@@ -150,7 +163,7 @@ class MultiFactorModelStrategy(bt.Strategy):
 
 if __name__ == '__main__':
     # 加载数据
-    ts.set_token('e96f18882532434b7692388cb028eb267d3f0d56845dc92eef06ea4a')
+    ts.set_token(get_tushare_token())
     pro = ts.pro_api()
     data_fetchers = [
         {'code': 'pe_ttm', 'data_fetcher': PEFetcher(pro)},

@@ -88,7 +88,7 @@ git clone https://github.com/UFund-Me/Qbot --depth 1
 cd Qbot
 pip install -r requirements.txt
 
-export PYTHONPATH=${PYTHONPATH}:$(pwd):$(pwd)/backend/multi-fact/mfm_learner
+export PYTHONPATH=${PYTHONPATH}:$(pwd)
 python main.py  #if run on Mac, please use 'pythonw main.py'
 
 ```
@@ -204,13 +204,13 @@ python main.py
 
 ## Strategy pool
 
-通过Qbot 可以积木式完成策略编写、多因子挖掘，实现数据开发、因子开发、组合优化、交易执行的[量化交易全流程](docs/01-新手指引/量化策略的分类和原理.md#1量化选股策略)。
+通过Qbot 可以积木式完成策略编写、多因子挖掘，实现数据开发、因子开发、组合优化、交易执行的[量化交易全流程](01-新手指引/量化策略的分类和原理.md#1量化选股策略)。
 
 <b>如果说策略是量化的核心 ，那么因子就是策略的核心。</b>通过Qbot量化投研平台研究员可实现自动化因子挖掘，提取出具备预测能力的单因子，利用历史数据进行回测，如果回测结果显示该因子的预测能力达标，就提交到因子库。然后，对因子库里的因子进行有机组合，以形成预测模型，预测模型是整个量化策略的目标。
 
 以下即为，<u>数据指标单因子或组合因子</u>和<u>通过深度学习、机器学习、强化学习挖掘到的交易因子</u>，然后通过组合优化算法实现趋势交易、风险策略、alpha策略、动量轮动等等交易策略。
 
-策略库源代码路径：[qbot/strategy](qbot/strategy)
+策略库源代码路径：[qbot/strategies](../qbot/strategies)、[pytrader/strategies](../pytrader/strategies)
 
 
 <div align="center">
@@ -238,76 +238,76 @@ python main.py
       </td>
       <td>
         <ul>
-          <li><a href="docs/02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
-          <li><a href="docs/tutorials_code/05.kdj_macd_in_A_market">移动均线+KDJ</a></li>
-          <li><a href="qbot/strategy/bigger_than_ema_bt.py">简单移动均线</a></li>
-          <li><a href="qbot/strategy/arbr_strategy.py">情绪指标ARBR</a></li>
-          <li><a href="qbot/strategy/aroon_strategy.py">阿隆指标(趋势交易)</a></li>
-          <li><a href="qbot/strategy/lgb_strategy.py">LightGBM 预测</a></li>
-          <li><a href="qbot/strategy/svm_strategy.py">SVM 预测</a></li>
-          <li><a href="qbot/strategy/lstm_strategy_bt.py">LSTM时序预测</a></li>
-          <li><a href="qbot/strategy/rl_strategy_bt.py">强化学习预测</a></li>
-          <li><a href="qbot/strategy/q-learning.py">Q-Leaning预测</a></li>
-          <li><a href="docs/tutorials_code/11_RandomForest">随机森林预测</a></li>
-          <li><a href="qbot/strategy/rsi_departure_strategy.py">RSI背离策略</a></li>
-          <li><a href="qbot/strategy/ssa_strategy_bt.py">麻雀优化算法SSA</a></li>
-          <li><a href="qbot/strategy/stoch_rsi_strategy.py">随机相对强弱指数 StochRSI</a></li>
-          <li><a href="docs/02-经典策略/01-股票/小市值.md">小市值 ('2021)</a></li>
-          <li><a href="qbot/strategy/undervalued_stock_picking_strategy.py">市场低估值策略</a></li>
-          <li><a href="docs/02-经典策略/01-股票/量化策略-RSRS择时.md">RSRS择时</a></li>
-          <li><a href="docs/02-经典策略/01-股票/量化三-配对交易.md">配对交易</a></li>
+          <li><a href="02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
+          <li><a href="tutorials_code/05.kdj_macd_in_A_market">移动均线+KDJ</a></li>
+          <li><a href="../qbot/strategies/bigger_than_ema_bt.py">简单移动均线</a></li>
+          <li><a href="../qbot/strategies/arbr_strategy.py">情绪指标ARBR</a></li>
+          <li><a href="../pytrader/strategies/aroon_strategy.py">阿隆指标(趋势交易)</a></li>
+          <li><a href="../pytrader/strategies/lgb_strategy.py">LightGBM 预测</a></li>
+          <li><a href="../pytrader/strategies/svm_strategy.py">SVM 预测</a></li>
+          <li><a href="../qbot/strategies/lstm_strategy_bt.py">LSTM时序预测</a></li>
+          <li><a href="../qbot/strategies/rl_strategy_bt.py">强化学习预测</a></li>
+          <li><a href="../pytrader/strategies/q-learning.py">Q-Leaning预测</a></li>
+          <li><a href="tutorials_code/11_RandomForest">随机森林预测</a></li>
+          <li><a href="../pytrader/strategies/rsi_departure_strategy.py">RSI背离策略</a></li>
+          <li><a href="../qbot/strategies/ssa_strategy_bt.py">麻雀优化算法SSA</a></li>
+          <li><a href="../pytrader/strategies/StochRSI.py">随机相对强弱指数 StochRSI</a></li>
+          <li><a href="02-经典策略/01-股票/小市值.md">小市值 ('2021)</a></li>
+          <li><a href="../qbot/strategies/undervalued_stock_picking_strategy.py">市场低估值策略</a></li>
+          <li><a href="02-经典策略/01-股票/量化策略-RSRS择时.md">RSRS择时</a></li>
+          <li><a href="02-经典策略/01-股票/量化三-配对交易.md">配对交易</a></li>
         </ul>
       </td>
       <td>
         <li><b>传统指标（对应下方Qbot支持的指标 <a href="#交易指标因子">这里</a>）</b></li>
         <ul>
-          <li><a href="docs/02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
-          <li><a href="docs/tutorials_code/05.kdj_macd_in_A_market">移动均线+KDJ</a></li>
-          <li><a href="qbot/strategy/bigger_than_ema_bt.py">简单移动均线</a></li>
-          <li><a href="qbot/strategy/klines_bt.py">双均线策略 ('2022)</a></li>
-          <li><a href="qbot/strategy/arbr_strategy.py">情绪指标ARBR</a></li>
-          <li><a href="qbot/strategy/aroon_strategy.py">阿隆指标(趋势交易)</a></li>
-          <li><a href="qbot/strategy/lgb_strategy.py">LightGBM 预测</a></li>
-          <li><a href="qbot/strategy/svm_strategy.py">SVM 预测</a></li>
-          <li><a href="qbot/strategy/lstm_strategy_bt.py">LSTM时序预测</a></li>
-          <li><a href="qbot/strategy/rl_strategy_bt.py">强化学习预测</a></li>
-          <li><a href="qbot/strategy/q-learning.py">Q-Leaning预测</a></li>
-          <li><a href="docs/tutorials_code/11_RandomForest">随机森林预测</a></li>
-          <li><a href="qbot/strategy/rsi_departure_strategy.py">RSI背离策略</a></li>
-          <li><a href="qbot/strategy/ssa_strategy_bt.py">麻雀优化算法SSA</a></li>
-          <li><a href="qbot/strategy/stoch_rsi_strategy.py">随机相对强弱指数 StochRSI</a></li>
+          <li><a href="02-经典策略/01-股票/布林线均值回归.md">布林线均值回归 ('2022)</a></li>
+          <li><a href="tutorials_code/05.kdj_macd_in_A_market">移动均线+KDJ</a></li>
+          <li><a href="../qbot/strategies/bigger_than_ema_bt.py">简单移动均线</a></li>
+          <li><a href="../qbot/strategies/klines_bt.py">双均线策略 ('2022)</a></li>
+          <li><a href="../qbot/strategies/arbr_strategy.py">情绪指标ARBR</a></li>
+          <li><a href="../pytrader/strategies/aroon_strategy.py">阿隆指标(趋势交易)</a></li>
+          <li><a href="../pytrader/strategies/lgb_strategy.py">LightGBM 预测</a></li>
+          <li><a href="../pytrader/strategies/svm_strategy.py">SVM 预测</a></li>
+          <li><a href="../qbot/strategies/lstm_strategy_bt.py">LSTM时序预测</a></li>
+          <li><a href="../qbot/strategies/rl_strategy_bt.py">强化学习预测</a></li>
+          <li><a href="../pytrader/strategies/q-learning.py">Q-Leaning预测</a></li>
+          <li><a href="tutorials_code/11_RandomForest">随机森林预测</a></li>
+          <li><a href="../pytrader/strategies/rsi_departure_strategy.py">RSI背离策略</a></li>
+          <li><a href="../qbot/strategies/ssa_strategy_bt.py">麻雀优化算法SSA</a></li>
+          <li><a href="../pytrader/strategies/StochRSI.py">随机相对强弱指数 StochRSI</a></li>
         </ul>
         <li><b>因子组合</b></li>
         <ul>
-          <li><a href="qbot/strategy/rsi_cci_strategy.py">RSI和CCI组合</a></li>
-          <li><a href="qbot/strategy/adx_strategy.py">MACD和ADX指标</a></li>
-          <li><a href="docs/tutorials_code/05.kdj_macd_in_A_market">MACD和KDJ指标</a></li>
-          <li><a href="qbot/strategy/multi_strategy_bt.py">多因子交易</a></li>
-          <li><a href="docs/tutorials_code/13.alphalens_factor_backtest">alphalens多因子交易</a></li>
-          <li><a href="docs/tutorials_code/08.harami_in_A_market">多策略整合</a></li>
-          <li><a href="docs/notebook/Kurtosis Portfolio.ipynb">组合策略</a></li>
-          <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
+          <li><a href="../pytrader/strategies/CCI.py">RSI和CCI组合</a></li>
+          <li><a href="../qbot/strategies/adx_strategy.py">MACD和ADX指标</a></li>
+          <li><a href="tutorials_code/05.kdj_macd_in_A_market">MACD和KDJ指标</a></li>
+          <li><a href="../qbot/strategies/multi_strategy_bt.py">多因子交易</a></li>
+          <li><a href="tutorials_code/13.alphalens_factor_backtest">alphalens多因子交易</a></li>
+          <li><a href="tutorials_code/08.harami_in_A_market">多策略整合</a></li>
+          <li><a href="notebook/Kurtosis Portfolio.ipynb">组合策略</a></li>
+          <li><a href="02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
         </ul>
         <li><b>经典策略</b></li>
         <ul>
-          <li><a href="docs/02-经典策略/01-股票/多因子选股.md">多因子选股 ('2023)</a></li>
-          <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
-          <li><a href="docs/02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
-          <li><a href="docs/02-经典策略/03-期货/网络交易.md">网格交易</a></li>
-          <li><a href="docs/02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
-          <li><a href="docs/03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
-          <li><a href="docs/03-智能策略/">趋势交易</a></li>
-          <li><a href="docs/03-智能策略/">海龟策略</a></li>
-          <li><a href="docs/03-智能策略/">动态平衡策略</a></li>
+          <li><a href="02-经典策略/01-股票/多因子选股.md">多因子选股 ('2023)</a></li>
+          <li><a href="02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
+          <li><a href="02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
+          <li><a href="02-经典策略/03-期货/网络交易.md">网格交易</a></li>
+          <li><a href="02-经典策略/03-期货/双均线策略.md">双均线策略 ('2022)</a></li>
+          <li><a href="03-智能策略/拐点交易.md">拐点交易 ('2022)</a></li>
+          <li><a href="03-智能策略/">趋势交易</a></li>
+          <li><a href="03-智能策略/">海龟策略</a></li>
+          <li><a href="03-智能策略/">动态平衡策略</a></li>
         </ul>
       </td>
       <td>
         <ul>
-          <li><a href="docs/notebook/Kurtosis Portfolio.ipynb">Kurtosis Portfolio组合策略 ('2023)</a></li>
-          <li><a href="docs/02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
-          <li><a href="docs/02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
-          <li><a href="docs/03-智能策略/">动态平衡策略</a></li>
-          <li><a href="qbot/strategy/multi_factor_strategy.py">多因子自动组合策略</a></li>
+          <li><a href="notebook/Kurtosis Portfolio.ipynb">Kurtosis Portfolio组合策略 ('2023)</a></li>
+          <li><a href="02-经典策略/01-股票/指数增强.md">指数增强 ('2022)</a></li>
+          <li><a href="02-经典策略/01-股票/Alpha对冲.md">Alpha对冲 ('2022)</a></li>
+          <li><a href="03-智能策略/">动态平衡策略</a></li>
+          <li><a href="../pytrader/strategies/multi_factor_strategy.py">多因子自动组合策略</a></li>
         </ul>
       </td>
       <tr valign="top">
@@ -316,16 +316,16 @@ python main.py
         </td>
         <td>
           <ul>
-            <li><a href="docs/02-经典策略/02-基金/4433法则.md">4433法则 ('2022)</a></li>
+            <li><a href="02-经典策略/02-基金/4433法则.md">4433法则 ('2022)</a></li>
           </ul>
         </td>
         <td>
           <ul>
-            <li><a href="docs/02-经典策略/02-基金/">对冲策略：指数型+债券型对冲</a></li>
-            <li><a href="docs/02-经典策略/02-基金/">组合策略：多因子组合配置</a></li>
-            <li><a href="docs/02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
-            <li><a href="docs/02-经典策略/02-基金/">组合策略：择时多策略</a></li>
-            <li><a href="docs/02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
+            <li><a href="02-经典策略/02-基金/">对冲策略：指数型+债券型对冲</a></li>
+            <li><a href="02-经典策略/02-基金/">组合策略：多因子组合配置</a></li>
+            <li><a href="02-经典策略/02-基金/">组合策略：惠赢智能算法1</a></li>
+            <li><a href="02-经典策略/02-基金/">组合策略：择时多策略</a></li>
+            <li><a href="02-经典策略/02-基金/">组合策略：智赢多因子1</a></li>
           </ul>
         </td>
         <td>
@@ -362,51 +362,51 @@ python main.py
       <td>
         <li><b>GBDT</b></li>
         <ul>
-            <li><a href="qbot/strategy/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
-            <li><a href="qbot/strategy/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
-            <li><a href="qbot/strategy/benchmarks/CatBoost/">Catboost (NIPS'2018)</a></li>
+            <li><a href="../pytrader/strategies/benchmarks/XGBoost">XGBoost (KDD'2016)</a></li>
+            <li><a href="../pytrader/strategies/benchmarks/LightGBM">LightGBM (NIPS'2017)</a></li>
+            <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/CatBoost">Catboost (NIPS'2018)</a> <sup>qlib</sup></li>
         </ul>
         <li><b>BOOST</b></li>
         <ul>
-            <li><a href="qbot/strategy/benchmarks/DoubleEnsemble/">DoubleEnsemble (ICDM'2020)</a></li>
-            <li><a href="qbot/strategy/benchmarks/TabNet/">TabNet (ECCV'2022)</a></li>
+            <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/DoubleEnsemble">DoubleEnsemble (ICDM'2020)</a> <sup>qlib</sup></li>
+            <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TabNet">TabNet (ECCV'2022)</a> <sup>qlib</sup></li>
         </ul>
         <li><b>LR</b></li>
         <ul>
-            <li><a href="qbot/strategy/benchmarks/Linear"> Line Regression ('2020)</a></li>
+            <li><a href="../pytrader/strategies/benchmarks/Linear"> Line Regression ('2020)</a></li>
         </ul>
       </td>
       <td>
         <li><b>CNN</b></li>
         <ul>
-          <li><a href="qbot/strategy/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
-          <li><a href="qbot/strategy/benchmarks/GRU/">GRU (ICCVW'2021)</a></li>
-          <li><a href="qbot/strategy/benchmarks/">ImVoxelNet (WACV'2022)</a></li>
-          <li><a href="qbot/strategy/benchmarks/TabNet/">TabNet (AAAI'2019)</a></li>
+          <li><a href="../pytrader/strategies/benchmarks/MLP">MLP (CVPRW'2020)</a></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/GRU">GRU (ICCVW'2021)</a> <sup>qlib</sup></li>
+          <li>ImVoxelNet (WACV'2022) <sup>未包含</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TabNet">TabNet (AAAI'2019)</a> <sup>qlib</sup></li>
         </ul>
         <li><b>RNN</b></li>
         <ul>
-          <li><a href="qbot/strategy/benchmarks/LSTM">LSTM (Neural Computation'2017)</a></li>
-          <li><a href="qbot/strategy/benchmarks/ALSTM/">ALSTM (IJCAI'2022)</a></li>
-          <li><a href="qbot/strategy/benchmarks/ADARNN/">ADARNN (KDD'2021)</a></li>
-          <li><a href="qbot/strategy/benchmarks/ADD/">ADD (CoRL'2020)</a></li>
-          <li><a href="qbot/strategy/benchmarks/KRNN/">KRNN ()</a></li>
-          <li><a href="qbot/strategy/benchmarks/Sandwich/">Sandwich ()</a></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/LSTM">LSTM (Neural Computation'2017)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/ALSTM">ALSTM (IJCAI'2022)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/ADARNN">ADARNN (KDD'2021)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/ADD">ADD (CoRL'2020)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/KRNN">KRNN ()</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/Sandwich">Sandwich ()</a> <sup>qlib</sup></li>
         </ul>
       </td>
       <td>
-          <li><a href="qbot/strategy/benchmarks/TFT">TFT (IJoF'2019)</a></li>
-          <li><a href="qbot/strategy/benchmarks/GATs/">GATs (NIPS'2017)</a></li>
-          <li><a href="qbot/strategy/benchmarks/SFM/">SFM (KDD'2017)</a></li>
+          <li><a href="../pytrader/strategies/benchmarks/TFT">TFT (IJoF'2019)</a></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/GATs">GATs (NIPS'2017)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/SFM">SFM (KDD'2017)</a> <sup>qlib</sup></li>
       </td>
       <td>
-          <li><a href="qbot/strategy/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
-          <li><a href="qbot/strategy/benchmarks/TCTS">TCTS (ICML'2021)</a></li>
-          <li><a href="qbot/strategy/benchmarks/TRA">TRA (KDD'2021)</a></li>
-          <li><a href="qbot/strategy/benchmarks/TCN">TCN (KDD'2018)</a></li>
-          <li><a href="qbot/strategy/benchmarks/IGMTF">IGMTF (KDD'2021)</a></li>
-          <li><a href="qbot/strategy/benchmarks/HIST">HIST (KDD'2018)</a></li>
-          <li><a href="qbot/strategy/benchmarks/Localformer">Localformer ('2021)</a></li>
+          <li><a href="../pytrader/strategies/benchmarks/Transformer">Transformer (NeurIPS'2017)</a></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TCTS">TCTS (ICML'2021)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TRA">TRA (KDD'2021)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/TCN">TCN (KDD'2018)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/IGMTF">IGMTF (KDD'2021)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/HIST">HIST (KDD'2018)</a> <sup>qlib</sup></li>
+          <li><a href="https://github.com/microsoft/qlib/tree/main/examples/benchmarks/Localformer">Localformer ('2021)</a> <sup>qlib</sup></li>
       </td>
       <td>
           <li><a href="https://chat-gpt-next-web-five-puce-64.vercel.app/">ChatGPT</a></li>
@@ -418,9 +418,11 @@ python main.py
   </tbody>
 </table>
 
+> 注：标有 <sup>qlib</sup> 的模型未包含在本仓库中，链接指向 [microsoft/qlib](https://github.com/microsoft/qlib/tree/main/examples/benchmarks) 上游 benchmark；标有 <sup>未包含</sup> 的模型暂无实现。本仓库自带的模型位于 [pytrader/strategies/benchmarks](../pytrader/strategies/benchmarks)。
+
 ### Benchmark and Model zoo
 
-Results and models are available in the [model zoo](docs/03-智能策略/model_zoo.md). AI strategies is shown at [here](./pytrader/strategies/), local run ``python backend/pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/blob/main/backend/pytrader/strategies/workflow_by_code.ipynb/HEAD)
+Results and models are available in the [model zoo](03-智能策略/model_zoo.md). AI strategies is shown at [here](../pytrader/strategies/), local run ``python pytrader/strategies/workflow_by_code.py``, also provide [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UFund-Me/Qbot/HEAD?labpath=pytrader%2Fstrategies%2Fworkflow_by_code.ipynb)
 
 <details><summary><em><b>👉 点击展开查看具体AI模型benchmark结果</b></em></summary>
 
@@ -450,7 +452,7 @@ Results and models are available in the [model zoo](docs/03-智能策略/model_z
 |     HIST       |   ✓    |     ✗     |   pytorch    |   ✗   |    ✗    |  Wentao Xu, et al.2021 |     ✗      |
 
 
-<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./docs/03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
+<sup>**Note:** All the about **300+ models, methods of 40+ papers** in quant.ai supported by [Model Zoo](./03-智能策略/model_zoo.md) can be trained or used in this codebase.</sup>
 
 </details>
 
@@ -582,7 +584,7 @@ Qbot买卖强弱指标(收费)
 
 本项目编写了详细的策略原理说明和平台搭建到使用的详细文档，尤其适合量化小白。欢迎加群交流！
 
-[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](./pytrader/strategies/notebook)
+[在线文档](https://ufund-me.github.io/Qbot/#/) | [❓ 常见问题](https://ufund-me.github.io/Qbot/#/04-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/FQA) | [Jupyter Notebook](../pytrader/strategies/notebook)
 
 ## Quantstats Report
 
@@ -651,7 +653,7 @@ dagit -h 0.0.0.0 -p 3000
 
 ## Contributing
 
-We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](.github/CONTRIBUTING) for the contributing guideline.
+We appreciate all contributions to improve Qbot. Please refer to [CONTRIBUTING](../.github/CONTRIBUTING.md) for the contributing guideline.
 
 ## 🍮 Community
 - Github <a href="https://github.com/UFund-Me/Qbot/discussions" target="_blank">discussions 💬</a> or <a href="https://github.com/UFund-Me/Qbot/issues" target="_blank">issues 💭</a>
@@ -743,7 +745,7 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 ## LICENSE
 
-<img src="qbot/asserts/statics/imgs/license_by-nc-sa_4.0.png">
+<img src="../qbot/asserts/statics/imgs/license_by-nc-sa_4.0.png">
 
 署名-非商业性使用-相同方式共享 4.0 国际
 

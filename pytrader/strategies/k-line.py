@@ -1,5 +1,7 @@
 
 # blog https://blog.csdn.net/qq_44176343/article/details/109903512
+import os
+
 import tushare as ts
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -8,7 +10,12 @@ import seaborn as sns
 # pip install --upgrade mplfinance
 import mpl_finance as mpf 
 
-token = "6f747880359ef14fe2fd5fc0c2c08a4e09a47e7ac161d643ae7036c0"
+token = os.environ.get("TUSHARE_TOKEN")
+if not token:
+    raise RuntimeError(
+        "TUSHARE_TOKEN is not set. Export your Tushare token first, e.g. "
+        "`export TUSHARE_TOKEN=<your token>` (see docs/Install_guide.md)."
+    )
 pro = ts.pro_api(token)
 df = ts.get_k_data('000002','2019-06-01','2019-09-30')
 

@@ -16,16 +16,25 @@ Licensed under the MIT License.
 """
 
 # 本示例运行于python3.6及以上版本
+import os
+
 from gmtrade.api import *  # noqa: F403
 
 # token身份认证，掘金登录后可在仿真交易官网获取
-set_token("c793349a885556506e27c2081c73091b4e77f28b")
+GMTRADE_TOKEN = os.environ.get("GMTRADE_TOKEN")
+GMTRADE_ACCOUNT = os.environ.get("GMTRADE_ACCOUNT")
+if not GMTRADE_TOKEN or not GMTRADE_ACCOUNT:
+    raise RuntimeError(
+        "GMTRADE_TOKEN and GMTRADE_ACCOUNT must be set to your 掘金 simulation token "
+        "and account ID (see docs/Install_guide.md)."
+    )
+set_token(GMTRADE_TOKEN)
 
 # 示例中为掘金官方仿真服务地址，如接入掘金终端，则填空
 set_endpoint("api.myquant.cn:9000")
 
 # 登录账户，账户ID由登录并申请仿真账户后，可复制获取；account_alias为账号别名，选填
-a1 = account(account_id="5e4cdda3-f2fb-11ed-ae27-00163e022aa6", account_alias="")
+a1 = account(account_id=GMTRADE_ACCOUNT, account_alias="")
 login(a1)  # 注意，可以输入账户也可以输入账户组成的list
 
 

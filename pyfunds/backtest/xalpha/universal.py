@@ -1248,7 +1248,14 @@ def _get_daily(
         return df
 
 
-def get_xueqiu_rt(code, token="a664afb60c7036c7947578ac1a5860c4cfb6b3b5"):
+def get_xueqiu_rt(code, token=None):
+    if not token:
+        token = os.environ.get("XUEQIU_TOKEN")
+        if not token:
+            raise RuntimeError(
+                "No Xueqiu token given. Pass token=get_token() or set the "
+                "XUEQIU_TOKEN environment variable."
+            )
     if code.startswith("HK") and code[2:].isdigit():
         code = code[2:]
     url = "https://stock.xueqiu.com/v5/stock/quote.json?symbol={code}&extend=detail"
@@ -2667,7 +2674,12 @@ def get_bar_fromwsj(code, token=None, interval=3600):
     # TODO: there is other freq tags, but I have no time to explore them, contributions are welcome:)
     freq = trans.get(str(interval), interval)
     if not token:
-        token = "cecc4267a0194af89ca343805a3e57af"
+        token = os.environ.get("WSJ_TOKEN")
+        if not token:
+            raise RuntimeError(
+                "No WSJ token given. Pass token=... or set the WSJ_TOKEN "
+                "environment variable."
+            )
     # the thing I am concerned here is whether token is refreshed
 
     params = {

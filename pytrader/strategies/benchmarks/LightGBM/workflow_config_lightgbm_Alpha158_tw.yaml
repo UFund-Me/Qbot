@@ -1,0 +1,79 @@
+# 台股版 LightGBM + Alpha158
+# 先用 qbot/data/tw_collector.py 建好 ~/.qlib/qlib_data/tw_data，再執行：
+#   qrun pytrader/strategies/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158_tw.yaml
+# 說明見 docs/03-智能策略/台股qlib工作流.md
+qlib_init:
+    provider_uri: "~/.qlib/qlib_data/tw_data"
+    region: tw                  # 交易單位 1000 股（一張），需 pyqlib >= 0.8.6
+market: &market top200          # 依過去 60 日成交值每季重選的前 200 檔
+benchmark: &benchmark TW0050    # 0050 還原權值（含息）；TWII 是不含息的價格指數
+data_handler_config: &data_handler_config
+    start_time: 2008-01-01
+    end_time: 2025-12-31
+    fit_start_time: 2008-01-01
+    fit_end_time: 2017-12-31
+    instruments: *market
+port_analysis_config: &port_analysis_config
+    strategy:
+        class: TopkDropoutStrategy
+        module_path: qlib.contrib.strategy
+        kwargs:
+            signal: <PRED>
+            topk: 50
+            n_drop: 5
+    backtest:
+        # 2015-06-01 起漲跌幅才從 7% 放寬到 10%，回測期間請放在之後
+        start_time: 2021-01-01
+        # 資料最後一天必須晚於 end_time（qlib 回測需要下一個交易日）
+        end_time: 2025-12-31
+        # 一張要 1000 股，帳戶太小時高價股會買不到；小資金可在 exchange_kwargs 加 trade_unit: 1 模擬零股
+        account: 1000000000
+        benchmark: *benchmark
+        exchange_kwargs:
+            # 漲停價會依升降單位向下取整，實際漲停幅度約 9.5%～10%，因此不用 0.1
+            limit_threshold: 0.095
+            deal_price: close
+            open_cost: 0.001425     # 手續費 0.1425%（券商折扣可自行調低）
+            close_cost: 0.004425    # 手續費 0.1425% + 證交稅 0.3%
+            min_cost: 20            # 最低手續費 20 元
+task:
+    model:
+        class: LGBModel
+        module_path: qlib.contrib.model.gbdt
+        kwargs:
+            loss: mse
+            colsample_bytree: 0.8879
+            learning_rate: 0.2
+            subsample: 0.8789
+            lambda_l1: 205.6999
+            lambda_l2: 580.9768
+            max_depth: 8
+            num_leaves: 210
+            num_threads: 20
+    dataset:
+        class: DatasetH
+        module_path: qlib.data.dataset
+        kwargs:
+            handler:
+                class: Alpha158
+                module_path: qlib.contrib.data.handler
+                kwargs: *data_handler_config
+            segments:
+                train: [2008-01-01, 2017-12-31]
+                valid: [2018-01-01, 2020-12-31]
+                test: [2021-01-01, 2025-12-31]
+    record:
+        - class: SignalRecord
+          module_path: qlib.workflow.record_temp
+          kwargs:
+            model: <MODEL>
+            dataset: <DATASET>
+        - class: SigAnaRecord
+          module_path: qlib.workflow.record_temp
+          kwargs:
+            ana_long_short: False
+            ann_scaler: 252
+        - class: PortAnaRecord
+          module_path: qlib.workflow.record_temp
+          kwargs:
+            config: *port_analysis_config

@@ -139,6 +139,26 @@ docker exec -it <container-id> bash
 
 <img src="./statics/imgs/email_config.jpg">
 
+2.3 数据源 / 交易 API token（环境变量）
+
+部分策略和示例脚本通过环境变量读取 API token，代码中不再硬编码。运行前请先设置对应变量，未设置时脚本会直接报错并提示缺少哪个变量。
+
+| 环境变量 | 用途 | 使用位置 |
+| --- | --- | --- |
+| `TUSHARE_TOKEN` | Tushare Pro token，在 [tushare.pro 个人主页](https://tushare.pro/user/token) 获取 | `pytrader/strategies/multi_factor_strategy.py`、`pytrader/strategies/k-line.py`、`qbot/strategies/arbr_strategy.py`、`docs/notebook/stock_api.py`、`docs/notebook/Strategy_runner.py` |
+| `GMTRADE_TOKEN` | 掘金仿真交易 token，登录[掘金仿真交易](https://sim.myquant.cn/sim/help/#仿真账户登录)后获取 | `qbot/engine/trade/engine_apis/stocks/gmtrade_example.py` |
+| `GMTRADE_ACCOUNT` | 掘金仿真账户 ID | `qbot/engine/trade/engine_apis/stocks/gmtrade_example.py` |
+| `XUEQIU_TOKEN` | 雪球 `xq_a_token` cookie。仅在调用 `get_xueqiu_rt()` 且未传入 `token` 时需要；`get_rt()` 会自动通过 `get_token()` 匿名获取 | `pyfunds/backtest/xalpha/universal.py` |
+| `WSJ_TOKEN` | WSJ / MarketWatch 行情接口的 EntitlementToken，`get_bar(..., _from="wsj")` 时需要 | `pyfunds/backtest/xalpha/universal.py` |
+
+```bash
+export TUSHARE_TOKEN=<your tushare token>
+export GMTRADE_TOKEN=<your gm token>
+export GMTRADE_ACCOUNT=<your gm sim account id>
+```
+
+Windows（PowerShell）使用 `$env:TUSHARE_TOKEN="<your tushare token>"`。请勿将 token 提交到代码仓库。
+
 ## Run：启动Qbot
 
 ```bash

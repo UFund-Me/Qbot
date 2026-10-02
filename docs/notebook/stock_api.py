@@ -1,6 +1,13 @@
+import os
+
 import tushare as ts
 
-mytoken = '565ee6d69fb85cb0bc7fdfc8dea4b8ce1f18366f30e8d23a253bb9cf'
+mytoken = os.environ.get("TUSHARE_TOKEN")
+if not mytoken:
+    raise RuntimeError(
+        "TUSHARE_TOKEN is not set. Export your Tushare token first, e.g. "
+        "`export TUSHARE_TOKEN=<your token>` (see docs/Install_guide.md)."
+    )
 ts.set_token(mytoken)
 pro = ts.pro_api()
 

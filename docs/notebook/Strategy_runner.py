@@ -10,7 +10,12 @@ matplotlib.use('agg')
 data_path = './data/'
 if not os.path.exists(data_path):
     os.makedirs(data_path)
-mytoken = '565ee6d69fb85cb0bc7fdfc8dea4b8ce1f18366f30e8d23a253bb9cf'
+mytoken = os.environ.get("TUSHARE_TOKEN")
+if not mytoken:
+    raise RuntimeError(
+        "TUSHARE_TOKEN is not set. Export your Tushare token first, e.g. "
+        "`export TUSHARE_TOKEN=<your token>` (see docs/Install_guide.md)."
+    )
 
 
 class Strategy_runner:
